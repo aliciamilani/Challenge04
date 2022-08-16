@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // MARK: - Variables
     
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
@@ -22,12 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var angerBtn: UIButton!
     
     var goButton: Bool = false
-    
-    // MARK: - Main
-    
-    
-    
-    // MARK: - Functions
+
 
     @IBAction func humorButtons(_ sender: UIButton) {
         
