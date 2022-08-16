@@ -8,4 +8,13 @@
 import Foundation
 import UIKit
 
-class 
+//class ImageHumor () {
+//
+//
+//
+//    init (){
+//        self
+//        self
+//    }
+//
+//}
