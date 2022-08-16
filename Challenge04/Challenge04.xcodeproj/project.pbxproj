@@ -73,9 +73,9 @@
 		8BB52E2128ABC4E300916CD5 /* Challenge04 */ = {
 			isa = PBXGroup;
 			children = (
-				8B54985828ABC5F600299D02 /* Controller */,
 				8B54985728ABC5F100299D02 /* Model */,
 				8BB52E3628ABC4F100916CD5 /* View */,
+				8B54985828ABC5F600299D02 /* Controller */,
 				8BB52E2228ABC4E300916CD5 /* AppDelegate.swift */,
 				8BB52E2428ABC4E300916CD5 /* SceneDelegate.swift */,
 				8BB52E2B28ABC4E400916CD5 /* Assets.xcassets */,
@@ -87,9 +87,9 @@
 		8BB52E3628ABC4F100916CD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8BB52E2D28ABC4E400916CD5 /* LaunchScreen.storyboard */,
 				8BB52E2828ABC4E300916CD5 /* Humor.storyboard */,
 				8B54985528ABC5D200299D02 /* DailyTasks.storyboard */,
+				8BB52E2D28ABC4E400916CD5 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
