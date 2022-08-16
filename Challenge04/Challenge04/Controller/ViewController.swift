@@ -8,12 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var humorImage: UIImageView!
+    @IBOutlet weak var humorTitle: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func humorButtons(_ sender: UIButton) {
+        
+        
+        
+    }
+    
+    @IBAction func goButton(_ sender: UIButton) {
+        
+        
+        
+    }
 }
 
