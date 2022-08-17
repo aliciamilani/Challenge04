@@ -16,8 +16,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     
-    let myData = ["first", "second", "third", "four", "five"]
-    let myData2 = ["first",  "second", "third", "four", "five"]
+    let data = getTasks()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,29 +24,18 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-//        cardTableView.register(UITableViewCell.self,
-//                               forCellReuseIdentifier: "TableViewCell")
-        
-//        self.cardTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
-        dateLabel.text = getCurrentTime()
+        dateLabel.text = String(Date.now.formatted(date: .complete, time: .omitted))
         messageLabel.text = "Tenho aqui algumas atividades pra você ser produtivo mesmo estando triste"
     }
     
-    // TableView funcs
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myData.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
-        
-        cell.configure(title: myData[indexPath.row], description: myData2[indexPath.row])
-        
-//        cell.layer.cornerRadius = 10.0;
-        
-//        cell.textLabel?.text = myData[indexPath.row]
-        
+        cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         return cell
     }
 }
