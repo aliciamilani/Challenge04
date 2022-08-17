@@ -9,29 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Variables
+    
+    
+    
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
     @IBOutlet weak var confidentBtn: UIButton!
     @IBOutlet weak var happyBtn: UIButton!
     @IBOutlet weak var sadBtn: UIButton!
-    @IBOutlet weak var impatientBtn: UIButton!
+    @IBOutlet weak var indifferentBtn: UIButton!
     @IBOutlet weak var tiredBtn: UIButton!
-    @IBOutlet weak var angerBtn: UIButton!
+    @IBOutlet weak var irritatedBtn: UIButton!
+    @IBOutlet weak var goBtn: UIButton!
+    
+    // MARK: - Main
     
     
+    
+    // MARK: - Functions
 
     @IBAction func humorButtons(_ sender: UIButton) {
+        goBtn.alpha = 1.0
+        goBtn.isUserInteractionEnabled = true
         
-        // Change button color when selected
-//        var color = sender.tintColor
-//        color = (color == UIColor.brown) ? UIColor.black : UIColor.brown
-//
-//        if color == .black {
-//            sender.alpha = 1.0
-//        }
-//        else {
-//            sender.alpha = 0.7
-//        }
         
     }
     
@@ -41,10 +42,13 @@ class ViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        confidentBtn.layer.cornerRadius = 25
+        goBtn.alpha = 0.5
+        goBtn.isUserInteractionEnabled = false
     }
+    
+    
+    
 }
 

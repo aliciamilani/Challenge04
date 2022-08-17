@@ -190,11 +190,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="angerBtn" destination="UFj-sJ-DvO" id="NRy-tK-QVP"/>
                         <outlet property="confidentBtn" destination="pYE-Cm-ntf" id="ebs-Em-dHO"/>
+                        <outlet property="goBtn" destination="ZAb-6q-SHn" id="YUn-SC-Cg5"/>
                         <outlet property="happyBtn" destination="NLY-la-z2e" id="b4F-7F-R7f"/>
                         <outlet property="humorImage" destination="d3I-B5-Vmb" id="jIc-nh-I7S"/>
-                        <outlet property="impatientBtn" destination="Rj6-oa-qq3" id="FFY-aC-64X"/>
+                        <outlet property="indifferentBtn" destination="Rj6-oa-qq3" id="xve-9L-9Fr"/>
+                        <outlet property="irritatedBtn" destination="UFj-sJ-DvO" id="6vd-wX-cl9"/>
                         <outlet property="mainTitle" destination="1g6-dk-zZc" id="ZXJ-ah-pFf"/>
                         <outlet property="sadBtn" destination="wbZ-1b-UPo" id="4fe-g8-HjG"/>
                         <outlet property="tiredBtn" destination="JPd-bw-pvF" id="FKs-pF-roR"/>
