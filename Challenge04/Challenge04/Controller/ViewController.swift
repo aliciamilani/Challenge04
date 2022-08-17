@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
-    @IBOutlet weak var humorTitle: UILabel!
     @IBOutlet weak var confidentBtn: UIButton!
     @IBOutlet weak var happyBtn: UIButton!
     @IBOutlet weak var sadBtn: UIButton!
@@ -24,15 +23,15 @@ class ViewController: UIViewController {
     @IBAction func humorButtons(_ sender: UIButton) {
         
         // Change button color when selected
-        var color = sender.tintColor
-        color = (color == UIColor.brown) ? UIColor.black : UIColor.brown
-        
-        if color == .black {
-            sender.alpha = 1.0
-        }
-        else {
-            sender.alpha = 0.7
-        }
+//        var color = sender.tintColor
+//        color = (color == UIColor.brown) ? UIColor.black : UIColor.brown
+//
+//        if color == .black {
+//            sender.alpha = 1.0
+//        }
+//        else {
+//            sender.alpha = 0.7
+//        }
         
     }
     
