@@ -24,7 +24,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        dateLabel.text = String(Date.now.formatted(date: .complete, time: .omitted))
+        dateLabel.text = getCurrentTime()
         messageLabel.text = "Tenho aqui algumas atividades pra você ser produtivo mesmo estando triste"
     }
     
@@ -41,12 +41,16 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
 }
 
 func getCurrentTime() -> String {
-    let date = Date()
-    let calendar = Calendar.current
-    let day = calendar.component(.day, from: date)
-    let month = calendar.component(.month, from: date)
-    let year = calendar.component(.year, from: date)
-    let thedate = "\(day)/\(month)/\(year)"
     
+    let currentLocale:Locale = NSLocale(localeIdentifier: Locale.preferredLanguages.first!) as Locale
+    let currentDate =  Date()
+    
+    let stringDate = currentDate.formatted(.dateTime
+                     .day(.twoDigits)
+                     .month(.wide)
+                     .weekday(.short)
+                     .locale(currentLocale))
+    
+    let thedate = "\(stringDate)"
     return thedate
 }
