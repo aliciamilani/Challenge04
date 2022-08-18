@@ -23,11 +23,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var irritatedBtn: UIButton!
     @IBOutlet weak var goBtn: UIButton!
     
+    
     // MARK: - Main
     
     
     
     // MARK: - Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        goBtn.alpha = 0.5
+        goBtn.isUserInteractionEnabled = false
+        //humorImage.image = UIImage.init(named: "")
+        accessibility()
+        
+    }
 
     @IBAction func humorButtons(_ sender: UIButton) {
         goBtn.alpha = 1.0
@@ -45,13 +55,6 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        goBtn.alpha = 0.5
-        goBtn.isUserInteractionEnabled = false
-        //humorImage.image = UIImage.init(named: "")
-    }
-    
     func isSelectedButton () {
         
         sadBtn.layer.borderColor = UIColor.clear.cgColor
@@ -61,6 +64,19 @@ class ViewController: UIViewController {
         confidentBtn.layer.borderColor = UIColor.clear.cgColor
         indifferentBtn.layer.borderColor = UIColor.clear.cgColor
         
+    }
+    
+    func accessibility () {
+        mainTitle.isAccessibilityElement = true
+        humorImage.accessibilityLabel = "Humor image selectedi"
+        indifferentBtn.isAccessibilityElement = true
+        confidentBtn.isAccessibilityElement = true
+        irritatedBtn.isAccessibilityElement = true
+        happyBtn.isAccessibilityElement = true
+        tiredBtn.isAccessibilityElement = true
+        sadBtn.isAccessibilityElement = true
+        goBtn.isAccessibilityElement = true
+        humorImage.isAccessibilityElement = true
     }
     
 }

@@ -19,6 +19,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howdy, cowboy! How are you feeling today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-dk-zZc">
                                 <rect key="frame" x="32" y="116" width="350" height="60"/>
+                                <accessibility key="accessibilityConfiguration" label="Howdy, cowboy! How are you feeling today?"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="a92-rd-bDX"/>
                                     <constraint firstAttribute="height" constant="60" id="uJW-QL-RsV"/>
