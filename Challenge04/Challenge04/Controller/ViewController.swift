@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     // MARK: - Variables
     
-    // var buttonsConfig = ButtonsConfig()
+    var humorSelected: String = ""
     
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
@@ -23,48 +23,60 @@ class ViewController: UIViewController {
     @IBOutlet weak var irritatedBtn: UIButton!
     @IBOutlet weak var goBtn: UIButton!
     
+    
     // MARK: - Main
     
     
     
     // MARK: - Functions
-
-    @IBAction func humorButtons(_ sender: UIButton) {
-        goBtn.alpha = 1.0
-        goBtn.isUserInteractionEnabled = true
-        
-//        guard let image = sender.currentTitle else { return }
-//        humorImage.image = UIImage.init(named: image)
-        
-        isSelectedButton()
-        sender.isSelected = true
-        
-        
-        
-    }
-    
-    @IBAction func goButton(_ sender: UIButton) {
-        
-        
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-//      humorImage.image = UIImage.init(named: "NoFace")
+        //humorImage.image = UIImage.init(named: "")
+        accessibility()
+        
+    }
+
+    @IBAction func humorButtons(_ sender: UIButton) {
+        goBtn.alpha = 1.0
+        goBtn.isUserInteractionEnabled = true
+        
+        guard let imageName = sender.titleLabel?.text else { return }
+        humorImage.image = UIImage.init(named: imageName)
+        
+        isSelectedButton()
+        sender.layer.borderWidth = 1
+        sender.layer.cornerRadius = 12
+        sender.layer.borderColor = UIColor.black.cgColor
+        
+        humorSelected = imageName
+        
     }
     
     func isSelectedButton () {
         
-        sadBtn.isSelected = false
-        tiredBtn.isSelected = false
-        happyBtn.isSelected = false
-        irritatedBtn.isSelected = false
-        confidentBtn.isSelected = false
-        indifferentBtn.isSelected = false
+        sadBtn.layer.borderColor = UIColor.clear.cgColor
+        tiredBtn.layer.borderColor = UIColor.clear.cgColor
+        happyBtn.layer.borderColor = UIColor.clear.cgColor
+        irritatedBtn.layer.borderColor = UIColor.clear.cgColor
+        confidentBtn.layer.borderColor = UIColor.clear.cgColor
+        indifferentBtn.layer.borderColor = UIColor.clear.cgColor
         
+    }
+    
+    func accessibility () {
+        mainTitle.isAccessibilityElement = true
+        humorImage.accessibilityLabel = "Humor image selectedi"
+        indifferentBtn.isAccessibilityElement = true
+        confidentBtn.isAccessibilityElement = true
+        irritatedBtn.isAccessibilityElement = true
+        happyBtn.isAccessibilityElement = true
+        tiredBtn.isAccessibilityElement = true
+        sadBtn.isAccessibilityElement = true
+        goBtn.isAccessibilityElement = true
+        humorImage.isAccessibilityElement = true
     }
     
 }
