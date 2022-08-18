@@ -35,6 +35,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstItem="4P3-8B-YIJ" firstAttribute="centerY" secondItem="ecz-Qt-4kk" secondAttribute="centerY" id="FMU-Wk-qTy"/>
                                     <constraint firstItem="4P3-8B-YIJ" firstAttribute="width" secondItem="ecz-Qt-4kk" secondAttribute="width" id="KCb-ch-AlF"/>
@@ -61,7 +62,6 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="goButton:" destination="qfc-Kt-95f" eventType="touchUpInside" id="wNx-Gj-Xaf"/>
                                     <segue destination="uk7-BW-M5M" kind="presentation" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
                                 </connections>
                             </button>
@@ -88,7 +88,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="FQf-AA-ZOx"/>
+                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="JlL-JN-8gy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-oa-qq3">
@@ -108,7 +108,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="3ET-O9-LFp"/>
+                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="x0a-8i-6aZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-bw-pvF">
@@ -128,7 +128,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="D02-wA-DVs"/>
+                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="qQj-4j-NNV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -156,7 +156,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="usQ-Es-DQU"/>
+                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="Gmy-b3-NFt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-1b-UPo">
@@ -176,7 +176,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="7VS-jz-XtE"/>
+                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="mGl-OH-ojd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFj-sJ-DvO">
@@ -196,7 +196,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="SvW-7A-jxw"/>
+                                                    <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="zrc-tP-b5H"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -219,15 +219,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confidentBtn" destination="pYE-Cm-ntf" id="5KH-C5-gqT"/>
+                        <outlet property="confidentBtn" destination="pYE-Cm-ntf" id="9aT-nV-0c9"/>
                         <outlet property="goBtn" destination="ZAb-6q-SHn" id="YUn-SC-Cg5"/>
-                        <outlet property="happyBtn" destination="NLY-la-z2e" id="b4F-7F-R7f"/>
+                        <outlet property="happyBtn" destination="NLY-la-z2e" id="MBg-hr-APR"/>
                         <outlet property="humorImage" destination="4P3-8B-YIJ" id="k9a-oP-1mg"/>
-                        <outlet property="indifferentBtn" destination="Rj6-oa-qq3" id="Kdj-1D-Uih"/>
-                        <outlet property="irritatedBtn" destination="UFj-sJ-DvO" id="IXk-Rw-K4C"/>
+                        <outlet property="indifferentBtn" destination="Rj6-oa-qq3" id="EKB-ZX-V9y"/>
+                        <outlet property="irritatedBtn" destination="UFj-sJ-DvO" id="00R-Q4-3Kl"/>
                         <outlet property="mainTitle" destination="1g6-dk-zZc" id="ZXJ-ah-pFf"/>
-                        <outlet property="sadBtn" destination="wbZ-1b-UPo" id="BKT-cL-6fa"/>
-                        <outlet property="tiredBtn" destination="JPd-bw-pvF" id="cqH-sE-ilM"/>
+                        <outlet property="sadBtn" destination="wbZ-1b-UPo" id="5pw-fg-WRu"/>
+                        <outlet property="tiredBtn" destination="JPd-bw-pvF" id="dam-4v-cuq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg7-Au-y4C" sceneMemberID="firstResponder"/>

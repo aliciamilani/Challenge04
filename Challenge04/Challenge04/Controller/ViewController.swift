@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     // MARK: - Variables
     
-    // var buttonsConfig = ButtonsConfig()
+    var humorSelected: String = ""
     
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
@@ -33,19 +33,15 @@ class ViewController: UIViewController {
         goBtn.alpha = 1.0
         goBtn.isUserInteractionEnabled = true
         
-//        guard let image = sender.currentTitle else { return }
-//        humorImage.image = UIImage.init(named: image)
+        guard let imageName = sender.titleLabel?.text else { return }
+        humorImage.image = UIImage.init(named: imageName)
         
         isSelectedButton()
-        sender.isSelected = true
+        sender.layer.borderWidth = 1
+        sender.layer.cornerRadius = 12
+        sender.layer.borderColor = UIColor.black.cgColor
         
-        
-        
-    }
-    
-    @IBAction func goButton(_ sender: UIButton) {
-        
-        
+        humorSelected = imageName
         
     }
     
@@ -53,17 +49,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-//      humorImage.image = UIImage.init(named: "NoFace")
+        //humorImage.image = UIImage.init(named: "")
     }
     
     func isSelectedButton () {
         
-        sadBtn.isSelected = false
-        tiredBtn.isSelected = false
-        happyBtn.isSelected = false
-        irritatedBtn.isSelected = false
-        confidentBtn.isSelected = false
-        indifferentBtn.isSelected = false
+        sadBtn.layer.borderColor = UIColor.clear.cgColor
+        tiredBtn.layer.borderColor = UIColor.clear.cgColor
+        happyBtn.layer.borderColor = UIColor.clear.cgColor
+        irritatedBtn.layer.borderColor = UIColor.clear.cgColor
+        confidentBtn.layer.borderColor = UIColor.clear.cgColor
+        indifferentBtn.layer.borderColor = UIColor.clear.cgColor
         
     }
     
