@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="60" id="uJW-QL-RsV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="MainTitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecz-Qt-4kk">
@@ -45,7 +45,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
-                                <rect key="frame" x="32" y="790" width="350" height="52"/>
+                                <rect key="frame" x="32" y="755.5" width="350" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="L10-or-HXh"/>
@@ -53,9 +53,12 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Let's go!">
-                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Let's go!">
+                                    <backgroundConfiguration key="background" cornerRadius="16">
+                                        <color key="backgroundColor" name="GoButton"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goButton:" destination="qfc-Kt-95f" eventType="touchUpInside" id="wNx-Gj-Xaf"/>
@@ -77,10 +80,12 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Happy">
+                                                <buttonConfiguration key="configuration" style="plain" title="Happy">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" name="HumorButtons"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="FQf-AA-ZOx"/>
@@ -95,10 +100,12 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Indifferent">
+                                                <buttonConfiguration key="configuration" style="plain" title="Indifferent">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" name="HumorButtons"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="3ET-O9-LFp"/>
@@ -113,10 +120,12 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Tired">
+                                                <buttonConfiguration key="configuration" style="plain" title="Tired">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" name="HumorButtons"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="D02-wA-DVs"/>
@@ -130,16 +139,21 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-Cm-ntf">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" selected="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="HKz-NU-lKe"/>
                                                     <constraint firstAttribute="width" constant="106" id="dZp-Dc-1ej"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Confident">
+                                                <buttonConfiguration key="configuration" style="plain" title="Confident">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" name="HumorButtons"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="usQ-Es-DQU"/>
@@ -154,10 +168,12 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Sad">
+                                                <buttonConfiguration key="configuration" style="plain" title="Sad">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" name="HumorButtons"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="7VS-jz-XtE"/>
@@ -172,10 +188,12 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Irritated">
+                                                <buttonConfiguration key="configuration" style="plain" title="Irritated">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" name="HumorButtons"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
-                                                    <color key="baseForegroundColor" name="Dark Mode"/>
-                                                    <color key="baseBackgroundColor" name="Light Mode"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="SvW-7A-jxw"/>
@@ -196,19 +214,20 @@
                             <constraint firstItem="1g6-dk-zZc" firstAttribute="top" secondItem="RWF-BC-1Wa" secondAttribute="top" constant="72" id="6Cw-yJ-mKf"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="top" secondItem="ecz-Qt-4kk" secondAttribute="bottom" constant="69.5" id="7TX-rC-u9w"/>
                             <constraint firstItem="ecz-Qt-4kk" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="72" id="FCb-vc-ofM"/>
+                            <constraint firstItem="ZAb-6q-SHn" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="138" id="HiF-pL-GA8"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="ZkD-xH-h6N"/>
-                            <constraint firstItem="RWF-BC-1Wa" firstAttribute="bottom" secondItem="ZAb-6q-SHn" secondAttribute="bottom" constant="20" id="gnb-Yr-chG"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confidentBtn" destination="pYE-Cm-ntf" id="ebs-Em-dHO"/>
+                        <outlet property="confidentBtn" destination="pYE-Cm-ntf" id="5KH-C5-gqT"/>
                         <outlet property="goBtn" destination="ZAb-6q-SHn" id="YUn-SC-Cg5"/>
                         <outlet property="happyBtn" destination="NLY-la-z2e" id="b4F-7F-R7f"/>
-                        <outlet property="indifferentBtn" destination="Rj6-oa-qq3" id="xve-9L-9Fr"/>
-                        <outlet property="irritatedBtn" destination="UFj-sJ-DvO" id="6vd-wX-cl9"/>
+                        <outlet property="humorImage" destination="4P3-8B-YIJ" id="k9a-oP-1mg"/>
+                        <outlet property="indifferentBtn" destination="Rj6-oa-qq3" id="Kdj-1D-Uih"/>
+                        <outlet property="irritatedBtn" destination="UFj-sJ-DvO" id="IXk-Rw-K4C"/>
                         <outlet property="mainTitle" destination="1g6-dk-zZc" id="ZXJ-ah-pFf"/>
-                        <outlet property="sadBtn" destination="wbZ-1b-UPo" id="4fe-g8-HjG"/>
-                        <outlet property="tiredBtn" destination="JPd-bw-pvF" id="FKs-pF-roR"/>
+                        <outlet property="sadBtn" destination="wbZ-1b-UPo" id="BKT-cL-6fa"/>
+                        <outlet property="tiredBtn" destination="JPd-bw-pvF" id="cqH-sE-ilM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg7-Au-y4C" sceneMemberID="firstResponder"/>
@@ -230,12 +249,18 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Dark Mode">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="GoButton">
+            <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Light Mode">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="HumorButtons">
+            <color red="0.792156862745098" green="0.79607843137254897" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="MainTitle">
+            <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
