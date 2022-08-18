@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     // MARK: - Variables
     
-    
+    // var buttonsConfig = ButtonsConfig()
     
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
@@ -30,8 +30,17 @@ class ViewController: UIViewController {
     // MARK: - Functions
 
     @IBAction func humorButtons(_ sender: UIButton) {
+        happyBtn.alpha = 0.5
+        confidentBtn.alpha = 0.5
+        indifferentBtn.alpha = 0.5
+        sadBtn.alpha = 0.5
+        tiredBtn.alpha = 0.5
+        irritatedBtn.alpha = 0.5
         goBtn.alpha = 1.0
+        sender.alpha = 1.0
         goBtn.isUserInteractionEnabled = true
+        guard let imageName = sender.currentTitle else { return }
+        humorImage.image = UIImage.init(named: imageName)
         
         
     }
@@ -46,6 +55,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
+//      humorImage.image = UIImage.init(named: "Happy")
     }
     
     
