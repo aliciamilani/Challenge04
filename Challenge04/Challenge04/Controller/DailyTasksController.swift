@@ -9,6 +9,8 @@ import UIKit
 
 class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var wecolmeMessage: UILabel!
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!
@@ -27,6 +29,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
+        
     }
     
 

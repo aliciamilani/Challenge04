@@ -53,8 +53,7 @@ class ViewController: UIViewController {
         isSelectedButton()
         sender.layer.borderWidth = 1
         sender.layer.cornerRadius = 12
-        sender.layer.borderColor = UIColor.black.cgColor
-        
+        sender.layer.borderColor = UIColor.label.cgColor
     }
     
     func isSelectedButton () {

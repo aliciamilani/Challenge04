@@ -118,6 +118,7 @@
                         <outlet property="dateLabel" destination="MLr-9F-EOh" id="oSp-Xa-yYK"/>
                         <outlet property="messageLabel" destination="Nea-3g-J4E" id="koc-tp-Nbz"/>
                         <outlet property="tableView" destination="jyQ-Ps-ofN" id="Rg7-yC-rMF"/>
+                        <outlet property="wecolmeMessage" destination="EJz-on-cNY" id="Ww9-1F-oU2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
