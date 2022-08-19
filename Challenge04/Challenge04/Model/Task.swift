@@ -28,6 +28,7 @@ class Task {
         self.priority = priority
         self.dificulty = dificulty
         self.timeForExecution = timeForExecution
+        // calculate priority
         self.points = Float(priority * dificulty * timeForExecution)
         self.category = category
         self.codGoal = codGoal

@@ -32,9 +32,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-        accessibility()
+
         humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
 
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
     
     func accessibility () {
         mainTitle.isAccessibilityElement = true
-        humorImage.accessibilityLabel = "Humor image selectedi"
+        humorImage.accessibilityLabel = "Humor image selectedt"
         indifferentBtn.isAccessibilityElement = true
         confidentBtn.isAccessibilityElement = true
         irritatedBtn.isAccessibilityElement = true
