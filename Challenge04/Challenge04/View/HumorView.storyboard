@@ -23,7 +23,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="a92-rd-bDX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" name="MainTitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,26 +45,6 @@
                                     <constraint firstItem="4P3-8B-YIJ" firstAttribute="centerX" secondItem="ecz-Qt-4kk" secondAttribute="centerX" id="nnq-N3-eHT"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
-                                <rect key="frame" x="32" y="753" width="350" height="52"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="L10-or-HXh"/>
-                                    <constraint firstAttribute="height" constant="52" id="TuV-n4-JkT"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Let's go!">
-                                    <backgroundConfiguration key="background" cornerRadius="16">
-                                        <color key="backgroundColor" name="GoButton"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="uk7-BW-M5M" kind="presentation" identifier="dailyTasks" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1fN-lC-nKG">
                                 <rect key="frame" x="89" y="459" width="236" height="156"/>
                                 <subviews>
@@ -203,6 +183,26 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
+                                <rect key="frame" x="32" y="707" width="350" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="L10-or-HXh"/>
+                                    <constraint firstAttribute="height" constant="52" id="TuV-n4-JkT"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Let's go!">
+                                    <backgroundConfiguration key="background" cornerRadius="16">
+                                        <color key="backgroundColor" name="GoButton"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uk7-BW-M5M" kind="presentation" identifier="dailyTasks" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RWF-BC-1Wa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -214,7 +214,7 @@
                             <constraint firstItem="1g6-dk-zZc" firstAttribute="top" secondItem="RWF-BC-1Wa" secondAttribute="top" constant="72" id="6Cw-yJ-mKf"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="top" secondItem="ecz-Qt-4kk" secondAttribute="bottom" constant="69.5" id="7TX-rC-u9w"/>
                             <constraint firstItem="ecz-Qt-4kk" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="72" id="FCb-vc-ofM"/>
-                            <constraint firstItem="ZAb-6q-SHn" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="138" id="HiF-pL-GA8"/>
+                            <constraint firstItem="ZAb-6q-SHn" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="92" id="HiF-pL-GA8"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="ZkD-xH-h6N"/>
                         </constraints>
                     </view>
