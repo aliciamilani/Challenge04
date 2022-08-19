@@ -17,21 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howdy, cowboy! How are you feeling today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-dk-zZc">
-                                <rect key="frame" x="32" y="116" width="350" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howdy, cowboy! How are you feeling today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-dk-zZc">
+                                <rect key="frame" x="32" y="116" width="350" height="57.5"/>
                                 <accessibility key="accessibilityConfiguration" label="Howdy, cowboy! How are you feeling today?"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="a92-rd-bDX"/>
-                                    <constraint firstAttribute="height" constant="60" id="uJW-QL-RsV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" name="MainTitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecz-Qt-4kk">
-                                <rect key="frame" x="135" y="248" width="144" height="144"/>
+                                <rect key="frame" x="135" y="245.5" width="144" height="144"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
                                         <rect key="frame" x="0.0" y="8" width="144" height="128"/>
                                     </imageView>
                                 </subviews>
@@ -46,8 +45,8 @@
                                     <constraint firstItem="4P3-8B-YIJ" firstAttribute="centerX" secondItem="ecz-Qt-4kk" secondAttribute="centerX" id="nnq-N3-eHT"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
-                                <rect key="frame" x="32" y="755.5" width="350" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
+                                <rect key="frame" x="32" y="753" width="350" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="L10-or-HXh"/>
@@ -59,7 +58,7 @@
                                     <backgroundConfiguration key="background" cornerRadius="16">
                                         <color key="backgroundColor" name="GoButton"/>
                                     </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -67,12 +66,12 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1fN-lC-nKG">
-                                <rect key="frame" x="89" y="461.5" width="236" height="156"/>
+                                <rect key="frame" x="89" y="459" width="236" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="d4z-xP-74A">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="156"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLY-la-z2e">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLY-la-z2e">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -85,14 +84,14 @@
                                                     <backgroundConfiguration key="background" cornerRadius="12">
                                                         <color key="backgroundColor" name="HumorButtons"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="JlL-JN-8gy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-oa-qq3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-oa-qq3">
                                                 <rect key="frame" x="0.0" y="60" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -105,14 +104,14 @@
                                                     <backgroundConfiguration key="background" cornerRadius="12">
                                                         <color key="backgroundColor" name="HumorButtons"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="x0a-8i-6aZ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-bw-pvF">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-bw-pvF">
                                                 <rect key="frame" x="0.0" y="120" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -125,7 +124,7 @@
                                                     <backgroundConfiguration key="background" cornerRadius="12">
                                                         <color key="backgroundColor" name="HumorButtons"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -137,7 +136,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wRK-cM-gTF">
                                         <rect key="frame" x="130" y="0.0" width="106" height="156"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-Cm-ntf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-Cm-ntf">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration">
@@ -153,14 +152,14 @@
                                                     <backgroundConfiguration key="background" cornerRadius="12">
                                                         <color key="backgroundColor" name="HumorButtons"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="Gmy-b3-NFt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-1b-UPo">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-1b-UPo">
                                                 <rect key="frame" x="0.0" y="60" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -173,14 +172,14 @@
                                                     <backgroundConfiguration key="background" cornerRadius="12">
                                                         <color key="backgroundColor" name="HumorButtons"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="humorButtons:" destination="qfc-Kt-95f" eventType="touchUpInside" id="mGl-OH-ojd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFj-sJ-DvO">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFj-sJ-DvO">
                                                 <rect key="frame" x="0.0" y="120" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -193,7 +192,7 @@
                                                     <backgroundConfiguration key="background" cornerRadius="12">
                                                         <color key="backgroundColor" name="HumorButtons"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
