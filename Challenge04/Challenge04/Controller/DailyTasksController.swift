@@ -26,7 +26,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         dateLabel.text = getCurrentTime()
-        messageLabel.text = "Here are some activities for you to be productive even when you are sad:"
+        messageLabel.text = getMessage(humor: humor)
     }
     
 
