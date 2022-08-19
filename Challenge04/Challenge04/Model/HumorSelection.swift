@@ -19,7 +19,7 @@ func getMessage(humor: String) -> (String){
         return "Glad you're happy today! Shall we complete the day with some activities?"
         
     case "Confident":
-        return "I liked the attitude! Shall we detonate today?"
+        return "I liked the attitude! Shall we rock today?"
         
     case "Indifferent":
         return "Animation, cowboy! You can do it!"

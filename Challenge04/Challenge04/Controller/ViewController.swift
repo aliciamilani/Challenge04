@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
         accessibility()
-        
+        humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
 
     @IBAction func humorButtons(_ sender: UIButton) {
