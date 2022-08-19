@@ -190,7 +190,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
                                 <rect key="frame" x="32" y="707" width="350" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="Let's go!"/>
@@ -211,6 +211,12 @@
                                     <segue destination="uk7-BW-M5M" kind="presentation" identifier="dailyTasks" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-up" translatesAutoresizingMaskIntoConstraints="NO" id="D0S-6G-Q4Z">
+                                <rect key="frame" x="-156" y="240.5" width="214" height="269"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-down" translatesAutoresizingMaskIntoConstraints="NO" id="raT-D4-Zko">
+                                <rect key="frame" x="298" y="740" width="192" height="188"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RWF-BC-1Wa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -223,7 +229,11 @@
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="top" secondItem="ecz-Qt-4kk" secondAttribute="bottom" constant="69.5" id="7TX-rC-u9w"/>
                             <constraint firstItem="ecz-Qt-4kk" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="72" id="FCb-vc-ofM"/>
                             <constraint firstItem="ZAb-6q-SHn" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="92" id="HiF-pL-GA8"/>
+                            <constraint firstItem="raT-D4-Zko" firstAttribute="leading" secondItem="1fN-lC-nKG" secondAttribute="trailing" constant="-27" id="JUZ-oK-TG9"/>
+                            <constraint firstItem="D0S-6G-Q4Z" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="67" id="Krd-nO-rAK"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="ZkD-xH-h6N"/>
+                            <constraint firstItem="ecz-Qt-4kk" firstAttribute="leading" secondItem="D0S-6G-Q4Z" secondAttribute="trailing" constant="77" id="ekw-6B-bMV"/>
+                            <constraint firstItem="raT-D4-Zko" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="125" id="tlT-O4-dm3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -254,6 +264,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Spot-down" width="192" height="188"/>
+        <image name="Spot-up" width="210" height="285"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
