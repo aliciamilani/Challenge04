@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Black.ttf">
+            <string>Poppins-Black</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="BkN-ZB-U9h">
@@ -19,24 +24,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howdy, cowboy! How are you feeling today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-dk-zZc">
-                                <rect key="frame" x="32" y="116" width="350" height="57.5"/>
+                                <rect key="frame" x="32" y="116" width="350" height="67.5"/>
                                 <accessibility key="accessibilityConfiguration" label="Howdy, cowboy! How are you feeling today?"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="a92-rd-bDX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="24"/>
                                 <color key="textColor" name="MainTitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecz-Qt-4kk">
-                                <rect key="frame" x="135" y="245.5" width="144" height="144"/>
+                                <rect key="frame" x="135" y="255.5" width="144" height="144"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
                                         <rect key="frame" x="0.0" y="8" width="144" height="128"/>
                                         <accessibility key="accessibilityConfiguration" label="Humor"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstItem="4P3-8B-YIJ" firstAttribute="centerY" secondItem="ecz-Qt-4kk" secondAttribute="centerY" id="FMU-Wk-qTy"/>
@@ -48,7 +53,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1fN-lC-nKG">
-                                <rect key="frame" x="89" y="459" width="236" height="156"/>
+                                <rect key="frame" x="89" y="469" width="236" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="d4z-xP-74A">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="156"/>
@@ -190,8 +195,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
-                                <rect key="frame" x="32" y="707" width="350" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
+                                <rect key="frame" x="32" y="717" width="350" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="Let's go!"/>
                                 <constraints>
@@ -211,9 +216,15 @@
                                     <segue destination="uk7-BW-M5M" kind="presentation" identifier="dailyTasks" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-up" translatesAutoresizingMaskIntoConstraints="NO" id="D0S-6G-Q4Z">
+                                <rect key="frame" x="-156" y="250.5" width="214" height="269"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-down" translatesAutoresizingMaskIntoConstraints="NO" id="raT-D4-Zko">
+                                <rect key="frame" x="298" y="750" width="192" height="188"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RWF-BC-1Wa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="View"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="1g6-dk-zZc" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="0wV-Xf-O07"/>
@@ -223,7 +234,11 @@
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="top" secondItem="ecz-Qt-4kk" secondAttribute="bottom" constant="69.5" id="7TX-rC-u9w"/>
                             <constraint firstItem="ecz-Qt-4kk" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="72" id="FCb-vc-ofM"/>
                             <constraint firstItem="ZAb-6q-SHn" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="92" id="HiF-pL-GA8"/>
+                            <constraint firstItem="raT-D4-Zko" firstAttribute="leading" secondItem="1fN-lC-nKG" secondAttribute="trailing" constant="-27" id="JUZ-oK-TG9"/>
+                            <constraint firstItem="D0S-6G-Q4Z" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="67" id="Krd-nO-rAK"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="ZkD-xH-h6N"/>
+                            <constraint firstItem="ecz-Qt-4kk" firstAttribute="leading" secondItem="D0S-6G-Q4Z" secondAttribute="trailing" constant="77" id="ekw-6B-bMV"/>
+                            <constraint firstItem="raT-D4-Zko" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="125" id="tlT-O4-dm3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -254,23 +269,25 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Spot-down" width="192" height="188"/>
+        <image name="Spot-up" width="210" height="285"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GoButton">
-            <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.82400000095367432" green="0.51800000667572021" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HumorButtons">
-            <color red="0.792156862745098" green="0.79607843137254897" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.79199999570846558" green="0.79600000381469727" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainTitle">
-            <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.82400000095367432" green="0.51800000667572021" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="View">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
