@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-        //humorImage.image = UIImage.init(named: "")
         accessibility()
         
     }
@@ -45,6 +44,8 @@ class ViewController: UIViewController {
         
         guard var imageName = sender.titleLabel?.text else { return }
         
+        humorSelected = imageName
+        
         imageName = "Humor/" + imageName
         humorImage.image = UIImage.init(named: imageName)
         
@@ -52,8 +53,6 @@ class ViewController: UIViewController {
         sender.layer.borderWidth = 1
         sender.layer.cornerRadius = 12
         sender.layer.borderColor = UIColor.black.cgColor
-        
-        humorSelected = imageName
         
     }
     
@@ -79,6 +78,12 @@ class ViewController: UIViewController {
         sadBtn.isAccessibilityElement = true
         goBtn.isAccessibilityElement = true
         humorImage.isAccessibilityElement = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? DailyTasksController {
+            destinationViewController.humor = humorSelected
+        }
     }
     
 }

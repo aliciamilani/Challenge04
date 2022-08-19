@@ -63,7 +63,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="uk7-BW-M5M" kind="presentation" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
+                                    <segue destination="uk7-BW-M5M" kind="presentation" identifier="dailyTasks" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1fN-lC-nKG">

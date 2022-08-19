@@ -15,6 +15,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    var humor = ""
     
     let data = getTasks()
     
