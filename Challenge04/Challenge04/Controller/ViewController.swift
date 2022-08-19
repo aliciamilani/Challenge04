@@ -43,7 +43,9 @@ class ViewController: UIViewController {
         goBtn.alpha = 1.0
         goBtn.isUserInteractionEnabled = true
         
-        guard let imageName = sender.titleLabel?.text else { return }
+        guard var imageName = sender.titleLabel?.text else { return }
+        
+        imageName = "Humor/" + imageName
         humorImage.image = UIImage.init(named: imageName)
         
         isSelectedButton()
