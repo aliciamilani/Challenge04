@@ -60,8 +60,8 @@ func getTasks() -> ([Task]){
     
     let tasksArray = [
         Task(
-            title: "Estudar assuntos pendentes de matemática",
-            description: "Devo acessar o portal da escola e pegar os slides.",
+            title: "Study outstanding math subjects",
+            description: "I must access the school portal and get the slides.",
             priority: 3,
             dificulty: 2,
             timeForExecution: 2,
@@ -70,8 +70,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Praticar piano",
-            description: "Ligar para o professor e marcar aulas.",
+            title: "Practice piano",
+            description: "Call the teacher and schedule classes.",
             priority: 2,
             dificulty: 1,
             timeForExecution: 1,
@@ -80,8 +80,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Adiantar leitura do paradidático do próximo ano",
-            description: "Ir a biblioteca.",
+            title: "Advance reading of next year's paradidactic",
+            description: "Go to the library.",
             priority: 1,
             dificulty: 1,
             timeForExecution: 3,
@@ -90,8 +90,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Jogar nova atualização do jogo X",
-            description: "Ir na AppStore.",
+            title: "Play new X game update",
+            description: "Visit the AppStore.",
             priority: 2,
             dificulty: 1,
             timeForExecution: 3,
@@ -100,8 +100,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Mandar email para Sr. Beto",
-            description: "Verificar se há turmas disponíveis de violão.",
+            title: "Send email to Mr. Beto",
+            description: "Check for available guitar classes.",
             priority: 3,
             dificulty: 1,
             timeForExecution: 1,
@@ -110,8 +110,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Procurar nova capa para kindle",
-            description: "Minha capa danificou e preciso de uma nova.",
+            title: "Find new kindle cover.",
+            description: "My cover is damaged and I need a new one.",
             priority: 1,
             dificulty: 1,
             timeForExecution: 1,
@@ -120,8 +120,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Pesquisar novo protetor solar",
-            description: "Procurar por outro protetor que não me de alergia.",
+            title: "Search new sunscreen",
+            description: "Look for another protector that doesn't make me allergic.",
             priority: 3,
             dificulty: 1,
             timeForExecution: 1,
@@ -130,8 +130,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Passar a limpo anotações",
-            description: "Pegar assunto que faltei.",
+            title: "Update notes",
+            description: "Pick up the topic I missed.",
             priority: 2,
             dificulty: 1,
             timeForExecution: 2,
@@ -140,8 +140,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Trocar corda da guitarra",
-            description: "Trocar para quando quiser tocar.",
+            title: "Change guitar string",
+            description: "Change strings for when I want to play.",
             priority: 2,
             dificulty: 1,
             timeForExecution: 1,
@@ -150,8 +150,8 @@ func getTasks() -> ([Task]){
         ),
         
         Task(
-            title: "Zerar jogo Y",
-            description: "Só se fala nisso.",
+            title: "Reset Y game",
+            description: "It's just talked about.",
             priority: 2,
             dificulty: 3,
             timeForExecution: 3,
