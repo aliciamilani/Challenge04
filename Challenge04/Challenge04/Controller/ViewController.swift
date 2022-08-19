@@ -32,26 +32,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-        //humorImage.image = UIImage.init(named: "")
-        accessibility()
-        
+
+        humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
 
     @IBAction func humorButtons(_ sender: UIButton) {
         goBtn.alpha = 1.0
         goBtn.isUserInteractionEnabled = true
         
-        guard let imageName = sender.titleLabel?.text else { return }
+        guard var imageName = sender.titleLabel?.text else { return }
+        
+        humorSelected = imageName
+        
+        imageName = "Humor/" + imageName
         humorImage.image = UIImage.init(named: imageName)
         
         isSelectedButton()
         sender.layer.borderWidth = 1
         sender.layer.cornerRadius = 12
         sender.layer.borderColor = UIColor.black.cgColor
-        
-        humorSelected = imageName
         
     }
     
@@ -68,7 +70,7 @@ class ViewController: UIViewController {
     
     func accessibility () {
         mainTitle.isAccessibilityElement = true
-        humorImage.accessibilityLabel = "Humor image selectedi"
+        humorImage.accessibilityLabel = "Humor image selectedt"
         indifferentBtn.isAccessibilityElement = true
         confidentBtn.isAccessibilityElement = true
         irritatedBtn.isAccessibilityElement = true
@@ -77,6 +79,12 @@ class ViewController: UIViewController {
         sadBtn.isAccessibilityElement = true
         goBtn.isAccessibilityElement = true
         humorImage.isAccessibilityElement = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? DailyTasksController {
+            destinationViewController.humor = humorSelected
+        }
     }
     
 }

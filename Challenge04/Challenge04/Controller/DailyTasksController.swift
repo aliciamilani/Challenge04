@@ -15,6 +15,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    var humor = ""
     
     let data = getTasks()
     
@@ -25,7 +26,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         dateLabel.text = getCurrentTime()
-        messageLabel.text = "Tenho aqui algumas atividades pra você ser produtivo mesmo estando triste"
+        messageLabel.text = getMessage(humor: humor)
     }
     
 
