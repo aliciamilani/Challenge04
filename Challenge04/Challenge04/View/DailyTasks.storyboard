@@ -42,19 +42,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-Ps-ofN">
-                                <rect key="frame" x="0.0" y="250" width="414" height="612"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="622"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9N-aw-f0f" id="m15-B0-lCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYz-OX-dKD">
-                                                    <rect key="frame" x="20" y="5" width="374" height="49"/>
+                                                    <rect key="frame" x="20" y="10" width="374" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-NY-hT8">
                                                             <rect key="frame" x="15" y="15" width="344" height="19"/>
@@ -64,7 +64,8 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="Card"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="VMY-NY-hT8" firstAttribute="leading" secondItem="zYz-OX-dKD" secondAttribute="leading" constant="15" id="Epa-Xh-kU2"/>
                                                         <constraint firstAttribute="trailing" secondItem="VMY-NY-hT8" secondAttribute="trailing" constant="15" id="HMz-my-JnC"/>
@@ -73,11 +74,12 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="zYz-OX-dKD" firstAttribute="top" secondItem="m15-B0-lCC" secondAttribute="top" constant="5" id="8WY-7m-eSe"/>
+                                                <constraint firstItem="zYz-OX-dKD" firstAttribute="top" secondItem="m15-B0-lCC" secondAttribute="top" constant="10" id="8WY-7m-eSe"/>
                                                 <constraint firstAttribute="trailing" secondItem="zYz-OX-dKD" secondAttribute="trailing" constant="20" id="ATu-C9-0mo"/>
                                                 <constraint firstItem="zYz-OX-dKD" firstAttribute="leading" secondItem="m15-B0-lCC" secondAttribute="leading" constant="20" id="NQN-EV-lCW"/>
-                                                <constraint firstAttribute="bottom" secondItem="zYz-OX-dKD" secondAttribute="bottom" constant="16" id="bXP-er-S1n"/>
+                                                <constraint firstAttribute="bottom" secondItem="zYz-OX-dKD" secondAttribute="bottom" constant="10" id="bXP-er-S1n"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +92,7 @@
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="11"/>
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
@@ -137,7 +139,7 @@
                             <constraint firstItem="EJz-on-cNY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="mS0-cS-8Uu"/>
                             <constraint firstItem="MLr-9F-EOh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="pfN-ee-xhY"/>
                             <constraint firstItem="q9p-BH-k5p" firstAttribute="top" secondItem="Nea-3g-J4E" secondAttribute="bottom" constant="20" id="vCx-nW-PBY"/>
-                            <constraint firstItem="jyQ-Ps-ofN" firstAttribute="top" secondItem="MLr-9F-EOh" secondAttribute="bottom" constant="30" id="ylL-Pn-4BV"/>
+                            <constraint firstItem="jyQ-Ps-ofN" firstAttribute="top" secondItem="MLr-9F-EOh" secondAttribute="bottom" constant="20" id="ylL-Pn-4BV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -156,9 +158,6 @@
         <image name="Moo" width="156" height="156"/>
         <namedColor name="BackgroundCard">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Card">
-            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Labels">
             <color red="0.31400001049041748" green="0.32199999690055847" blue="0.35699999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

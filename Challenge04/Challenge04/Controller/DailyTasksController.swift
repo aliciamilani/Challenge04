@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DailyTasksController : UIViewController, UITableViewDataSource {
+class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var wecolmeMessage: UILabel!
     
@@ -16,7 +16,7 @@ class DailyTasksController : UIViewController, UITableViewDataSource {
     @IBOutlet weak var messageLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
-    
+        
     var humor = ""
     
     var data = getTasks()
@@ -40,51 +40,58 @@ class DailyTasksController : UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
+        
         return cell
     }
     
-    
-    func tableView(_ tableView: UITableView,
-                       trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-
-        // Trash action
-        let trash = UIContextualAction(style: .destructive,
-                                       title: "Trash") { [weak self] (action, view, completionHandler) in
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let latter = UIContextualAction(style: .destructive,
+                                       title: "Reschedule") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
+            
+            
             self.data.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
-        trash.backgroundColor = .systemRed
-
-        let configuration = UISwipeActionsConfiguration(actions: [trash])
-
+        latter.backgroundColor = UIColor(named: "Undone")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [latter])
+            
+        return configuration
+    }
+    
+    func tableView(_ tableView: UITableView,
+                       trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let done = UIContextualAction(style: .destructive,
+                                       title: "Done") { [weak self] (action, view, completionHandler) in
+            guard let self = self else {return}
+            
+            self.data.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
+        }
+        done.backgroundColor = UIColor(named: "Done")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [done])
+            
         return configuration
     }
     
     
-    func tableView(_ tableView: UITableView,
-                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .none
-    }
-    
-}
+    func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.contentView.backgroundColor = UIColor.init(named: "Card")
 
-extension DailyTasksController: UITableViewDelegate {
-    private func handleMarkAsFavourite() {
-        print("Marked as favourite")
     }
 
-    private func handleMarkAsUnread() {
-        print("Marked as unread")
-    }
-
-    private func handleMoveToTrash() {
-        print("Moved to trash")
-    }
-
-    private func handleMoveToArchive() {
-        print("Moved to archive")
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        if indexPath != nil {
+            let cell = tableView.cellForRow(at: indexPath!)
+            cell?.contentView.backgroundColor = UIColor.init(named: "BackgroundCard")
+        }
+        
     }
     
 }
