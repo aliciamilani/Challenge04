@@ -11,13 +11,10 @@ class CardCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var cardView: UIView!
     
     func configure(title: String, description: String){
         titleLabel.text = title
-        descriptionLabel.text = description
         cardView.layer.cornerRadius = 12.0
     }
 }
