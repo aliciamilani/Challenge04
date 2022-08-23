@@ -19,7 +19,7 @@ class DailyTasksController : UIViewController, UITableViewDataSource {
     
     var humor = ""
     
-    let data = getTasks()
+    var data = getTasks()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,45 +43,21 @@ class DailyTasksController : UIViewController, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView,
-                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .normal,
-                                        title: "Favourite") { [weak self] (action, view, completionHandler) in
-                                            self?.handleMarkAsFavourite()
-                                            completionHandler(true)
-        }
-        action.backgroundColor = .systemBlue
-        
-        return UISwipeActionsConfiguration(actions: [action])
-    }
     
     func tableView(_ tableView: UITableView,
                        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        // Archive action
-        let archive = UIContextualAction(style: .normal,
-                                         title: "Archive") { [weak self] (action, view, completionHandler) in
-                                            self?.handleMoveToArchive()
-                                            completionHandler(true)
-        }
-        archive.backgroundColor = .systemGreen
 
         // Trash action
         let trash = UIContextualAction(style: .destructive,
                                        title: "Trash") { [weak self] (action, view, completionHandler) in
-                                        self?.handleMoveToTrash()
-                                        completionHandler(true)
+            guard let self = self else {return}
+            self.data.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
         }
         trash.backgroundColor = .systemRed
 
-        // Unread action
-        let unread = UIContextualAction(style: .normal,
-                                       title: "Mark as Unread") { [weak self] (action, view, completionHandler) in
-                                        self?.handleMarkAsUnread()
-                                        completionHandler(true)
-        }
-        unread.backgroundColor = .systemOrange
-
-        let configuration = UISwipeActionsConfiguration(actions: [trash, archive, unread])
+        let configuration = UISwipeActionsConfiguration(actions: [trash])
 
         return configuration
     }
