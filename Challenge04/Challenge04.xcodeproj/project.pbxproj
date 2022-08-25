@@ -19,7 +19,7 @@
 		8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDB1F7728AD34BD009C945D /* CardCell.swift */; };
 		8D745E2128ABCC4300F6ED75 /* HumorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */; };
 		8D75176B28B51F140033E38B /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D75176A28B51F140033E38B /* Goals.storyboard */; };
-		8DB5322D28AE9A1200327621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5322C28AE9A1200327621 /* ViewController.swift */; };
+		8DB5322D28AE9A1200327621 /* HumorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5322C28AE9A1200327621 /* HumorController.swift */; };
 		8DB5324128AE9BD500327621 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB5323828AE9B8300327621 /* Poppins-LightItalic.ttf */; };
 		8DB5324228AE9BD500327621 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB5322E28AE9B8200327621 /* Poppins-Light.ttf */; };
 		8DB5324328AE9BD500327621 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB5323928AE9B8300327621 /* Poppins-ExtraBold.ttf */; };
@@ -57,7 +57,7 @@
 		8BDB1F7728AD34BD009C945D /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorSelection.swift; sourceTree = "<group>"; };
 		8D75176A28B51F140033E38B /* Goals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
-		8DB5322C28AE9A1200327621 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8DB5322C28AE9A1200327621 /* HumorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumorController.swift; sourceTree = "<group>"; };
 		8DB5322E28AE9B8200327621 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		8DB5322F28AE9B8200327621 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		8DB5323028AE9B8200327621 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			children = (
 				8DC408A928B6636D00847C28 /* GoalsController.swift */,
 				8DD4573B28B7BCC1004B68DC /* NewTaskViewController.swift */,
-				8DB5322C28AE9A1200327621 /* ViewController.swift */,
+				8DB5322C28AE9A1200327621 /* HumorController.swift */,
 				8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */,
 				8BDB1F7728AD34BD009C945D /* CardCell.swift */,
 			);
@@ -279,7 +279,7 @@
 				8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */,
 				8DD4573C28B7BCC1004B68DC /* NewTaskViewController.swift in Sources */,
 				8B1E611B28ABEA35006FB525 /* Goal.swift in Sources */,
-				8DB5322D28AE9A1200327621 /* ViewController.swift in Sources */,
+				8DB5322D28AE9A1200327621 /* HumorController.swift in Sources */,
 				8BB52E2528ABC4E300916CD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +424,7 @@
 				INFOPLIST_FILE = Challenge04/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Goals;
+				INFOPLIST_KEY_UIMainStoryboardFile = DailyTasks;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,7 +452,7 @@
 				INFOPLIST_FILE = Challenge04/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Goals;
+				INFOPLIST_KEY_UIMainStoryboardFile = DailyTasks;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
