@@ -25,17 +25,6 @@
       "scale" : "1x"
     },
     {
-      "filename" : "Tired-dark@2x.svg",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "light"
-        }
-      ],
       "filename" : "Tired-light@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
@@ -44,15 +33,26 @@
       "appearances" : [
         {
           "appearance" : "luminosity",
-          "value" : "dark"
+          "value" : "light"
         }
       ],
-      "filename" : "Tired-dark@2x-1.svg",
+      "filename" : "Tired-light@2x-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Tired-dark@3x.svg",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Tired-dark@2x.svg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Tired-light@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -63,7 +63,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "Tired-light@3x.svg",
+      "filename" : "Tired-light@3x-1.svg",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -74,7 +74,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Tired-dark@3x-1.svg",
+      "filename" : "Tired-dark@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

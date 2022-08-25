@@ -25,7 +25,7 @@
       "scale" : "1x"
     },
     {
-      "filename" : "Irritated-light@2x.svg",
+      "filename" : "Portrait-background-tasks@2x-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -36,7 +36,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "Irritated-light@2x-1.svg",
+      "filename" : "Portrait-background-tasks@2x-2.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -47,12 +47,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Irritated-dark@2x.svg",
+      "filename" : "Portrait-background-tasks@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Irritated-light@3x.svg",
+      "filename" : "Portrait-background-tasks@3x-1.svg",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -63,7 +63,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "Irritated-light@3x-1.svg",
+      "filename" : "Portrait-background-tasks@3x-2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -74,7 +74,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Irritated-dark@3x.svg",
+      "filename" : "Portrait-background-tasks@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
