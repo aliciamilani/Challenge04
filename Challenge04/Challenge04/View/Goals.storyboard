@@ -17,28 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="je4-9W-ju3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiU-HB-77x">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrC-AT-qYk">
-                                                <rect key="frame" x="20" y="40" width="350" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="vCy-4k-iHu"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bo-9rf">
-                                                <rect key="frame" x="20" y="101" width="68" height="21.5"/>
+                                                <rect key="frame" x="20" y="32" width="68" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="qZf-7X-1mT">
-                                                <rect key="frame" x="20" y="138.5" width="374" height="137"/>
+                                                <rect key="frame" x="20" y="69.5" width="374" height="137"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-aU-Grs">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="137"/>
@@ -53,6 +44,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HdY-lT-Zgz"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="Qdh-ZR-szG"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-2U-Z8N">
@@ -76,6 +68,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6m3-VR-XZI"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="iYW-PE-4sZ"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-JC-UCU">
@@ -99,6 +92,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tbC-QG-gsF"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="6bg-bM-eqR"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StU-GB-IcL">
@@ -112,13 +106,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-G5-S2E">
-                                                <rect key="frame" x="20" y="307.5" width="65.5" height="21.5"/>
+                                                <rect key="frame" x="20" y="238.5" width="65.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Qf2-Fi-L8m">
-                                                <rect key="frame" x="20" y="345" width="374" height="137"/>
+                                                <rect key="frame" x="20" y="276" width="374" height="137"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-RU-yto">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="137"/>
@@ -133,6 +127,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RS4-zg-aBn"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="A5q-hL-7Ul"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-wY-MdS">
@@ -156,6 +151,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oG-Pw-3Cq"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="yUl-gt-IUf"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-cW-1ry">
@@ -179,6 +175,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9nD-vZ-Evc"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="Zj8-rA-sSm"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxL-aR-t5i">
@@ -192,13 +189,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-7u-GM6">
-                                                <rect key="frame" x="20" y="514" width="46" height="21.5"/>
+                                                <rect key="frame" x="20" y="445" width="46" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="K56-0y-jjY">
-                                                <rect key="frame" x="20" y="551.5" width="374" height="137"/>
+                                                <rect key="frame" x="20" y="482.5" width="374" height="137"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-8y-7LB">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="137"/>
@@ -213,6 +210,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1hZ-z0-HWI"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="0Bc-Ei-nGX"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-q1-x7W">
@@ -236,6 +234,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Of-op-xfr"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="SG9-Ae-WcN"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i33-0z-IE8">
@@ -259,6 +258,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ksB-3O-ix7"/>
+                                                                    <segue destination="hBt-v3-XOy" kind="show" id="N2a-tT-LrT"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-lo-wvh">
@@ -272,7 +272,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
-                                                <rect key="frame" x="32" y="744.5" width="350" height="52"/>
+                                                <rect key="frame" x="32" y="675.5" width="350" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="RZz-yE-zME"/>
                                                     <constraint firstAttribute="width" constant="350" id="y9e-HH-u8B"/>
@@ -289,18 +289,15 @@
                                             <constraint firstAttribute="trailing" secondItem="Qf2-Fi-L8m" secondAttribute="trailing" constant="20" id="0nK-xp-Nwd"/>
                                             <constraint firstItem="yMZ-eU-gxy" firstAttribute="centerX" secondItem="tiU-HB-77x" secondAttribute="centerX" id="48Y-DC-pU1"/>
                                             <constraint firstItem="yDW-7u-GM6" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="8dw-JT-iZx"/>
-                                            <constraint firstItem="arD-bo-9rf" firstAttribute="top" secondItem="wrC-AT-qYk" secondAttribute="bottom" constant="32" id="GIl-OP-YW6"/>
                                             <constraint firstItem="K56-0y-jjY" firstAttribute="top" secondItem="yDW-7u-GM6" secondAttribute="bottom" constant="16" id="GXA-83-1fy"/>
                                             <constraint firstItem="Qf2-Fi-L8m" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="Gfg-aj-58B"/>
                                             <constraint firstItem="yDW-7u-GM6" firstAttribute="top" secondItem="Qf2-Fi-L8m" secondAttribute="bottom" constant="32" id="IQI-6W-Kkl"/>
-                                            <constraint firstItem="wrC-AT-qYk" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="V6c-8c-f5Y"/>
                                             <constraint firstAttribute="height" constant="850" id="Vgm-IA-XKt"/>
                                             <constraint firstItem="Qf2-Fi-L8m" firstAttribute="top" secondItem="TZp-G5-S2E" secondAttribute="bottom" constant="16" id="Wqa-ZX-VxK"/>
                                             <constraint firstItem="K56-0y-jjY" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="XJn-9M-7xO"/>
                                             <constraint firstItem="qZf-7X-1mT" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="cAT-t1-yeV"/>
                                             <constraint firstItem="TZp-G5-S2E" firstAttribute="top" secondItem="qZf-7X-1mT" secondAttribute="bottom" constant="32" id="dVS-8M-gTy"/>
                                             <constraint firstItem="arD-bo-9rf" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="dYT-gF-32s"/>
-                                            <constraint firstItem="wrC-AT-qYk" firstAttribute="top" secondItem="tiU-HB-77x" secondAttribute="top" constant="40" id="hrA-hk-pYC"/>
                                             <constraint firstAttribute="trailing" secondItem="qZf-7X-1mT" secondAttribute="trailing" constant="20" id="hzG-8a-esd"/>
                                             <constraint firstItem="yMZ-eU-gxy" firstAttribute="top" secondItem="K56-0y-jjY" secondAttribute="bottom" constant="56" id="iDc-Kh-Lxp"/>
                                             <constraint firstItem="TZp-G5-S2E" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="obX-tQ-QLF"/>
@@ -325,9 +322,10 @@
                             <constraint firstItem="je4-9W-ju3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="HG2-Hw-Zq0"/>
                             <constraint firstItem="tiU-HB-77x" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="JxW-D4-5le"/>
                             <constraint firstItem="je4-9W-ju3" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="VER-SV-Pnx"/>
+                            <constraint firstItem="arD-bo-9rf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="iyx-Ac-WlM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Goals" id="4Ha-1o-on0"/>
+                    <navigationItem key="navigationItem" title="Goals" largeTitleDisplayMode="always" id="4Ha-1o-on0"/>
                     <connections>
                         <outlet property="arts1Btn" destination="tcK-3j-2EC" id="IZn-KS-Mp3"/>
                         <outlet property="arts2Btn" destination="EmY-M3-e6u" id="OyR-8m-N3C"/>
@@ -345,12 +343,55 @@
             </objects>
             <point key="canvasLocation" x="1466.6666666666667" y="103.79464285714285"/>
         </scene>
+        <!--New Task-->
+        <scene sceneID="AcW-hK-Xgr">
+            <objects>
+                <viewController title="New Task" id="hBt-v3-XOy" customClass="NewTaskViewController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Oq-ia-6AG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
+                                <rect key="frame" x="20" y="186" width="374" height="130"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
+                                <rect key="frame" x="20" y="128" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Vx-5M-pgH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="Hcv-34-soO" secondAttribute="trailing" constant="20" id="ApC-Zj-g6e"/>
+                            <constraint firstItem="f1E-w5-TOS" firstAttribute="top" secondItem="Hcv-34-soO" secondAttribute="bottom" constant="24" id="GTH-Rc-3KQ"/>
+                            <constraint firstItem="Hcv-34-soO" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="Ut4-Ih-1zR"/>
+                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="f1E-w5-TOS" secondAttribute="bottom" priority="250" constant="497" id="fbK-nJ-4Tf"/>
+                            <constraint firstItem="f1E-w5-TOS" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="p2A-y3-4O5"/>
+                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" constant="20" id="pOp-bU-X5i"/>
+                            <constraint firstItem="Hcv-34-soO" firstAttribute="top" secondItem="9Vx-5M-pgH" secondAttribute="top" constant="40" id="tUZ-AY-EjC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Task" largeTitleDisplayMode="never" id="Dcp-gv-GlL">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="wDA-nB-PJ1"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="f1E-w5-TOS" id="XAE-Rx-YBP"/>
+                        <outlet property="textField" destination="Hcv-34-soO" id="cnz-dl-0qi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vK-0P-YHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="107"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lBo-mG-FT4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qDt-ID-ER8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="qDt-ID-ER8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PkC-r1-zTI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="PkC-r1-zTI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -360,9 +401,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPB-mG-UZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="104"/>
+            <point key="canvasLocation" x="636" y="104"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Bc-Ei-nGX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
