@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="11"/>
     <dependencies>
@@ -46,18 +46,32 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="69"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" rowHeight="200" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9N-aw-f0f" id="m15-B0-lCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYz-OX-dKD">
-                                                    <rect key="frame" x="20" y="10" width="374" height="49"/>
+                                                    <rect key="frame" x="20" y="10" width="374" height="180"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-NY-hT8">
-                                                            <rect key="frame" x="15" y="15" width="344" height="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️⭐️⭐️" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-Cn-VAO">
+                                                            <rect key="frame" x="15" y="5" width="344" height="102"/>
+                                                            <accessibility key="accessibilityConfiguration" label="Title of the task"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
+                                                            <color key="textColor" name="Labels"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="aaaa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-NY-hT8">
+                                                            <rect key="frame" x="15" y="112" width="344" height="19"/>
+                                                            <accessibility key="accessibilityConfiguration" label="Title of the task"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
+                                                            <color key="textColor" name="Labels"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="15 xp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZr-T8-qUs">
+                                                            <rect key="frame" x="15" y="146" width="344" height="19"/>
                                                             <accessibility key="accessibilityConfiguration" label="Title of the task"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                             <color key="textColor" name="Labels"/>
@@ -67,10 +81,16 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="VMY-NY-hT8" firstAttribute="leading" secondItem="zYz-OX-dKD" secondAttribute="leading" constant="15" id="Epa-Xh-kU2"/>
-                                                        <constraint firstAttribute="trailing" secondItem="VMY-NY-hT8" secondAttribute="trailing" constant="15" id="HMz-my-JnC"/>
-                                                        <constraint firstItem="VMY-NY-hT8" firstAttribute="top" secondItem="zYz-OX-dKD" secondAttribute="top" constant="15" id="RMN-we-biF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="VMY-NY-hT8" secondAttribute="bottom" constant="15" id="qvF-Ln-1on"/>
+                                                        <constraint firstItem="VMY-NY-hT8" firstAttribute="leading" secondItem="zYz-OX-dKD" secondAttribute="leading" constant="15" id="0v8-wo-j3U"/>
+                                                        <constraint firstItem="NZr-T8-qUs" firstAttribute="top" secondItem="VMY-NY-hT8" secondAttribute="bottom" constant="15" id="8kl-hm-6cF"/>
+                                                        <constraint firstItem="bdc-Cn-VAO" firstAttribute="leading" secondItem="zYz-OX-dKD" secondAttribute="leading" constant="15" id="AWZ-6j-WJU"/>
+                                                        <constraint firstItem="bdc-Cn-VAO" firstAttribute="top" secondItem="zYz-OX-dKD" secondAttribute="top" constant="5" id="AsV-3N-qfJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NZr-T8-qUs" secondAttribute="trailing" constant="15" id="Oqv-Xi-cBu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VMY-NY-hT8" secondAttribute="trailing" constant="15" id="SaW-EX-MrS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bdc-Cn-VAO" secondAttribute="trailing" constant="15" id="g4o-bj-6d9"/>
+                                                        <constraint firstItem="NZr-T8-qUs" firstAttribute="leading" secondItem="zYz-OX-dKD" secondAttribute="leading" constant="15" id="lNf-8x-BkN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NZr-T8-qUs" secondAttribute="bottom" constant="15" id="oNv-f4-7iX"/>
+                                                        <constraint firstItem="VMY-NY-hT8" firstAttribute="top" secondItem="bdc-Cn-VAO" secondAttribute="bottom" constant="5" id="ptM-Ta-1U3"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
