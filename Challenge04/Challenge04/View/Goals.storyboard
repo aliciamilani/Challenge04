@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="je4-9W-ju3">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="624"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiU-HB-77x">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
@@ -104,6 +105,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="backgroundGoals"/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-G5-S2E">
                                                 <rect key="frame" x="20" y="238.5" width="65.5" height="21.5"/>
@@ -187,6 +189,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="backgroundGoals"/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-7u-GM6">
                                                 <rect key="frame" x="20" y="445" width="46" height="21.5"/>
@@ -270,6 +273,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" name="backgroundGoals"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
                                                 <rect key="frame" x="32" y="675.5" width="350" height="52"/>
@@ -284,7 +288,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="backgroundGoals"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Qf2-Fi-L8m" secondAttribute="trailing" constant="20" id="0nK-xp-Nwd"/>
                                             <constraint firstItem="yMZ-eU-gxy" firstAttribute="centerX" secondItem="tiU-HB-77x" secondAttribute="centerX" id="48Y-DC-pU1"/>
@@ -306,6 +310,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="backgroundGoals"/>
                                 <constraints>
                                     <constraint firstItem="tiU-HB-77x" firstAttribute="leading" secondItem="je4-9W-ju3" secondAttribute="leading" id="5ay-SJ-z3Z"/>
                                     <constraint firstAttribute="trailing" secondItem="tiU-HB-77x" secondAttribute="trailing" id="pTX-b6-dE3"/>
@@ -315,7 +320,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundGoals"/>
                         <constraints>
                             <constraint firstItem="je4-9W-ju3" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="CqC-pe-IIq"/>
                             <constraint firstItem="je4-9W-ju3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ExR-Ax-Qfo"/>
@@ -325,7 +330,9 @@
                             <constraint firstItem="arD-bo-9rf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="iyx-Ac-WlM"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Goals" image="target" catalog="system" id="fNQ-RA-KUf"/>
                     <navigationItem key="navigationItem" title="Goals" largeTitleDisplayMode="always" id="4Ha-1o-on0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arts1Btn" destination="tcK-3j-2EC" id="IZn-KS-Mp3"/>
                         <outlet property="arts2Btn" destination="EmY-M3-e6u" id="OyR-8m-N3C"/>
@@ -352,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
-                                <rect key="frame" x="20" y="186" width="374" height="130"/>
+                                <rect key="frame" x="20" y="186" width="374" height="81"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
@@ -408,6 +415,10 @@
         <segue reference="0Bc-Ei-nGX"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="target" catalog="system" width="128" height="121"/>
+        <namedColor name="backgroundGoals">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

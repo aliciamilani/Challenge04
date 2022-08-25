@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jVh-qD-8gY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="11"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Daily Tasks Controller-->
+        <!--Day-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="DailyTasksController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,36 +43,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-Ps-ofN">
-                                <rect key="frame" x="0.0" y="240" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="573"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" rowHeight="200" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9N-aw-f0f" id="m15-B0-lCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYz-OX-dKD">
-                                                    <rect key="frame" x="20" y="10" width="374" height="180"/>
+                                                    <rect key="frame" x="20" y="10" width="374" height="92"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️⭐️⭐️" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-Cn-VAO">
-                                                            <rect key="frame" x="15" y="5" width="344" height="102"/>
+                                                            <rect key="frame" x="15" y="5" width="344" height="14"/>
                                                             <accessibility key="accessibilityConfiguration" label="Title of the task"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
                                                             <color key="textColor" name="Labels"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="aaaa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-NY-hT8">
-                                                            <rect key="frame" x="15" y="112" width="344" height="19"/>
+                                                            <rect key="frame" x="15" y="24" width="344" height="19"/>
                                                             <accessibility key="accessibilityConfiguration" label="Title of the task"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                             <color key="textColor" name="Labels"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="15 xp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZr-T8-qUs">
-                                                            <rect key="frame" x="15" y="146" width="344" height="19"/>
+                                                            <rect key="frame" x="15" y="58" width="344" height="19"/>
                                                             <accessibility key="accessibilityConfiguration" label="Title of the task"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                             <color key="textColor" name="Labels"/>
@@ -162,6 +163,7 @@
                             <constraint firstItem="jyQ-Ps-ofN" firstAttribute="top" secondItem="MLr-9F-EOh" secondAttribute="bottom" constant="20" id="ylL-Pn-4BV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Day" image="sun.min.fill" catalog="system" id="w9I-P6-ezJ"/>
                     <connections>
                         <outlet property="dateLabel" destination="MLr-9F-EOh" id="oSp-Xa-yYK"/>
                         <outlet property="messageLabel" destination="Nea-3g-J4E" id="koc-tp-Nbz"/>
@@ -171,11 +173,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="59.598214285714285"/>
+            <point key="canvasLocation" x="928.98550724637687" y="59.598214285714285"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="XIO-tW-8BT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Goals" id="hzG-bW-Feb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kRW-ma-qlZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdH-UW-2ZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="516"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BMV-DP-fkf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jVh-qD-8gY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KGr-G8-FXG">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="lpp-3z-TfL"/>
+                        <segue destination="hzG-bW-Feb" kind="relationship" relationship="viewControllers" id="T5B-xf-TsW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQ4-gh-tPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-383" y="60"/>
         </scene>
     </scenes>
     <resources>
         <image name="Moo" width="156" height="156"/>
+        <image name="sun.min.fill" catalog="system" width="128" height="121"/>
         <namedColor name="BackgroundCard">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -188,5 +219,8 @@
         <namedColor name="backgroundTasks">
             <color red="0.4309999942779541" green="0.55299997329711914" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
