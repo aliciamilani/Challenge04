@@ -38,6 +38,7 @@
 		8DB5325028AE9BD500327621 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB5323728AE9B8300327621 /* Poppins-ExtraLightItalic.ttf */; };
 		8DB5325128AE9BD500327621 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB5323628AE9B8300327621 /* Poppins-ThinItalic.ttf */; };
 		8DB5325228AE9BD500327621 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB5323A28AE9B8300327621 /* Poppins-Bold.ttf */; };
+		8DC408AA28B6636D00847C28 /* GoalsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC408A928B6636D00847C28 /* GoalsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		8DB5323D28AE9B8300327621 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8DB5323E28AE9B8300327621 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		8DB5323F28AE9B8300327621 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		8DC408A928B6636D00847C28 /* GoalsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		8B54985828ABC5F600299D02 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8DC408A928B6636D00847C28 /* GoalsController.swift */,
 				8DB5322C28AE9A1200327621 /* ViewController.swift */,
 				8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */,
 				8BDB1F7728AD34BD009C945D /* CardCell.swift */,
@@ -268,6 +271,7 @@
 				8D745E2128ABCC4300F6ED75 /* HumorSelection.swift in Sources */,
 				8B1E611928ABEA29006FB525 /* Task.swift in Sources */,
 				8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */,
+				8DC408AA28B6636D00847C28 /* GoalsController.swift in Sources */,
 				8BB52E2328ABC4E300916CD5 /* AppDelegate.swift in Sources */,
 				8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */,
 				8B1E611B28ABEA35006FB525 /* Goal.swift in Sources */,
@@ -416,7 +420,7 @@
 				INFOPLIST_FILE = Challenge04/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = HumorView;
+				INFOPLIST_KEY_UIMainStoryboardFile = Goals;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,7 +448,7 @@
 				INFOPLIST_FILE = Challenge04/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = HumorView;
+				INFOPLIST_KEY_UIMainStoryboardFile = Goals;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
