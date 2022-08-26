@@ -13,7 +13,7 @@ class CardCell: UITableViewCell {
     
     @IBOutlet weak var cardView: UIView!
     
-    func configure(title: String, description: String){
+    func configure(title: String){
         titleLabel.text = title
         cardView.layer.cornerRadius = 12.0
     }

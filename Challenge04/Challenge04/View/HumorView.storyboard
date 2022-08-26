@@ -224,7 +224,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RWF-BC-1Wa"/>
-                        <color key="backgroundColor" name="View"/>
+                        <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="1g6-dk-zZc" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="0wV-Xf-O07"/>
@@ -274,17 +274,17 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Background">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GoButton">
-            <color red="0.82400000095367432" green="0.51800000667572021" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HumorButtons">
-            <color red="0.79199999570846558" green="0.79600000381469727" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78823529411764703" green="0.792156862745098" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainTitle">
-            <color red="0.82400000095367432" green="0.51800000667572021" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="View">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

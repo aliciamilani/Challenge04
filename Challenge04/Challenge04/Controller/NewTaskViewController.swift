@@ -15,7 +15,16 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    let options: [String] = ["", "Duration", ""]
+    struct Options {
+        let title: String
+        let description: String
+    }
+    
+    let data: [Options] = [
+        Options(title: "Dificulty", description: "⭐️⭐️⭐️"),
+        Options(title: "Duration", description: "I don't know >"),
+        Options(title: "Frequency", description: "Never >"),
+    ]
     
     
     override func viewDidLoad() {
@@ -25,14 +34,17 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
+        
+        cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         
         return cell
     }
     
 }
+

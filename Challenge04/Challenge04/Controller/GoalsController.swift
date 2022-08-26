@@ -28,10 +28,6 @@ class GoalsController: UIViewController {
         super.viewDidLoad()
         confirmButton.isEnabled = false
         confirmButton.alpha = 0.5
-        
-        
-        
-        
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
@@ -41,9 +37,9 @@ class GoalsController: UIViewController {
     
     @IBAction func goalsChoice(_ sender: UIButton) {
         confirmButton.alpha = 1.0
+        
+        
         confirmButton.isEnabled = true
-        
-        
-        
+
     }
 }
