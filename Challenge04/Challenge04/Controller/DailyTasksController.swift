@@ -39,7 +39,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
-        cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
+        cell.configure(title: data[indexPath.row].title)
         
         return cell
     }

@@ -46,7 +46,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HdY-lT-Zgz"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="Qdh-ZR-szG"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="Qdh-ZR-szG"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-2U-Z8N">
@@ -70,7 +70,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6m3-VR-XZI"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="iYW-PE-4sZ"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="iYW-PE-4sZ"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-JC-UCU">
@@ -94,7 +94,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tbC-QG-gsF"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="6bg-bM-eqR"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="6bg-bM-eqR"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StU-GB-IcL">
@@ -131,7 +131,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RS4-zg-aBn"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="A5q-hL-7Ul"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="A5q-hL-7Ul"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-wY-MdS">
@@ -155,7 +155,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oG-Pw-3Cq"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="yUl-gt-IUf"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="yUl-gt-IUf"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-cW-1ry">
@@ -179,7 +179,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9nD-vZ-Evc"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="Zj8-rA-sSm"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="Zj8-rA-sSm"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxL-aR-t5i">
@@ -216,7 +216,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1hZ-z0-HWI"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="0Bc-Ei-nGX"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="0Bc-Ei-nGX"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-q1-x7W">
@@ -240,7 +240,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Of-op-xfr"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="SG9-Ae-WcN"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="SG9-Ae-WcN"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i33-0z-IE8">
@@ -264,7 +264,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ksB-3O-ix7"/>
-                                                                    <segue destination="hBt-v3-XOy" kind="show" id="N2a-tT-LrT"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" id="N2a-tT-LrT"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crochet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-lo-wvh">
@@ -384,35 +384,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
-                                <rect key="frame" x="20" y="152" width="374" height="193"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
-                                <rect key="frame" x="20" y="84" width="374" height="44"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-ip-b3T">
+                                <rect key="frame" x="0.0" y="12" width="414" height="830"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
+                                <rect key="frame" x="20" y="96" width="374" height="44"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ubr-fQ-Zaq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
+                                <rect key="frame" x="20" y="164" width="374" height="137"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="iDG-li-Wco"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellGoals" rowHeight="60" id="hZr-V6-8VV" customClass="CardCellGoals" customModule="Challenge04" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZr-V6-8VV" id="z8P-Gb-HNf">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-2C-zjZ">
+                                                    <rect key="frame" x="20" y="11" width="66" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" name="OptionsText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't know" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkU-Ze-7Vd">
+                                                    <rect key="frame" x="256" y="11" width="98" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" name="DescriptionText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JNp-2C-zjZ" firstAttribute="leading" secondItem="z8P-Gb-HNf" secondAttribute="leadingMargin" id="7db-qh-B6Q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JNp-2C-zjZ" secondAttribute="bottom" id="9Be-9J-3es"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GkU-Ze-7Vd" secondAttribute="bottom" id="BbT-ah-Eld"/>
+                                                <constraint firstItem="JNp-2C-zjZ" firstAttribute="top" secondItem="z8P-Gb-HNf" secondAttribute="topMargin" id="Xgk-BR-pHG"/>
+                                                <constraint firstItem="GkU-Ze-7Vd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="JNp-2C-zjZ" secondAttribute="trailing" constant="194" id="Zsu-TQ-bY6"/>
+                                                <constraint firstItem="GkU-Ze-7Vd" firstAttribute="top" secondItem="z8P-Gb-HNf" secondAttribute="topMargin" id="tRM-1e-5Sp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GkU-Ze-7Vd" secondAttribute="trailing" id="y3t-Tt-QCn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionOptions" destination="GkU-Ze-7Vd" id="sk0-I0-t7u"/>
+                                            <outlet property="titleOptions" destination="JNp-2C-zjZ" id="jHU-7f-dyu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vx-5M-pgH"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="rZq-ip-b3T" secondAttribute="trailing" id="ASh-h4-q4b"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="Hcv-34-soO" secondAttribute="trailing" constant="20" id="ApC-Zj-g6e"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="top" secondItem="Hcv-34-soO" secondAttribute="bottom" constant="24" id="GTH-Rc-3KQ"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="Ut4-Ih-1zR"/>
-                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="f1E-w5-TOS" secondAttribute="bottom" priority="250" constant="497" id="fbK-nJ-4Tf"/>
+                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="top" secondItem="rZq-ip-b3T" secondAttribute="top" constant="44" id="Yuq-ig-jez"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="p2A-y3-4O5"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" constant="20" id="pOp-bU-X5i"/>
+                            <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="rZq-ip-b3T" secondAttribute="bottom" id="qQU-yT-Xl3"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="top" secondItem="9Vx-5M-pgH" secondAttribute="top" constant="40" id="tUZ-AY-EjC"/>
+                            <constraint firstItem="rZq-ip-b3T" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" id="z4v-4L-0eS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" largeTitleDisplayMode="never" id="Dcp-gv-GlL">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="wDA-nB-PJ1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="wDA-nB-PJ1">
+                            <color key="tintColor" name="FinishButton"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="f1E-w5-TOS" id="XAE-Rx-YBP"/>
@@ -421,19 +479,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vK-0P-YHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2281" y="107"/>
+            <point key="canvasLocation" x="3189.8550724637685" y="106.47321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gBd-P4-ZUo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4P9-7B-fig" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bYW-Hs-Rs8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qea-5M-SCB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hBt-v3-XOy" kind="relationship" relationship="rootViewController" id="KbN-0w-lQx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2M-vH-7VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279.7101449275365" y="106.47321428571428"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Bc-Ei-nGX"/>
+        <segue reference="Zj8-rA-sSm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="target" catalog="system" width="128" height="121"/>
         <namedColor name="Background">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="DescriptionText">
+            <color red="0.65490196078431373" green="0.6588235294117647" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="FinishButton">
             <color red="0.73725490196078436" green="0.46274509803921571" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OptionsText">
+            <color red="0.31372549019607843" green="0.32156862745098042" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.23137254901960785" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
