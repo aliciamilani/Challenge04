@@ -93,59 +93,59 @@ func getTasks() -> ([Task]){
             codGoal: goalJogos
         ),
         
-        Task(
-            title: "Send email to Mr. Beto",
-            priority: 3,
-            dificulty: 1,
-            timeForExecution: 1,
-            category: .hobby,
-            codGoal: goalInstrumentos
-        ),
-        
-        Task(
-            title: "Find new kindle cover.",
-            priority: 1,
-            dificulty: 1,
-            timeForExecution: 1,
-            category: .hobby,
-            codGoal: goalLeitura
-        ),
-        
-        Task(
-            title: "Search new sunscreen",
-            priority: 3,
-            dificulty: 1,
-            timeForExecution: 1,
-            category: .hobby,
-            codGoal: goaLSaude
-        ),
-        
-        Task(
-            title: "Update notes",
-            priority: 2,
-            dificulty: 1,
-            timeForExecution: 2,
-            category: .education,
-            codGoal: goalMatematica
-        ),
-        
-        Task(
-            title: "Change guitar string",
-            priority: 2,
-            dificulty: 1,
-            timeForExecution: 1,
-            category: .hobby,
-            codGoal: goalInstrumentos
-        ),
-        
-        Task(
-            title: "Reset Y game",
-            priority: 2,
-            dificulty: 3,
-            timeForExecution: 3,
-            category: .hobby,
-            codGoal: goalJogos
-        ),
+//        Task(
+//            title: "Send email to Mr. Beto",
+//            priority: 3,
+//            dificulty: 1,
+//            timeForExecution: 1,
+//            category: .hobby,
+//            codGoal: goalInstrumentos
+//        ),
+//
+//        Task(
+//            title: "Find new kindle cover.",
+//            priority: 1,
+//            dificulty: 1,
+//            timeForExecution: 1,
+//            category: .hobby,
+//            codGoal: goalLeitura
+//        ),
+//
+//        Task(
+//            title: "Search new sunscreen",
+//            priority: 3,
+//            dificulty: 1,
+//            timeForExecution: 1,
+//            category: .hobby,
+//            codGoal: goaLSaude
+//        ),
+//
+//        Task(
+//            title: "Update notes",
+//            priority: 2,
+//            dificulty: 1,
+//            timeForExecution: 2,
+//            category: .education,
+//            codGoal: goalMatematica
+//        ),
+//
+//        Task(
+//            title: "Change guitar string",
+//            priority: 2,
+//            dificulty: 1,
+//            timeForExecution: 1,
+//            category: .hobby,
+//            codGoal: goalInstrumentos
+//        ),
+//
+//        Task(
+//            title: "Reset Y game",
+//            priority: 2,
+//            dificulty: 3,
+//            timeForExecution: 3,
+//            category: .hobby,
+//            codGoal: goalJogos
+//        ),
     ]
     
     return tasksArray
