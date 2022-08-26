@@ -1,6 +1,6 @@
 <svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="2" y="2" width="144" height="144" rx="12" stroke="#CACBCD" stroke-width="3" stroke-dasharray="14 14"/>
-<rect width="144" height="144" transform="translate(2 2)" fill="url(#pattern0)"/>
+<rect x="2" y="2" width="144" height="144" rx="72" stroke="#CACBCD" stroke-width="3" stroke-dasharray="14 14"/>
+<rect x="2" y="2" width="144" height="144" rx="72" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_258_208" transform="translate(0.159916 0.0553223) scale(0.00181008)"/>
