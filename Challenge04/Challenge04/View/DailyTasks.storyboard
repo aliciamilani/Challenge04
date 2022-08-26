@@ -191,6 +191,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jVh-qD-8gY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KGr-G8-FXG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                     </tabBar>

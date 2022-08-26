@@ -89,7 +89,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         if indexPath != nil {
             let cell = tableView.cellForRow(at: indexPath!)
-            cell?.contentView.backgroundColor = UIColor.init(named: "BackgroundCard")
+            cell?.contentView.backgroundColor = UIColor.init(named: "Background")
         }
         
     }
