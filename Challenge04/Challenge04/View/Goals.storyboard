@@ -18,32 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="je4-9W-ju3">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je4-9W-ju3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiU-HB-77x">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bo-9rf">
-                                                <rect key="frame" x="20" y="32" width="64" height="21.5"/>
+                                                <rect key="frame" x="20" y="53" width="64" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qZf-7X-1mT">
-                                                <rect key="frame" x="20" y="69.5" width="374" height="138.5"/>
+                                                <rect key="frame" x="20" y="90.5" width="264" height="138.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-aU-Grs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="138.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="138.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-33-xFE">
+                                                            <button opaque="NO" contentMode="right" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-33-xFE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="GOM-VH-YOM"/>
                                                                     <constraint firstAttribute="height" constant="111" id="pb2-wF-Aud"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="School"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HdY-lT-Zgz"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="Qdh-ZR-szG"/>
@@ -58,7 +58,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lrj-Di-PuE">
-                                                        <rect key="frame" x="194.5" y="0.0" width="179.5" height="138.5"/>
+                                                        <rect key="frame" x="139.5" y="0.0" width="124.5" height="138.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-Jf-srx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
@@ -67,7 +67,7 @@
                                                                     <constraint firstAttribute="height" constant="111" id="crw-74-ysV"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="University"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6m3-VR-XZI"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="iYW-PE-4sZ"/>
@@ -82,7 +82,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="61G-iT-gF0">
-                                                        <rect key="frame" x="374" y="0.0" width="109" height="138.5"/>
+                                                        <rect key="frame" x="264" y="0.0" width="109" height="138.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brb-0v-c16">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
@@ -110,13 +110,13 @@
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-G5-S2E">
-                                                <rect key="frame" x="20" y="240" width="56" height="21.5"/>
+                                                <rect key="frame" x="20" y="261" width="56" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Qf2-Fi-L8m">
-                                                <rect key="frame" x="20" y="277.5" width="374" height="138.5"/>
+                                                <rect key="frame" x="20" y="298.5" width="374" height="138.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-RU-yto">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="138.5"/>
@@ -128,7 +128,7 @@
                                                                     <constraint firstAttribute="height" constant="111" id="q0b-je-sJp"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Soccer"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RS4-zg-aBn"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="A5q-hL-7Ul"/>
@@ -152,7 +152,7 @@
                                                                     <constraint firstAttribute="height" constant="111" id="tl7-wn-f6n"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Videog"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oG-Pw-3Cq"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="yUl-gt-IUf"/>
@@ -176,7 +176,7 @@
                                                                     <constraint firstAttribute="width" constant="109" id="RLb-6u-Joe"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Bask"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9nD-vZ-Evc"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="Zj8-rA-sSm"/>
@@ -195,13 +195,13 @@
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-7u-GM6">
-                                                <rect key="frame" x="20" y="448" width="26.5" height="21.5"/>
+                                                <rect key="frame" x="20" y="469" width="26.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="K56-0y-jjY">
-                                                <rect key="frame" x="20" y="485.5" width="374" height="138.5"/>
+                                                <rect key="frame" x="20" y="506.5" width="374" height="138.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-8y-7LB">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="138.5"/>
@@ -213,7 +213,7 @@
                                                                     <constraint firstAttribute="width" constant="109" id="gas-u5-b3A"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Paint"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1hZ-z0-HWI"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="0Bc-Ei-nGX"/>
@@ -237,7 +237,7 @@
                                                                     <constraint firstAttribute="height" constant="111" id="z3B-jf-Do4"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Draw"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Of-op-xfr"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="SG9-Ae-WcN"/>
@@ -261,7 +261,7 @@
                                                                     <constraint firstAttribute="width" constant="109" id="hgz-19-MN4"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ksB-3O-ix7"/>
                                                                     <segue destination="4P9-7B-fig" kind="show" id="N2a-tT-LrT"/>
@@ -280,7 +280,7 @@
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
-                                                <rect key="frame" x="32" y="659" width="350" height="46"/>
+                                                <rect key="frame" x="32" y="680" width="350" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="RZz-yE-zME"/>
                                                     <constraint firstAttribute="width" constant="350" id="y9e-HH-u8B"/>
@@ -317,7 +317,7 @@
                                             <constraint firstItem="qZf-7X-1mT" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="cAT-t1-yeV"/>
                                             <constraint firstItem="TZp-G5-S2E" firstAttribute="top" secondItem="qZf-7X-1mT" secondAttribute="bottom" constant="32" id="dVS-8M-gTy"/>
                                             <constraint firstItem="arD-bo-9rf" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="dYT-gF-32s"/>
-                                            <constraint firstAttribute="trailing" secondItem="qZf-7X-1mT" secondAttribute="trailing" constant="20" id="hzG-8a-esd"/>
+                                            <constraint firstAttribute="trailing" secondItem="qZf-7X-1mT" secondAttribute="trailing" constant="130" id="hzG-8a-esd"/>
                                             <constraint firstItem="yMZ-eU-gxy" firstAttribute="top" secondItem="K56-0y-jjY" secondAttribute="bottom" constant="35" id="iDc-Kh-Lxp"/>
                                             <constraint firstItem="TZp-G5-S2E" firstAttribute="leading" secondItem="tiU-HB-77x" secondAttribute="leading" constant="20" id="obX-tQ-QLF"/>
                                             <constraint firstAttribute="trailing" secondItem="K56-0y-jjY" secondAttribute="trailing" constant="20" id="pDx-Xw-J5O"/>
@@ -384,7 +384,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-ip-b3T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-ip-b3T">
                                 <rect key="frame" x="0.0" y="12" width="414" height="830"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
@@ -404,7 +404,8 @@
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
                                 <rect key="frame" x="20" y="164" width="374" height="137"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="TextField"/>
+                                <color key="tintColor" name="TextField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="iDG-li-Wco"/>
                                 </constraints>
@@ -429,6 +430,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="TextField"/>
+                                            <color key="tintColor" name="TextField"/>
                                             <constraints>
                                                 <constraint firstItem="JNp-2C-zjZ" firstAttribute="leading" secondItem="z8P-Gb-HNf" secondAttribute="leadingMargin" id="7db-qh-B6Q"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="JNp-2C-zjZ" secondAttribute="bottom" id="9Be-9J-3es"/>
@@ -439,6 +442,8 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="GkU-Ze-7Vd" secondAttribute="trailing" id="y3t-Tt-QCn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="TextField"/>
+                                        <color key="tintColor" name="TextField"/>
                                         <connections>
                                             <outlet property="descriptionOptions" destination="GkU-Ze-7Vd" id="sk0-I0-t7u"/>
                                             <outlet property="titleOptions" destination="JNp-2C-zjZ" id="jHU-7f-dyu"/>
@@ -516,6 +521,15 @@
         <segue reference="Zj8-rA-sSm"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Bask" width="109" height="111"/>
+        <image name="Crochet" width="109" height="111"/>
+        <image name="Draw" width="109" height="111"/>
+        <image name="Paint" width="109" height="111"/>
+        <image name="Portrait-background-tasks" width="390" height="844"/>
+        <image name="School" width="109" height="111"/>
+        <image name="Soccer" width="109" height="111"/>
+        <image name="University" width="109" height="111"/>
+        <image name="Videog" width="109" height="111"/>
         <image name="target" catalog="system" width="128" height="121"/>
         <namedColor name="Background">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -537,9 +551,6 @@
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

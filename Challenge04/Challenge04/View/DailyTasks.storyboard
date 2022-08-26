@@ -27,6 +27,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, cowboy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-on-cNY">
+                                <rect key="frame" x="20" y="84" width="374" height="28"/>
+                                <accessibility key="accessibilityConfiguration" label="Hey, Cowboy!"/>
+                                <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="24"/>
+                                <color key="textColor" name="TitleTasks"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-3g-J4E">
+                                <rect key="frame" x="20" y="132" width="272" height="17"/>
+                                <accessibility key="accessibilityConfiguration" label="Here are some activities for you!"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moo" translatesAutoresizingMaskIntoConstraints="NO" id="ilu-53-Epr">
+                                <rect key="frame" x="294" y="43" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="MDi-j4-fV6"/>
+                                    <constraint firstAttribute="width" constant="150" id="wAf-ry-t7G"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9p-BH-k5p">
                                 <rect key="frame" x="0.0" y="169" width="414" height="727"/>
                                 <color key="backgroundColor" name="Background"/>
@@ -123,27 +144,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, cowboy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-on-cNY">
-                                <rect key="frame" x="20" y="84" width="374" height="28"/>
-                                <accessibility key="accessibilityConfiguration" label="Hey, Cowboy!"/>
-                                <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="24"/>
-                                <color key="textColor" name="TitleTasks"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-3g-J4E">
-                                <rect key="frame" x="20" y="132" width="272" height="17"/>
-                                <accessibility key="accessibilityConfiguration" label="Here are some activities for you!"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moo" translatesAutoresizingMaskIntoConstraints="NO" id="ilu-53-Epr">
-                                <rect key="frame" x="294" y="43" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="MDi-j4-fV6"/>
-                                    <constraint firstAttribute="width" constant="150" id="wAf-ry-t7G"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="backgroundTasks"/>
@@ -210,6 +210,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                         <color key="tintColor" name="FinishButton"/>
+                        <color key="barTintColor" systemColor="quaternarySystemFillColor"/>
                         <color key="selectedImageTintColor" name="FinishButton"/>
                     </tabBar>
                     <connections>
