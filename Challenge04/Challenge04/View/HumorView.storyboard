@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="294.20289855072468" y="49.553571428571423"/>
         </scene>
-        <!--Goals-->
+        <!--DailyTasks-->
         <scene sceneID="snO-mE-KYl">
             <objects>
-                <viewControllerPlaceholder storyboardName="Goals" id="uk7-BW-M5M" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DailyTasks" id="uk7-BW-M5M" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gLz-kk-6I5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ae-8w-LF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

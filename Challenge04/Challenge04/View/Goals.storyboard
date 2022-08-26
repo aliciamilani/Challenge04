@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--DailyTasks-->
+        <scene sceneID="rLe-6i-mEV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DailyTasks" id="TZP-sl-bQJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gg-tR-0rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885" y="532"/>
+        </scene>
         <!--Goals-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -279,7 +287,7 @@
                                                 <color key="backgroundColor" name="Background"/>
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
                                                 <rect key="frame" x="32" y="680" width="350" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="RZz-yE-zME"/>
@@ -299,6 +307,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="confirmAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NrS-yE-mo6"/>
+                                                    <segue destination="TZP-sl-bQJ" kind="presentation" modalPresentationStyle="fullScreen" id="IfQ-go-lPp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -489,10 +498,10 @@
             </objects>
             <point key="canvasLocation" x="3189.8550724637685" y="106.47321428571428"/>
         </scene>
-        <!--DailyTasks-->
+        <!--HumorView-->
         <scene sceneID="b5w-nc-tcz">
             <objects>
-                <viewControllerPlaceholder storyboardName="DailyTasks" id="GHo-gw-GMb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HumorView" id="GHo-gw-GMb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRc-s9-Srn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3999" y="107"/>
