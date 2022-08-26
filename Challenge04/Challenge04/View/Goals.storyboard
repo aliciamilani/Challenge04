@@ -470,6 +470,9 @@
                     <navigationItem key="navigationItem" title="New Task" largeTitleDisplayMode="never" id="Dcp-gv-GlL">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="wDA-nB-PJ1">
                             <color key="tintColor" name="FinishButton"/>
+                            <connections>
+                                <segue destination="GHo-gw-GMb" kind="presentation" modalPresentationStyle="fullScreen" id="Q8q-LK-F1w"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -480,6 +483,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vK-0P-YHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3189.8550724637685" y="106.47321428571428"/>
+        </scene>
+        <!--DailyTasks-->
+        <scene sceneID="b5w-nc-tcz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DailyTasks" id="GHo-gw-GMb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRc-s9-Srn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3999" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBd-P4-ZUo">
