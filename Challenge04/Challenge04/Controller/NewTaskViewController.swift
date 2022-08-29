@@ -15,22 +15,24 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     struct Options {
         let title: String
         let description: String
     }
     
     let data: [Options] = [
-        Options(title: "Dificulty", description: "⭐️⭐️⭐️"),
+        Options(title: "Difficulty", description: "⭐️⭐️⭐️"),
         Options(title: "Duration", description: "I don't know >"),
         Options(title: "Frequency", description: "Never >"),
     ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,6 +47,24 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (data[indexPath.item].title == "Duration") {
+            performSegue(withIdentifier: "durationSegue", sender: self)
+        }
+        if (data[indexPath.item].title == "Frequency") {
+            performSegue(withIdentifier: "frequencySegue", sender: self)
+        }
+        if (data[indexPath.item].title == "Difficulty") {
+            performSegue(withIdentifier: "difficultySegue", sender: self)
+        }
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//      if let destination = segue.destination as? DurationController {
+//          let _ = 1
+//      }
+//    }
     
 }
 
