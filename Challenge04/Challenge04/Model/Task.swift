@@ -38,8 +38,8 @@ class Task {
         self.cod = UUID().uuidString
         self.title = ""
         
-        self.difficulty = -1
-        self.duration = -1
+        self.difficulty = 0
+        self.duration = 0
         
         self.points = 0
         self.category = .none

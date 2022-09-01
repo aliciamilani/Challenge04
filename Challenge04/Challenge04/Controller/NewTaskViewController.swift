@@ -27,18 +27,38 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         Options(title: "Duration", description: "I don't know >")
     ]
     
+    func getText(_ num: Int) -> String {
+        switch (num){
+        case 0:
+            return "I dont't know"
+        case 1:
+            return "Low"
+        case 2:
+            return "Moderate"
+        case 3:
+            return "High"
+        default:
+            return "I dont't know"
+        }
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
         
-        if (!currentTask.title.isEmpty) {
-            textField.text = currentTask.title
-            data[0].description = String(currentTask.difficulty)
-            data[1].description = String(currentTask.duration)
-        }
+        textField.text = currentTask.title
+        data[0].description = getText(currentTask.difficulty)
+        data[1].description = getText(currentTask.duration)
         
+        configureTextFields()
+        
+    }
+    
+    private func configureTextFields(){
+        textField.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,6 +84,13 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         if (data[indexPath.item].title == "Difficulty") {
             performSegue(withIdentifier: "difficultySegue", sender: self)
         }
+    }
+}
+
+extension NewTaskViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 

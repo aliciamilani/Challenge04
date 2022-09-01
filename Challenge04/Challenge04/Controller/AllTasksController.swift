@@ -18,8 +18,8 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-    }
     
+    }
     
     @IBAction func addTasks(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "editSegue", sender: self)
