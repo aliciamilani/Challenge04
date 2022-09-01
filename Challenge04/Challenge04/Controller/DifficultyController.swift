@@ -10,17 +10,17 @@ import UIKit
 
 class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     struct Options {
         let type: String
+        var check: Bool
     }
     
     let data: [Options] = [
-        Options(type: "Low"),
-        Options(type: "Moderate"),
-        Options(type: "High"),
+        Options(type: "Low", check: true),
+        Options(type: "Moderate", check: false),
+        Options(type: "High", check: false),
     ]
     
     override func viewDidLoad() {
@@ -37,19 +37,20 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDifficulty", for: indexPath) as! CardCellDifficulty
         
-        cell.configure(title: data[indexPath.row].type)
+        cell.configure(title: data[indexPath.row].type, checked: !data[indexPath.row].check)
         
         return cell
     }
-
 }
 
 class CardCellDifficulty: UITableViewCell {
 
+    @IBOutlet weak var checkedImage: UIImageView!
     @IBOutlet weak var titleOptions: UILabel!
     
-    func configure(title: String){
+    func configure(title: String, checked: Bool){
         titleOptions.text = title
+        checkedImage.isHidden = checked
     }
 }
 

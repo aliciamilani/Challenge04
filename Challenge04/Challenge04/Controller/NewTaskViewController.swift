@@ -15,7 +15,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    var currentTask: Task = Task()
     
+    var a = "aaaa"
     
     struct Options {
         let title: String
@@ -33,6 +35,13 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
+        
+        print("task: ", currentTask.goal, currentTask.category, currentTask.cod, currentTask.title)
+        
+        print("testeee ", a)
+        
+        textField.text = a
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

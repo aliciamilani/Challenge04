@@ -59,7 +59,7 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="School"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HdY-lT-Zgz"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="Qdh-ZR-szG"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="schoolSegue" id="Qdh-ZR-szG"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-2U-Z8N">
@@ -518,7 +518,7 @@
                 <viewControllerPlaceholder storyboardName="HumorView" id="GHo-gw-GMb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRc-s9-Srn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3642" y="-1471"/>
+            <point key="canvasLocation" x="3629" y="-530"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBd-P4-ZUo">
@@ -767,18 +767,27 @@
                                                     <color key="textColor" name="OptionsText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zng-jy-XWm">
+                                                    <rect key="frame" x="335.5" y="12" width="18.5" height="36.5"/>
+                                                    <color key="tintColor" name="Checked"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" name="TextField"/>
                                             <color key="tintColor" name="TextField"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="zng-jy-XWm" secondAttribute="trailing" constant="20" id="5R0-rB-RZM"/>
+                                                <constraint firstAttribute="bottom" secondItem="zng-jy-XWm" secondAttribute="bottom" constant="10" id="BIh-ac-CUw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Lc5-zk-C5j" secondAttribute="bottom" id="Zzm-bb-07A"/>
+                                                <constraint firstItem="zng-jy-XWm" firstAttribute="top" secondItem="vcv-uG-mho" secondAttribute="top" constant="10" id="jp9-xZ-frY"/>
                                                 <constraint firstItem="Lc5-zk-C5j" firstAttribute="leading" secondItem="vcv-uG-mho" secondAttribute="leadingMargin" id="p0h-OF-SI8"/>
                                                 <constraint firstItem="Lc5-zk-C5j" firstAttribute="top" secondItem="vcv-uG-mho" secondAttribute="topMargin" id="tPX-Mb-612"/>
+                                                <constraint firstItem="zng-jy-XWm" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Lc5-zk-C5j" secondAttribute="trailing" constant="250" id="xvp-sI-jB7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="TextField"/>
                                         <color key="tintColor" name="TextField"/>
                                         <connections>
+                                            <outlet property="checkedImage" destination="zng-jy-XWm" id="vwI-Tm-c3N"/>
                                             <outlet property="titleOptions" destination="Lc5-zk-C5j" id="tvH-sE-C4S"/>
                                         </connections>
                                     </tableViewCell>
@@ -813,7 +822,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epo-3z-CiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5181" y="-606"/>
+            <point key="canvasLocation" x="5179.7101449275369" y="-606.02678571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nce-KD-ZMn">
@@ -835,7 +844,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zj8-rA-sSm"/>
+        <segue reference="Qdh-ZR-szG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bask" width="109" height="111"/>
@@ -847,9 +856,13 @@
         <image name="Soccer" width="109" height="111"/>
         <image name="University" width="109" height="111"/>
         <image name="Videog" width="109" height="111"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="target" catalog="system" width="128" height="121"/>
         <namedColor name="Background">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Checked">
+            <color red="0.73725490196078436" green="0.46274509803921571" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DescriptionText">
             <color red="0.65490196078431373" green="0.6588235294117647" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
