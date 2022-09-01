@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wuh-w1-0io">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,24 +15,71 @@
         </array>
     </customFonts>
     <scenes>
+        <!--All Tasks-->
+        <scene sceneID="XDj-wy-5ij">
+            <objects>
+                <viewController id="mE9-ZN-4Bb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0N4-Ea-T0U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="679"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
+                                <rect key="frame" x="87" y="810" width="240" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="vVc-ej-dQF" kind="presentation" id="RUf-ZP-NRd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JMB-Qj-CQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="All Tasks" largeTitleDisplayMode="never" id="T5D-wx-V4J">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="L1g-aX-Onv"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="KiN-ho-SDI">
+                            <connections>
+                                <segue destination="hBt-v3-XOy" kind="show" id="lDp-fz-YUa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dna-zY-M5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="105.80357142857143"/>
+        </scene>
         <!--DailyTasks-->
         <scene sceneID="rLe-6i-mEV">
             <objects>
                 <viewControllerPlaceholder storyboardName="DailyTasks" id="TZP-sl-bQJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gg-tR-0rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1467" y="536"/>
+            <point key="canvasLocation" x="746" y="680"/>
+        </scene>
+        <!--HumorView-->
+        <scene sceneID="8rB-wd-ohb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HumorView" id="vVc-ej-dQF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaP-Iu-FRo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="680"/>
         </scene>
         <!--Goals-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="GoalsController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Goals" id="Y6W-OH-hqX" customClass="GoalsController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je4-9W-ju3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiU-HB-77x">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
@@ -59,7 +106,7 @@
                                                                 <buttonConfiguration key="configuration" style="plain" image="School"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HdY-lT-Zgz"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="schoolSegue" id="Qdh-ZR-szG"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="dh6-gr-v3p"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-2U-Z8N">
@@ -83,7 +130,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="University"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6m3-VR-XZI"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="collegeSegue" id="iYW-PE-4sZ"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="ctu-RI-N1I"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-JC-UCU">
@@ -107,7 +154,6 @@
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tbC-QG-gsF"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="6bg-bM-eqR"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estudos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StU-GB-IcL">
@@ -144,7 +190,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Soccer"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RS4-zg-aBn"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="soccerSegue" id="A5q-hL-7Ul"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="QVX-by-ByQ"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-wY-MdS">
@@ -168,7 +214,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Videog"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oG-Pw-3Cq"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="eletronicsSegue" id="yUl-gt-IUf"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="Chk-0J-Sxk"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-cW-1ry">
@@ -192,7 +238,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Bask"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9nD-vZ-Evc"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="basketballSegue" id="Zj8-rA-sSm"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="qbR-z7-yb1"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxL-aR-t5i">
@@ -229,7 +275,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Paint"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1hZ-z0-HWI"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="paintingSegue" id="0Bc-Ei-nGX"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="b6b-TS-BrB"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-q1-x7W">
@@ -253,7 +299,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Draw"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Of-op-xfr"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="drawingSegue" id="SG9-Ae-WcN"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="e3G-H9-T0u"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i33-0z-IE8">
@@ -277,7 +323,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ksB-3O-ix7"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="crochetSegue" id="N2a-tT-LrT"/>
+                                                                    <segue destination="mE9-ZN-4Bb" kind="show" id="zKN-4w-Mih"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crochet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-lo-wvh">
@@ -361,18 +407,8 @@
                             <constraint firstItem="arD-bo-9rf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="iyx-Ac-WlM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Goals" id="fNQ-RA-KUf">
-                        <imageReference key="image" image="target" catalog="system" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color name="FinishButton"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                        <color key="badgeColor" name="FinishButton"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Goals" largeTitleDisplayMode="always" id="4Ha-1o-on0"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="arts1Btn" destination="tcK-3j-2EC" id="IZn-KS-Mp3"/>
                         <outlet property="arts2Btn" destination="EmY-M3-e6u" id="OyR-8m-N3C"/>
@@ -388,21 +424,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="103.79464285714285"/>
+            <point key="canvasLocation" x="745" y="106"/>
         </scene>
         <!--New Task-->
         <scene sceneID="AcW-hK-Xgr">
             <objects>
                 <viewController title="New Task" id="hBt-v3-XOy" customClass="NewTaskViewController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Oq-ia-6AG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-ip-b3T">
-                                <rect key="frame" x="0.0" y="12" width="414" height="830"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
-                                <rect key="frame" x="20" y="96" width="374" height="44"/>
+                                <rect key="frame" x="20" y="128" width="374" height="44"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
@@ -417,7 +453,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
-                                <rect key="frame" x="20" y="164" width="374" height="137"/>
+                                <rect key="frame" x="20" y="196" width="374" height="137"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
@@ -490,7 +526,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Isv-Cr-F3y">
                             <color key="tintColor" name="FinishButton"/>
                             <connections>
-                                <segue destination="Y6W-OH-hqX" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="F15-aZ-jZi"/>
+                                <segue destination="Wuh-w1-0io" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="F15-aZ-jZi"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="wDA-nB-PJ1">
@@ -510,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vK-0P-YHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3035" y="106"/>
+            <point key="canvasLocation" x="2838" y="106"/>
         </scene>
         <!--HumorView-->
         <scene sceneID="b5w-nc-tcz">
@@ -519,25 +555,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRc-s9-Srn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3629" y="-530"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gBd-P4-ZUo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4P9-7B-fig" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="bYW-Hs-Rs8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qea-5M-SCB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="hBt-v3-XOy" kind="relationship" relationship="rootViewController" id="KbN-0w-lQx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l2M-vH-7VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2279.7101449275365" y="106.47321428571428"/>
         </scene>
         <!--Duration-->
         <scene sceneID="xUb-T6-25c">
@@ -617,7 +634,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caj-bp-7Jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5177" y="161"/>
+            <point key="canvasLocation" x="6086.9565217391309" y="160.71428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gCC-TX-FrQ">
@@ -635,7 +652,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd2-IA-PYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="161"/>
+            <point key="canvasLocation" x="5179.7101449275369" y="160.71428571428569"/>
         </scene>
         <!--Frequency-->
         <scene sceneID="hRL-gp-E1b">
@@ -842,9 +859,38 @@
             </objects>
             <point key="canvasLocation" x="4271" y="-606"/>
         </scene>
+        <!--Goals-->
+        <scene sceneID="SFP-1L-HZW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wuh-w1-0io" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Goals" id="fNQ-RA-KUf">
+                        <imageReference key="image" image="target" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="FinishButton"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" name="FinishButton"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TdL-Mo-bR7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="jTG-W0-Lib"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Err-M1-Klh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209" y="106"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="N2a-tT-LrT"/>
+        <segue reference="QVX-by-ByQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bask" width="109" height="111"/>
@@ -857,6 +903,7 @@
         <image name="University" width="109" height="111"/>
         <image name="Videog" width="109" height="111"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="target" catalog="system" width="128" height="121"/>
         <namedColor name="Background">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -881,6 +928,9 @@
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
