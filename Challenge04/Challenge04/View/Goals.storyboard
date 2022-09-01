@@ -29,14 +29,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAllTasks" id="MsY-j7-qMS" customClass="CardCellAllTasks" customModule="Challenge04" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MsY-j7-qMS" id="h0O-OJ-U1R">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-K2-vCr">
-                                                    <rect key="frame" x="40" y="21" width="334" height="21.5"/>
+                                                    <rect key="frame" x="40" y="21" width="334" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -580,7 +580,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRc-s9-Srn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3629" y="-530"/>
+            <point key="canvasLocation" x="3667" y="-604"/>
         </scene>
         <!--Duration-->
         <scene sceneID="xUb-T6-25c">
@@ -656,7 +656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caj-bp-7Jk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4270" y="148"/>
+            <point key="canvasLocation" x="4270" y="442"/>
         </scene>
         <!--Difficulty-->
         <scene sceneID="YpF-hy-j45">
@@ -741,7 +741,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epo-3z-CiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271" y="-593"/>
+            <point key="canvasLocation" x="4270" y="-217"/>
         </scene>
         <!--Goals-->
         <scene sceneID="SFP-1L-HZW">
