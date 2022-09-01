@@ -18,6 +18,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     let data: [Options] = [
+        Options(type: "I don't know", check: true),
         Options(type: "Low", check: true),
         Options(type: "Moderate", check: false),
         Options(type: "High", check: false),
