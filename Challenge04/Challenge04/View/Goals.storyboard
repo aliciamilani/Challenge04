@@ -23,20 +23,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="679"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-37-vMf">
+                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAllTasks" id="MsY-j7-qMS" customClass="CardCellAllTasks" customModule="Challenge04" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAllTasks" rowHeight="59" id="MsY-j7-qMS" customClass="CardCellAllTasks" customModule="Challenge04" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MsY-j7-qMS" id="h0O-OJ-U1R">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-K2-vCr">
-                                                    <rect key="frame" x="40" y="21" width="334" height="21"/>
+                                                    <rect key="frame" x="40" y="21" width="334" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,9 +58,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
-                                <rect key="frame" x="87" y="810" width="240" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
+                                <rect key="frame" x="20" y="810" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="7pp-6k-31k"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
@@ -67,6 +72,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMB-Qj-CQc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="top" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="78" id="0hT-zT-arj"/>
+                            <constraint firstItem="XYC-E9-cQu" firstAttribute="top" secondItem="JMB-Qj-CQc" secondAttribute="top" id="3rO-aV-d6w"/>
+                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="bottom" secondItem="JMB-Qj-CQc" secondAttribute="bottom" id="DaP-2V-rv9"/>
+                            <constraint firstItem="JMB-Qj-CQc" firstAttribute="trailing" secondItem="Z8u-L5-2yR" secondAttribute="trailing" constant="20" id="SL2-Qo-3Bf"/>
+                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" constant="20" id="UKO-Mg-zJo"/>
+                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="centerX" secondItem="JMB-Qj-CQc" secondAttribute="centerX" id="iey-dV-FyZ"/>
+                            <constraint firstItem="XYC-E9-cQu" firstAttribute="trailing" secondItem="JMB-Qj-CQc" secondAttribute="trailing" id="opx-mp-bcx"/>
+                            <constraint firstItem="XYC-E9-cQu" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="zJ0-x8-m9T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All Tasks" largeTitleDisplayMode="never" id="T5D-wx-V4J">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="at3-wf-ofM"/>
