@@ -19,13 +19,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     struct Options {
         let title: String
-        let description: String
+        var description: String
     }
     
-    let data: [Options] = [
-        Options(title: "Difficulty", description: "⭐️⭐️⭐️"),
-        Options(title: "Duration", description: "I don't know >"),
-        Options(title: "Frequency", description: "Never >"),
+    var data: [Options] = [
+        Options(title: "Difficulty", description: "I don't know >"),
+        Options(title: "Duration", description: "I don't know >")
     ]
     
     override func viewDidLoad() {
@@ -34,7 +33,11 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
-        print("task: ", currentTask.goal, currentTask.category, currentTask.cod, currentTask.title)
+        if (!currentTask.title.isEmpty) {
+            textField.text = currentTask.title
+            data[0].description = String(currentTask.difficulty)
+            data[1].description = String(currentTask.duration)
+        }
         
     }
     
@@ -62,12 +65,5 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             performSegue(withIdentifier: "difficultySegue", sender: self)
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//      if let destination = segue.destination as? DurationController {
-//          let _ = 1
-//      }
-//    }
-    
 }
 

@@ -11,6 +11,7 @@
 		8B1E611928ABEA29006FB525 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611828ABEA29006FB525 /* Task.swift */; };
 		8B1E611B28ABEA35006FB525 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611A28ABEA35006FB525 /* Goal.swift */; };
 		8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */; };
+		8B53DA7828C0EECA0046625B /* AllTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DA7728C0EECA0046625B /* AllTasksController.swift */; };
 		8B54985628ABC5D200299D02 /* DailyTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B54985528ABC5D200299D02 /* DailyTasks.storyboard */; };
 		8BB52E2328ABC4E300916CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB52E2228ABC4E300916CD5 /* AppDelegate.swift */; };
 		8BB52E2528ABC4E300916CD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB52E2428ABC4E300916CD5 /* SceneDelegate.swift */; };
@@ -19,7 +20,6 @@
 		8BB8C2E928B8913400C9F49B /* CardCellGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8C2E828B8913400C9F49B /* CardCellGoals.swift */; };
 		8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDB1F7728AD34BD009C945D /* CardCell.swift */; };
 		8BF551E828BCFBAD00F9B2D9 /* DurationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF551E728BCFBAD00F9B2D9 /* DurationController.swift */; };
-		8BF551F028BD099D00F9B2D9 /* FrequencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF551EF28BD099D00F9B2D9 /* FrequencyController.swift */; };
 		8BF551F228BD0EB200F9B2D9 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF551F128BD0EB200F9B2D9 /* DifficultyController.swift */; };
 		8D745E2128ABCC4300F6ED75 /* HumorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */; };
 		8D75176B28B51F140033E38B /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D75176A28B51F140033E38B /* Goals.storyboard */; };
@@ -51,6 +51,7 @@
 		8B1E611828ABEA29006FB525 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8B1E611A28ABEA35006FB525 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTasksController.swift; sourceTree = "<group>"; };
+		8B53DA7728C0EECA0046625B /* AllTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksController.swift; sourceTree = "<group>"; };
 		8B54985528ABC5D200299D02 /* DailyTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyTasks.storyboard; sourceTree = "<group>"; };
 		8BB52E1F28ABC4E300916CD5 /* Challenge04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge04.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB52E2228ABC4E300916CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		8BB8C2E828B8913400C9F49B /* CardCellGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellGoals.swift; sourceTree = "<group>"; };
 		8BDB1F7728AD34BD009C945D /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		8BF551E728BCFBAD00F9B2D9 /* DurationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationController.swift; sourceTree = "<group>"; };
-		8BF551EF28BD099D00F9B2D9 /* FrequencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyController.swift; sourceTree = "<group>"; };
 		8BF551F128BD0EB200F9B2D9 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
 		8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorSelection.swift; sourceTree = "<group>"; };
 		8D75176A28B51F140033E38B /* Goals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 				8BDB1F7728AD34BD009C945D /* CardCell.swift */,
 				8BB8C2E828B8913400C9F49B /* CardCellGoals.swift */,
 				8BF551E728BCFBAD00F9B2D9 /* DurationController.swift */,
-				8BF551EF28BD099D00F9B2D9 /* FrequencyController.swift */,
 				8BF551F128BD0EB200F9B2D9 /* DifficultyController.swift */,
+				8B53DA7728C0EECA0046625B /* AllTasksController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,11 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D745E2128ABCC4300F6ED75 /* HumorSelection.swift in Sources */,
+				8B53DA7828C0EECA0046625B /* AllTasksController.swift in Sources */,
 				8BF551E828BCFBAD00F9B2D9 /* DurationController.swift in Sources */,
 				8B1E611928ABEA29006FB525 /* Task.swift in Sources */,
 				8BB8C2E928B8913400C9F49B /* CardCellGoals.swift in Sources */,
 				8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */,
-				8BF551F028BD099D00F9B2D9 /* FrequencyController.swift in Sources */,
 				8DC408AA28B6636D00847C28 /* GoalsController.swift in Sources */,
 				8BB52E2328ABC4E300916CD5 /* AppDelegate.swift in Sources */,
 				8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */,

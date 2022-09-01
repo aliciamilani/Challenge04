@@ -13,7 +13,6 @@ class Task {
     
     var difficulty : Int
     var duration : Int
-    var frequency : Int
     
     var points: Float
     
@@ -21,16 +20,16 @@ class Task {
     var goal: CategoryGoals
 
     
-    init(title: String, difficulty: Int, duration: Int, frequency: Int, category: CategoryTypes, goal: CategoryGoals){
+    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryGoals){
         self.cod = UUID().uuidString
         self.title = title
         
         self.difficulty = difficulty
         self.duration = duration
-        self.frequency = frequency
         
         // calculate priority
-        self.points = Float(frequency * difficulty * duration)
+        self.points = Float(difficulty + duration)
+        
         self.category = category
         self.goal = goal
     }
@@ -41,7 +40,6 @@ class Task {
         
         self.difficulty = -1
         self.duration = -1
-        self.frequency = -1
         
         self.points = 0
         self.category = .none
@@ -64,7 +62,6 @@ func getTasks() -> ([Task]){
             title: "Study outstanding math subjects",
             difficulty: 2,
             duration: 2,
-            frequency: 3,
             category: .Studies,
             goal: .School
         ),
@@ -73,7 +70,6 @@ func getTasks() -> ([Task]){
             title: "Practice soccer",
             difficulty: 2,
             duration: 1,
-            frequency: 1,
             category: .Sports,
             goal: .Soccer
         ),
@@ -82,7 +78,6 @@ func getTasks() -> ([Task]){
             title: "Advance reading of next year's paradidactic",
             difficulty: 1,
             duration: 1,
-            frequency: 3,
             category: .Studies,
             goal: .College
         ),
@@ -91,7 +86,6 @@ func getTasks() -> ([Task]){
             title: "Play new X game update",
             difficulty: 2,
             duration: 1,
-            frequency: 3,
             category: .Sports,
             goal: .Eletronics
         ),
@@ -100,3 +94,44 @@ func getTasks() -> ([Task]){
     return tasksArray
 
 }
+
+func getAllTasks() -> ([Task]){
+    
+    let tasksArray = [
+        Task(
+            title: "aaa",
+            difficulty: 2,
+            duration: 2,
+            category: .Studies,
+            goal: .School
+        ),
+        
+        Task(
+            title: "bbbb",
+            difficulty: 2,
+            duration: 1,
+            category: .Sports,
+            goal: .Soccer
+        ),
+        
+        Task(
+            title: "cccc",
+            difficulty: 1,
+            duration: 1,
+            category: .Studies,
+            goal: .College
+        ),
+        
+        Task(
+            title: "dddddd",
+            difficulty: 2,
+            duration: 1,
+            category: .Sports,
+            goal: .Eletronics
+        ),
+    ]
+    
+    return tasksArray
+
+}
+
