@@ -37,9 +37,17 @@ class GoalsController: UIViewController {
     
     @IBAction func goalsChoice(_ sender: UIButton) {
         confirmButton.alpha = 1.0
-        
-        
         confirmButton.isEnabled = true
-
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "schoolSegue" {
+            if let firstDestination = segue.destination as? UINavigationController,
+               let destination = firstDestination.topViewController as? NewTaskViewController {
+                destination.currentTask.category = .Studies
+                destination.currentTask.goal = .School
+            }
+        }
     }
 }
