@@ -49,54 +49,5 @@ class GoalsController: UIViewController {
                 destination.currentTask.goal = .School
             }
         }
-        
-        if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-                destination.currentTask.category = .Studies
-                destination.currentTask.goal = .School
-            }
-        }
-        
-        if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-                destination.currentTask.category = .Studies
-                destination.currentTask.goal = .School
-            }
-        }
-        
-        if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-                destination.currentTask.category = .Studies
-                destination.currentTask.goal = .School
-            }
-        }
-        
-        if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-                destination.currentTask.category = .Studies
-                destination.currentTask.goal = .School
-            }
-        }
-        
-        if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-                destination.currentTask.category = .Studies
-                destination.currentTask.goal = .School
-            }
-        }
-        
-        if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-                destination.currentTask.category = .Studies
-                destination.currentTask.goal = .School
-            }
-        }
-        
     }
 }
