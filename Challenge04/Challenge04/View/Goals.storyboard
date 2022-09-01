@@ -83,7 +83,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="University"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6m3-VR-XZI"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="iYW-PE-4sZ"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="collegeSegue" id="iYW-PE-4sZ"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-JC-UCU">
@@ -144,7 +144,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Soccer"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RS4-zg-aBn"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="A5q-hL-7Ul"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="soccerSegue" id="A5q-hL-7Ul"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-wY-MdS">
@@ -168,7 +168,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Videog"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oG-Pw-3Cq"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="yUl-gt-IUf"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="eletronicsSegue" id="yUl-gt-IUf"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-cW-1ry">
@@ -192,7 +192,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Bask"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9nD-vZ-Evc"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="Zj8-rA-sSm"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="basketballSegue" id="Zj8-rA-sSm"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxL-aR-t5i">
@@ -229,7 +229,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Paint"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1hZ-z0-HWI"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="0Bc-Ei-nGX"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="paintingSegue" id="0Bc-Ei-nGX"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-q1-x7W">
@@ -253,7 +253,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Draw"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8Of-op-xfr"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="SG9-Ae-WcN"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="drawingSegue" id="SG9-Ae-WcN"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i33-0z-IE8">
@@ -277,7 +277,7 @@
                                                                 <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ksB-3O-ix7"/>
-                                                                    <segue destination="4P9-7B-fig" kind="show" id="N2a-tT-LrT"/>
+                                                                    <segue destination="4P9-7B-fig" kind="show" identifier="crochetSegue" id="N2a-tT-LrT"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crochet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-lo-wvh">
@@ -844,7 +844,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qdh-ZR-szG"/>
+        <segue reference="N2a-tT-LrT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bask" width="109" height="111"/>

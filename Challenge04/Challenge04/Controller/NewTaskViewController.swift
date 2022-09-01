@@ -17,8 +17,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var currentTask: Task = Task()
     
-    var a = "aaaa"
-    
     struct Options {
         let title: String
         let description: String
@@ -37,10 +35,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.allowsSelection = true
         
         print("task: ", currentTask.goal, currentTask.category, currentTask.cod, currentTask.title)
-        
-        print("testeee ", a)
-        
-        textField.text = a
         
     }
     
