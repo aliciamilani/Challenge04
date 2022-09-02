@@ -99,7 +99,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
-        self.navigationController?.popViewController(animated: true)
+        if !(textField.text == "") {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 
