@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humor title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5j-ty-oSI">
+                                <rect key="frame" x="155.5" y="436" width="103" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vx-05-nVY">
+                                <rect key="frame" x="56" y="490" width="80" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confident">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="humorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Xn-EW-JGv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPZ-hs-MTT">
+                                <rect key="frame" x="179" y="490" width="61" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Happy">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="humorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFC-Le-MzI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb1-s9-GH7">
+                                <rect key="frame" x="302" y="490" width="46" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sad">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="humorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="624-hv-MLo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzR-T8-URd">
+                                <rect key="frame" x="252" y="567" width="54" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Tired">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="humorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QgC-EZ-BdL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHb-8p-DGH">
+                                <rect key="frame" x="108" y="567" width="78" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Impatient">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="humorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmN-z7-6WA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSW-0U-0sw">
+                                <rect key="frame" x="180" y="653" width="58" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Anger">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="humorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMG-Hp-t2k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afx-J1-6pT">
+                                <rect key="frame" x="105" y="777" width="206" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Let's go!"/>
+                                <connections>
+                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqb-xd-q49"/>
+                                    <segue destination="Bml-La-eHc" kind="presentation" modalPresentationStyle="fullScreen" id="ZPv-He-AOg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgX-EU-S4W">
+                                <rect key="frame" x="102" y="193" width="209" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How are you feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-sR-HfP">
+                                <rect key="frame" x="77" y="88" width="265" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V5j-ty-oSI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0q8-Dc-PDp"/>
+                            <constraint firstItem="V5j-ty-oSI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vy3-KI-WJq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="angerBtn" destination="FSW-0U-0sw" id="DlP-Nb-QxK"/>
+                        <outlet property="confidentBtn" destination="9vx-05-nVY" id="9F0-v9-eHM"/>
+                        <outlet property="happyBtn" destination="qPZ-hs-MTT" id="G59-Yi-q0J"/>
+                        <outlet property="humorImage" destination="XgX-EU-S4W" id="fsP-vo-eSM"/>
+                        <outlet property="humorTitle" destination="V5j-ty-oSI" id="ROz-eX-Xs3"/>
+                        <outlet property="impatientBtn" destination="lHb-8p-DGH" id="6Nz-sG-ODc"/>
+                        <outlet property="mainTitle" destination="WaW-sR-HfP" id="4Wj-ti-wRY"/>
+                        <outlet property="sadBtn" destination="Yb1-s9-GH7" id="dFp-qV-R8U"/>
+                        <outlet property="tiredBtn" destination="rzR-T8-URd" id="t8y-6B-gpO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="294.20289855072468" y="49.553571428571423"/>
+        </scene>
+        <!--DailyTasks-->
+        <scene sceneID="qS9-xh-4iI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DailyTasks" id="Bml-La-eHc" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iO9-9V-xdU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDP-ih-VVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="50"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
