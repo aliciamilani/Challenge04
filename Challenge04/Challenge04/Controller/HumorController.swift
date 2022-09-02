@@ -30,13 +30,18 @@ class HumorController: UIViewController {
     
     // MARK: - Functions
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tabBarController?.tabBar.layer.zPosition = -1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
         
-        navigationController?.setNavigationBarHidden(true, animated: true)
         
         humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
