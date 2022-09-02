@@ -78,11 +78,29 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         if (data[indexPath.item].title == "Duration") {
             performSegue(withIdentifier: "durationSegue", sender: self)
         }
-        if (data[indexPath.item].title == "Frequency") {
-            performSegue(withIdentifier: "frequencySegue", sender: self)
-        }
         if (data[indexPath.item].title == "Difficulty") {
             performSegue(withIdentifier: "difficultySegue", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == "durationSegue" {
+            if let destination = segue.destination as? DurationController {
+                destination.task = currentTask
+            }
+        }
+        
+        if segue.identifier == "difficultySegue" {
+            if let destination = segue.destination as? DifficultyController {
+                destination.task = currentTask
+            }
+        }
+    }
+    @IBAction func AddButton(_ sender: UIBarButtonItem) {
+        
+        if !(textField.text == "") {
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }
