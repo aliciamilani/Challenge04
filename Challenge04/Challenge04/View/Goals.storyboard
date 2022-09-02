@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-37-vMf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" id="7kg-37-vMf">
                                 <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -33,9 +33,9 @@
                                 <color key="tintColor" name="Background"/>
                                 <color key="separatorColor" red="0.31372549019607843" green="0.32156862745098036" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <color key="sectionIndexColor" name="Background"/>
-                                <color key="sectionIndexBackgroundColor" name="Background"/>
-                                <color key="sectionIndexTrackingBackgroundColor" name="Background"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAllTasks" rowHeight="59" id="MsY-j7-qMS" customClass="CardCellAllTasks" customModule="Challenge04" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="59"/>
@@ -51,6 +51,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="RJc-K2-vCr" secondAttribute="bottom" constant="10" id="7f5-ei-2dK"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="RJc-K2-vCr" secondAttribute="trailing" constant="20" id="Cal-2I-edb"/>
@@ -58,7 +60,8 @@
                                                 <constraint firstItem="RJc-K2-vCr" firstAttribute="leading" secondItem="h0O-OJ-U1R" secondAttribute="leadingMargin" constant="20" id="fxX-bj-BLm"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="Background"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="title" destination="RJc-K2-vCr" id="ZVd-c7-wbK"/>
                                         </connections>
@@ -66,29 +69,30 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
-                                <rect key="frame" x="20" y="810" width="374" height="52"/>
+                                <rect key="frame" x="20" y="760" width="374" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7pp-6k-31k"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="Done">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="FinishButton"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="vVc-ej-dQF" kind="presentation" id="RUf-ZP-NRd"/>
+                                    <segue destination="vVc-ej-dQF" kind="show" id="RUf-ZP-NRd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMB-Qj-CQc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <color key="tintColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="top" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="78" id="0hT-zT-arj"/>
+                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="bottom" secondItem="JMB-Qj-CQc" secondAttribute="bottom" constant="-50" id="0X4-xI-yJ7"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="top" secondItem="JMB-Qj-CQc" secondAttribute="top" id="3rO-aV-d6w"/>
-                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="bottom" secondItem="JMB-Qj-CQc" secondAttribute="bottom" id="DaP-2V-rv9"/>
                             <constraint firstItem="JMB-Qj-CQc" firstAttribute="trailing" secondItem="Z8u-L5-2yR" secondAttribute="trailing" constant="20" id="SL2-Qo-3Bf"/>
                             <constraint firstItem="Z8u-L5-2yR" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" constant="20" id="UKO-Mg-zJo"/>
                             <constraint firstItem="Z8u-L5-2yR" firstAttribute="centerX" secondItem="JMB-Qj-CQc" secondAttribute="centerX" id="iey-dV-FyZ"/>
+                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="top" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="28" id="kQ7-nD-a8L"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="trailing" secondItem="JMB-Qj-CQc" secondAttribute="trailing" id="opx-mp-bcx"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="zJ0-x8-m9T"/>
                         </constraints>
@@ -121,7 +125,9 @@
         <!--HumorView-->
         <scene sceneID="8rB-wd-ohb">
             <objects>
-                <viewControllerPlaceholder storyboardName="HumorView" id="vVc-ej-dQF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HumorView" id="vVc-ej-dQF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ld5-3Q-2j4"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaP-Iu-FRo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1835" y="680"/>
@@ -580,9 +586,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Task" largeTitleDisplayMode="never" id="Dcp-gv-GlL">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="wDA-nB-PJ1">
-                            <color key="tintColor" name="FinishButton"/>
+                            <color key="tintColor" name="MainTitle"/>
                             <connections>
-                                <segue destination="GHo-gw-GMb" kind="show" id="Q8q-LK-F1w"/>
+                                <action selector="AddButton:" destination="hBt-v3-XOy" id="f7e-36-nXG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -596,16 +602,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7vK-0P-YHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2838" y="106"/>
-        </scene>
-        <!--HumorView-->
-        <scene sceneID="b5w-nc-tcz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HumorView" id="GHo-gw-GMb" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="b5N-Zd-Hb7"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qRc-s9-Srn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3667" y="-604"/>
         </scene>
         <!--Duration-->
         <scene sceneID="xUb-T6-25c">
@@ -778,6 +774,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TdL-Mo-bR7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="MainTitle"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -827,9 +824,6 @@
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

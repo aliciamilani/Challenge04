@@ -44,7 +44,28 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.configure(title: data[indexPath.row].type)
         
+        cell.accessoryType = data[indexPath.row].check ? .checkmark : .none
+        
+        cell.tintColor = UIColor.init(named: "MainTitle")
+        cell.backgroundColor = UIColor.clear
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        clearCheck()
+        
+        data[indexPath.row].check.toggle()
+        
+        tableView.reloadRows(at:[indexPath],with:.none)
+    }
+    
+    func clearCheck(){
+        data[0].check = false
+        data[1].check = false
+        data[2].check = false
+        data[3].check = false
+        tableView.reloadData()
     }
 
 }

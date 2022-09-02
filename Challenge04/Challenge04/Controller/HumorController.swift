@@ -35,7 +35,9 @@ class HumorController: UIViewController {
         
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
 
