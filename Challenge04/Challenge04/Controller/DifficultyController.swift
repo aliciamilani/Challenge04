@@ -42,20 +42,40 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDifficulty", for: indexPath) as! CardCellDifficulty
         
-        cell.configure(title: data[indexPath.row].type, checked: !data[indexPath.row].check)
+        cell.configure(title: data[indexPath.row].type)
+        
+        cell.accessoryType = data[indexPath.row].check ? .checkmark : .none
+        
+        cell.tintColor = UIColor.init(named: "MainTitle")
+        cell.backgroundColor = UIColor.clear
+        
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        clearCheck()
+        
+        data[indexPath.row].check.toggle()
+        
+        tableView.reloadRows(at:[indexPath],with:.none)
+    }
+    
+    func clearCheck(){
+        data[0].check = false
+        data[1].check = false
+        data[2].check = false
+        data[3].check = false
+        tableView.reloadData()
     }
 }
 
 class CardCellDifficulty: UITableViewCell {
 
-    @IBOutlet weak var checkedImage: UIImageView!
     @IBOutlet weak var titleOptions: UILabel!
     
-    func configure(title: String, checked: Bool){
+    func configure(title: String){
         titleOptions.text = title
-        checkedImage.isHidden = checked
     }
 }
 

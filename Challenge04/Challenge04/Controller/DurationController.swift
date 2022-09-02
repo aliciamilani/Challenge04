@@ -42,7 +42,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDuration", for: indexPath) as! CardCellDuration
         
-        cell.configure(title: data[indexPath.row].type, checked: !data[indexPath.row].check)
+        cell.configure(title: data[indexPath.row].type)
         
         return cell
     }
@@ -53,10 +53,7 @@ class CardCellDuration: UITableViewCell {
 
     @IBOutlet weak var titleOptions: UILabel!
     
-    @IBOutlet weak var checkedImage: UIImageView!
-    
-    func configure(title: String, checked: Bool){
+    func configure(title: String){
         titleOptions.text = title
-        checkedImage.isHidden = checked
     }
 }
