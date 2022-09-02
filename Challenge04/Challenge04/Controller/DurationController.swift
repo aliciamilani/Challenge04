@@ -12,21 +12,26 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
+    var task:Task = Task()
+    
     struct Options {
         let type: String
+        var check: Bool
     }
     
-    let data: [Options] = [
-        Options(type: "I don't know"),
-        Options(type: "Low"),
-        Options(type: "Moderate"),
-        Options(type: "High"),
+    var data: [Options] = [
+        Options(type: "I don't know", check: false),
+        Options(type: "Low", check: false),
+        Options(type: "Moderate", check: false),
+        Options(type: "High", check: false),
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        data[task.duration].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,7 +42,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDuration", for: indexPath) as! CardCellDuration
         
-        cell.configure(title: data[indexPath.row].type)
+        cell.configure(title: data[indexPath.row].type, checked: !data[indexPath.row].check)
         
         return cell
     }
@@ -48,7 +53,10 @@ class CardCellDuration: UITableViewCell {
 
     @IBOutlet weak var titleOptions: UILabel!
     
-    func configure(title: String){
+    @IBOutlet weak var checkedImage: UIImageView!
+    
+    func configure(title: String, checked: Bool){
         titleOptions.text = title
+        checkedImage.isHidden = checked
     }
 }

@@ -12,14 +12,16 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
+    var task:Task = Task()
+    
     struct Options {
         let type: String
         var check: Bool
     }
     
-    let data: [Options] = [
-        Options(type: "I don't know", check: true),
-        Options(type: "Low", check: true),
+    var data: [Options] = [
+        Options(type: "I don't know", check: false),
+        Options(type: "Low", check: false),
         Options(type: "Moderate", check: false),
         Options(type: "High", check: false),
     ]
@@ -28,6 +30,8 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        data[task.difficulty].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
