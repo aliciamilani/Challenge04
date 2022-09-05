@@ -30,7 +30,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getText(_ num: Int) -> String {
         switch (num){
         case 0:
-            return "I dont't know"
+            return "I don't know"
         case 1:
             return "Low"
         case 2:
@@ -38,7 +38,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 3:
             return "High"
         default:
-            return "I dont't know"
+            return "I don't know"
         }
     
     }
@@ -50,11 +50,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.allowsSelection = true
         
         textField.text = currentTask.title
-        data[0].description = getText(currentTask.difficulty)
-        data[1].description = getText(currentTask.duration)
         
         configureTextFields()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        data[0].description = getText(currentTask.difficulty)
+        data[1].description = getText(currentTask.duration)
     }
     
     private func configureTextFields(){
@@ -66,9 +70,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
-        
+                
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         
         return cell
