@@ -586,7 +586,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" largeTitleDisplayMode="never" id="Dcp-gv-GlL">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="wDA-nB-PJ1">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="wDA-nB-PJ1">
                             <color key="tintColor" name="MainTitle"/>
                             <connections>
                                 <action selector="AddButton:" destination="hBt-v3-XOy" id="f7e-36-nXG"/>
