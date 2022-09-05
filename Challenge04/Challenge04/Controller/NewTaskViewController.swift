@@ -10,6 +10,7 @@ import UIKit
 
 class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var addTaskButton: UIBarButtonItem!
     
     @IBOutlet weak var textField: UITextField!
     
@@ -63,6 +64,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private func configureTextFields(){
         textField.delegate = self
+        
+        if (textField.text == "") {
+            addTaskButton.isEnabled = false
+        } else {
+            addTaskButton.isEnabled = true
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,6 +119,18 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
 extension NewTaskViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+
+        if !text.isEmpty{
+            addTaskButton.isEnabled = true
+        } else {
+            addTaskButton.isEnabled = false
+        }
         return true
     }
 }
