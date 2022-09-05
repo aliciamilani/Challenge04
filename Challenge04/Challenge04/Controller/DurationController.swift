@@ -57,7 +57,11 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         data[indexPath.row].check.toggle()
         
-        tableView.reloadRows(at:[indexPath],with:.none)
+        tableView.reloadRows(at:[indexPath], with:.none)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func clearCheck(){
