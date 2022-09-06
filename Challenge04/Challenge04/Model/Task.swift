@@ -8,7 +8,7 @@
 import Foundation
 
 class Task {
-    var cod: String
+    var cod: UUID
     var title : String
     
     var difficulty : Int
@@ -21,7 +21,7 @@ class Task {
 
     
     init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryGoals){
-        self.cod = UUID().uuidString
+        self.cod = UUID()
         self.title = title
         
         self.difficulty = difficulty
@@ -35,7 +35,7 @@ class Task {
     }
     
     init(){
-        self.cod = UUID().uuidString
+        self.cod = UUID()
         self.title = ""
         
         self.difficulty = 0
@@ -47,12 +47,25 @@ class Task {
     }
 }
 
-enum CategoryTypes {
-    case Studies, Sports, Art, none
+@objc
+public enum CategoryTypes: Int16 {
+    case Studies = 1
+    case Sports = 2
+    case Art = 3
+    case none = 0
 }
 
-enum CategoryGoals {
-    case School, College, Soccer, Eletronics, Basketball, Painting, Drawing, Crochet, none
+@objc
+public enum CategoryGoals: Int16 {
+    case School = 1
+    case College = 2
+    case Soccer = 3
+    case Eletronics = 4
+    case Basketball = 5
+    case Painting = 6
+    case Drawing = 7
+    case Crochet = 8
+    case none = 0
 }
 
 func getTasks() -> ([Task]){
