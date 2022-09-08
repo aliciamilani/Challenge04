@@ -34,13 +34,15 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
         
         let manageContext = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Tasks")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TaskModel")
         
         do {
             tasks = try manageContext.fetch(fetchRequest)
         } catch let error as NSError {
             print(error)
         }
+        
+        tableView.reloadData()
     }
     
     @IBAction func addTasks(_ sender: UIBarButtonItem) {
@@ -72,7 +74,10 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
               return
           }
           tableView.deselectRow(at: indexPath, animated: false)
-          destination.task = tasks[indexPath.row]
+          destination.tasks = tasks[indexPath.row]
+          
+          destination.taskP.goal = goal
+          destination.taskP.category = category
       }
     }
 }

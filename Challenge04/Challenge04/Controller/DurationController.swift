@@ -12,7 +12,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var taskDuration : Int = -1
+    var taskDuration : Int = 0
     
     struct Options {
         let id: Int
@@ -67,9 +67,10 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if let destination = segue.destination as? NewTaskViewController {
-          destination.edit(a: taskDuration)
+          destination.taskP.duration = taskDuration
       }
     }
     

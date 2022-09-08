@@ -12,7 +12,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var taskDifficulty : Int = -1
+    var taskDifficulty : Int = 0
     
     struct Options {
         let id: Int
@@ -70,7 +70,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if let destination = segue.destination as? NewTaskViewController {
-          destination.edit(a: taskDifficulty)
+          destination.taskP.difficulty = taskDifficulty
       }
     }
     
