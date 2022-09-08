@@ -13,9 +13,8 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var data = getAllTasks()
-    
-    var info: [String: String] = ["category" : "", "goal" : ""]
+    var category: CategoryTypes = .none
+    var goal: CategoryTypes = .none
     
     var tasks: [NSManagedObject] = []
     

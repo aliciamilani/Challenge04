@@ -17,10 +17,10 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-//    var currentTask: Task = Task()
-    var task: NSManagedObject!
+    var task: NSManagedObject?
     
-    var info: [String: CategoryTypes] = ["category" : "", "goal" : ""]
+    var category: CategoryTypes = .none
+    var goal: CategoryTypes = .none
     
     struct Options {
         let title: String
@@ -54,7 +54,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
-        textField.text = currentTask.title
+        textField.text = task?.value(forKey: "title") as? String
         
         configureTextFields()
         
@@ -62,8 +62,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        data[0].description = getText(currentTask.difficulty)
-        data[1].description = getText(currentTask.duration)
+        
+        if task != nil {
+            data[0].description = getText(task?.value(forKey: "difficulty") as! Int)
+            data[1].description = getText(task?.value(forKey: "duration") as! Int)
+        }
+        
     }
     
     private func configureTextFields(){
@@ -74,6 +78,10 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             addTaskButton.isEnabled = true
         }
+    }
+    
+    func edit(a: Int){
+        print(a)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,13 +110,13 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
-                destination.task = currentTask
+                destination.taskDuration = task?.value(forKey: "duration") as! Int
             }
         }
         
         if segue.identifier == "difficultySegue" {
             if let destination = segue.destination as? DifficultyController {
-                destination.task = currentTask
+                destination.taskDifficulty = task?.value(forKey: "difficulty") as! Int
             }
         }
     }

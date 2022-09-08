@@ -44,11 +44,10 @@ class GoalsController: UIViewController {
         
         if segue.identifier == "schoolSegue" {
             if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? NewTaskViewController {
-//                destination.currentTask.category = .Studies
-                destination.info["category"] = .Studies
-//                destination.currentTask.goal = .School
-                destination.info["goal"] = .School
+               let destination = firstDestination.topViewController as? AllTasksController {
+                
+                destination.category = .Studies
+                destination.goal = .School
                 
             }
         }

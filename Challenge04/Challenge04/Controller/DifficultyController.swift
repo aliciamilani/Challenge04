@@ -12,7 +12,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var task:Task = Task()
+    var taskDifficulty : Int = -1
     
     struct Options {
         let id: Int
@@ -32,7 +32,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[task.difficulty].check = true
+        data[taskDifficulty].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +59,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         
         data[indexPath.row].check.toggle()
         
-        task.difficulty = data[indexPath.row].id
+        taskDifficulty = data[indexPath.row].id
         
         tableView.reloadRows(at:[indexPath],with:.none)
         
@@ -70,7 +70,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       if let destination = segue.destination as? NewTaskViewController {
-          destination.currentTask = task
+          destination.edit(a: taskDifficulty)
       }
     }
     
