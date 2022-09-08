@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,7 +17,10 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    var currentTask: Task = Task()
+//    var currentTask: Task = Task()
+    var task: NSManagedObject!
+    
+    var info: [String: CategoryTypes] = ["category" : "", "goal" : ""]
     
     struct Options {
         let title: String

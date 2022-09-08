@@ -17,10 +17,10 @@ class Task {
     var points: Float
     
     var category: CategoryTypes
-    var goal: CategoryGoals
+    var goal: CategoryTypes
 
     
-    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryGoals){
+    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes){
         self.cod = UUID()
         self.title = title
         
@@ -52,19 +52,14 @@ public enum CategoryTypes: Int16 {
     case Studies = 1
     case Sports = 2
     case Art = 3
-    case none = 0
-}
-
-@objc
-public enum CategoryGoals: Int16 {
-    case School = 1
-    case College = 2
-    case Soccer = 3
-    case Eletronics = 4
-    case Basketball = 5
-    case Painting = 6
-    case Drawing = 7
-    case Crochet = 8
+    case School = 4
+    case College = 5
+    case Soccer = 6
+    case Eletronics = 7
+    case Basketball = 8
+    case Painting = 9
+    case Drawing = 10
+    case Crochet = 11
     case none = 0
 }
 
