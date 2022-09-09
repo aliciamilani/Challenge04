@@ -68,7 +68,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func addTasks(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "editSegue", sender: self)
+        performSegue(withIdentifier: "addSegue", sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,16 +91,26 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if let destination = segue.destination as? NewTaskViewController {
-          guard let indexPath = tableView.indexPathForSelectedRow else {
-              return
-          }
-          tableView.deselectRow(at: indexPath, animated: false)
-          destination.taskModel = taskModel[indexPath.row]
-          
-          destination.goal = goal
-          destination.category = category
-      }
+        
+        if segue.identifier == "addSegue" {
+            if let destination = segue.destination as? NewTaskViewController {
+            
+                destination.goal = goal
+                destination.category = category
+                destination.add = true
+            }
+        }
+        
+        if segue.identifier == "editSegue" {
+            if let destination = segue.destination as? NewTaskViewController {
+                guard let indexPath = tableView.indexPathForSelectedRow else {
+                    return
+                }
+                tableView.deselectRow(at: indexPath, animated: false)
+                destination.taskModel = taskModel[indexPath.row]
+                destination.add = false
+            }
+        }
     }
 }
 

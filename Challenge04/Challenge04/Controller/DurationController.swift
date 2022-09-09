@@ -13,6 +13,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var taskDuration : Int = 0
+    var add = true
     
     struct Options {
         let id: Int
@@ -65,7 +66,12 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
             self.navigationController?.popViewController(animated: true)
             let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
-            destination.updateDuration(newDuration: self.taskDuration)
+            
+            if !self.add {
+                destination.updateDuration(newDuration: self.taskDuration)
+            } else {
+                destination.createdTask?.duration = self.taskDuration
+            }
         }
     }
     

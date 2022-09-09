@@ -109,6 +109,7 @@
                     <connections>
                         <outlet property="tableView" destination="XYC-E9-cQu" id="2Jk-MU-lIa"/>
                         <segue destination="hBt-v3-XOy" kind="show" identifier="editSegue" id="0WF-K8-2GB"/>
+                        <segue destination="hBt-v3-XOy" kind="show" identifier="addSegue" id="4Hd-5Q-JK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dna-zY-M5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -789,6 +790,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="4Hd-5Q-JK2"/>
         <segue reference="ctu-RI-N1I"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Task {
+class LocalTask {
     var cod: UUID
     var title : String
     
@@ -63,10 +63,10 @@ public enum CategoryTypes: Int16 {
     case none = 0
 }
 
-func getTasks() -> ([Task]){
+func getTasks() -> ([LocalTask]){
     
     let tasksArray = [
-        Task(
+        LocalTask(
             title: "Study outstanding math subjects",
             difficulty: 2,
             duration: 2,
@@ -74,7 +74,7 @@ func getTasks() -> ([Task]){
             goal: .School
         ),
         
-        Task(
+        LocalTask(
             title: "Practice soccer",
             difficulty: 2,
             duration: 1,
@@ -82,7 +82,7 @@ func getTasks() -> ([Task]){
             goal: .Soccer
         ),
         
-        Task(
+        LocalTask(
             title: "Advance reading of next year's paradidactic",
             difficulty: 1,
             duration: 1,
@@ -90,7 +90,7 @@ func getTasks() -> ([Task]){
             goal: .College
         ),
         
-        Task(
+        LocalTask(
             title: "Play new X game update",
             difficulty: 2,
             duration: 1,
@@ -103,10 +103,10 @@ func getTasks() -> ([Task]){
 
 }
 
-func getAllTasks() -> ([Task]){
+func getAllTasks() -> ([LocalTask]){
     
     let tasksArray = [
-        Task(
+        LocalTask(
             title: "aaa",
             difficulty: 2,
             duration: 2,
@@ -114,7 +114,7 @@ func getAllTasks() -> ([Task]){
             goal: .School
         ),
         
-        Task(
+        LocalTask(
             title: "bbbb",
             difficulty: 2,
             duration: 1,
@@ -122,7 +122,7 @@ func getAllTasks() -> ([Task]){
             goal: .Soccer
         ),
         
-        Task(
+        LocalTask(
             title: "cccc",
             difficulty: 1,
             duration: 1,
@@ -130,7 +130,7 @@ func getAllTasks() -> ([Task]){
             goal: .College
         ),
         
-        Task(
+        LocalTask(
             title: "dddddd",
             difficulty: 2,
             duration: 1,
