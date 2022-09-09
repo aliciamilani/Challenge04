@@ -64,14 +64,9 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
             self.navigationController?.popViewController(animated: true)
+            let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
+            destination.updateDuration(newDuration: self.taskDuration)
         }
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if let destination = segue.destination as? NewTaskViewController {
-          destination.taskP.duration = taskDuration
-      }
     }
     
     func clearCheck(){

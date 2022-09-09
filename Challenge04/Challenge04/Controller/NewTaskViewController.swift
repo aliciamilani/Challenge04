@@ -17,12 +17,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    var tasks: NSManagedObject?
-    
-    var taskP: Task = Task()
+    var taskModel = TaskModel()
     
     var category: CategoryTypes = .none
     var goal: CategoryTypes = .none
+    
+    var new = true
     
     struct Options {
         let title: String
@@ -34,7 +34,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         Options(title: "Duration", description: "I don't know >")
     ]
     
-    func getText(_ num: Int) -> String {
+    func getText(_ num: Int16) -> String {
         switch (num){
         case 0:
             return "I don't know"
@@ -56,7 +56,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
-        textField.text = tasks?.value(forKey: "title") as? String
+        textField.text = taskModel.title
         
         configureTextFields()
         
@@ -64,12 +64,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        
-        if tasks != nil {
-            data[0].description = getText(tasks?.value(forKey: "difficulty") as! Int)
-            data[1].description = getText(tasks?.value(forKey: "duration") as! Int)
-        }
-        
+    
+        data[0].description = getText(taskModel.difficulty)
+        data[1].description = getText(taskModel.duration)
     }
     
     private func configureTextFields(){
@@ -108,57 +105,58 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
-                if tasks != nil {
-                    destination.taskDuration = tasks?.value(forKey: "duration") as! Int
-                }
+                destination.taskDuration = Int(taskModel.duration)
             }
         }
         
         if segue.identifier == "difficultySegue" {
             if let destination = segue.destination as? DifficultyController {
-                if tasks != nil {
-                    destination.taskDifficulty = tasks?.value(forKey: "difficulty") as! Int
-                }
-                
+                destination.taskDifficulty = Int(taskModel.difficulty)
             }
         }
     }
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func save(){
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "TaskModel", in: managedContext)!
-        
-        let task = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        task.setValue(textField.text, forKey: "title")
-        task.setValue(taskP.category.rawValue, forKey: "category")
-        task.setValue(taskP.difficulty, forKey: "difficulty")
-        task.setValue(taskP.duration, forKey: "duration")
-        task.setValue(taskP.goal.rawValue, forKey: "goal")
+    func createItem(title: String){
+        let newItem = TaskModel(context: context)
+        newItem.title = title
         
         do {
-            try managedContext.save()
-//            tasks.append(task)
-        } catch let error as NSError {
-            print(error)
+            try context.save()
+        } catch {
+            // error
         }
+    }
+    
+    func updateDuration(newDuration: Int){
         
+        taskModel.duration = Int16(newDuration)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    func updateDifficulty(newDifficulty: Int){
+        
+        taskModel.difficulty = Int16(newDifficulty)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
     }
     
     
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
         if !(textField.text == "") {
-            save()
+            createItem(title: textField.text!)
             self.navigationController?.popViewController(animated: true)
-            
-            
         }
     }
 }

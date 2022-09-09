@@ -11,6 +11,8 @@
 		8B1E611728ABE904006FB525 /* HumorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1E611628ABE904006FB525 /* HumorView.storyboard */; };
 		8B1E611928ABEA29006FB525 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611828ABEA29006FB525 /* Task.swift */; };
 		8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */; };
+		8B4BE2A628CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4BE2A428CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift */; };
+		8B4BE2A728CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4BE2A528CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift */; };
 		8B53DA7828C0EECA0046625B /* AllTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DA7728C0EECA0046625B /* AllTasksController.swift */; };
 		8B54985628ABC5D200299D02 /* DailyTasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B54985528ABC5D200299D02 /* DailyTasks.storyboard */; };
 		8BB52E2328ABC4E300916CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB52E2228ABC4E300916CD5 /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 		8B1E611628ABE904006FB525 /* HumorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HumorView.storyboard; sourceTree = "<group>"; };
 		8B1E611828ABEA29006FB525 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTasksController.swift; sourceTree = "<group>"; };
+		8B4BE2A428CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B4BE2A528CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B53DA7728C0EECA0046625B /* AllTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksController.swift; sourceTree = "<group>"; };
 		8B54985528ABC5D200299D02 /* DailyTasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyTasks.storyboard; sourceTree = "<group>"; };
 		8BB52E1F28ABC4E300916CD5 /* Challenge04.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge04.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B4BE2A828CA37D300FDEFA9 /* TaskModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B4BE2A428CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift */,
+				8B4BE2A528CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift */,
+			);
+			path = TaskModel;
+			sourceTree = "<group>";
+		};
 		8B54985728ABC5F100299D02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,7 @@
 		8BB52E2128ABC4E300916CD5 /* Challenge04 */ = {
 			isa = PBXGroup;
 			children = (
+				8B4BE2A828CA37D300FDEFA9 /* TaskModel */,
 				8B1A5B3528C6CC28001B8AA2 /* Model.xcdatamodeld */,
 				8BB52E2228ABC4E300916CD5 /* AppDelegate.swift */,
 				8BB52E2428ABC4E300916CD5 /* SceneDelegate.swift */,
@@ -285,6 +299,7 @@
 			files = (
 				8D745E2128ABCC4300F6ED75 /* HumorSelection.swift in Sources */,
 				8B53DA7828C0EECA0046625B /* AllTasksController.swift in Sources */,
+				8B4BE2A628CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift in Sources */,
 				8B1A5B3728C6CC28001B8AA2 /* Model.xcdatamodeld in Sources */,
 				8BF551E828BCFBAD00F9B2D9 /* DurationController.swift in Sources */,
 				8B1E611928ABEA29006FB525 /* Task.swift in Sources */,
@@ -294,6 +309,7 @@
 				8BB52E2328ABC4E300916CD5 /* AppDelegate.swift in Sources */,
 				8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */,
 				8DD4573C28B7BCC1004B68DC /* NewTaskViewController.swift in Sources */,
+				8B4BE2A728CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift in Sources */,
 				8BF551F228BD0EB200F9B2D9 /* DifficultyController.swift in Sources */,
 				8DB5322D28AE9A1200327621 /* HumorController.swift in Sources */,
 				8BB52E2528ABC4E300916CD5 /* SceneDelegate.swift in Sources */,

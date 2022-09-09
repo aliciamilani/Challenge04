@@ -16,33 +16,55 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     var category: CategoryTypes = .none
     var goal: CategoryTypes = .none
     
-    var tasks: [NSManagedObject] = []
+    private var taskModel = [TaskModel]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+        getAllItems()
+    }
+    
+    // Core Data
+    
+    func getAllItems() {
+        do {
+            taskModel = try context.fetch(TaskModel.fetchRequest())
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        } catch {
+            //error
         }
         
-        let manageContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TaskModel")
+    }
+    
+    func deleteItem(item: TaskModel){
+        context.delete(item)
         
         do {
-            tasks = try manageContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print(error)
+            try context.save()
+        } catch {
+            // error
         }
+    }
+    
+    func updateItem(item: TaskModel, newTitle: String){
+        item.title = newTitle
         
-        tableView.reloadData()
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
     }
     
     @IBAction func addTasks(_ sender: UIBarButtonItem) {
@@ -50,16 +72,16 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return taskModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellAllTasks", for: indexPath) as! CardCellAllTasks
         
-        let task = tasks[indexPath.row]
+        let task = taskModel[indexPath.row]
         
-        cell.configure(currentTitle: task.value(forKey: "title") as! String)
+        cell.configure(currentTitle: task.title!)
         
         return cell
     }
@@ -74,10 +96,10 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
               return
           }
           tableView.deselectRow(at: indexPath, animated: false)
-          destination.tasks = tasks[indexPath.row]
+          destination.taskModel = taskModel[indexPath.row]
           
-          destination.taskP.goal = goal
-          destination.taskP.category = category
+          destination.goal = goal
+          destination.category = category
       }
     }
 }
