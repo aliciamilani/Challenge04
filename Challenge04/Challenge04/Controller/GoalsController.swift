@@ -43,12 +43,58 @@ class GoalsController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "schoolSegue" {
-            if let firstDestination = segue.destination as? UINavigationController,
-               let destination = firstDestination.topViewController as? AllTasksController {
-                
+            if let destination = segue.destination as? AllTasksController {
                 destination.category = .Studies
                 destination.goal = .School
-                
+            }
+        }
+        
+        if segue.identifier == "collegeSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Studies
+                destination.goal = .College
+            }
+        }
+        
+        if segue.identifier == "soccerSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Sports
+                destination.goal = .Soccer
+            }
+        }
+        
+        if segue.identifier == "eletronicsSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Sports
+                destination.goal = .Eletronics
+            }
+        }
+        
+        if segue.identifier == "basketballSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Sports
+                destination.goal = .Basketball
+            }
+        }
+        
+        if segue.identifier == "paintingSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Art
+                destination.goal = .Painting
+            }
+        }
+        
+        if segue.identifier == "drawingSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Art
+                destination.goal = .Drawing
+            }
+        }
+        
+        if segue.identifier == "crochetSegue" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Art
+                destination.goal = .Crochet
             }
         }
     }
