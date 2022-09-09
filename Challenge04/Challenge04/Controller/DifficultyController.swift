@@ -12,7 +12,8 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var task:Task = Task()
+    var taskDifficulty = 0
+    var add = true
     
     struct Options {
         let id: Int
@@ -32,7 +33,8 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[task.difficulty].check = true
+        data[taskDifficulty].check = true
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,19 +61,20 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         
         data[indexPath.row].check.toggle()
         
-        task.difficulty = data[indexPath.row].id
+        taskDifficulty = data[indexPath.row].id
         
         tableView.reloadRows(at:[indexPath],with:.none)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
             self.navigationController?.popViewController(animated: true)
+            let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
+            
+            if !self.add {
+                destination.updateDifficulty(newDifficulty: self.taskDifficulty)
+            } else {
+                destination.createdTask?.difficulty = self.taskDifficulty
+            }
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if let destination = segue.destination as? NewTaskViewController {
-          destination.currentTask = task
-      }
     }
     
     func clearCheck(){

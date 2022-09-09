@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,7 +17,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    var currentTask: Task = Task()
+    var taskModel = TaskModel()
+    
+    var createdTask: LocalTask?
+    
+    var category: CategoryTypes = .none
+    var goal: CategoryTypes = .none
+    
+    var add = true
     
     struct Options {
         let title: String
@@ -28,7 +36,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         Options(title: "Duration", description: "I don't know >")
     ]
     
-    func getText(_ num: Int) -> String {
+    func getText(_ num: Int?) -> String {
         switch (num){
         case 0:
             return "I don't know"
@@ -50,7 +58,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
-        textField.text = currentTask.title
+        if !add {
+            textField.text = taskModel.title
+        } else {
+            createdTask = LocalTask()
+            textField.text = createdTask?.title
+        }
         
         configureTextFields()
         
@@ -58,8 +71,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-        data[0].description = getText(currentTask.difficulty)
-        data[1].description = getText(currentTask.duration)
+    
+        if !add {
+            data[0].description = getText(Int(taskModel.difficulty))
+            data[1].description = getText(Int(taskModel.duration))
+        } else {
+            data[0].description = getText(createdTask?.difficulty)
+            data[1].description = getText(createdTask?.duration)
+        }
     }
     
     private func configureTextFields(){
@@ -98,21 +117,96 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
-                destination.task = currentTask
+                if !add {
+                    destination.taskDuration = Int(taskModel.duration)
+                    destination.add = false
+                } else {
+                    destination.taskDuration = createdTask!.duration
+                    destination.add = true
+                }
+                
             }
         }
         
         if segue.identifier == "difficultySegue" {
             if let destination = segue.destination as? DifficultyController {
-                destination.task = currentTask
+                
+                if !add {
+                    destination.taskDifficulty = Int(taskModel.difficulty)
+                    destination.add = false
+                } else {
+                    destination.taskDifficulty = createdTask!.difficulty
+                    destination.add = true
+                }
             }
         }
     }
+    
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes){
+        let newItem = TaskModel(context: context)
+        newItem.title = title
+        newItem.difficulty = Int16(difficulty)
+        newItem.duration = Int16(duration)
+        newItem.goal = goal.rawValue
+        newItem.category = category.rawValue
+    
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    func updateDuration(newDuration: Int){
+        
+        taskModel.duration = Int16(newDuration)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    func updateDifficulty(newDifficulty: Int){
+        
+        taskModel.difficulty = Int16(newDifficulty)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    func updateTitle(newTitle: String){
+        
+        taskModel.title = newTitle
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
-        if !(textField.text == "") {
-            self.navigationController?.popViewController(animated: true)
+        if !(textField.text == ""){
+            if add {
+                createItem(title: textField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: category, category: goal)
+            } else {
+                if taskModel.title != textField.text! {
+                    updateTitle(newTitle: textField.text!)
+                }
+            }
         }
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

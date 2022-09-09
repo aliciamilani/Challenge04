@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Task {
-    var cod: String
+class LocalTask {
+    var cod: UUID
     var title : String
     
     var difficulty : Int
@@ -17,11 +17,11 @@ class Task {
     var points: Float
     
     var category: CategoryTypes
-    var goal: CategoryGoals
+    var goal: CategoryTypes
 
     
-    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryGoals){
-        self.cod = UUID().uuidString
+    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes){
+        self.cod = UUID()
         self.title = title
         
         self.difficulty = difficulty
@@ -35,7 +35,7 @@ class Task {
     }
     
     init(){
-        self.cod = UUID().uuidString
+        self.cod = UUID()
         self.title = ""
         
         self.difficulty = 0
@@ -47,18 +47,26 @@ class Task {
     }
 }
 
-enum CategoryTypes {
-    case Studies, Sports, Art, none
+@objc
+public enum CategoryTypes: Int16 {
+    case Studies = 1
+    case Sports = 2
+    case Art = 3
+    case School = 4
+    case College = 5
+    case Soccer = 6
+    case Eletronics = 7
+    case Basketball = 8
+    case Painting = 9
+    case Drawing = 10
+    case Crochet = 11
+    case none = 0
 }
 
-enum CategoryGoals {
-    case School, College, Soccer, Eletronics, Basketball, Painting, Drawing, Crochet, none
-}
-
-func getTasks() -> ([Task]){
+func getTasks() -> ([LocalTask]){
     
     let tasksArray = [
-        Task(
+        LocalTask(
             title: "Study outstanding math subjects",
             difficulty: 2,
             duration: 2,
@@ -66,7 +74,7 @@ func getTasks() -> ([Task]){
             goal: .School
         ),
         
-        Task(
+        LocalTask(
             title: "Practice soccer",
             difficulty: 2,
             duration: 1,
@@ -74,7 +82,7 @@ func getTasks() -> ([Task]){
             goal: .Soccer
         ),
         
-        Task(
+        LocalTask(
             title: "Advance reading of next year's paradidactic",
             difficulty: 1,
             duration: 1,
@@ -82,7 +90,7 @@ func getTasks() -> ([Task]){
             goal: .College
         ),
         
-        Task(
+        LocalTask(
             title: "Play new X game update",
             difficulty: 2,
             duration: 1,
@@ -95,10 +103,10 @@ func getTasks() -> ([Task]){
 
 }
 
-func getAllTasks() -> ([Task]){
+func getAllTasks() -> ([LocalTask]){
     
     let tasksArray = [
-        Task(
+        LocalTask(
             title: "aaa",
             difficulty: 2,
             duration: 2,
@@ -106,7 +114,7 @@ func getAllTasks() -> ([Task]){
             goal: .School
         ),
         
-        Task(
+        LocalTask(
             title: "bbbb",
             difficulty: 2,
             duration: 1,
@@ -114,7 +122,7 @@ func getAllTasks() -> ([Task]){
             goal: .Soccer
         ),
         
-        Task(
+        LocalTask(
             title: "cccc",
             difficulty: 1,
             duration: 1,
@@ -122,7 +130,7 @@ func getAllTasks() -> ([Task]){
             goal: .College
         ),
         
-        Task(
+        LocalTask(
             title: "dddddd",
             difficulty: 2,
             duration: 1,

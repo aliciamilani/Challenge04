@@ -12,7 +12,8 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var task:Task = Task()
+    var taskDuration : Int = 0
+    var add = true
     
     struct Options {
         let id: Int
@@ -32,7 +33,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[task.duration].check = true
+        data[taskDuration].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,19 +59,20 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         data[indexPath.row].check.toggle()
         
-        task.duration = data[indexPath.row].id
+        taskDuration = data[indexPath.row].id
         
         tableView.reloadRows(at:[indexPath], with:.none)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
             self.navigationController?.popViewController(animated: true)
+            let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
+            
+            if !self.add {
+                destination.updateDuration(newDuration: self.taskDuration)
+            } else {
+                destination.createdTask?.duration = self.taskDuration
+            }
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if let destination = segue.destination as? NewTaskViewController {
-          destination.currentTask = task
-      }
     }
     
     func clearCheck(){
