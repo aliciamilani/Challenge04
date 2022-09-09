@@ -79,6 +79,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             data[0].description = getText(createdTask?.difficulty)
             data[1].description = getText(createdTask?.duration)
         }
+        
     }
     
     private func configureTextFields(){
@@ -198,7 +199,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if !(textField.text == ""){
             if add {
-                createItem(title: textField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: category, category: goal)
+                createItem(title: textField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category)
             } else {
                 if taskModel.title != textField.text! {
                     updateTitle(newTitle: textField.text!)
