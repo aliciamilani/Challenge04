@@ -19,7 +19,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
     var humor = ""
     
-    var data = getTasks()
+    private var taskModel = [TaskModel]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +30,29 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        do {
+            taskModel = try context.fetch(TaskModel.fetchRequest())
+
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        } catch {
+            //error
+        }
     }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return taskModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
-        cell.configure(title: data[indexPath.row].title)
+        cell.configure(title: taskModel[indexPath.row].title!)
         
         return cell
     }
@@ -50,7 +63,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             guard let self = self else {return}
             
             
-            self.data.remove(at: indexPath.row)
+            self.taskModel.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
@@ -68,7 +81,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
-            self.data.remove(at: indexPath.row)
+            self.taskModel.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
