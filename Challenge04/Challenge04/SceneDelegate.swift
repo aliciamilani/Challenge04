@@ -10,9 +10,10 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private var humorModel = [HumorModel]()
+    
     private func checkHumorDay() -> Bool {
-        var humorModel = [HumorModel]()
+        humorModel = [HumorModel]()
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         do {
@@ -42,11 +43,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if checkHumorDay(){
             let storyboard = UIStoryboard(name: "DailyTasks", bundle: .main)
             let vc = storyboard.instantiateViewController(identifier: "tabStory")
-            self.window?.rootViewController = UINavigationController(rootViewController: vc)
+            self.window?.rootViewController = vc
         } else {
-            let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
-            self.window?.rootViewController = UINavigationController(rootViewController: vc)
+            if humorModel.count == 0 {
+                let storyboard = UIStoryboard(name: "Goals", bundle: .main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "goalsStory") as! GoalsController
+                self.window?.rootViewController = vc
+                
+            } else {
+                let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
+                self.window?.rootViewController = vc
+            }
+            
         }
         
     }
