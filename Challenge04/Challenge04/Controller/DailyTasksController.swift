@@ -20,6 +20,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     var humor = ""
     
     private var taskModel = [TaskModel]()
+    private var humorModel = [HumorModel]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -29,14 +30,20 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        dateLabel.text = getCurrentTime()
-        messageLabel.text = getMessage(humor: humor)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         do {
             taskModel = try context.fetch(TaskModel.fetchRequest())
-
+            
+            humorModel = try context.fetch(HumorModel.fetchRequest())
+            
+            humorModel = humorModel.filter { h in
+                return Calendar.current.isDateInToday(h.data!)
+            }
+            
+            self.humor = humorModel[0].humor!
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -44,6 +51,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         } catch {
             //error
         }
+        
+        dateLabel.text = getCurrentTime()
+        messageLabel.text = getMessage(humor: humor)
     }
     
 
