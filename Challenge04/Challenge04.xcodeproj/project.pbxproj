@@ -11,6 +11,8 @@
 		8B1E611728ABE904006FB525 /* HumorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1E611628ABE904006FB525 /* HumorView.storyboard */; };
 		8B1E611928ABEA29006FB525 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611828ABEA29006FB525 /* Task.swift */; };
 		8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */; };
+		8B35B2FC28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B2FA28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift */; };
+		8B35B2FD28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B2FB28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift */; };
 		8B4BE2A628CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4BE2A428CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift */; };
 		8B4BE2A728CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4BE2A528CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift */; };
 		8B53DA7828C0EECA0046625B /* AllTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B53DA7728C0EECA0046625B /* AllTasksController.swift */; };
@@ -53,6 +55,8 @@
 		8B1E611628ABE904006FB525 /* HumorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HumorView.storyboard; sourceTree = "<group>"; };
 		8B1E611828ABEA29006FB525 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTasksController.swift; sourceTree = "<group>"; };
+		8B35B2FA28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HumorModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B35B2FB28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HumorModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B4BE2A428CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8B4BE2A528CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B53DA7728C0EECA0046625B /* AllTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 		8B4BE2A828CA37D300FDEFA9 /* TaskModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B35B2FA28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift */,
+				8B35B2FB28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift */,
 				8B4BE2A428CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift */,
 				8B4BE2A528CA37C200FDEFA9 /* TaskModel+CoreDataProperties.swift */,
 			);
@@ -302,7 +308,9 @@
 				8B4BE2A628CA37C200FDEFA9 /* TaskModel+CoreDataClass.swift in Sources */,
 				8B1A5B3728C6CC28001B8AA2 /* Model.xcdatamodeld in Sources */,
 				8BF551E828BCFBAD00F9B2D9 /* DurationController.swift in Sources */,
+				8B35B2FC28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift in Sources */,
 				8B1E611928ABEA29006FB525 /* Task.swift in Sources */,
+				8B35B2FD28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift in Sources */,
 				8BB8C2E928B8913400C9F49B /* CardCellGoals.swift in Sources */,
 				8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */,
 				8DC408AA28B6636D00847C28 /* GoalsController.swift in Sources */,

@@ -20,6 +20,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     var humor = ""
     
     private var taskModel = [TaskModel]()
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
