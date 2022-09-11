@@ -27,6 +27,22 @@
                                 <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
+                                <rect key="frame" x="20" y="760" width="374" height="52"/>
+                                <accessibility key="accessibilityConfiguration" label="Done"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="7pp-6k-31k"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" name="FinishButton"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="vVc-ej-dQF" kind="show" id="RUf-ZP-NRd"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="644"/>
                                 <color key="backgroundColor" name="Background"/>
@@ -68,21 +84,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
-                                <rect key="frame" x="20" y="760" width="374" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="7pp-6k-31k"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Done">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="FinishButton"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="vVc-ej-dQF" kind="show" id="RUf-ZP-NRd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMB-Qj-CQc"/>
                         <color key="backgroundColor" name="Background"/>
@@ -149,19 +150,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bo-9rf">
-                                                <rect key="frame" x="20" y="32" width="70.5" height="25.5"/>
+                                                <rect key="frame" x="20" y="32" width="61" height="21"/>
                                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qZf-7X-1mT">
-                                                <rect key="frame" x="20" y="73.5" width="264" height="138.5"/>
+                                                <rect key="frame" x="20" y="69" width="264" height="138.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-aU-Grs">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="138.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="right" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-33-xFE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="School"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="GOM-VH-YOM"/>
                                                                     <constraint firstAttribute="height" constant="111" id="pb2-wF-Aud"/>
@@ -186,6 +188,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-Jf-srx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="College"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="XbO-Wm-P4x"/>
                                                                     <constraint firstAttribute="height" constant="111" id="crw-74-ysV"/>
@@ -233,19 +236,20 @@
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-G5-S2E">
-                                                <rect key="frame" x="20" y="244" width="61" height="25.5"/>
+                                                <rect key="frame" x="20" y="239.5" width="53.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Qf2-Fi-L8m">
-                                                <rect key="frame" x="20" y="285.5" width="374" height="138.5"/>
+                                                <rect key="frame" x="20" y="276.5" width="374" height="138.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-RU-yto">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="138.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1A-Lh-m37">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Soccer"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="bSk-hT-Wtp"/>
                                                                     <constraint firstAttribute="height" constant="111" id="q0b-je-sJp"/>
@@ -270,6 +274,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-KL-zgQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Electronics"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="G8M-XK-DfI"/>
                                                                     <constraint firstAttribute="height" constant="111" id="tl7-wn-f6n"/>
@@ -294,6 +299,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-C9-b1I">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Basketball"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="Hcb-h9-Yu4"/>
                                                                     <constraint firstAttribute="width" constant="109" id="RLb-6u-Joe"/>
@@ -318,19 +324,20 @@
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-7u-GM6">
-                                                <rect key="frame" x="20" y="456" width="29.5" height="25.5"/>
+                                                <rect key="frame" x="20" y="447" width="23.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="K56-0y-jjY">
-                                                <rect key="frame" x="20" y="497.5" width="374" height="138.5"/>
+                                                <rect key="frame" x="20" y="484" width="374" height="138.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-8y-7LB">
                                                         <rect key="frame" x="0.0" y="0.0" width="110.5" height="138.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-3j-2EC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Painting"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="PzE-W9-NYc"/>
                                                                     <constraint firstAttribute="width" constant="109" id="gas-u5-b3A"/>
@@ -355,6 +362,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-M3-e6u">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Drawing"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="8dl-1r-f2i"/>
                                                                     <constraint firstAttribute="height" constant="111" id="z3B-jf-Do4"/>
@@ -379,12 +387,13 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arj-Ps-FNN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Crochet"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="aZz-TJ-Uy4"/>
                                                                     <constraint firstAttribute="width" constant="109" id="hgz-19-MN4"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
+                                                                <buttonConfiguration key="configuration" style="filled" image="Crochet" title=""/>
                                                                 <connections>
                                                                     <action selector="goalsChoice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ksB-3O-ix7"/>
                                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="crochetSegue" id="zKN-4w-Mih"/>
@@ -403,7 +412,8 @@
                                                 <color key="tintColor" name="Background"/>
                                             </stackView>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
-                                                <rect key="frame" x="32" y="671" width="350" height="46"/>
+                                                <rect key="frame" x="32" y="657.5" width="350" height="46"/>
+                                                <accessibility key="accessibilityConfiguration" label="Finish"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="RZz-yE-zME"/>
                                                     <constraint firstAttribute="width" constant="350" id="y9e-HH-u8B"/>
@@ -558,6 +568,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="TextField"/>
                                         <color key="tintColor" name="TextField"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="descriptionOptions" destination="GkU-Ze-7Vd" id="sk0-I0-t7u"/>
                                             <outlet property="titleOptions" destination="JNp-2C-zjZ" id="jHU-7f-dyu"/>
