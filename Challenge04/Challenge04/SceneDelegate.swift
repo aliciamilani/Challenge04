@@ -40,20 +40,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        
         if checkHumorDay(){
             let storyboard = UIStoryboard(name: "DailyTasks", bundle: .main)
             let vc = storyboard.instantiateViewController(identifier: "tabStory")
             self.window?.rootViewController = vc
+            
         } else {
             if humorModel.count == 0 {
                 let storyboard = UIStoryboard(name: "Goals", bundle: .main)
-                let vc = storyboard.instantiateViewController(withIdentifier: "goalsStory") as! GoalsController
-                self.window?.rootViewController = vc
+                let vc = storyboard.instantiateViewController(withIdentifier: "goalsStory")
+                self.window?.rootViewController = UINavigationController(rootViewController: vc)
                 
             } else {
                 let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
-                self.window?.rootViewController = vc
+                self.window?.rootViewController = UINavigationController(rootViewController: vc)
             }
             
         }

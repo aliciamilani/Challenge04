@@ -23,11 +23,12 @@ class GoalsController: UIViewController {
     @IBOutlet weak var confirmButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.isEnabled = false
         confirmButton.alpha = 0.5
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "MainTitle")
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
