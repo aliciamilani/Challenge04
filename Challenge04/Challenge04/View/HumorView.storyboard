@@ -38,9 +38,7 @@
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
                                         <rect key="frame" x="0.0" y="8" width="144" height="128"/>
-                                        <accessibility key="accessibilityConfiguration" label="Humor Selected">
-                                            <bool key="isElement" value="YES"/>
-                                        </accessibility>
+                                        <accessibility key="accessibilityConfiguration" label="Humor"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
