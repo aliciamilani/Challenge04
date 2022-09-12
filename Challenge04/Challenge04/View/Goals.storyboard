@@ -70,6 +70,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
                                 <rect key="frame" x="20" y="760" width="374" height="52"/>
+                                <accessibility key="accessibilityConfiguration" label="Done"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7pp-6k-31k"/>
                                 </constraints>
@@ -162,6 +163,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="right" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-33-xFE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Scholl"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="GOM-VH-YOM"/>
                                                                     <constraint firstAttribute="height" constant="111" id="pb2-wF-Aud"/>
@@ -186,6 +188,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-Jf-srx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="College"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="XbO-Wm-P4x"/>
                                                                     <constraint firstAttribute="height" constant="111" id="crw-74-ysV"/>
@@ -246,6 +249,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1A-Lh-m37">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Soccer"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="bSk-hT-Wtp"/>
                                                                     <constraint firstAttribute="height" constant="111" id="q0b-je-sJp"/>
@@ -270,6 +274,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-KL-zgQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Electronics"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="G8M-XK-DfI"/>
                                                                     <constraint firstAttribute="height" constant="111" id="tl7-wn-f6n"/>
@@ -294,6 +299,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-C9-b1I">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Basketball"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="Hcb-h9-Yu4"/>
                                                                     <constraint firstAttribute="width" constant="109" id="RLb-6u-Joe"/>
@@ -331,6 +337,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-3j-2EC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Painting"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="PzE-W9-NYc"/>
                                                                     <constraint firstAttribute="width" constant="109" id="gas-u5-b3A"/>
@@ -355,6 +362,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-M3-e6u">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Drawing"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="8dl-1r-f2i"/>
                                                                     <constraint firstAttribute="height" constant="111" id="z3B-jf-Do4"/>
@@ -379,6 +387,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arj-Ps-FNN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Crochet"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="aZz-TJ-Uy4"/>
                                                                     <constraint firstAttribute="width" constant="109" id="hgz-19-MN4"/>
@@ -404,6 +413,7 @@
                                             </stackView>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
                                                 <rect key="frame" x="32" y="657.5" width="350" height="46"/>
+                                                <accessibility key="accessibilityConfiguration" label="Finish"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="RZz-yE-zME"/>
                                                     <constraint firstAttribute="width" constant="350" id="y9e-HH-u8B"/>
