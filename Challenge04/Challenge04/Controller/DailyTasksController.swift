@@ -34,8 +34,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         do {
-            taskModel = try context.fetch(TaskModel.fetchRequest())
-            
+            taskModel = getTasksDay(humor: humor)
+        
             humorModel = try context.fetch(HumorModel.fetchRequest())
             
             humorModel = humorModel.filter { h in
