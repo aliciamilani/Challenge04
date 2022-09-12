@@ -18,7 +18,7 @@
         <!--Humor Controller-->
         <scene sceneID="BkN-ZB-U9h">
             <objects>
-                <viewController id="qfc-Kt-95f" customClass="HumorController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="humorStory" id="qfc-Kt-95f" customClass="HumorController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZd-SE-WpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

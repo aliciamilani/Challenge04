@@ -87,7 +87,25 @@ class HumorController: UIViewController {
         humorImage.isAccessibilityElement = true
     }
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func createItem(humor: String){
+        let newItem = HumorModel(context: context)
+        
+        newItem.data = Date()
+        newItem.humor = humor
+    
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        createItem(humor: humorSelected)
+        
         if let destinationViewController = segue.destination as? DailyTasksController {
             destinationViewController.humor = humorSelected
         }

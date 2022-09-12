@@ -35,7 +35,11 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getAllItems() {
         do {
-            taskModel = try context.fetch(TaskModel.fetchRequest())
+            let allData = try context.fetch(TaskModel.fetchRequest())
+            
+            taskModel = allData.filter { t in
+                return t.goal == goal.rawValue
+            }
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()

@@ -49,18 +49,18 @@ class LocalTask {
 
 @objc
 public enum CategoryTypes: Int16 {
-    case Studies = 1
-    case Sports = 2
-    case Art = 3
-    case School = 4
-    case College = 5
-    case Soccer = 6
-    case Eletronics = 7
-    case Basketball = 8
-    case Painting = 9
-    case Drawing = 10
-    case Crochet = 11
-    case none = 0
+    case Studies = 1,
+        Sports = 2,
+        Art = 3,
+        School = 4,
+        College = 5,
+        Soccer = 6,
+        Eletronics = 7,
+        Basketball = 8,
+        Painting = 9,
+        Drawing = 10,
+        Crochet = 11,
+        none = 0
 }
 
 func getTasks() -> ([LocalTask]){

@@ -19,7 +19,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
     var humor = ""
     
-    var data = getTasks()
+    private var taskModel = [TaskModel]()
+    private var humorModel = [HumorModel]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +30,40 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        do {
+            taskModel = try context.fetch(TaskModel.fetchRequest())
+            
+            humorModel = try context.fetch(HumorModel.fetchRequest())
+            
+            humorModel = humorModel.filter { h in
+                return Calendar.current.isDateInToday(h.data!)
+            }
+            
+            self.humor = humorModel[0].humor!
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        } catch {
+            //error
+        }
+        
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
-        
     }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return taskModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
-        cell.configure(title: data[indexPath.row].title)
+        cell.configure(title: taskModel[indexPath.row].title!)
         
         return cell
     }
@@ -50,7 +74,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             guard let self = self else {return}
             
             
-            self.data.remove(at: indexPath.row)
+            self.taskModel.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
@@ -68,7 +92,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
-            self.data.remove(at: indexPath.row)
+            self.taskModel.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
