@@ -46,6 +46,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-K2-vCr">
                                                     <rect key="frame" x="40" y="21" width="334" height="17"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="One of all tasks to do or reschedule"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -151,6 +152,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arD-bo-9rf">
                                                 <rect key="frame" x="20" y="32" width="61" height="21"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Category">
+                                                    <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                                                </accessibility>
                                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
@@ -163,7 +167,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="right" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLF-33-xFE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Scholl"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Scholl"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="GOM-VH-YOM"/>
                                                                     <constraint firstAttribute="height" constant="111" id="pb2-wF-Aud"/>
@@ -177,6 +181,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js3-2U-Z8N">
                                                                 <rect key="frame" x="0.0" y="119" width="52" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -188,7 +193,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-Jf-srx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="College"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="College"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="XbO-Wm-P4x"/>
                                                                     <constraint firstAttribute="height" constant="111" id="crw-74-ysV"/>
@@ -202,6 +207,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-JC-UCU">
                                                                 <rect key="frame" x="0.0" y="119" width="57.5" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -237,6 +243,7 @@
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-G5-S2E">
                                                 <rect key="frame" x="20" y="239.5" width="53.5" height="21"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Category"/>
                                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
@@ -249,7 +256,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1A-Lh-m37">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Soccer"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Soccer"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="bSk-hT-Wtp"/>
                                                                     <constraint firstAttribute="height" constant="111" id="q0b-je-sJp"/>
@@ -263,6 +270,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-wY-MdS">
                                                                 <rect key="frame" x="0.0" y="119" width="53.5" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -274,7 +282,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-KL-zgQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Electronics"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Electronics"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="G8M-XK-DfI"/>
                                                                     <constraint firstAttribute="height" constant="111" id="tl7-wn-f6n"/>
@@ -288,6 +296,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-cW-1ry">
                                                                 <rect key="frame" x="0.0" y="119" width="84.5" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -299,7 +308,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-C9-b1I">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Basketball"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Basketball"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="Hcb-h9-Yu4"/>
                                                                     <constraint firstAttribute="width" constant="109" id="RLb-6u-Joe"/>
@@ -313,6 +322,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxL-aR-t5i">
                                                                 <rect key="frame" x="0.0" y="119" width="79" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -325,6 +335,7 @@
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-7u-GM6">
                                                 <rect key="frame" x="20" y="447" width="23.5" height="21"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Category"/>
                                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" name="Text"/>
                                                 <nil key="highlightedColor"/>
@@ -337,7 +348,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-3j-2EC">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Painting"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Painting"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="PzE-W9-NYc"/>
                                                                     <constraint firstAttribute="width" constant="109" id="gas-u5-b3A"/>
@@ -351,6 +362,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeT-q1-x7W">
                                                                 <rect key="frame" x="0.0" y="119" width="62" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -362,7 +374,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmY-M3-e6u">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Drawing"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Drawing"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="8dl-1r-f2i"/>
                                                                     <constraint firstAttribute="height" constant="111" id="z3B-jf-Do4"/>
@@ -376,6 +388,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i33-0z-IE8">
                                                                 <rect key="frame" x="0.0" y="119" width="62.5" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -387,7 +400,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arj-Ps-FNN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Crochet"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Select category to add task" label="Crochet"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="aZz-TJ-Uy4"/>
                                                                     <constraint firstAttribute="width" constant="109" id="hgz-19-MN4"/>
@@ -401,6 +414,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crochet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-lo-wvh">
                                                                 <rect key="frame" x="0.0" y="119" width="61" height="19.5"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Category type"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                 <color key="textColor" name="Text"/>
                                                                 <nil key="highlightedColor"/>
@@ -413,7 +427,7 @@
                                             </stackView>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-eU-gxy">
                                                 <rect key="frame" x="32" y="657.5" width="350" height="46"/>
-                                                <accessibility key="accessibilityConfiguration" label="Finish"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Finish add tasks to categories" label="Finish"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="RZz-yE-zME"/>
                                                     <constraint firstAttribute="width" constant="350" id="y9e-HH-u8B"/>
@@ -515,6 +529,7 @@
                                 <rect key="frame" x="20" y="128" width="374" height="44"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
+                                <accessibility key="accessibilityConfiguration" hint="Input the title of your task "/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ubr-fQ-Zaq"/>
                                 </constraints>
@@ -543,6 +558,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-2C-zjZ">
                                                     <rect key="frame" x="20" y="11" width="66" height="38"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="Choose task dificult and duration "/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" name="OptionsText"/>
                                                     <nil key="highlightedColor"/>
