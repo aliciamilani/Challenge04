@@ -110,14 +110,8 @@ func getTasksDay(humor: String) -> [TaskModel]{
             var i = 0
             while i < difference{
                 let num = Int.random(in: 0...taskModel.count - 1)
-                print("antes: ", num)
-                print("antes: ", elements)
                 if !elements.contains(num){
-                    print("depois: ", num)
-                    
                     elements.append(num)
-                    
-                    print("depois: ", elements)
                     listTasks.append(taskModel[num])
                 }
                 
