@@ -13,7 +13,6 @@ class GoalsController: UIViewController {
     
     @IBOutlet weak var study1Btn: UIButton!
     @IBOutlet weak var study2Btn: UIButton!
-    @IBOutlet weak var study3Btn: UIButton!
     @IBOutlet weak var sport1Btn: UIButton!
     @IBOutlet weak var sport2Btn: UIButton!
     @IBOutlet weak var sport3Btn: UIButton!
@@ -25,8 +24,8 @@ class GoalsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmButton.isEnabled = false
-        confirmButton.alpha = 0.5
+//        confirmButton.isEnabled = false
+//        confirmButton.alpha = 0.5
         
         self.navigationController?.navigationBar.tintColor = UIColor(named: "MainTitle")
     }
@@ -36,9 +35,14 @@ class GoalsController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        confirmButton.isHidden = defaults.bool(forKey: "goalsButton")
+    }
+    
     @IBAction func goalsChoice(_ sender: UIButton) {
-        confirmButton.alpha = 1.0
-        confirmButton.isEnabled = true
+//        confirmButton.alpha = 1.0
+//        confirmButton.isEnabled = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

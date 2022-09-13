@@ -27,6 +27,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "goalsButton")
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -35,7 +38,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         do {
             taskModel = getTasksDay(humor: humor)
-        
+            
             humorModel = try context.fetch(HumorModel.fetchRequest())
             
             humorModel = humorModel.filter { h in
@@ -58,6 +61,13 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if taskModel.count == 0 {
+            tableView.setEmptyView(title: "Congratulations! You are done for today.", message: "See you tomorrow.")
+        } else {
+            tableView.restore()
+        }
+        
         return taskModel.count
     }
     
@@ -136,3 +146,35 @@ func getCurrentTime() -> String {
 }
 
 
+extension UITableView {
+    func setEmptyView(title: String, message: String) {
+        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+        let titleLabel = UILabel()
+        let messageLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
+        messageLabel.textColor = UIColor.lightGray
+        messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
+        emptyView.addSubview(titleLabel)
+        emptyView.addSubview(messageLabel)
+        titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
+        titleLabel.text = title
+        messageLabel.text = message
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        // The only tricky part is here:
+        self.backgroundView = emptyView
+        self.separatorStyle = .none
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
+    }
+}
