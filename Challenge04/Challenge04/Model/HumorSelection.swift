@@ -37,3 +37,81 @@ func getMessage(humor: String) -> (String){
         return "Here are some activities for you :)"
     }
 }
+
+private var taskModel = [TaskModel]()
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+func getAllItems() {
+    do {
+        taskModel = try context.fetch(TaskModel.fetchRequest())
+        
+    } catch {
+        //error
+    }
+    
+}
+
+var listTasks = [TaskModel]()
+
+func getTasksDay(humor: String) -> [TaskModel]{
+    getAllItems()
+    for t in 0 ..< taskModel.count {
+        if listTasks.count < 3 {
+            let soma = (taskModel[t].difficulty + taskModel[t].duration)
+        
+            if taskModel[t].difficulty == 3 && soma >= 5 && humor == "Happy"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+        
+            if taskModel[t].difficulty == 3 && humor == "Confident" {
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            if taskModel[t].duration == 3 && soma == 5 && humor == "Confident"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            if taskModel[t].difficulty == 1 && soma == 4 && humor == "Indifferent"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            if soma == 4 && humor == "Irritated"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            if taskModel[t].difficulty == 2 && soma == 3 && humor == "Tired"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            if soma == 3 && humor == "Sad"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            if soma == 2 && humor == "Tired"{
+                listTasks.append(taskModel[t])
+                taskModel.remove(at: t)
+            }
+            
+            
+        }
+    }
+    
+    let difference = 3 - listTasks.count
+    
+    if difference != 0 && taskModel.count != 0 {
+        for _ in 0 ..< difference {
+            let num = Int.random(in: 0...taskModel.count)
+            print("num: ", num)
+            listTasks.append(taskModel[num])
+        }
+    }
+    
+    return listTasks
+}
