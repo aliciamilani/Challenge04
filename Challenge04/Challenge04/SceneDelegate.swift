@@ -53,6 +53,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.window?.rootViewController = UINavigationController(rootViewController: vc)
                 
             } else {
+                
+                let defaults = UserDefaults.standard
+                defaults.set(true, forKey: "goalsButton")
+                
                 let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
                 self.window?.rootViewController = UINavigationController(rootViewController: vc)

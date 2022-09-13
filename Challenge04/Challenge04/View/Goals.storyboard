@@ -69,35 +69,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-L5-2yR">
-                                <rect key="frame" x="20" y="760" width="374" height="52"/>
-                                <accessibility key="accessibilityConfiguration" label="Done"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="7pp-6k-31k"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Done">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="FinishButton"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="vVc-ej-dQF" kind="show" id="RUf-ZP-NRd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMB-Qj-CQc"/>
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="bottom" secondItem="JMB-Qj-CQc" secondAttribute="bottom" constant="-50" id="0X4-xI-yJ7"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="top" secondItem="JMB-Qj-CQc" secondAttribute="top" id="3rO-aV-d6w"/>
-                            <constraint firstItem="JMB-Qj-CQc" firstAttribute="trailing" secondItem="Z8u-L5-2yR" secondAttribute="trailing" constant="20" id="SL2-Qo-3Bf"/>
-                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" constant="20" id="UKO-Mg-zJo"/>
-                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="centerX" secondItem="JMB-Qj-CQc" secondAttribute="centerX" id="iey-dV-FyZ"/>
-                            <constraint firstItem="Z8u-L5-2yR" firstAttribute="top" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="28" id="kQ7-nD-a8L"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="trailing" secondItem="JMB-Qj-CQc" secondAttribute="trailing" id="opx-mp-bcx"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="zJ0-x8-m9T"/>
+                            <constraint firstItem="JMB-Qj-CQc" firstAttribute="bottom" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="130" id="zYb-Ci-b1Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All Tasks" largeTitleDisplayMode="never" id="T5D-wx-V4J">
@@ -118,23 +98,13 @@
             </objects>
             <point key="canvasLocation" x="1834.7826086956522" y="105.80357142857143"/>
         </scene>
-        <!--DailyTasks-->
+        <!--HumorView-->
         <scene sceneID="rLe-6i-mEV">
             <objects>
-                <viewControllerPlaceholder storyboardName="DailyTasks" id="TZP-sl-bQJ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HumorView" id="TZP-sl-bQJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gg-tR-0rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="746" y="680"/>
-        </scene>
-        <!--HumorView-->
-        <scene sceneID="8rB-wd-ohb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HumorView" id="vVc-ej-dQF" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ld5-3Q-2j4"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BaP-Iu-FRo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1835" y="680"/>
         </scene>
         <!--Goals-->
         <scene sceneID="s0d-6b-0kx">

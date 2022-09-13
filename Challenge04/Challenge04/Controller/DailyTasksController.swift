@@ -27,6 +27,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "goalsButton")
+        
         tableView.dataSource = self
         tableView.delegate = self
         
