@@ -13,7 +13,6 @@ class GoalsController: UIViewController {
     
     @IBOutlet weak var study1Btn: UIButton!
     @IBOutlet weak var study2Btn: UIButton!
-    @IBOutlet weak var study3Btn: UIButton!
     @IBOutlet weak var sport1Btn: UIButton!
     @IBOutlet weak var sport2Btn: UIButton!
     @IBOutlet weak var sport3Btn: UIButton!
