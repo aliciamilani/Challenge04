@@ -29,14 +29,15 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, cowboy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-on-cNY">
                                 <rect key="frame" x="20" y="84" width="374" height="28"/>
-                                <accessibility key="accessibilityConfiguration" label="Hey, Cowboy!"/>
+                                <accessibility key="accessibilityConfiguration" label="Hey, Cowboy!">
+                                    <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="24"/>
                                 <color key="textColor" name="TitleTasks"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-3g-J4E">
                                 <rect key="frame" x="20" y="132" width="272" height="17"/>
-                                <accessibility key="accessibilityConfiguration" label="Here are some activities for you!"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -60,7 +61,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLr-9F-EOh">
                                 <rect key="frame" x="20" y="199" width="374" height="21"/>
-                                <accessibility key="accessibilityConfiguration" label="Day os the week"/>
+                                <accessibility key="accessibilityConfiguration" hint="Week day according to your adjust set up" label="Day os the week"/>
                                 <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="18"/>
                                 <color key="textColor" name="Labels"/>
                                 <nil key="highlightedColor"/>
@@ -94,7 +95,7 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="aaaa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-NY-hT8">
                                                             <rect key="frame" x="15" y="24.5" width="344" height="19"/>
-                                                            <accessibility key="accessibilityConfiguration" label="Title of the task"/>
+                                                            <accessibility key="accessibilityConfiguration" hint="Title of the task"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                             <color key="textColor" name="Labels"/>
                                                             <nil key="highlightedColor"/>

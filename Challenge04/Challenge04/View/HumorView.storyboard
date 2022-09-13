@@ -25,7 +25,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howdy, cowboy! How are you feeling today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-dk-zZc">
                                 <rect key="frame" x="32" y="116" width="350" height="56"/>
-                                <accessibility key="accessibilityConfiguration" label="Howdy, cowboy! How are you feeling today?"/>
+                                <accessibility key="accessibilityConfiguration" label="Howdy, cowboy! How are you feeling today?">
+                                    <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="a92-rd-bDX"/>
                                 </constraints>
@@ -38,7 +40,7 @@
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
                                         <rect key="frame" x="0.0" y="8" width="144" height="128"/>
-                                        <accessibility key="accessibilityConfiguration" label="Humor Selected"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Shows image according to selected buttons below" label="Humor Selected"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +63,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLY-la-z2e">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" label="Happy"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Select humor" label="Happy"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="84U-Jp-s1k"/>
                                                     <constraint firstAttribute="width" constant="106" id="kjY-JA-t4C"/>
@@ -82,7 +84,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-oa-qq3">
                                                 <rect key="frame" x="0.0" y="60" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" label="Indifferent"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Select humor" label="Indifferent"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="PzI-ob-O1Q"/>
                                                     <constraint firstAttribute="width" constant="106" id="hQd-QY-aeE"/>
@@ -103,7 +105,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-bw-pvF">
                                                 <rect key="frame" x="0.0" y="120" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" label="Tired"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Select humor" label="Tired"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="106" id="Tlm-bK-qoq"/>
                                                     <constraint firstAttribute="height" constant="36" id="u4S-W3-vng"/>
@@ -129,7 +131,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-Cm-ntf">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" label="Confident">
+                                                <accessibility key="accessibilityConfiguration" hint="Select humor" label="Confident">
                                                     <accessibilityTraits key="traits" button="YES" selected="YES"/>
                                                 </accessibility>
                                                 <constraints>
@@ -152,7 +154,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-1b-UPo">
                                                 <rect key="frame" x="0.0" y="60" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" label="Sad"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Select humor" label="Sad"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="106" id="Az5-5z-MSc"/>
                                                     <constraint firstAttribute="height" constant="36" id="fFK-EL-bY3"/>
@@ -173,7 +175,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFj-sJ-DvO">
                                                 <rect key="frame" x="0.0" y="120" width="106" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" label="Irritated"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Select humor" label="Irritated"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="cvM-2d-gJt"/>
                                                     <constraint firstAttribute="width" constant="106" id="h8N-fC-YmE"/>
