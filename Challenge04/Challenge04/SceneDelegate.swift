@@ -56,6 +56,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
                 self.window?.rootViewController = UINavigationController(rootViewController: vc)
+                
             }
             
         }

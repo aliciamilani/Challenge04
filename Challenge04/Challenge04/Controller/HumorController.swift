@@ -30,6 +30,7 @@ class HumorController: UIViewController {
     
     // MARK: - Functions
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -90,12 +91,12 @@ class HumorController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func createItem(humor: String){
-        let newItem = HumorModel(context: context)
-        
-        newItem.data = Date()
-        newItem.humor = humor
-    
         do {
+            let newItem = HumorModel(context: context)
+            
+            newItem.data = Date()
+            newItem.humor = humor
+            
             try context.save()
         } catch {
             // error
