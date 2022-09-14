@@ -22,7 +22,6 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     var data: [Options] = [
-        Options(id: 0, type: "I don't know", check: false),
         Options(id: 1, type: "Low", check: false),
         Options(id: 2, type: "Moderate", check: false),
         Options(id: 3, type: "High", check: false),
@@ -33,7 +32,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[taskDuration].check = true
+        data[taskDuration-1].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,7 +78,6 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         data[0].check = false
         data[1].check = false
         data[2].check = false
-        data[3].check = false
         tableView.reloadData()
     }
 

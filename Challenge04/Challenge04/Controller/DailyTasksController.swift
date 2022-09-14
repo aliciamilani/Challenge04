@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +20,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
     var humor = ""
     
+    let userDefaults = UserDefaults.standard
+    var listOfTasks: [String] = []
+    
     private var taskModel = [TaskModel]()
     private var humorModel = [HumorModel]()
     
@@ -27,18 +31,36 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults.standard
-        defaults.set(false, forKey: "goalsButton")
+        userDefaults.set(false, forKey: "goalsButton")
         
         tableView.dataSource = self
         tableView.delegate = self
         
+        getSavedTasks()
+        getHumorDay()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func deleteItem(item: TaskModel){
+        context.delete(item)
+        
         do {
-            taskModel = getTasksDay(humor: humor)
-            
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    func getSavedTasks(){
+        
+        listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+        
+        for i in 0 ..< listOfTasks.count {
+            taskModel.append(context.object(with: context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: listOfTasks[i])!)!) as! TaskModel)
+        }
+    }
+    
+    func getHumorDay(){
+        do {
             humorModel = try context.fetch(HumorModel.fetchRequest())
             
             humorModel = humorModel.filter { h in
@@ -54,9 +76,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         } catch {
             //error
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
+        tableView.reloadData()
     }
     
 
@@ -85,6 +110,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             
             
             self.taskModel.remove(at: indexPath.row)
+            
+            self.listOfTasks.remove(at: indexPath.row)
+            self.userDefaults.set(self.listOfTasks, forKey: "tasks")
+            
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
@@ -102,7 +131,14 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
+            // tem q apagar de tudo
+            
+            self.deleteItem(item: self.taskModel[indexPath.row])
             self.taskModel.remove(at: indexPath.row)
+            
+            self.listOfTasks.remove(at: indexPath.row)
+            self.userDefaults.set(self.listOfTasks, forKey: "tasks")
+            
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
@@ -154,7 +190,8 @@ extension UITableView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
+        titleLabel.font = UIFont(name: "Poppins-Light", size: 19)
+        titleLabel.textColor = UIColor(named: "Text")
         messageLabel.textColor = UIColor.lightGray
         messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
         emptyView.addSubview(titleLabel)

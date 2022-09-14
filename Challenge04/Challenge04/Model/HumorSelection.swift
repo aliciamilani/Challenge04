@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class HumorSelection {
     var userHumor: String = ""
@@ -51,59 +52,79 @@ func getAllItems() {
     
 }
 
-func getTasksDay(humor: String) -> [TaskModel]{
+func getTasksDay(humor: String){
     var listTasks = [TaskModel]()
     
     getAllItems()
     
+    let userDefaults = UserDefaults.standard
+    var listOfTasks: [String] = userDefaults.object(forKey: "tasks") as? [String] ?? []
+    
+    var j = 0
+    
+    let dicHumor: [String:Int] = ["Happy": 3, "Confident": 3, "Indifferent": 3, "Irritated": 2, "Tired": 1, "Sad": 2]
+    
+    let qtdeTask = dicHumor[humor]!
+
     if taskModel.count != 0 {
-        for t in 0 ..< taskModel.count {
-            if listTasks.count <= 3 {
-                let soma = (taskModel[t].difficulty + taskModel[t].duration)
+        for i in taskModel {
+            if listTasks.count < qtdeTask {
+                
+                let soma = (i.difficulty + i.duration)
             
-                if taskModel[t].difficulty == 3 && soma >= 5 && humor == "Happy"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                if i.difficulty == 3 && soma >= 5 && humor == "Happy"{
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
             
-                if taskModel[t].difficulty == 3 && humor == "Confident" {
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                if i.difficulty == 3 && humor == "Confident" {
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
                 
-                if taskModel[t].duration == 3 && soma == 5 && humor == "Confident"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                if i.duration == 3 && soma == 5 && humor == "Confident"{
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
                 
-                if taskModel[t].difficulty == 1 && soma == 4 && humor == "Indifferent"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                if i.difficulty == 1 && soma == 4 && humor == "Indifferent"{
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
                 
                 if soma == 4 && humor == "Irritated"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
                 
-                if taskModel[t].difficulty == 2 && soma == 3 && humor == "Tired"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                if i.difficulty == 2 && soma == 3 && humor == "Tired"{
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
                 
                 if soma == 3 && humor == "Sad"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
                 
                 if soma == 2 && humor == "Tired"{
-                    listTasks.append(taskModel[t])
-                    taskModel.remove(at: t)
+                    listTasks.append(i)
+                    taskModel.remove(at: j)
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
                 }
             }
+            
+            j += 1
         }
-        
-        let difference = 3 - listTasks.count
+                
+        let difference = qtdeTask - listTasks.count
         var elements: [Int] = []
             
         if difference != 0 && taskModel.count != 0 {
@@ -113,6 +134,7 @@ func getTasksDay(humor: String) -> [TaskModel]{
                 if !elements.contains(num){
                     elements.append(num)
                     listTasks.append(taskModel[num])
+                    listOfTasks.append(taskModel[num].objectID.uriRepresentation().absoluteString)
                 }
                 
                 i += 1
@@ -120,5 +142,5 @@ func getTasksDay(humor: String) -> [TaskModel]{
         }
     }
     
-    return listTasks
+    userDefaults.set(listOfTasks, forKey: "tasks")
 }
