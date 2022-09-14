@@ -24,8 +24,9 @@ class GoalsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        confirmButton.isEnabled = false
-//        confirmButton.alpha = 0.5
+    
+        confirmButton.alpha = 0
+        confirmButton.isEnabled = false
         
         self.navigationController?.navigationBar.tintColor = UIColor(named: "MainTitle")
     }
@@ -36,8 +37,16 @@ class GoalsController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         let defaults = UserDefaults.standard
-        confirmButton.isHidden = defaults.bool(forKey: "goalsButton")
+        
+        if defaults.bool(forKey: "goalsButton") {
+            confirmButton.alpha = 1
+            confirmButton.isEnabled = true
+        } else {
+            confirmButton.alpha = 0
+            confirmButton.isEnabled = false
+        }
     }
     
     @IBAction func goalsChoice(_ sender: UIButton) {
