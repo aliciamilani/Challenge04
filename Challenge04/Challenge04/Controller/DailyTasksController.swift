@@ -190,7 +190,8 @@ extension UITableView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
+        titleLabel.font = UIFont(name: "Poppins-Light", size: 19)
+        titleLabel.textColor = UIColor(named: "Text")
         messageLabel.textColor = UIColor.lightGray
         messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
         emptyView.addSubview(titleLabel)
