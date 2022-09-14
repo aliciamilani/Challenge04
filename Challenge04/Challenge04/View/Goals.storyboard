@@ -13,7 +13,7 @@
         <!--All Tasks-->
         <scene sceneID="XDj-wy-5ij">
             <objects>
-                <viewController id="mE9-ZN-4Bb" customClass="AllTasksController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mE9-ZN-4Bb" customClass="AllTasksController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0N4-Ea-T0U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAllTasks" rowHeight="59" id="MsY-j7-qMS" customClass="CardCellAllTasks" customModule="Challenge04" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAllTasks" rowHeight="59" id="MsY-j7-qMS" customClass="CardCellAllTasks" customModule="GoMoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MsY-j7-qMS" id="h0O-OJ-U1R">
@@ -92,7 +92,7 @@
         <!--New Task-->
         <scene sceneID="AcW-hK-Xgr">
             <objects>
-                <viewController title="New Task" id="hBt-v3-XOy" customClass="NewTaskViewController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Task" id="hBt-v3-XOy" customClass="NewTaskViewController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Oq-ia-6AG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
                                     <constraint firstAttribute="height" constant="100" id="iDG-li-Wco"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellGoals" rowHeight="60" id="hZr-V6-8VV" customClass="CardCellGoals" customModule="Challenge04" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellGoals" rowHeight="60" id="hZr-V6-8VV" customClass="CardCellGoals" customModule="GoMoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZr-V6-8VV" id="z8P-Gb-HNf">
@@ -210,7 +210,7 @@
         <!--Duration-->
         <scene sceneID="xUb-T6-25c">
             <objects>
-                <viewController title="Duration" id="t6Z-3d-Yp2" customClass="DurationController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Duration" id="t6Z-3d-Yp2" customClass="DurationController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGg-W2-72X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +226,7 @@
                                     <constraint firstAttribute="height" constant="150" id="iKh-g2-lfe"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDuration" rowHeight="60" id="iNz-2f-eOh" customClass="CardCellDuration" customModule="Challenge04" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDuration" rowHeight="60" id="iNz-2f-eOh" customClass="CardCellDuration" customModule="GoMoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iNz-2f-eOh" id="duX-q7-Sxy">
@@ -286,7 +286,7 @@
         <!--Difficulty-->
         <scene sceneID="YpF-hy-j45">
             <objects>
-                <viewController title="Difficulty" id="cJ9-fZ-Pe7" customClass="DifficultyController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Difficulty" id="cJ9-fZ-Pe7" customClass="DifficultyController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6L1-7c-0zz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,7 +302,7 @@
                                     <constraint firstAttribute="height" constant="150" id="cVl-X9-9gA"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDifficulty" rowHeight="60" id="Mfd-yY-72D" customClass="CardCellDifficulty" customModule="Challenge04" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDifficulty" rowHeight="60" id="Mfd-yY-72D" customClass="CardCellDifficulty" customModule="GoMoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mfd-yY-72D" id="vcv-uG-mho">
@@ -362,7 +362,7 @@
         <!--Goals-->
         <scene sceneID="g6C-gE-Pm8">
             <objects>
-                <viewController storyboardIdentifier="goalsStory" id="Prt-FP-d1Y" customClass="GoalsController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalsStory" id="Prt-FP-d1Y" customClass="GoalsController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SuP-Fl-0Of">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,6 +375,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPh-ua-d1Q">
                                                 <rect key="frame" x="20" y="32" width="64" height="21.5"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                                                </accessibility>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -387,6 +390,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-au-4dG">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="School"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="5tt-O2-SuG"/>
                                                                     <constraint firstAttribute="width" constant="109" id="mey-z9-rez"/>
@@ -411,6 +415,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVW-by-qRT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="College"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="q8n-q1-3hx"/>
                                                                     <constraint firstAttribute="height" constant="111" id="t5K-FG-TpL"/>
@@ -449,6 +454,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-Tf-i86">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Soccer"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="daZ-cl-deu"/>
                                                                     <constraint firstAttribute="width" constant="109" id="fbG-Yo-1XU"/>
@@ -473,6 +479,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAS-gc-v3T">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Electronnics"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="4iL-ka-i17"/>
                                                                     <constraint firstAttribute="width" constant="109" id="FsH-Jl-jVt"/>
@@ -497,6 +504,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-OJ-Xx0">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Basketball"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="0FV-7I-u3A"/>
                                                                     <constraint firstAttribute="height" constant="111" id="ceh-LD-4W1"/>
@@ -532,6 +540,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvA-TW-jDO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Painting"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="fMN-cW-1Yp"/>
                                                                     <constraint firstAttribute="height" constant="111" id="s9k-ZW-9tT"/>
@@ -556,6 +565,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-cr-cCQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Drawing"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="109" id="SxI-UN-sOl"/>
                                                                     <constraint firstAttribute="height" constant="111" id="zT5-iq-n7Y"/>
@@ -580,6 +590,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-dd-Ah9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Crochet"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="111" id="UaK-gk-Yed"/>
                                                                     <constraint firstAttribute="width" constant="109" id="eBD-DE-RAF"/>
@@ -603,6 +614,7 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-BH-F3Z">
                                                 <rect key="frame" x="32" y="675.5" width="350" height="52"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Finish adding task" label="Finish"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="Yfb-WS-Gq0"/>
                                                     <constraint firstAttribute="width" constant="350" id="zlK-Fs-aNa"/>

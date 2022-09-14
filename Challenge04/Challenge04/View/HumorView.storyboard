@@ -18,7 +18,7 @@
         <!--Humor Controller-->
         <scene sceneID="BkN-ZB-U9h">
             <objects>
-                <viewController storyboardIdentifier="humorStory" id="qfc-Kt-95f" customClass="HumorController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="humorStory" id="qfc-Kt-95f" customClass="HumorController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZd-SE-WpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,9 @@
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
                                         <rect key="frame" x="0.0" y="8" width="144" height="128"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Shows image according to selected buttons below" label="Humor Selected"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Shows image according to selected buttons below" label="Humor Selected">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,7 +202,7 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
                                 <rect key="frame" x="32" y="627" width="350" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration" label="Let's go!"/>
+                                <accessibility key="accessibilityConfiguration" hint="Finish and go to day tasks" label="Let's go!"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="L10-or-HXh"/>
                                     <constraint firstAttribute="height" constant="52" id="TuV-n4-JkT"/>
