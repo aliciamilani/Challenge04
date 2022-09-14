@@ -52,70 +52,65 @@ func getAllItems() {
     
 }
 
-func getTasksDay(humor: String) -> [TaskModel]{
+func getTasksDay(humor: String){
     var listTasks = [TaskModel]()
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     getAllItems()
     
     let userDefaults = UserDefaults.standard
-    var listOfTasks: [String] = userDefaults.object(forKey: "test") as? [String] ?? []
+    var listOfTasks: [String] = userDefaults.object(forKey: "tasks") as? [String] ?? []
     
     if taskModel.count != 0 {
-        for t in 0 ..< taskModel.count {
+        for t in 0 ..< taskModel.count - 1 {
             if listTasks.count <= 3 {
                 let soma = (taskModel[t].difficulty + taskModel[t].duration)
             
-//                print("aqui: ", taskModel[t].objectID)
-//                print("aqui2: ", context.object(with: taskModel[t].objectID))
-//                print("aqui3: ", taskModel[t].objectID.uriRepresentation().absoluteString)
                 if taskModel[t].difficulty == 3 && soma >= 5 && humor == "Happy"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
             
                 if taskModel[t].difficulty == 3 && humor == "Confident" {
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
                 
                 if taskModel[t].duration == 3 && soma == 5 && humor == "Confident"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
                 
                 if taskModel[t].difficulty == 1 && soma == 4 && humor == "Indifferent"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
                 
                 if soma == 4 && humor == "Irritated"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
                 
                 if taskModel[t].difficulty == 2 && soma == 3 && humor == "Tired"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
                 
                 if soma == 3 && humor == "Sad"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
                 
                 if soma == 2 && humor == "Tired"{
                     listTasks.append(taskModel[t])
                     taskModel.remove(at: t)
-//                    listOfTasks.append(taskModel[t].objectID)
+                    listOfTasks.append(taskModel[t].objectID.uriRepresentation().absoluteString)
                 }
             }
         }
@@ -130,8 +125,7 @@ func getTasksDay(humor: String) -> [TaskModel]{
                 if !elements.contains(num){
                     elements.append(num)
                     listTasks.append(taskModel[num])
-                    let a = taskModel[num].objectID.uriRepresentation().absoluteString
-                    listOfTasks.append(a)
+                    listOfTasks.append(taskModel[num].objectID.uriRepresentation().absoluteString)
                 }
                 
                 i += 1
@@ -139,9 +133,5 @@ func getTasksDay(humor: String) -> [TaskModel]{
         }
     }
     
-    print("como ta: ", listOfTasks)
-    
-    userDefaults.set(listOfTasks, forKey: "test")
-    
-    return listTasks
+    userDefaults.set(listOfTasks, forKey: "tasks")
 }

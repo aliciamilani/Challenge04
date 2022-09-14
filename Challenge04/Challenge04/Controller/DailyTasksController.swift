@@ -20,6 +20,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
     var humor = ""
     
+    let userDefaults = UserDefaults.standard
+    var listOfTasks: [String] = []
+    
     private var taskModel = [TaskModel]()
     private var humorModel = [HumorModel]()
     
@@ -28,28 +31,26 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = UserDefaults.standard
-        defaults.set(false, forKey: "goalsButton")
+        userDefaults.set(false, forKey: "goalsButton")
         
         tableView.dataSource = self
         tableView.delegate = self
         
+        getSavedTasks()
+        getHumorDay()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func getSavedTasks(){
         
-        let userDefaults = UserDefaults.standard
+        listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
         
-        var strings: [String] = userDefaults.object(forKey: "test") as? [String] ?? []
-        
-        print("daily: ", strings[0])
-        
-        print("ihaaaaa:", context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: strings[0])!))
-        
-        
+        for i in 0 ..< listOfTasks.count {
+            taskModel.append(context.object(with: context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: listOfTasks[i])!)!) as! TaskModel)
+        }
+    }
+    
+    func getHumorDay(){
         do {
-            taskModel = getTasksDay(humor: humor)
-            
             humorModel = try context.fetch(HumorModel.fetchRequest())
             
             humorModel = humorModel.filter { h in
@@ -65,9 +66,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         } catch {
             //error
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
+        tableView.reloadData()
     }
     
 
@@ -94,8 +98,13 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Reschedule") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
+            // tem q apagar do dia
             
             self.taskModel.remove(at: indexPath.row)
+            
+            self.listOfTasks.remove(at: indexPath.row)
+            self.userDefaults.set(self.listOfTasks, forKey: "tasks")
+            
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
@@ -112,6 +121,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         let done = UIContextualAction(style: .destructive,
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
+            
+            // tem q apagar de tudo
             
             self.taskModel.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)

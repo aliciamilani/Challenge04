@@ -107,6 +107,9 @@ class HumorController: UIViewController {
         
         createItem(humor: humorSelected)
         
+        getTasksDay(humor: humorSelected)
+
+        
         if let destinationViewController = segue.destination as? DailyTasksController {
             destinationViewController.humor = humorSelected
         }
