@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -36,6 +37,16 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        let userDefaults = UserDefaults.standard
+        
+        var strings: [String] = userDefaults.object(forKey: "test") as? [String] ?? []
+        
+        print("daily: ", strings[0])
+        
+        print("ihaaaaa:", context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: strings[0])!))
+        
+        
         do {
             taskModel = getTasksDay(humor: humor)
             
