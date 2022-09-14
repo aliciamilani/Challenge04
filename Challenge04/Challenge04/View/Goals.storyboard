@@ -689,7 +689,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xPa-SY-pPt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Goals" id="kIT-nQ-max">
-                        <imageReference key="image" image="List" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="Goals" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="FinishButton"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -723,7 +723,7 @@
         <image name="Bask" width="109" height="111"/>
         <image name="Crochet" width="109" height="111"/>
         <image name="Draw" width="109" height="111"/>
-        <image name="List" width="35" height="24"/>
+        <image name="Goals" width="25" height="24"/>
         <image name="Paint" width="109" height="111"/>
         <image name="Portrait-background-tasks" width="390" height="844"/>
         <image name="School" width="109" height="111"/>
