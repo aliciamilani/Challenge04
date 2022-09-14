@@ -40,6 +40,16 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         getHumorDay()
     }
     
+    func deleteItem(item: TaskModel){
+        context.delete(item)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
     func getSavedTasks(){
         
         listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
@@ -98,7 +108,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Reschedule") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
-            // tem q apagar do dia
             
             self.taskModel.remove(at: indexPath.row)
             
@@ -124,7 +133,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             
             // tem q apagar de tudo
             
+            self.deleteItem(item: self.taskModel[indexPath.row])
             self.taskModel.remove(at: indexPath.row)
+            
+            self.listOfTasks.remove(at: indexPath.row)
+            self.userDefaults.set(self.listOfTasks, forKey: "tasks")
+            
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
