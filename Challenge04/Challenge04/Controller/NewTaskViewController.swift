@@ -39,15 +39,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getText(_ num: Int?) -> String {
         switch (num){
         case 0:
-            return "I don't know"
+            return "I don't know >"
         case 1:
-            return "Low"
+            return "Low >"
         case 2:
-            return "Moderate"
+            return "Moderate >"
         case 3:
-            return "High"
+            return "High >"
         default:
-            return "I don't know"
+            return "I don't know >"
         }
     
     }
@@ -65,6 +65,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             textField.text = createdTask?.title
         }
         
+        createdTask?.difficulty = 1
+        createdTask?.duration = 1
         configureTextFields()
         
     }

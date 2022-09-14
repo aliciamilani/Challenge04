@@ -22,7 +22,6 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     var data: [Options] = [
-        Options(id: 0, type: "I don't know", check: false),
         Options(id: 1, type: "Low", check: false),
         Options(id: 2, type: "Moderate", check: false),
         Options(id: 3, type: "High", check: false),
@@ -33,7 +32,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[taskDifficulty].check = true
+        data[taskDifficulty-1].check = true
         
     }
     
@@ -81,7 +80,6 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         data[0].check = false
         data[1].check = false
         data[2].check = false
-        data[3].check = false
         tableView.reloadData()
     }
 }
