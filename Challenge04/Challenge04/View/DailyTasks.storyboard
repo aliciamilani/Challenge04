@@ -22,7 +22,7 @@
         <!--Tasks-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DailyTasksStory" id="Y6W-OH-hqX" customClass="DailyTasksController" customModule="Challenge04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DailyTasksStory" id="Y6W-OH-hqX" customClass="DailyTasksController" customModule="GoMoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLr-9F-EOh">
                                 <rect key="frame" x="20" y="199" width="374" height="21"/>
-                                <accessibility key="accessibilityConfiguration" hint="Week day according to your adjust set up" label="Day os the week"/>
+                                <accessibility key="accessibilityConfiguration" hint="Week day according to your adjust set up"/>
                                 <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="18"/>
                                 <color key="textColor" name="Labels"/>
                                 <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                 <color key="sectionIndexBackgroundColor" name="Background"/>
                                 <color key="sectionIndexTrackingBackgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="Challenge04" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="GoMoo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="59.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9N-aw-f0f" id="m15-B0-lCC">
