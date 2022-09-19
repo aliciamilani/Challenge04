@@ -30,6 +30,7 @@ class HumorController: UIViewController {
     
     // MARK: - Functions
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -87,7 +88,28 @@ class HumorController: UIViewController {
         humorImage.isAccessibilityElement = true
     }
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func createItem(humor: String){
+        do {
+            let newItem = HumorModel(context: context)
+            
+            newItem.data = Date()
+            newItem.humor = humor
+            
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        createItem(humor: humorSelected)
+        
+        getTasksDay(humor: humorSelected)
+
+        
         if let destinationViewController = segue.destination as? DailyTasksController {
             destinationViewController.humor = humorSelected
         }

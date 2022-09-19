@@ -10,13 +10,61 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private var humorModel = [HumorModel]()
+    
+    private func checkHumorDay() -> Bool {
+        humorModel = [HumorModel]()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            humorModel = try context.fetch(HumorModel.fetchRequest())
 
-
+            for humor in humorModel{
+                if Calendar.current.isDateInToday(humor.data ?? Date()) {
+                    return true
+                }
+            }
+            return false
+            
+        } catch {
+            //error
+        }
+        
+        return false
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        if checkHumorDay(){
+            let storyboard = UIStoryboard(name: "DailyTasks", bundle: .main)
+            let vc = storyboard.instantiateViewController(identifier: "tabStory")
+            self.window?.rootViewController = vc
+            
+        } else {
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "goalsButton")
+            
+            if humorModel.count == 0 {
+                let storyboard = UIStoryboard(name: "Goals", bundle: .main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "goalsStory")
+                self.window?.rootViewController = UINavigationController(rootViewController: vc)
+                
+            } else {
+                
+                let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
+                self.window?.rootViewController = UINavigationController(rootViewController: vc)
+                
+            }
+            
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -12,18 +12,19 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var task:Task = Task()
+    var taskDuration : Int = 0
+    var add = true
     
     struct Options {
+        let id: Int
         let type: String
         var check: Bool
     }
     
     var data: [Options] = [
-        Options(type: "I don't know", check: false),
-        Options(type: "Low", check: false),
-        Options(type: "Moderate", check: false),
-        Options(type: "High", check: false),
+        Options(id: 1, type: "Low", check: false),
+        Options(id: 2, type: "Moderate", check: false),
+        Options(id: 3, type: "High", check: false),
     ]
     
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[task.duration].check = true
+        data[taskDuration-1].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,14 +58,26 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         data[indexPath.row].check.toggle()
         
-        tableView.reloadRows(at:[indexPath],with:.none)
+        taskDuration = data[indexPath.row].id
+        
+        tableView.reloadRows(at:[indexPath], with:.none)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
+            self.navigationController?.popViewController(animated: true)
+            let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
+            
+            if !self.add {
+                destination.updateDuration(newDuration: self.taskDuration)
+            } else {
+                destination.createdTask?.duration = self.taskDuration
+            }
+        }
     }
     
     func clearCheck(){
         data[0].check = false
         data[1].check = false
         data[2].check = false
-        data[3].check = false
         tableView.reloadData()
     }
 
