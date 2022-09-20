@@ -101,7 +101,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-ip-b3T">
                                 <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
                                 <rect key="frame" x="20" y="132" width="374" height="44"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
@@ -118,11 +118,11 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
-                                <rect key="frame" x="20" y="200" width="374" height="100"/>
+                                <rect key="frame" x="20" y="200" width="374" height="90"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="iDG-li-Wco"/>
+                                    <constraint firstAttribute="height" constant="90" id="iDG-li-Wco"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellGoals" rowHeight="60" id="hZr-V6-8VV" customClass="CardCellGoals" customModule="GoMoo" customModuleProvider="target">
@@ -220,11 +220,11 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-jN-Ms3">
-                                <rect key="frame" x="20" y="112" width="374" height="150"/>
+                                <rect key="frame" x="20" y="112" width="374" height="135"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="iKh-g2-lfe"/>
+                                    <constraint firstAttribute="height" constant="135" id="iKh-g2-lfe"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDuration" rowHeight="60" id="iNz-2f-eOh" customClass="CardCellDuration" customModule="GoMoo" customModuleProvider="target">
@@ -262,6 +262,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-EX-hRK">
+                                <rect key="frame" x="32" y="259" width="362" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbj-XL-rAL"/>
                         <color key="backgroundColor" name="Background"/>
@@ -269,7 +275,10 @@
                             <constraint firstItem="xbj-XL-rAL" firstAttribute="bottom" secondItem="ay5-jR-Gbs" secondAttribute="bottom" id="5ja-40-L5W"/>
                             <constraint firstItem="TtU-jN-Ms3" firstAttribute="top" secondItem="xbj-XL-rAL" secondAttribute="top" constant="20" id="80h-wK-rdX"/>
                             <constraint firstItem="xbj-XL-rAL" firstAttribute="trailing" secondItem="ay5-jR-Gbs" secondAttribute="trailing" id="D4U-2L-UHx"/>
+                            <constraint firstItem="hrI-EX-hRK" firstAttribute="trailing" secondItem="TtU-jN-Ms3" secondAttribute="trailing" id="JCh-bl-yJh"/>
                             <constraint firstItem="TtU-jN-Ms3" firstAttribute="leading" secondItem="xbj-XL-rAL" secondAttribute="leading" constant="20" id="MHI-dB-rQ1"/>
+                            <constraint firstItem="hrI-EX-hRK" firstAttribute="top" secondItem="TtU-jN-Ms3" secondAttribute="bottom" constant="12" id="OeD-y1-blp"/>
+                            <constraint firstItem="hrI-EX-hRK" firstAttribute="leading" secondItem="TtU-jN-Ms3" secondAttribute="leading" constant="12" id="WdV-H7-KUF"/>
                             <constraint firstItem="xbj-XL-rAL" firstAttribute="top" secondItem="ay5-jR-Gbs" secondAttribute="top" constant="44" id="gm0-N5-zWq"/>
                             <constraint firstItem="xbj-XL-rAL" firstAttribute="trailing" secondItem="TtU-jN-Ms3" secondAttribute="trailing" constant="20" id="kcK-Ei-2JY"/>
                             <constraint firstItem="ay5-jR-Gbs" firstAttribute="leading" secondItem="xbj-XL-rAL" secondAttribute="leading" id="wQE-ca-2vW"/>
@@ -296,11 +305,11 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="urG-TF-bd0">
-                                <rect key="frame" x="20" y="112" width="374" height="150"/>
+                                <rect key="frame" x="20" y="112" width="374" height="135"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="cVl-X9-9gA"/>
+                                    <constraint firstAttribute="height" constant="135" id="cVl-X9-9gA"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDifficulty" rowHeight="60" id="Mfd-yY-72D" customClass="CardCellDifficulty" customModule="GoMoo" customModuleProvider="target">
@@ -338,6 +347,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitment needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-wd-dHT">
+                                <rect key="frame" x="32" y="259" width="362" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F8O-T9-j5z"/>
                         <color key="backgroundColor" name="Background"/>
@@ -349,6 +364,9 @@
                             <constraint firstItem="F8O-T9-j5z" firstAttribute="trailing" secondItem="BVq-VV-w3p" secondAttribute="trailing" id="FHP-d7-NSa"/>
                             <constraint firstItem="F8O-T9-j5z" firstAttribute="bottom" secondItem="BVq-VV-w3p" secondAttribute="bottom" id="H8A-UN-831"/>
                             <constraint firstItem="F8O-T9-j5z" firstAttribute="top" secondItem="BVq-VV-w3p" secondAttribute="top" constant="44" id="Hgi-kS-T3f"/>
+                            <constraint firstItem="Y95-wd-dHT" firstAttribute="trailing" secondItem="urG-TF-bd0" secondAttribute="trailing" id="Lsp-rj-CnR"/>
+                            <constraint firstItem="Y95-wd-dHT" firstAttribute="leading" secondItem="urG-TF-bd0" secondAttribute="leading" constant="12" id="PcK-En-gfr"/>
+                            <constraint firstItem="Y95-wd-dHT" firstAttribute="top" secondItem="urG-TF-bd0" secondAttribute="bottom" constant="12" id="sii-Tw-vf1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Difficulty" largeTitleDisplayMode="never" id="JHW-A5-ZEM"/>

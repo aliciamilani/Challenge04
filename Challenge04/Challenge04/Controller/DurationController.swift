@@ -22,9 +22,9 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     var data: [Options] = [
-        Options(id: 1, type: "Low", check: false),
-        Options(id: 2, type: "Moderate", check: false),
-        Options(id: 3, type: "High", check: false),
+        Options(id: 1, type: "1 hour", check: false),
+        Options(id: 2, type: "2 hours", check: false),
+        Options(id: 3, type: "3 hours or more", check: false),
     ]
     
     override func viewDidLoad() {

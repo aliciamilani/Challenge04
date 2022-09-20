@@ -22,9 +22,9 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     var data: [Options] = [
-        Options(id: 1, type: "Low", check: false),
-        Options(id: 2, type: "Moderate", check: false),
-        Options(id: 3, type: "High", check: false),
+        Options(id: 1, type: "Easy", check: false),
+        Options(id: 2, type: "Medium", check: false),
+        Options(id: 3, type: "Hard", check: false),
     ]
     
     override func viewDidLoad() {

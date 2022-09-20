@@ -36,21 +36,38 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         Options(title: "Duration", description: "I don't know >")
     ]
     
-    func getText(_ num: Int?) -> String {
+    func getTextDifficulty(_ num: Int?) -> String {
         switch (num){
         case 0:
             return "I don't know >"
         case 1:
-            return "Low >"
+            return "Easy >"
         case 2:
-            return "Moderate >"
+            return "Medium >"
         case 3:
-            return "High >"
+            return "Hard >"
         default:
             return "I don't know >"
         }
     
     }
+    
+    func getTextDuration(_ num: Int?) -> String {
+        switch (num){
+        case 0:
+            return "I don't know >"
+        case 1:
+            return "1 hour >"
+        case 2:
+            return "2 hours >"
+        case 3:
+            return "3 hours or more >"
+        default:
+            return "I don't know >"
+        }
+    
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,11 +92,11 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.reloadData()
     
         if !add {
-            data[0].description = getText(Int(taskModel.difficulty))
-            data[1].description = getText(Int(taskModel.duration))
+            data[0].description = getTextDifficulty(Int(taskModel.difficulty))
+            data[1].description = getTextDuration(Int(taskModel.duration))
         } else {
-            data[0].description = getText(createdTask?.difficulty)
-            data[1].description = getText(createdTask?.duration)
+            data[0].description = getTextDifficulty(createdTask?.difficulty)
+            data[1].description = getTextDuration(createdTask?.duration)
         }
         
     }
