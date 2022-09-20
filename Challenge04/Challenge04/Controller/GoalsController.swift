@@ -77,7 +77,7 @@ class GoalsController: UIViewController {
             }
         }
         
-        if segue.identifier == "eletronicsSegue" {
+        if segue.identifier == "electronicsSegue" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Sports
                 destination.goal = .Eletronics

@@ -8,7 +8,6 @@
 import Foundation
 
 class LocalTask {
-    var cod: UUID
     var title : String
     
     var difficulty : Int
@@ -21,7 +20,6 @@ class LocalTask {
 
     
     init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes){
-        self.cod = UUID()
         self.title = title
         
         self.difficulty = difficulty
@@ -35,7 +33,6 @@ class LocalTask {
     }
     
     init(){
-        self.cod = UUID()
         self.title = ""
         
         self.difficulty = 0
