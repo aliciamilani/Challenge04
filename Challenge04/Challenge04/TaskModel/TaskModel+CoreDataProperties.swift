@@ -17,7 +17,6 @@ extension TaskModel {
     }
 
     @NSManaged public var category: Int16
-    @NSManaged public var cod: UUID?
     @NSManaged public var difficulty: Int16
     @NSManaged public var duration: Int16
     @NSManaged public var goal: Int16
