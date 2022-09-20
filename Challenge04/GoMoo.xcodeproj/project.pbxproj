@@ -109,14 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B05BE8A28D9F73300A9D962 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				8B05BE8B28D9F7A800A9D962 /* PreloadedData.plist */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		8B4BE2A828CA37D300FDEFA9 /* TaskModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +164,7 @@
 		8BB52E2128ABC4E300916CD5 /* Challenge04 */ = {
 			isa = PBXGroup;
 			children = (
-				8B05BE8A28D9F73300A9D962 /* Data */,
+				8B05BE8B28D9F7A800A9D962 /* PreloadedData.plist */,
 				8B4BE2A828CA37D300FDEFA9 /* TaskModel */,
 				8B1A5B3528C6CC28001B8AA2 /* Model.xcdatamodeld */,
 				8BB52E2228ABC4E300916CD5 /* AppDelegate.swift */,

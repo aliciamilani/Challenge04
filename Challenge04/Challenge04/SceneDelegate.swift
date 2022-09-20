@@ -12,6 +12,48 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     private var humorModel = [HumorModel]()
     
+    func preloadData() {
+        
+        let preloadedDataKey = "didPreloadData"
+        
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: preloadedDataKey) != true {
+
+            guard let urlPath = Bundle.main.url(forResource: "PreloadedData", withExtension: "plist") else {
+                return
+            }
+
+            let backgroundContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.newBackgroundContext()
+            
+//            (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+//
+            backgroundContext.perform {
+                if let arrayContent = NSArray(contentsOf: urlPath) as? [Array<String>] {
+
+                    do {
+                        
+                        for item in arrayContent {
+                            let taskModelObject = TaskModel(context: backgroundContext)
+                            taskModelObject.category = Int16(item[0])!
+                            taskModelObject.goal = Int16(item[1])!
+                            taskModelObject.title = item[2]
+                            taskModelObject.difficulty = Int16(item[3])!
+                            taskModelObject.duration = Int16(item[4])!
+                            taskModelObject.points = Float(item[5])!
+                        }
+                        
+                        try backgroundContext.save()
+                        userDefaults.set(true, forKey: preloadedDataKey)
+                        
+                    } catch {
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     private func checkHumorDay() -> Bool {
         humorModel = [HumorModel]()
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -40,6 +82,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        preloadData()
         
         if checkHumorDay(){
             let storyboard = UIStoryboard(name: "DailyTasks", bundle: .main)
