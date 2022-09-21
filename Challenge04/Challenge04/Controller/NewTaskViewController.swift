@@ -9,13 +9,18 @@ import Foundation
 import UIKit
 import CoreData
 
-class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var descriptionTextField: UITextField!
+    
+    
+    @IBOutlet weak var descriptionText: UITextView!
+    var placeholderLabel : UILabel!
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -76,6 +81,16 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
+        
+        descriptionText.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "Enter some text..."
+        placeholderLabel.sizeToFit()
+        
+        descriptionText.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (descriptionText.font?.pointSize)! / 2)
+        placeholderLabel.textColor = .tertiaryLabel
+        placeholderLabel.isHidden = !descriptionText.text.isEmpty
         
         if !add {
             titleTextField.text = taskModel.title
@@ -258,3 +273,9 @@ extension NewTaskViewController: UITextFieldDelegate {
     }
 }
 
+
+extension NewTaskViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+    }
+}
