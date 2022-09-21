@@ -113,7 +113,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="12"/>
+                                        <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
@@ -172,6 +172,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Description (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0N5-6d-82E">
+                                <rect key="frame" x="20" y="314" width="374" height="142"/>
+                                <color key="backgroundColor" name="TextField"/>
+                                <color key="tintColor" name="MainTitle"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="cef-XR-oo7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vx-5M-pgH"/>
                         <color key="backgroundColor" name="Background"/>
@@ -181,7 +191,10 @@
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="top" secondItem="Hcv-34-soO" secondAttribute="bottom" constant="24" id="GTH-Rc-3KQ"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="Ut4-Ih-1zR"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="top" secondItem="rZq-ip-b3T" secondAttribute="top" constant="44" id="Yuq-ig-jez"/>
+                            <constraint firstItem="0N5-6d-82E" firstAttribute="leading" secondItem="f1E-w5-TOS" secondAttribute="leading" id="fr0-lo-FKZ"/>
+                            <constraint firstItem="0N5-6d-82E" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" id="p0G-B2-riP"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="p2A-y3-4O5"/>
+                            <constraint firstItem="0N5-6d-82E" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="24" id="pDF-8x-lDW"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" constant="20" id="pOp-bU-X5i"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="rZq-ip-b3T" secondAttribute="bottom" id="qQU-yT-Xl3"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="top" secondItem="9Vx-5M-pgH" secondAttribute="top" constant="40" id="tUZ-AY-EjC"/>
@@ -198,8 +211,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addTaskButton" destination="wDA-nB-PJ1" id="kTc-Os-6W5"/>
+                        <outlet property="descriptionTextField" destination="0N5-6d-82E" id="PJw-kQ-Amh"/>
                         <outlet property="tableView" destination="f1E-w5-TOS" id="XAE-Rx-YBP"/>
-                        <outlet property="textField" destination="Hcv-34-soO" id="cnz-dl-0qi"/>
+                        <outlet property="titleTextField" destination="Hcv-34-soO" id="Cb6-VB-MnC"/>
                         <segue destination="cJ9-fZ-Pe7" kind="show" identifier="difficultySegue" id="54T-On-bKg"/>
                         <segue destination="t6Z-3d-Yp2" kind="show" identifier="durationSegue" id="JP2-pc-pk6"/>
                     </connections>

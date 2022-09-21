@@ -13,7 +13,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var descriptionTextField: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -76,16 +78,23 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.allowsSelection = true
         
         if !add {
-            textField.text = taskModel.title
+            titleTextField.text = taskModel.title
         } else {
             createdTask = LocalTask()
-            textField.text = createdTask?.title
+            titleTextField.text = createdTask?.title
         }
         
         createdTask?.difficulty = 1
         createdTask?.duration = 1
         configureTextFields()
         
+        //Code for left padding in title text field
+        titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: titleTextField.frame.height))
+        titleTextField.leftViewMode = .always
+        
+        //Code for left padding in description text field
+        descriptionTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 13, height: descriptionTextField.frame.height))
+        descriptionTextField.leftViewMode = .always
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,9 +111,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     private func configureTextFields(){
-        textField.delegate = self
+        titleTextField.delegate = self
         
-        if (textField.text == "") {
+        if (titleTextField.text == "") {
             addTaskButton.isEnabled = false
         } else {
             addTaskButton.isEnabled = true
@@ -216,12 +225,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
-        if !(textField.text == ""){
+        if !(titleTextField.text == ""){
             if add {
-                createItem(title: textField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category)
+                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category)
             } else {
-                if taskModel.title != textField.text! {
-                    updateTitle(newTitle: textField.text!)
+                if taskModel.title != titleTextField.text! {
+                    updateTitle(newTitle: titleTextField.text!)
                 }
             }
         }
@@ -231,14 +240,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension NewTaskViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+    func textFieldShouldReturn(_ titleTextField: UITextField) -> Bool {
+        titleTextField.resignFirstResponder()
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ titleTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
-        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        let text = (titleTextField.text! as NSString).replacingCharacters(in: range, with: string)
 
         if !text.isEmpty{
             addTaskButton.isEnabled = true
