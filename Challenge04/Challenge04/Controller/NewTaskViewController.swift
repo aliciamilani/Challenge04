@@ -15,12 +15,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var titleTextField: UITextField!
     
-    @IBOutlet weak var descriptionTextField: UITextField!
-    
-    
     @IBOutlet weak var descriptionText: UITextView!
     var placeholderLabel : UILabel!
-    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -82,15 +78,18 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
+        // Description TextView placeholder
         descriptionText.delegate = self
         placeholderLabel = UILabel()
-        placeholderLabel.text = "Enter some text..."
+        placeholderLabel.text = "Description (optional)"
+        placeholderLabel.font = .systemFont(ofSize: 16)
         placeholderLabel.sizeToFit()
         
         descriptionText.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (descriptionText.font?.pointSize)! / 2)
         placeholderLabel.textColor = .tertiaryLabel
         placeholderLabel.isHidden = !descriptionText.text.isEmpty
+        //
         
         if !add {
             titleTextField.text = taskModel.title
@@ -107,9 +106,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: titleTextField.frame.height))
         titleTextField.leftViewMode = .always
         
-        //Code for left padding in description text field
-        descriptionTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 13, height: descriptionTextField.frame.height))
-        descriptionTextField.leftViewMode = .always
+        //Code for left padding in title view
+        
+        descriptionText.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
