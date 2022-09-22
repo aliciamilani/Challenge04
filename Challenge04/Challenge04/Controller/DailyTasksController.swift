@@ -164,6 +164,13 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: self)
+    }
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+    }
+    
 }
 
 func getCurrentTime() -> String {
