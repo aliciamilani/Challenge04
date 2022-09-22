@@ -42,15 +42,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getTextDifficulty(_ num: Int?) -> String {
         switch (num){
         case 0:
-            return "I don't know >"
+            return "I don't know"
         case 1:
-            return "Easy >"
+            return "Easy"
         case 2:
-            return "Medium >"
+            return "Medium"
         case 3:
-            return "Hard >"
+            return "Hard"
         default:
-            return "I don't know >"
+            return "I don't know"
         }
     
     }
@@ -58,15 +58,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getTextDuration(_ num: Int?) -> String {
         switch (num){
         case 0:
-            return "I don't know >"
+            return "I don't know"
         case 1:
-            return "1 hour >"
+            return "1 hour"
         case 2:
-            return "2 hours >"
+            return "2 hours"
         case 3:
-            return "3 hours or more >"
+            return "3 hours or more"
         default:
-            return "I don't know >"
+            return "I don't know"
         }
     
     }
@@ -96,8 +96,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if !add {
             titleTextField.text = taskModel.title
-            print("aqqq: ", taskModel.title)
-            print("aqqq: ", taskModel.descrip)
             descriptionText.text = taskModel.descrip
         } else {
             createdTask = LocalTask()
@@ -116,6 +114,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         //Code for left padding in title view
         
         descriptionText.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        
+        placeholderLabel.isHidden = !descriptionText.text.isEmpty
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -150,6 +150,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
                 
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
+        
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }
@@ -246,7 +248,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func updateDescrip(newDescrip: String){
         
-        taskModel.descrip = description
+        taskModel.descrip = newDescrip
         
         do {
             try context.save()
@@ -297,7 +299,6 @@ extension NewTaskViewController: UITextFieldDelegate {
 
 extension NewTaskViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        
         placeholderLabel.isHidden = !textView.text.isEmpty
     }
 }

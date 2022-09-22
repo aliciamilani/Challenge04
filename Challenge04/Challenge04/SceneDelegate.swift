@@ -25,9 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
 
             let backgroundContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.newBackgroundContext()
+
             
-//            (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-//
             backgroundContext.perform {
                 if let arrayContent = NSArray(contentsOf: urlPath) as? [Array<String>] {
 
@@ -41,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                             taskModelObject.difficulty = Int16(item[3])!
                             taskModelObject.duration = Int16(item[4])!
                             taskModelObject.points = Float(item[5])!
+                            taskModelObject.descrip = item[6]
                         }
                         
                         try backgroundContext.save()
