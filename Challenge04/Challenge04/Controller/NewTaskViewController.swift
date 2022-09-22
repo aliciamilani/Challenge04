@@ -118,6 +118,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         placeholderLabel.isHidden = !descriptionText.text.isEmpty
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     
@@ -278,9 +279,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension NewTaskViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ titleTextField: UITextField) -> Bool {
         titleTextField.resignFirstResponder()
         return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func textField(_ titleTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
