@@ -39,7 +39,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-K2-vCr">
                                                     <rect key="frame" x="40" y="21" width="334" height="17"/>
                                                     <accessibility key="accessibilityConfiguration" hint="One of all tasks to do or reschedule"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -109,7 +109,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ubr-fQ-Zaq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -133,15 +133,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-2C-zjZ">
-                                                    <rect key="frame" x="20" y="11" width="66" height="38"/>
+                                                    <rect key="frame" x="20" y="11" width="56.5" height="38"/>
                                                     <accessibility key="accessibilityConfiguration" hint="Choose task dificult and duration "/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="OptionsText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't know" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkU-Ze-7Vd">
-                                                    <rect key="frame" x="256" y="11" width="98" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="270.5" y="11" width="83.5" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="DescriptionText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -172,16 +172,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Description (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0N5-6d-82E">
-                                <rect key="frame" x="20" y="314" width="374" height="142"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAU-UD-C81">
+                                <rect key="frame" x="20" y="314" width="374" height="70"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="142" id="cef-XR-oo7"/>
+                                    <constraint firstAttribute="height" constant="70" id="0OQ-S3-c7G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vx-5M-pgH"/>
                         <color key="backgroundColor" name="Background"/>
@@ -189,12 +195,12 @@
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="rZq-ip-b3T" secondAttribute="trailing" id="ASh-h4-q4b"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="Hcv-34-soO" secondAttribute="trailing" constant="20" id="ApC-Zj-g6e"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="top" secondItem="Hcv-34-soO" secondAttribute="bottom" constant="24" id="GTH-Rc-3KQ"/>
+                            <constraint firstItem="hAU-UD-C81" firstAttribute="leading" secondItem="f1E-w5-TOS" secondAttribute="leading" id="Jmr-iC-cRn"/>
+                            <constraint firstItem="hAU-UD-C81" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" id="L3I-aT-X9Q"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="Ut4-Ih-1zR"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="top" secondItem="rZq-ip-b3T" secondAttribute="top" constant="44" id="Yuq-ig-jez"/>
-                            <constraint firstItem="0N5-6d-82E" firstAttribute="leading" secondItem="f1E-w5-TOS" secondAttribute="leading" id="fr0-lo-FKZ"/>
-                            <constraint firstItem="0N5-6d-82E" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" id="p0G-B2-riP"/>
+                            <constraint firstItem="hAU-UD-C81" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="24" id="cn0-4h-YXt"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="p2A-y3-4O5"/>
-                            <constraint firstItem="0N5-6d-82E" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="24" id="pDF-8x-lDW"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" constant="20" id="pOp-bU-X5i"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="rZq-ip-b3T" secondAttribute="bottom" id="qQU-yT-Xl3"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="top" secondItem="9Vx-5M-pgH" secondAttribute="top" constant="40" id="tUZ-AY-EjC"/>
@@ -211,7 +217,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addTaskButton" destination="wDA-nB-PJ1" id="kTc-Os-6W5"/>
-                        <outlet property="descriptionTextField" destination="0N5-6d-82E" id="PJw-kQ-Amh"/>
+                        <outlet property="descriptionText" destination="hAU-UD-C81" id="ePK-2E-3A8"/>
                         <outlet property="tableView" destination="f1E-w5-TOS" id="XAE-Rx-YBP"/>
                         <outlet property="titleTextField" destination="Hcv-34-soO" id="Cb6-VB-MnC"/>
                         <segue destination="cJ9-fZ-Pe7" kind="show" identifier="difficultySegue" id="54T-On-bKg"/>
@@ -234,11 +240,11 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-jN-Ms3">
-                                <rect key="frame" x="20" y="112" width="374" height="135"/>
+                                <rect key="frame" x="20" y="112" width="374" height="130"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="135" id="iKh-g2-lfe"/>
+                                    <constraint firstAttribute="height" constant="130" id="iKh-g2-lfe"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDuration" rowHeight="60" id="iNz-2f-eOh" customClass="CardCellDuration" customModule="GoMoo" customModuleProvider="target">
@@ -249,8 +255,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-yw-8qx">
-                                                    <rect key="frame" x="20" y="11" width="72" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="20" y="11" width="61.5" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="OptionsText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -277,7 +283,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-EX-hRK">
-                                <rect key="frame" x="32" y="259" width="362" height="17"/>
+                                <rect key="frame" x="32" y="254" width="362" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -319,11 +325,11 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="urG-TF-bd0">
-                                <rect key="frame" x="20" y="112" width="374" height="135"/>
+                                <rect key="frame" x="20" y="112" width="374" height="130"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="135" id="cVl-X9-9gA"/>
+                                    <constraint firstAttribute="height" constant="130" id="cVl-X9-9gA"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellDifficulty" rowHeight="60" id="Mfd-yY-72D" customClass="CardCellDifficulty" customModule="GoMoo" customModuleProvider="target">
@@ -334,8 +340,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc5-zk-C5j">
-                                                    <rect key="frame" x="20" y="11" width="72" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="20" y="11" width="61.5" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="OptionsText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -362,7 +368,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitment needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-wd-dHT">
-                                <rect key="frame" x="32" y="259" width="362" height="17"/>
+                                <rect key="frame" x="32" y="254" width="362" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

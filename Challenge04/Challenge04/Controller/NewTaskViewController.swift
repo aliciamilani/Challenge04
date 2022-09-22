@@ -9,13 +9,14 @@ import Foundation
 import UIKit
 import CoreData
 
-class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     
     @IBOutlet weak var titleTextField: UITextField!
     
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var descriptionText: UITextView!
+    var placeholderLabel : UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -41,15 +42,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getTextDifficulty(_ num: Int?) -> String {
         switch (num){
         case 0:
-            return "I don't know >"
+            return "I don't know"
         case 1:
-            return "Easy >"
+            return "Easy"
         case 2:
-            return "Medium >"
+            return "Medium"
         case 3:
-            return "Hard >"
+            return "Hard"
         default:
-            return "I don't know >"
+            return "I don't know"
         }
     
     }
@@ -57,15 +58,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getTextDuration(_ num: Int?) -> String {
         switch (num){
         case 0:
-            return "I don't know >"
+            return "I don't know"
         case 1:
-            return "1 hour >"
+            return "1 hour"
         case 2:
-            return "2 hours >"
+            return "2 hours"
         case 3:
-            return "3 hours or more >"
+            return "3 hours or more"
         default:
-            return "I don't know >"
+            return "I don't know"
         }
     
     }
@@ -77,11 +78,29 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
+        // Description TextView placeholder
+        descriptionText.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "Description (optional)"
+        placeholderLabel.font = .systemFont(ofSize: 15)
+        placeholderLabel.sizeToFit()
+        
+        descriptionText.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (descriptionText.font?.pointSize)! / 2)
+        placeholderLabel.textColor = .tertiaryLabel
+        placeholderLabel.isHidden = !descriptionText.text.isEmpty
+        
+        descriptionText.textColor = .label
+        descriptionText.font = .systemFont(ofSize: 15)
+        
+        
         if !add {
             titleTextField.text = taskModel.title
+            descriptionText.text = taskModel.descrip
         } else {
             createdTask = LocalTask()
             titleTextField.text = createdTask?.title
+            descriptionText.text = createdTask?.descrip
         }
         
         createdTask?.difficulty = 1
@@ -92,9 +111,11 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: titleTextField.frame.height))
         titleTextField.leftViewMode = .always
         
-        //Code for left padding in description text field
-        descriptionTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 13, height: descriptionTextField.frame.height))
-        descriptionTextField.leftViewMode = .always
+        //Code for left padding in title view
+        
+        descriptionText.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        
+        placeholderLabel.isHidden = !descriptionText.text.isEmpty
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,7 +134,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     private func configureTextFields(){
         titleTextField.delegate = self
         
-        if (titleTextField.text == "") {
+        if (titleTextField.text == "" && descriptionText.text == "") {
             addTaskButton.isEnabled = false
         } else {
             addTaskButton.isEnabled = true
@@ -129,6 +150,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
                 
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
+        
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }
@@ -174,13 +197,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes){
+    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String){
         let newItem = TaskModel(context: context)
         newItem.title = title
         newItem.difficulty = Int16(difficulty)
         newItem.duration = Int16(duration)
         newItem.goal = goal.rawValue
         newItem.category = category.rawValue
+        newItem.descrip = descrip
     
         do {
             try context.save()
@@ -222,15 +246,29 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func updateDescrip(newDescrip: String){
+        
+        taskModel.descrip = newDescrip
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
     
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
         if !(titleTextField.text == ""){
             if add {
-                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category)
+                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text)
             } else {
                 if taskModel.title != titleTextField.text! {
                     updateTitle(newTitle: titleTextField.text!)
+                }
+                if taskModel.descrip != descriptionText.text {
+                    updateDescrip(newDescrip: descriptionText.text)
                 }
             }
         }
@@ -258,3 +296,9 @@ extension NewTaskViewController: UITextFieldDelegate {
     }
 }
 
+
+extension NewTaskViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+    }
+}

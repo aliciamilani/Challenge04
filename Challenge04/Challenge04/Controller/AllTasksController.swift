@@ -37,11 +37,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
         do {
             let allData = try context.fetch(TaskModel.fetchRequest())
             
-            print(allData.count)
-            print(goal.self)
             taskModel = allData.filter { t in
-                print("t1: ", t.goal)
-                print("t2: ", goal.rawValue)
                 return t.goal == goal.rawValue
             }
             
