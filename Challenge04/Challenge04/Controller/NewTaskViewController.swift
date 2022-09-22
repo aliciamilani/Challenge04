@@ -82,13 +82,17 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         descriptionText.delegate = self
         placeholderLabel = UILabel()
         placeholderLabel.text = "Description (optional)"
-        placeholderLabel.font = .systemFont(ofSize: 16)
+        placeholderLabel.font = .systemFont(ofSize: 15)
         placeholderLabel.sizeToFit()
         
         descriptionText.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (descriptionText.font?.pointSize)! / 2)
         placeholderLabel.textColor = .tertiaryLabel
         placeholderLabel.isHidden = !descriptionText.text.isEmpty
+        
+        descriptionText.textColor = .label
+        descriptionText.font = .systemFont(ofSize: 15)
+        
         //
         
         if !add {
@@ -275,6 +279,7 @@ extension NewTaskViewController: UITextFieldDelegate {
 
 extension NewTaskViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
+        
         placeholderLabel.isHidden = !textView.text.isEmpty
     }
 }
