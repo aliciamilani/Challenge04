@@ -51,6 +51,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.tintColor = UIColor.init(named: "MainTitle")
         cell.backgroundColor = UIColor.clear
         
+        cell.selectionStyle = .none
         
         return cell
     }

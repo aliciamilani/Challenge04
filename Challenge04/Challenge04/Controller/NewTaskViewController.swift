@@ -154,6 +154,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
+        cell.selectionStyle = .none
+        
         return cell
     }
     

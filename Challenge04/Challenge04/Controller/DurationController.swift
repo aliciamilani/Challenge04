@@ -50,6 +50,8 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         cell.tintColor = UIColor.init(named: "MainTitle")
         cell.backgroundColor = UIColor.clear
         
+        cell.selectionStyle = .none
+        
         return cell
     }
     
