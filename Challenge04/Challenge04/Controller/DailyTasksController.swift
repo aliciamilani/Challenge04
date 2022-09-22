@@ -117,7 +117,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
-        latter.backgroundColor = UIColor(named: "Undone")
+        latter.backgroundColor = UIColor(named: "Reschedule")
         
         let configuration = UISwipeActionsConfiguration(actions: [latter])
             
