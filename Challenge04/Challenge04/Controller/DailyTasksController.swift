@@ -168,6 +168,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "detailSegue", sender: self)
     }
     
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        print("Unwind")
+    }
+    
 }
 
 func getCurrentTime() -> String {

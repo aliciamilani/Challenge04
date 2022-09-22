@@ -15,13 +15,5 @@ class DetailsController: UIViewController{
         super.viewDidLoad()
     }
     
-    @IBAction func close(_ sender: Any) {
-        print("oi")
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func closeView(_ sender: Any) {
-        print("oi")
-        self.navigationController?.popViewController(animated: <#T##Bool#>)
-    }
+
 }

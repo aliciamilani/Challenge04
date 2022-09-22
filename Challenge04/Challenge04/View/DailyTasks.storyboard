@@ -168,12 +168,12 @@
                         <outlet property="messageLabel" destination="Nea-3g-J4E" id="koc-tp-Nbz"/>
                         <outlet property="tableView" destination="jyQ-Ps-ofN" id="Rg7-yC-rMF"/>
                         <outlet property="wecolmeMessage" destination="EJz-on-cNY" id="Ww9-1F-oU2"/>
-                        <segue destination="J0Z-yh-GEm" kind="show" identifier="detailSegue" id="v1X-g6-7Xf"/>
+                        <segue destination="J0Z-yh-GEm" kind="presentation" identifier="detailSegue" id="v1X-g6-7Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="59.598214285714285"/>
+            <point key="canvasLocation" x="425" y="60"/>
         </scene>
         <!--Details-->
         <scene sceneID="Gv5-PF-cbx">
@@ -184,12 +184,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-y5-tkh">
-                                <rect key="frame" x="154" y="20" width="80" height="35"/>
+                                <rect key="frame" x="167" y="20" width="80" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="AAAAA"/>
                                 <connections>
-                                    <action selector="close:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="B2D-bb-Zop"/>
+                                    <segue destination="ahY-QJ-7af" kind="unwind" unwindAction="unwindSegue:" id="sKe-aS-4CE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,8 +211,9 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="us7-Zz-sdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ahY-QJ-7af" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="76"/>
+            <point key="canvasLocation" x="1264" y="60"/>
         </scene>
         <!--Goals-->
         <scene sceneID="XIO-tW-8BT">
@@ -222,7 +223,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdH-UW-2ZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="516"/>
+            <point key="canvasLocation" x="-158" y="528"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BMV-DP-fkf">
