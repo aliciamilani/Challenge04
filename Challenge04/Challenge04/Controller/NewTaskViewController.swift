@@ -93,13 +93,16 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         descriptionText.textColor = .label
         descriptionText.font = .systemFont(ofSize: 15)
         
-        //
         
         if !add {
             titleTextField.text = taskModel.title
+            print("aqqq: ", taskModel.title)
+            print("aqqq: ", taskModel.descrip)
+            descriptionText.text = taskModel.descrip
         } else {
             createdTask = LocalTask()
             titleTextField.text = createdTask?.title
+            descriptionText.text = createdTask?.descrip
         }
         
         createdTask?.difficulty = 1
@@ -131,7 +134,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     private func configureTextFields(){
         titleTextField.delegate = self
         
-        if (titleTextField.text == "") {
+        if (titleTextField.text == "" && descriptionText.text == "") {
             addTaskButton.isEnabled = false
         } else {
             addTaskButton.isEnabled = true
@@ -192,13 +195,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes){
+    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String){
         let newItem = TaskModel(context: context)
         newItem.title = title
         newItem.difficulty = Int16(difficulty)
         newItem.duration = Int16(duration)
         newItem.goal = goal.rawValue
         newItem.category = category.rawValue
+        newItem.descrip = descrip
     
         do {
             try context.save()
@@ -240,15 +244,29 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func updateDescrip(newDescrip: String){
+        
+        taskModel.descrip = description
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
     
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
         if !(titleTextField.text == ""){
             if add {
-                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category)
+                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text)
             } else {
                 if taskModel.title != titleTextField.text! {
                     updateTitle(newTitle: titleTextField.text!)
+                }
+                if taskModel.descrip != descriptionText.text {
+                    updateDescrip(newDescrip: descriptionText.text)
                 }
             }
         }
