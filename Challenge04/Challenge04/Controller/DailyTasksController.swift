@@ -169,7 +169,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
-        print("Unwind")
     }
     
 }
