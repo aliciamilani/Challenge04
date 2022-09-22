@@ -168,7 +168,7 @@
                         <outlet property="messageLabel" destination="Nea-3g-J4E" id="koc-tp-Nbz"/>
                         <outlet property="tableView" destination="jyQ-Ps-ofN" id="Rg7-yC-rMF"/>
                         <outlet property="wecolmeMessage" destination="EJz-on-cNY" id="Ww9-1F-oU2"/>
-                        <segue destination="pac-fb-81f" kind="show" identifier="detailSegue" id="SYk-Sr-mgc"/>
+                        <segue destination="J0Z-yh-GEm" kind="show" identifier="detailSegue" id="v1X-g6-7Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,16 +182,30 @@
                     <view key="view" contentMode="scaleToFill" id="L2u-vT-jcK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-y5-tkh">
+                                <rect key="frame" x="154" y="20" width="80" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="AAAAA"/>
+                                <connections>
+                                    <action selector="close:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="B2D-bb-Zop"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LE0-HD-T8j"/>
                         <color key="backgroundColor" name="Background"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="ZOf-3q-XYf">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="h0W-N0-qm2">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="h0W-N0-qm2">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tU4-xh-Ngj">
                                 <rect key="frame" x="302" y="10.5" width="92" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="closeView:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="xh8-QH-3F8"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -199,24 +213,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="us7-Zz-sdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2804" y="76"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nT8-5F-5Vs">
-            <objects>
-                <navigationController id="pac-fb-81f" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="X32-hk-pbb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6nv-bW-4bG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.82352941180000006" green="0.51764705879999995" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="J0Z-yh-GEm" kind="relationship" relationship="rootViewController" id="W9B-fm-GTI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cj9-Fe-d7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1956" y="77"/>
         </scene>
         <!--Goals-->
         <scene sceneID="XIO-tW-8BT">
