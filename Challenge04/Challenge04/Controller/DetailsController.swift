@@ -21,9 +21,47 @@ class DetailsController: UIViewController{
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    var task = TaskModel()
+    
+    func findDuration () -> String {
+        if task.duration == 1 {
+            return "1 hour"
+        } else if task.duration == 2 {
+            return "2 hours"
+        } else if task.duration == 3 {
+            return "3 hours or more"
+        }
+        
+        return ""
+    }
+    
+    func findDifficulty () -> String {
+        if task.difficulty == 1 {
+            return "easy"
+        } else if task.difficulty == 2 {
+            return "medium"
+        } else if task.difficulty == 3 {
+            return "hard"
+        }
+        
+        return ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskTitleLabel.text = task.title!
+        timerLabel.text = "The duration of this task is " + findDuration()
+        difficultyLabel.text = "This task is considered " + findDifficulty()
+        urgencyLabel.text = "There is no urgency"
+        
+        if (task.descrip != nil && task.descrip != "") {
+            descriptionLabel.text = task.descrip
+        } else {
+            descriptionLabel.text = "There is no description."
+            descriptionLabel.textColor = .tertiaryLabel
+        }
+        
+        
     }
     
     @IBAction func doneBtn(_ sender: UIButton) {

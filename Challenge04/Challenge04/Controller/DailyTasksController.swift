@@ -131,8 +131,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
-            // tem q apagar de tudo
-            
             self.deleteItem(item: self.taskModel[indexPath.row])
             self.taskModel.remove(at: indexPath.row)
             
@@ -166,6 +164,17 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "detailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsController {
+            
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            tableView.deselectRow(at: indexPath, animated: false)
+            destination.task = taskModel[indexPath.row]
+        }
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
