@@ -220,7 +220,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-Pq-YU3">
-                                <rect key="frame" x="20" y="384" width="81" height="18"/>
+                                <rect key="frame" x="20" y="428" width="81" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -262,7 +262,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDD-3R-5W9">
-                                <rect key="frame" x="20" y="260" width="374" height="100"/>
+                                <rect key="frame" x="20" y="260" width="374" height="144"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dG-WD-wFr">
                                         <rect key="frame" x="38" y="19" width="336" height="18"/>
@@ -292,16 +292,16 @@
                                             <constraint firstAttribute="width" constant="16" id="rOE-8B-3rT"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="roB-SU-C9i">
-                                        <rect key="frame" x="12" y="63.5" width="16" height="17.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="roB-SU-C9i">
+                                        <rect key="frame" x="12" y="107.5" width="16" height="17.5"/>
                                         <color key="tintColor" name="MainTitle"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="4NF-Qc-R1U"/>
                                             <constraint firstAttribute="width" constant="16" id="mK6-la-ADF"/>
                                         </constraints>
                                     </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-zJ-KuX">
-                                        <rect key="frame" x="38" y="63" width="336" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-zJ-KuX">
+                                        <rect key="frame" x="38" y="107" width="336" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -323,7 +323,7 @@
                                     <constraint firstItem="xi8-zJ-KuX" firstAttribute="leading" secondItem="roB-SU-C9i" secondAttribute="trailing" constant="10" id="dk4-9s-1bN"/>
                                     <constraint firstItem="6dG-WD-wFr" firstAttribute="centerY" secondItem="qCK-qj-hfg" secondAttribute="centerY" id="ebG-SJ-jLs"/>
                                     <constraint firstAttribute="trailing" secondItem="xi8-zJ-KuX" secondAttribute="trailing" id="hxv-0Q-1I4"/>
-                                    <constraint firstAttribute="height" constant="100" id="kr5-2j-GLd"/>
+                                    <constraint firstAttribute="height" constant="144" id="kr5-2j-GLd"/>
                                     <constraint firstAttribute="bottom" secondItem="roB-SU-C9i" secondAttribute="bottom" constant="20" id="oIR-P5-Ki6"/>
                                     <constraint firstItem="6dG-WD-wFr" firstAttribute="leading" secondItem="qCK-qj-hfg" secondAttribute="trailing" constant="10" id="x3x-9o-C9b"/>
                                 </constraints>
@@ -334,7 +334,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-4K-iNA">
-                                <rect key="frame" x="20" y="414" width="374" height="64"/>
+                                <rect key="frame" x="20" y="458" width="374" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zth-Pm-xht">
                                         <rect key="frame" x="12" y="23" width="362" height="18"/>
