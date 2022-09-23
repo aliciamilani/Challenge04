@@ -37,6 +37,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         getHumorDay()
+        
+        
     }
     
     func deleteItem(item: TaskModel){
@@ -86,6 +88,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         getSavedTasks()
     
         tableView.reloadData()
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

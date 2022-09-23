@@ -63,6 +63,12 @@ class DetailsController: UIViewController{
             descriptionLabel.textColor = .tertiaryLabel
         }
         
+        navigationController?.setToolbarHidden(true, animated: true)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
         
     }
     
@@ -99,13 +105,13 @@ class DetailsController: UIViewController{
         
         removeElementFromDefaults()
         
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func rescheduleBtn(_ sender: UIButton) {
         
         removeElementFromDefaults()
         
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
