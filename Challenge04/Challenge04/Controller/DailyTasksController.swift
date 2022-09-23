@@ -36,8 +36,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        getSavedTasks()
         getHumorDay()
+        
+        
     }
     
     func deleteItem(item: TaskModel){
@@ -53,6 +54,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     func getSavedTasks(){
         
         listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+        
+        taskModel = [TaskModel]()
         
         for i in 0 ..< listOfTasks.count {
             taskModel.append(context.object(with: context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: listOfTasks[i])!)!) as! TaskModel)
@@ -79,11 +82,16 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
-        tableView.reloadData()
-    }
+        getSavedTasks()
     
+        tableView.reloadData()
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -117,7 +125,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }
-        latter.backgroundColor = UIColor(named: "Undone")
+        latter.backgroundColor = UIColor(named: "Reschedule")
         
         let configuration = UISwipeActionsConfiguration(actions: [latter])
             
@@ -130,8 +138,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         let done = UIContextualAction(style: .destructive,
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
-            
-            // tem q apagar de tudo
             
             self.deleteItem(item: self.taskModel[indexPath.row])
             self.taskModel.remove(at: indexPath.row)
@@ -168,7 +174,17 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "detailSegue", sender: self)
     }
     
-    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsController {
+            
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            tableView.deselectRow(at: indexPath, animated: false)
+            destination.task = taskModel[indexPath.row]
+            destination.position = indexPath.row
+        }
     }
     
 }
