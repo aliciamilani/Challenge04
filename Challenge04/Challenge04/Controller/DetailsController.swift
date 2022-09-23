@@ -79,28 +79,33 @@ class DetailsController: UIViewController{
     }
     
     
+    @IBAction func okBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    var listOfTasks: [String] = []
+    
+    
+    func removeElementFromDefaults () {
+        listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+        listOfTasks.remove(at: position)
+        userDefaults.set(listOfTasks, forKey: "tasks")
+    }
+    
     @IBAction func doneBtn(_ sender: UIButton) {
         
         deleteItem(item: task)
         
-        var listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
-        listOfTasks.remove(at: position)
-        userDefaults.set(listOfTasks, forKey: "tasks")
+        removeElementFromDefaults()
         
-        
+        dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func rescheduleBtn(_ sender: UIButton) {
         
-        var listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
-        listOfTasks.remove(at: position)
-        userDefaults.set(listOfTasks, forKey: "tasks")
+        removeElementFromDefaults()
+        
+        dismiss(animated: true, completion: nil)
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-          super.viewWillDisappear(animated)
-          presentingViewController?.viewWillAppear(true)
-      }
-    
 }

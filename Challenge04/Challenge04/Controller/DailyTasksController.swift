@@ -36,7 +36,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        
         getHumorDay()
     }
     
@@ -81,13 +80,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
         getSavedTasks()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-        
+    
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -177,19 +175,11 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             guard let indexPath = tableView.indexPathForSelectedRow else {
                 return
             }
+            
             tableView.deselectRow(at: indexPath, animated: false)
             destination.task = taskModel[indexPath.row]
             destination.position = indexPath.row
         }
-    }
-    
-    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
-    }
-    
-    @IBAction func doneSegue(_ segue: UIStoryboardSegue) {
-    }
-    
-    @IBAction func rescheduleSegue(_ segue: UIStoryboardSegue) {
     }
     
 }
