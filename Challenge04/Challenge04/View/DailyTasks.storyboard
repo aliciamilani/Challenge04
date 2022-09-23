@@ -255,6 +255,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="rescheduleBtn:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="ggn-CB-fEb"/>
+                                    <segue destination="hKd-1m-TNk" kind="unwind" unwindAction="rescheduleSegue:" id="qY5-bl-c6p"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-zx-hgo">
@@ -273,6 +274,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneBtn:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="bk9-rl-BNe"/>
+                                    <segue destination="hKd-1m-TNk" kind="unwind" unwindAction="doneSegue:" id="hYV-Uh-a15"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-9g-ql2">

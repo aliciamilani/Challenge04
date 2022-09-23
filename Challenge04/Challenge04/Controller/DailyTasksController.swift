@@ -36,7 +36,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
-        getSavedTasks()
+        
         getHumorDay()
     }
     
@@ -53,6 +53,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     func getSavedTasks(){
         
         listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+        
+        taskModel = [TaskModel]()
         
         for i in 0 ..< listOfTasks.count {
             taskModel.append(context.object(with: context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: listOfTasks[i])!)!) as! TaskModel)
@@ -81,9 +83,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
-        tableView.reloadData()
+        getSavedTasks()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
     }
-    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -174,10 +179,17 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             }
             tableView.deselectRow(at: indexPath, animated: false)
             destination.task = taskModel[indexPath.row]
+            destination.position = indexPath.row
         }
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func doneSegue(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func rescheduleSegue(_ segue: UIStoryboardSegue) {
     }
     
 }

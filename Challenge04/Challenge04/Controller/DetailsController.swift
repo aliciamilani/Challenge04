@@ -22,6 +22,8 @@ class DetailsController: UIViewController{
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var task = TaskModel()
+    var position = 0
+    let userDefaults = UserDefaults.standard
     
     func findDuration () -> String {
         if task.duration == 1 {
@@ -64,14 +66,41 @@ class DetailsController: UIViewController{
         
     }
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    func deleteItem(item: TaskModel){
+        context.delete(item)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    
     @IBAction func doneBtn(_ sender: UIButton) {
+        
+        deleteItem(item: task)
+        
+        var listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+        listOfTasks.remove(at: position)
+        userDefaults.set(listOfTasks, forKey: "tasks")
         
         
     }
     
+    
     @IBAction func rescheduleBtn(_ sender: UIButton) {
         
-        
+        var listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+        listOfTasks.remove(at: position)
+        userDefaults.set(listOfTasks, forKey: "tasks")
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+          super.viewWillDisappear(animated)
+          presentingViewController?.viewWillAppear(true)
+      }
     
 }
