@@ -58,7 +58,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         taskModel = [TaskModel]()
         
         for i in 0 ..< listOfTasks.count {
-            taskModel.append(context.object(with: context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: listOfTasks[i])!)!) as! TaskModel)
+            
+            let a = context.object(with: context.persistentStoreCoordinator!.managedObjectID(forURIRepresentation: URL(string: listOfTasks[i])!)!) as! TaskModel
+            
+            if a.title != nil{
+                taskModel.append(a)
+            }
         }
     }
     
@@ -85,8 +90,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidAppear(animated)
         dateLabel.text = getCurrentTime()
         messageLabel.text = getMessage(humor: humor)
+        
         getSavedTasks()
-    
         tableView.reloadData()
         
         navigationController?.setNavigationBarHidden(true, animated: true)

@@ -20,6 +20,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var deleteBtn: UIButton!
+    
     var taskModel = TaskModel()
     
     var createdTask: LocalTask?
@@ -95,9 +97,11 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         if !add {
+            deleteBtn.isHidden = false
             titleTextField.text = taskModel.title
             descriptionText.text = taskModel.descrip
         } else {
+            deleteBtn.isHidden = true
             createdTask = LocalTask()
             titleTextField.text = createdTask?.title
             descriptionText.text = createdTask?.descrip
@@ -145,6 +149,34 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
+    
+    func deleteItem(item: TaskModel){
+        context.delete(item)
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Are you sure you'd like to delete this task?", message: "This task will not appear in your list anymore.", preferredStyle: .alert)
+
+            let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+                self.deleteItem(item: self.taskModel)
+                self.navigationController?.popViewController(animated: true)
+            }
+
+            alert.addAction(yesAction)
+
+            // cancel action
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+            present(alert, animated: true, completion: nil)
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
