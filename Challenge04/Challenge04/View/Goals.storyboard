@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
-                                <rect key="frame" x="0.0" y="92" width="414" height="591"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="640"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="tintColor" name="Background"/>
                                 <color key="separatorColor" red="0.31372549019607843" green="0.32156862745098036" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-ip-b3T">
-                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-34-soO">
                                 <rect key="frame" x="20" y="132" width="374" height="44"/>
@@ -189,7 +189,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fih-pR-mEo">
-                                <rect key="frame" x="20" y="731" width="374" height="52"/>
+                                <rect key="frame" x="20" y="780" width="374" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7zu-x9-7jU"/>
                                 </constraints>
@@ -259,7 +259,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="ay5-jR-Gbs">
-                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-jN-Ms3">
                                 <rect key="frame" x="20" y="112" width="374" height="125"/>
@@ -344,7 +344,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-tasks" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-VV-w3p">
-                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="urG-TF-bd0">
                                 <rect key="frame" x="20" y="112" width="374" height="125"/>
@@ -428,8 +428,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ut-t7-SQm">
+                                <rect key="frame" x="0.0" y="23" width="414" height="850"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-EX-1bu">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-r8-xBA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
@@ -451,7 +455,7 @@
                                                     <constraint firstAttribute="width" constant="109" id="mey-z9-rez"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="School"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Work"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="aVr-wP-Tig"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="schoolSegue" id="WbD-Vx-BOp"/>
@@ -465,7 +469,7 @@
                                                     <constraint firstAttribute="height" constant="106" id="t5K-FG-TpL"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="University"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Study"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Kcn-a3-eKN"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="collegeSegue" id="Spq-fC-V0p"/>
@@ -479,7 +483,7 @@
                                                     <constraint firstAttribute="height" constant="106" id="wLc-Ok-z1P"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="University"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Others"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="5LD-Cz-qA8"/>
                                                 </connections>
@@ -498,7 +502,7 @@
                                                     <constraint firstAttribute="width" constant="109" id="fbG-Yo-1XU"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Soccer"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Others"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="vkv-mu-ZDF"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="soccerSegue" id="Cxb-5B-K0b"/>
@@ -512,7 +516,7 @@
                                                     <constraint firstAttribute="width" constant="109" id="FsH-Jl-jVt"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Videog"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Exercises"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="tXm-Lb-Yyu"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="electronicsSegue" id="YmC-nN-d53"/>
@@ -526,7 +530,7 @@
                                                     <constraint firstAttribute="height" constant="106" id="ceh-LD-4W1"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Bask"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Food"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="bWu-xI-dio"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="basketballSegue" id="x90-rB-uHs"/>
@@ -546,7 +550,7 @@
                                                     <constraint firstAttribute="height" constant="106" id="s9k-ZW-9tT"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Paint"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Leisure"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Avc-8s-reA"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="paintingSegue" id="YSx-zf-PpP"/>
@@ -560,7 +564,7 @@
                                                     <constraint firstAttribute="width" constant="109" id="eBD-DE-RAF"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Hobbies"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="xo9-Um-pmh"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="crochetSegue" id="5aS-qN-m4R"/>
@@ -590,14 +594,13 @@
                                                     <constraint firstAttribute="height" constant="106" id="zT5-iq-n7Y"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="Draw"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Others"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="SDN-fl-PiZ"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="drawingSegue" id="FSb-2j-i23"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" name="Background"/>
                                         <constraints>
                                             <constraint firstItem="BAS-gc-v3T" firstAttribute="centerY" secondItem="Dkj-OJ-Xx0" secondAttribute="centerY" id="0RZ-0H-aJg"/>
                                             <constraint firstItem="BAS-gc-v3T" firstAttribute="leading" secondItem="Dkj-OJ-Xx0" secondAttribute="trailing" constant="12" id="0ig-SF-A7q"/>
@@ -688,7 +691,7 @@
                         <color key="badgeColor" name="FinishButton"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZD5-kh-RgQ">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -709,16 +712,15 @@
         <segue reference="YSx-zf-PpP"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Bask" width="109" height="111"/>
-        <image name="Crochet" width="109" height="111"/>
-        <image name="Draw" width="109" height="111"/>
+        <image name="Exercises" width="109" height="106"/>
+        <image name="Food" width="110" height="107"/>
         <image name="Goals" width="25" height="24"/>
-        <image name="Paint" width="109" height="111"/>
+        <image name="Hobbies" width="109" height="106"/>
+        <image name="Leisure" width="109" height="106"/>
+        <image name="Others" width="109" height="106"/>
         <image name="Portrait-background-tasks" width="390" height="844"/>
-        <image name="School" width="109" height="111"/>
-        <image name="Soccer" width="109" height="111"/>
-        <image name="University" width="109" height="111"/>
-        <image name="Videog" width="109" height="111"/>
+        <image name="Study" width="110" height="107"/>
+        <image name="Work" width="109" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Background">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
