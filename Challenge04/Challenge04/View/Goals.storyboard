@@ -429,13 +429,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-EX-1bu">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-r8-xBA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPh-ua-d1Q">
-                                                <rect key="frame" x="20" y="20" width="64" height="21.5"/>
+                                                <rect key="frame" x="20" y="24" width="64" height="21.5"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                                 </accessibility>
@@ -443,238 +443,131 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-gv-Q0o">
-                                                <rect key="frame" x="20" y="57.5" width="374" height="137"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fEC-04-s9V">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-au-4dG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="School"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="111" id="5tt-O2-SuG"/>
-                                                                    <constraint firstAttribute="width" constant="109" id="mey-z9-rez"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="School"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="aVr-wP-Tig"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="schoolSegue" id="WbD-Vx-BOp"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cg-58-7ID">
-                                                                <rect key="frame" x="0.0" y="119" width="49" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gqQ-Ys-e62">
-                                                        <rect key="frame" x="131.5" y="0.0" width="111" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVW-by-qRT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="College"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="109" id="q8n-q1-3hx"/>
-                                                                    <constraint firstAttribute="height" constant="111" id="t5K-FG-TpL"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="University"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Kcn-a3-eKN"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="collegeSegue" id="Spq-fC-V0p"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="College" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxU-b4-ze3">
-                                                                <rect key="frame" x="0.0" y="119" width="54.5" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DeI-sU-jbK">
-                                                        <rect key="frame" x="263.5" y="0.0" width="110.5" height="137"/>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-au-4dG">
+                                                <rect key="frame" x="152.5" y="57.5" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="School"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="106" id="5tt-O2-SuG"/>
+                                                    <constraint firstAttribute="width" constant="109" id="mey-z9-rez"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="School"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="aVr-wP-Tig"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="schoolSegue" id="WbD-Vx-BOp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVW-by-qRT">
+                                                <rect key="frame" x="31.5" y="57.5" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="College"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="109" id="q8n-q1-3hx"/>
+                                                    <constraint firstAttribute="height" constant="106" id="t5K-FG-TpL"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="University"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Kcn-a3-eKN"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="collegeSegue" id="Spq-fC-V0p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0x-VS-IJR">
+                                                <rect key="frame" x="273.5" y="57.5" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="College"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="109" id="Gip-Om-PdW"/>
+                                                    <constraint firstAttribute="height" constant="106" id="wLc-Ok-z1P"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="University"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="5LD-Cz-qA8"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-kA-nEp">
-                                                <rect key="frame" x="20" y="214.5" width="56" height="21.5"/>
+                                                <rect key="frame" x="20" y="195.5" width="56" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6PP-Rf-rRL">
-                                                <rect key="frame" x="20" y="252" width="374" height="137"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-jq-giu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-Tf-i86">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Soccer"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="111" id="daZ-cl-deu"/>
-                                                                    <constraint firstAttribute="width" constant="109" id="fbG-Yo-1XU"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Soccer"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="vkv-mu-ZDF"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="soccerSegue" id="Cxb-5B-K0b"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBg-Lf-ZEi">
-                                                                <rect key="frame" x="0.0" y="119" width="50.5" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4cY-8w-O8x">
-                                                        <rect key="frame" x="131.5" y="0.0" width="111" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAS-gc-v3T">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Electronnics"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="111" id="4iL-ka-i17"/>
-                                                                    <constraint firstAttribute="width" constant="109" id="FsH-Jl-jVt"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Videog"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="tXm-Lb-Yyu"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="electronicsSegue" id="YmC-nN-d53"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBr-QJ-qL1">
-                                                                <rect key="frame" x="0.0" y="119" width="80" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eHK-hp-JmL">
-                                                        <rect key="frame" x="263.5" y="0.0" width="110.5" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-OJ-Xx0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Basketball"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="109" id="0FV-7I-u3A"/>
-                                                                    <constraint firstAttribute="height" constant="111" id="ceh-LD-4W1"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Bask"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="bWu-xI-dio"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="basketballSegue" id="x90-rB-uHs"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-n0-IiT">
-                                                                <rect key="frame" x="0.0" y="119" width="74.5" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-Tf-i86">
+                                                <rect key="frame" x="273.5" y="229" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Soccer"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="106" id="daZ-cl-deu"/>
+                                                    <constraint firstAttribute="width" constant="109" id="fbG-Yo-1XU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Soccer"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="vkv-mu-ZDF"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="soccerSegue" id="Cxb-5B-K0b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAS-gc-v3T">
+                                                <rect key="frame" x="152.5" y="229" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Electronnics"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="106" id="4iL-ka-i17"/>
+                                                    <constraint firstAttribute="width" constant="109" id="FsH-Jl-jVt"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Videog"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="tXm-Lb-Yyu"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="electronicsSegue" id="YmC-nN-d53"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-OJ-Xx0">
+                                                <rect key="frame" x="31.5" y="229" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Basketball"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="109" id="0FV-7I-u3A"/>
+                                                    <constraint firstAttribute="height" constant="106" id="ceh-LD-4W1"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Bask"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="bWu-xI-dio"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="basketballSegue" id="x90-rB-uHs"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-5C-93F">
-                                                <rect key="frame" x="20" y="409" width="26.5" height="21.5"/>
+                                                <rect key="frame" x="20" y="367" width="26.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="EVz-Sv-Uwl">
-                                                <rect key="frame" x="20" y="446.5" width="374" height="137"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="09v-1j-rHd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvA-TW-jDO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Painting"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="109" id="fMN-cW-1Yp"/>
-                                                                    <constraint firstAttribute="height" constant="111" id="s9k-ZW-9tT"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Paint"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Avc-8s-reA"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="paintingSegue" id="YSx-zf-PpP"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Painting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtL-aw-JCN">
-                                                                <rect key="frame" x="0.0" y="119" width="58.5" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mek-by-dkt">
-                                                        <rect key="frame" x="131.5" y="0.0" width="111" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-cr-cCQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Drawing"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="109" id="SxI-UN-sOl"/>
-                                                                    <constraint firstAttribute="height" constant="111" id="zT5-iq-n7Y"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Draw"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="SDN-fl-PiZ"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="drawingSegue" id="FSb-2j-i23"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-vL-6pu">
-                                                                <rect key="frame" x="0.0" y="119" width="59" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qc4-Ht-P43">
-                                                        <rect key="frame" x="263.5" y="0.0" width="110.5" height="137"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-dd-Ah9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="111"/>
-                                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Crochet"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="111" id="UaK-gk-Yed"/>
-                                                                    <constraint firstAttribute="width" constant="109" id="eBD-DE-RAF"/>
-                                                                </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
-                                                                <connections>
-                                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="xo9-Um-pmh"/>
-                                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="crochetSegue" id="5aS-qN-m4R"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crochet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78r-DC-J9J">
-                                                                <rect key="frame" x="0.0" y="119" width="57.5" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvA-TW-jDO">
+                                                <rect key="frame" x="31.5" y="400.5" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Painting"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="109" id="fMN-cW-1Yp"/>
+                                                    <constraint firstAttribute="height" constant="106" id="s9k-ZW-9tT"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Paint"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Avc-8s-reA"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="paintingSegue" id="YSx-zf-PpP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-dd-Ah9">
+                                                <rect key="frame" x="152.5" y="400.5" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Crochet"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="106" id="UaK-gk-Yed"/>
+                                                    <constraint firstAttribute="width" constant="109" id="eBD-DE-RAF"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Crochet"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="xo9-Um-pmh"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="crochetSegue" id="5aS-qN-m4R"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-BH-F3Z">
-                                                <rect key="frame" x="32" y="623.5" width="350" height="52"/>
+                                                <rect key="frame" x="32" y="633.5" width="350" height="52"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Finish adding task" label="Finish"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="Yfb-WS-Gq0"/>
@@ -689,27 +582,50 @@
                                                     <segue destination="YDi-KG-8Rs" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Le9-ta-f33"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-cr-cCQ">
+                                                <rect key="frame" x="273.5" y="400.5" width="109" height="106"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Drawing"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="109" id="SxI-UN-sOl"/>
+                                                    <constraint firstAttribute="height" constant="106" id="zT5-iq-n7Y"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="Draw"/>
+                                                <connections>
+                                                    <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="SDN-fl-PiZ"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="drawingSegue" id="FSb-2j-i23"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Background"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="YU2-gv-Q0o" secondAttribute="trailing" constant="20" id="1JW-rF-q6j"/>
-                                            <constraint firstItem="6PP-Rf-rRL" firstAttribute="top" secondItem="9hF-kA-nEp" secondAttribute="bottom" constant="16" id="3sh-YT-eUN"/>
+                                            <constraint firstItem="BAS-gc-v3T" firstAttribute="centerY" secondItem="Dkj-OJ-Xx0" secondAttribute="centerY" id="0RZ-0H-aJg"/>
+                                            <constraint firstItem="BAS-gc-v3T" firstAttribute="leading" secondItem="Dkj-OJ-Xx0" secondAttribute="trailing" constant="12" id="0ig-SF-A7q"/>
+                                            <constraint firstItem="O8i-au-4dG" firstAttribute="top" secondItem="xPh-ua-d1Q" secondAttribute="bottom" constant="12" id="0ob-4X-vo1"/>
+                                            <constraint firstItem="O8i-au-4dG" firstAttribute="centerX" secondItem="4l9-r8-xBA" secondAttribute="centerX" id="3Bo-X3-FMv"/>
                                             <constraint firstItem="9hF-kA-nEp" firstAttribute="leading" secondItem="4l9-r8-xBA" secondAttribute="leading" constant="20" id="3u0-DT-5F3"/>
-                                            <constraint firstItem="EVz-Sv-Uwl" firstAttribute="leading" secondItem="4l9-r8-xBA" secondAttribute="leading" constant="20" id="C6g-tP-nTX"/>
-                                            <constraint firstItem="OnW-BH-F3Z" firstAttribute="top" secondItem="EVz-Sv-Uwl" secondAttribute="bottom" constant="40" id="Cjb-gV-ehH"/>
-                                            <constraint firstAttribute="trailing" secondItem="6PP-Rf-rRL" secondAttribute="trailing" constant="20" id="DD1-nw-6Ut"/>
+                                            <constraint firstItem="2Ug-dd-Ah9" firstAttribute="leading" secondItem="gvA-TW-jDO" secondAttribute="trailing" constant="12" id="457-nx-S9v"/>
+                                            <constraint firstItem="Xgs-Tf-i86" firstAttribute="centerY" secondItem="BAS-gc-v3T" secondAttribute="centerY" id="DEI-zF-cR2"/>
+                                            <constraint firstItem="2Ug-dd-Ah9" firstAttribute="top" secondItem="Jeg-5C-93F" secondAttribute="bottom" constant="12" id="JpR-aL-zRq"/>
+                                            <constraint firstItem="2Ug-dd-Ah9" firstAttribute="centerY" secondItem="gvA-TW-jDO" secondAttribute="centerY" id="KA4-Sz-U5U"/>
+                                            <constraint firstItem="Jeg-5C-93F" firstAttribute="top" secondItem="Dkj-OJ-Xx0" secondAttribute="bottom" constant="32" id="KgA-Gy-LH0"/>
                                             <constraint firstItem="Jeg-5C-93F" firstAttribute="leading" secondItem="4l9-r8-xBA" secondAttribute="leading" constant="20" id="L5o-hY-1XN"/>
-                                            <constraint firstItem="9hF-kA-nEp" firstAttribute="top" secondItem="YU2-gv-Q0o" secondAttribute="bottom" constant="20" id="RpX-0D-N2P"/>
-                                            <constraint firstItem="YU2-gv-Q0o" firstAttribute="top" secondItem="xPh-ua-d1Q" secondAttribute="bottom" constant="16" id="SPO-cp-zKu"/>
+                                            <constraint firstItem="W0x-VS-IJR" firstAttribute="leading" secondItem="O8i-au-4dG" secondAttribute="trailing" constant="12" id="MMO-ch-B5c"/>
+                                            <constraint firstItem="GXu-cr-cCQ" firstAttribute="centerY" secondItem="2Ug-dd-Ah9" secondAttribute="centerY" id="P7m-aT-P3m"/>
+                                            <constraint firstItem="Xgs-Tf-i86" firstAttribute="leading" secondItem="BAS-gc-v3T" secondAttribute="trailing" constant="12" id="RIc-al-WNH"/>
                                             <constraint firstItem="OnW-BH-F3Z" firstAttribute="centerX" secondItem="4l9-r8-xBA" secondAttribute="centerX" id="V81-ci-ejX"/>
-                                            <constraint firstItem="YU2-gv-Q0o" firstAttribute="leading" secondItem="4l9-r8-xBA" secondAttribute="leading" constant="20" id="WGB-Uc-3R0"/>
-                                            <constraint firstAttribute="trailing" secondItem="EVz-Sv-Uwl" secondAttribute="trailing" constant="20" id="YZq-gK-Tvo"/>
-                                            <constraint firstItem="6PP-Rf-rRL" firstAttribute="leading" secondItem="4l9-r8-xBA" secondAttribute="leading" constant="20" id="bbX-9O-YQ1"/>
-                                            <constraint firstItem="xPh-ua-d1Q" firstAttribute="top" secondItem="4l9-r8-xBA" secondAttribute="top" constant="20" id="btU-EC-PhL"/>
-                                            <constraint firstItem="EVz-Sv-Uwl" firstAttribute="top" secondItem="Jeg-5C-93F" secondAttribute="bottom" constant="16" id="diA-bc-6Z6"/>
-                                            <constraint firstItem="Jeg-5C-93F" firstAttribute="top" secondItem="6PP-Rf-rRL" secondAttribute="bottom" constant="20" id="lAC-CB-Fho"/>
+                                            <constraint firstItem="9hF-kA-nEp" firstAttribute="top" secondItem="ZVW-by-qRT" secondAttribute="bottom" constant="32" id="Vkl-xE-BO5"/>
+                                            <constraint firstItem="BAS-gc-v3T" firstAttribute="top" secondItem="9hF-kA-nEp" secondAttribute="bottom" constant="12" id="ahN-LP-QVT"/>
+                                            <constraint firstItem="W0x-VS-IJR" firstAttribute="centerY" secondItem="O8i-au-4dG" secondAttribute="centerY" id="b61-lT-9wx"/>
+                                            <constraint firstItem="xPh-ua-d1Q" firstAttribute="top" secondItem="4l9-r8-xBA" secondAttribute="top" constant="24" id="btU-EC-PhL"/>
+                                            <constraint firstItem="OnW-BH-F3Z" firstAttribute="top" secondItem="2Ug-dd-Ah9" secondAttribute="bottom" constant="127" id="fHZ-wT-5NB"/>
+                                            <constraint firstItem="2Ug-dd-Ah9" firstAttribute="centerX" secondItem="4l9-r8-xBA" secondAttribute="centerX" id="gss-rV-Qkz"/>
+                                            <constraint firstItem="BAS-gc-v3T" firstAttribute="centerX" secondItem="4l9-r8-xBA" secondAttribute="centerX" id="lux-Eb-tje"/>
+                                            <constraint firstItem="GXu-cr-cCQ" firstAttribute="leading" secondItem="2Ug-dd-Ah9" secondAttribute="trailing" constant="12" id="oI0-KZ-kUX"/>
                                             <constraint firstAttribute="height" constant="850" id="oYJ-qD-Rzy"/>
+                                            <constraint firstItem="ZVW-by-qRT" firstAttribute="centerY" secondItem="O8i-au-4dG" secondAttribute="centerY" id="q8V-DF-ti4"/>
                                             <constraint firstItem="xPh-ua-d1Q" firstAttribute="leading" secondItem="4l9-r8-xBA" secondAttribute="leading" constant="20" id="y1I-j1-mCf"/>
+                                            <constraint firstItem="O8i-au-4dG" firstAttribute="leading" secondItem="ZVW-by-qRT" secondAttribute="trailing" constant="12" id="zfa-UA-2LV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -717,7 +633,7 @@
                                     <constraint firstItem="4l9-r8-xBA" firstAttribute="leading" secondItem="FD6-EX-1bu" secondAttribute="leading" id="K57-Uf-zB9"/>
                                     <constraint firstItem="4l9-r8-xBA" firstAttribute="top" secondItem="FD6-EX-1bu" secondAttribute="top" id="XDP-j8-jS5"/>
                                     <constraint firstAttribute="trailing" secondItem="4l9-r8-xBA" secondAttribute="trailing" id="kiV-we-sLO"/>
-                                    <constraint firstAttribute="bottom" secondItem="4l9-r8-xBA" secondAttribute="bottom" id="tuV-ws-6B5"/>
+                                    <constraint firstAttribute="bottom" secondItem="4l9-r8-xBA" secondAttribute="bottom" constant="-181" id="tuV-ws-6B5"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -732,7 +648,7 @@
                             <constraint firstItem="FD6-EX-1bu" firstAttribute="top" secondItem="FGm-wc-20Y" secondAttribute="top" id="uUm-wV-0fe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Goals" id="WLw-pk-aPZ"/>
+                    <navigationItem key="navigationItem" title="Goals" largeTitleDisplayMode="always" id="WLw-pk-aPZ"/>
                     <connections>
                         <outlet property="arts1Btn" destination="gvA-TW-jDO" id="RjF-U7-WtG"/>
                         <outlet property="arts2Btn" destination="GXu-cr-cCQ" id="XuZ-ah-btg"/>
@@ -747,7 +663,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JpX-wc-fBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="106"/>
+            <point key="canvasLocation" x="934.78260869565224" y="105.80357142857143"/>
         </scene>
         <!--HumorView-->
         <scene sceneID="yDi-If-Pc2">
@@ -773,8 +689,8 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZD5-kh-RgQ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZD5-kh-RgQ">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="MainTitle"/>
                     </navigationBar>
@@ -790,7 +706,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0WF-K8-2GB"/>
-        <segue reference="5aS-qN-m4R"/>
+        <segue reference="YSx-zf-PpP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bask" width="109" height="111"/>
