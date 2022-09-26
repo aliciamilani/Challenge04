@@ -428,7 +428,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ut-t7-SQm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Portrait-background-goals" translatesAutoresizingMaskIntoConstraints="NO" id="9ut-t7-SQm">
                                 <rect key="frame" x="0.0" y="23" width="414" height="850"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -709,7 +709,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0WF-K8-2GB"/>
-        <segue reference="YSx-zf-PpP"/>
+        <segue reference="YmC-nN-d53"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Exercises" width="109" height="106"/>
@@ -718,6 +718,7 @@
         <image name="Hobbies" width="109" height="106"/>
         <image name="Leisure" width="109" height="106"/>
         <image name="Others" width="109" height="106"/>
+        <image name="Portrait-background-goals" width="585" height="1266"/>
         <image name="Portrait-background-tasks" width="390" height="844"/>
         <image name="Study" width="110" height="107"/>
         <image name="Work" width="109" height="106"/>
