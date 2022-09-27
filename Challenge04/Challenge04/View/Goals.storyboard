@@ -38,7 +38,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJc-K2-vCr">
                                                     <rect key="frame" x="40" y="21" width="334" height="17"/>
-                                                    <accessibility key="accessibilityConfiguration" hint="One of all tasks to do or reschedule"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="Actions: click to edit, "/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -440,7 +440,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPh-ua-d1Q">
                                                 <rect key="frame" x="20" y="24" width="64" height="21.5"/>
-                                                <accessibility key="accessibilityConfiguration">
+                                                <accessibility key="accessibilityConfiguration" hint="1 of 3 categories " label="Studies">
                                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                                 </accessibility>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
@@ -449,7 +449,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-au-4dG">
                                                 <rect key="frame" x="152.5" y="57.5" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="School"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Work"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="5tt-O2-SuG"/>
                                                     <constraint firstAttribute="width" constant="109" id="mey-z9-rez"/>
@@ -463,7 +463,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVW-by-qRT">
                                                 <rect key="frame" x="31.5" y="57.5" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="College"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Study"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="109" id="q8n-q1-3hx"/>
                                                     <constraint firstAttribute="height" constant="106" id="t5K-FG-TpL"/>
@@ -477,7 +477,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0x-VS-IJR">
                                                 <rect key="frame" x="273.5" y="57.5" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="College"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Others"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="109" id="Gip-Om-PdW"/>
                                                     <constraint firstAttribute="height" constant="106" id="wLc-Ok-z1P"/>
@@ -491,13 +491,14 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-kA-nEp">
                                                 <rect key="frame" x="20" y="195.5" width="56" height="21.5"/>
+                                                <accessibility key="accessibilityConfiguration" hint="2 of 3 categories "/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgs-Tf-i86">
                                                 <rect key="frame" x="273.5" y="229" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Soccer"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Others"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="daZ-cl-deu"/>
                                                     <constraint firstAttribute="width" constant="109" id="fbG-Yo-1XU"/>
@@ -511,7 +512,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAS-gc-v3T">
                                                 <rect key="frame" x="152.5" y="229" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Electronnics"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Exercises"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="4iL-ka-i17"/>
                                                     <constraint firstAttribute="width" constant="109" id="FsH-Jl-jVt"/>
@@ -525,7 +526,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-OJ-Xx0">
                                                 <rect key="frame" x="31.5" y="229" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Basketball"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Food"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="109" id="0FV-7I-u3A"/>
                                                     <constraint firstAttribute="height" constant="106" id="ceh-LD-4W1"/>
@@ -539,13 +540,14 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-5C-93F">
                                                 <rect key="frame" x="20" y="367" width="26.5" height="21.5"/>
+                                                <accessibility key="accessibilityConfiguration" hint="3 of 3 categories "/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvA-TW-jDO">
                                                 <rect key="frame" x="31.5" y="400.5" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Painting"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Leisure"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="109" id="fMN-cW-1Yp"/>
                                                     <constraint firstAttribute="height" constant="106" id="s9k-ZW-9tT"/>
@@ -559,7 +561,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-dd-Ah9">
                                                 <rect key="frame" x="152.5" y="400.5" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Crochet"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Hobbies"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="UaK-gk-Yed"/>
                                                     <constraint firstAttribute="width" constant="109" id="eBD-DE-RAF"/>
@@ -589,7 +591,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-cr-cCQ">
                                                 <rect key="frame" x="273.5" y="400.5" width="109" height="106"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Choose tasks for this category" label="Drawing"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Others"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="109" id="SxI-UN-sOl"/>
                                                     <constraint firstAttribute="height" constant="106" id="zT5-iq-n7Y"/>
