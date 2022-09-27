@@ -54,7 +54,7 @@ class DetailsController: UIViewController{
         taskTitleLabel.text = task.title!
         timerLabel.text = "The duration of this task is " + findDuration()
         difficultyLabel.text = "This task is considered " + findDifficulty()
-        urgencyLabel.text = "There is no urgency"
+        urgencyLabel.text = task.urgency ? "There is urgency!" : "There is no urgency."
         
         if (task.descrip != nil && task.descrip != "") {
             descriptionLabel.text = task.descrip

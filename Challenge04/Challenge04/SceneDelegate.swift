@@ -106,7 +106,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             preloadData()
             
-            userDefaults.set(true, forKey: "addNew")
+            userDefaults.set(true, forKey: "addNewFunc")
         }
         
         if checkHumorDay(){

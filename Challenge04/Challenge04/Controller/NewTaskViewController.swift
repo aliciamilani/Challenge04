@@ -33,6 +33,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     var urgency: Bool = false
     
+    let mySwitch = UISwitch()
+    
     struct Options {
         let title: String
         var description: String
@@ -103,22 +105,22 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
-        tableView.reloadData()
+        
+        
         createTextView()
-        
-        
-        
+    
         if !add {
             deleteBtn.isHidden = false
             titleTextField.text = taskModel.title
             descriptionText.text = taskModel.descrip
+            mySwitch.setOn(taskModel.urgency, animated: true)
             
         } else {
             deleteBtn.isHidden = true
             createdTask = LocalTask()
             titleTextField.text = createdTask?.title
             descriptionText.text = createdTask?.descrip
-            
+            mySwitch.setOn(createdTask!.urgency, animated: true)
         }
         
         createdTask?.difficulty = 1
@@ -191,22 +193,15 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         
-        print("indexPath.row: ", indexPath.row)
-        
+    
         if indexPath.row != 2 {
             cell.accessoryView = .none
             cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
             
         } else {
             cell.accessoryType = .none
-            let mySwitch = UISwitch()
-            mySwitch.onTintColor = UIColor(named: "FinishButton")
             
-            if !add {
-                mySwitch.setOn(taskModel.urgency, animated: true)
-            } else {
-                mySwitch.setOn(createdTask!.urgency, animated: true)
-            }
+            mySwitch.onTintColor = UIColor(named: "FinishButton")
             
             mySwitch.tag = indexPath.row
             mySwitch.addTarget(self, action: #selector(self.switchDidChange(_:)), for: .valueChanged)
@@ -224,7 +219,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         if add {
             createdTask?.urgency = sender.isOn
         } else {
-            taskModel.urgency = sender.isOn
+            urgency = sender.isOn
         }
         urgency = sender.isOn
     }
@@ -283,7 +278,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         do {
             try context.save()
         } catch {
-            // error
         }
     }
     

@@ -75,19 +75,6 @@ class HumorController: UIViewController {
         
     }
     
-//    func accessibility () {
-//        mainTitle.isAccessibilityElement = true
-//        humorImage.accessibilityLabel = "Humor image selectedt"
-//        indifferentBtn.isAccessibilityElement = true
-//        confidentBtn.isAccessibilityElement = true
-//        irritatedBtn.isAccessibilityElement = true
-//        happyBtn.isAccessibilityElement = true
-//        tiredBtn.isAccessibilityElement = true
-//        sadBtn.isAccessibilityElement = true
-//        goBtn.isAccessibilityElement = true
-//        humorImage.isAccessibilityElement = true
-//    }
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func createItem(humor: String){
