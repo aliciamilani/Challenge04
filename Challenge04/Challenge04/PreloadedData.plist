@@ -10,6 +10,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>Study chapter 1 and 2</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>1</string>
@@ -19,6 +20,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>Study chapter 3 and 4</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>1</string>
@@ -28,6 +30,7 @@
 		<string>3</string>
 		<string>0</string>
 		<string>Share link</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>1</string>
@@ -37,6 +40,7 @@
 		<string>3</string>
 		<string>0</string>
 		<string>Request email list</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>1</string>
@@ -46,6 +50,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>Access the course website</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>5</string>
@@ -55,6 +60,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>Marcar com os amigos</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>5</string>
@@ -64,6 +70,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>At least 6 glasses</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>5</string>
@@ -73,6 +80,7 @@
 		<string>1</string>
 		<string>0</string>
 		<string></string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>5</string>
@@ -82,6 +90,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>7pm</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>5</string>
@@ -91,6 +100,7 @@
 		<string>3</string>
 		<string>0</string>
 		<string>Bring volleyball</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>9</string>
@@ -100,6 +110,7 @@
 		<string>2</string>
 		<string>0</string>
 		<string>Go to the library</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>9</string>
@@ -109,6 +120,7 @@
 		<string>1</string>
 		<string>0</string>
 		<string></string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>9</string>
@@ -118,6 +130,7 @@
 		<string>1</string>
 		<string>0</string>
 		<string>Invite a friend</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>9</string>
@@ -127,6 +140,7 @@
 		<string>1</string>
 		<string>0</string>
 		<string>Buy watercolor</string>
+		<string>false</string>
 	</array>
 	<array>
 		<string>9</string>
@@ -136,6 +150,7 @@
 		<string>1</string>
 		<string>0</string>
 		<string>Search one</string>
+		<string>false</string>
 	</array>
 </array>
 </plist>

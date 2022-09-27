@@ -103,7 +103,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
-        
+        tableView.reloadData()
         createTextView()
         
         
@@ -194,9 +194,11 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("indexPath.row: ", indexPath.row)
         
         if indexPath.row != 2 {
+            cell.accessoryView = .none
             cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        } else {
             
+        } else {
+            cell.accessoryType = .none
             let mySwitch = UISwitch()
             mySwitch.onTintColor = UIColor(named: "FinishButton")
             
