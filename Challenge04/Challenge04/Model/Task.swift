@@ -55,17 +55,17 @@ class LocalTask {
 
 @objc
 public enum CategoryTypes: Int16 {
-    case Studies = 1,
-        Sports = 2,
-        Art = 3,
-        School = 4,
-        College = 5,
-        Soccer = 6,
-        Eletronics = 7,
-        Basketball = 8,
-        Painting = 9,
-        Drawing = 10,
-        Crochet = 11,
+    case Study = 1,
+        Work = 2,
+        OthersStudy = 3,
+        Food = 4,
+        Exercise = 5,
+        OthersSports = 6,
+        Leisure = 7,
+        Hobbies = 8,
+        OthersArt = 9,
+        //Drawing = 10,
+        //Crochet = 11,
         none = 0
 }
 

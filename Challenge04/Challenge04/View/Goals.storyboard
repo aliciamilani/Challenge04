@@ -458,7 +458,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Work"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="aVr-wP-Tig"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="schoolSegue" id="WbD-Vx-BOp"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="work" id="WbD-Vx-BOp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVW-by-qRT">
@@ -472,7 +472,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Study"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Kcn-a3-eKN"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="collegeSegue" id="Spq-fC-V0p"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="study" id="Spq-fC-V0p"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0x-VS-IJR">
@@ -486,6 +486,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Others"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="5LD-Cz-qA8"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="othersStudy" id="6zz-rp-Gr1"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-kA-nEp">
@@ -505,7 +506,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Others"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="vkv-mu-ZDF"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="soccerSegue" id="Cxb-5B-K0b"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="othersSports" id="Cxb-5B-K0b"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAS-gc-v3T">
@@ -519,7 +520,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Exercises"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="tXm-Lb-Yyu"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="electronicsSegue" id="YmC-nN-d53"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="exercise" id="YmC-nN-d53"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-OJ-Xx0">
@@ -533,7 +534,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Food"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="bWu-xI-dio"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="basketballSegue" id="x90-rB-uHs"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="food" id="x90-rB-uHs"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-5C-93F">
@@ -553,7 +554,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Leisure"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="Avc-8s-reA"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="paintingSegue" id="YSx-zf-PpP"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="leisure" id="YSx-zf-PpP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-dd-Ah9">
@@ -567,7 +568,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Hobbies"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="xo9-Um-pmh"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="crochetSegue" id="5aS-qN-m4R"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="hobbies" id="5aS-qN-m4R"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-BH-F3Z">
@@ -597,7 +598,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" image="Others"/>
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="SDN-fl-PiZ"/>
-                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="drawingSegue" id="FSb-2j-i23"/>
+                                                    <segue destination="mE9-ZN-4Bb" kind="show" identifier="othersArt" id="FSb-2j-i23"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -653,15 +654,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Goals" largeTitleDisplayMode="always" id="WLw-pk-aPZ"/>
                     <connections>
-                        <outlet property="arts1Btn" destination="gvA-TW-jDO" id="RjF-U7-WtG"/>
-                        <outlet property="arts2Btn" destination="GXu-cr-cCQ" id="XuZ-ah-btg"/>
-                        <outlet property="arts3Btn" destination="2Ug-dd-Ah9" id="kpd-mU-wC4"/>
                         <outlet property="confirmButton" destination="OnW-BH-F3Z" id="WQZ-sv-uX5"/>
-                        <outlet property="sport1Btn" destination="Xgs-Tf-i86" id="nFx-60-s2K"/>
-                        <outlet property="sport2Btn" destination="BAS-gc-v3T" id="y2z-EI-G5D"/>
-                        <outlet property="sport3Btn" destination="Dkj-OJ-Xx0" id="2HU-pR-oY7"/>
-                        <outlet property="study1Btn" destination="O8i-au-4dG" id="FXs-E5-VQc"/>
-                        <outlet property="study2Btn" destination="ZVW-by-qRT" id="6Yc-7c-CVG"/>
+                        <outlet property="exerciseBtn" destination="BAS-gc-v3T" id="y2z-EI-G5D"/>
+                        <outlet property="foodBtn" destination="Dkj-OJ-Xx0" id="2HU-pR-oY7"/>
+                        <outlet property="hobbiesBtn" destination="2Ug-dd-Ah9" id="kpd-mU-wC4"/>
+                        <outlet property="leisureBtn" destination="gvA-TW-jDO" id="RjF-U7-WtG"/>
+                        <outlet property="othersArtBtn" destination="GXu-cr-cCQ" id="XuZ-ah-btg"/>
+                        <outlet property="othersStudyBtn" destination="W0x-VS-IJR" id="n5q-pe-VFV"/>
+                        <outlet property="othesSportsBtn" destination="Xgs-Tf-i86" id="nFx-60-s2K"/>
+                        <outlet property="studyBtn" destination="ZVW-by-qRT" id="6Yc-7c-CVG"/>
+                        <outlet property="workBtn" destination="O8i-au-4dG" id="FXs-E5-VQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JpX-wc-fBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -709,7 +711,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0WF-K8-2GB"/>
-        <segue reference="YmC-nN-d53"/>
+        <segue reference="FSb-2j-i23"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Exercises" width="109" height="106"/>
