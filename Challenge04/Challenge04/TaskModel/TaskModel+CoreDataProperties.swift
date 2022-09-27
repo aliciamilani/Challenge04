@@ -23,6 +23,7 @@ extension TaskModel {
     @NSManaged public var points: Float
     @NSManaged public var title: String?
     @NSManaged public var descrip: String?
+    @NSManaged public var urgency: Bool
 }
 
 extension TaskModel : Identifiable {

@@ -30,6 +30,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     var goal: CategoryTypes = .none
     
     var add = true
+
+    var urgency: Bool = false
     
     struct Options {
         let title: String
@@ -37,8 +39,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     var data: [Options] = [
-        Options(title: "Difficulty", description: "I don't know >"),
-        Options(title: "Duration", description: "I don't know >")
+        Options(title: "Difficulty", description: "I don't know"),
+        Options(title: "Duration", description: "I don't know"),
+        Options(title: "Urgency", description: "")
     ]
     
     func getTextDifficulty(_ num: Int?) -> String {
@@ -73,14 +76,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.allowsSelection = true
+    func createTextView(){
         
-        // Description TextView placeholder
         descriptionText.delegate = self
         placeholderLabel = UILabel()
         placeholderLabel.text = "Description (optional)"
@@ -95,31 +92,41 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         descriptionText.textColor = .label
         descriptionText.font = .systemFont(ofSize: 15)
         
+        titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: titleTextField.frame.height))
+        titleTextField.leftViewMode = .always
+        
+        descriptionText.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.allowsSelection = true
+        
+        createTextView()
+        
+        
         
         if !add {
             deleteBtn.isHidden = false
             titleTextField.text = taskModel.title
             descriptionText.text = taskModel.descrip
+            
         } else {
             deleteBtn.isHidden = true
             createdTask = LocalTask()
             titleTextField.text = createdTask?.title
             descriptionText.text = createdTask?.descrip
+            
         }
         
         createdTask?.difficulty = 1
         createdTask?.duration = 1
         configureTextFields()
         
-        //Code for left padding in title text field
-        titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: titleTextField.frame.height))
-        titleTextField.leftViewMode = .always
-        
-        //Code for left padding in title view
-        
-        descriptionText.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
-        
         placeholderLabel.isHidden = !descriptionText.text.isEmpty
+        
     }
     
     
@@ -184,11 +191,40 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         
-        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        print("indexPath.row: ", indexPath.row)
+        
+        if indexPath.row != 2 {
+            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        } else {
+            
+            let mySwitch = UISwitch()
+            mySwitch.onTintColor = UIColor(named: "FinishButton")
+            
+            if !add {
+                mySwitch.setOn(taskModel.urgency, animated: true)
+            } else {
+                mySwitch.setOn(createdTask!.urgency, animated: true)
+            }
+            
+            mySwitch.tag = indexPath.row
+            mySwitch.addTarget(self, action: #selector(self.switchDidChange(_:)), for: .valueChanged)
+            
+            cell.accessoryView = mySwitch
+        }
         
         cell.selectionStyle = .none
         
         return cell
+    }
+    
+    @objc func switchDidChange(_ sender: UISwitch){
+        
+        if add {
+            createdTask?.urgency = sender.isOn
+        } else {
+            taskModel.urgency = sender.isOn
+        }
+        urgency = sender.isOn
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -232,7 +268,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String){
+    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, urgency: Bool){
         let newItem = TaskModel(context: context)
         newItem.title = title
         newItem.difficulty = Int16(difficulty)
@@ -240,6 +276,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         newItem.goal = goal.rawValue
         newItem.category = category.rawValue
         newItem.descrip = descrip
+        newItem.urgency = urgency
     
         do {
             try context.save()
@@ -292,18 +329,31 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    
+    func updateUrgency(newUrgency: Bool){
+        
+        taskModel.urgency = newUrgency
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
         if !(titleTextField.text == ""){
             if add {
-                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text)
+                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
             } else {
                 if taskModel.title != titleTextField.text! {
                     updateTitle(newTitle: titleTextField.text!)
                 }
                 if taskModel.descrip != descriptionText.text {
                     updateDescrip(newDescrip: descriptionText.text)
+                }
+                if taskModel.urgency != urgency {
+                    updateUrgency(newUrgency: urgency)
                 }
             }
         }
