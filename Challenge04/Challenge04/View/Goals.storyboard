@@ -176,6 +176,7 @@
                                 <rect key="frame" x="20" y="354" width="374" height="70"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
+                                <accessibility key="accessibilityConfiguration" hint="Add or edit description"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="0OQ-S3-c7G"/>
                                 </constraints>
