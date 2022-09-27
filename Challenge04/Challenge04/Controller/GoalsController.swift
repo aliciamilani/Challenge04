@@ -33,8 +33,6 @@ class GoalsController: UIViewController {
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,66 +49,72 @@ class GoalsController: UIViewController {
     }
     
     @IBAction func goalsChoice(_ sender: UIButton) {
-//        confirmButton.alpha = 1.0
-//        confirmButton.isEnabled = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "schoolSegue" {
+        if segue.identifier == "study" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Study
-                destination.goal = .Food
+                destination.goal = .Studies
             }
         }
         
-        if segue.identifier == "collegeSegue" {
-            if let destination = segue.destination as? AllTasksController {
-                destination.category = .Study
-                destination.goal = .Exercise
-            }
-        }
-        
-        if segue.identifier == "soccerSegue" {
+        if segue.identifier == "work" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Work
-                destination.goal = .OthersSports
+                destination.goal = .Studies
             }
         }
         
-        if segue.identifier == "electronicsSegue" {
-            if let destination = segue.destination as? AllTasksController {
-                destination.category = .Work
-                destination.goal = .Leisure
-            }
-        }
-        
-        if segue.identifier == "basketballSegue" {
-            if let destination = segue.destination as? AllTasksController {
-                destination.category = .Work
-                destination.goal = .Hobbies
-            }
-        }
-        
-        if segue.identifier == "paintingSegue" {
+        if segue.identifier == "othersStudy" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .OthersStudy
-                destination.goal = .OthersArt
+                destination.goal = .Studies
             }
         }
         
-        if segue.identifier == "drawingSegue" {
+        if segue.identifier == "food" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .OthersStudy
-                destination.goal = .Drawing
+                destination.category = .Food
+                destination.goal = .Sports
             }
         }
         
-        if segue.identifier == "crochetSegue" {
+        if segue.identifier == "exercise" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .OthersStudy
-                destination.goal = .Crochet
+                destination.category = .Exercise
+                destination.goal = .Sports
             }
         }
+        
+        if segue.identifier == "othersSports" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .OthersSports
+                destination.goal = .Sports
+            }
+        }
+        
+        if segue.identifier == "leisure" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Leisure
+                destination.goal = .Art
+            }
+        }
+        
+        if segue.identifier == "hobbies" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Hobbies
+                destination.goal = .Art
+            }
+        }
+        
+        if segue.identifier == "othersArt" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .OthersArt
+                destination.goal = .Art
+            }
+        }
+        
     }
 }

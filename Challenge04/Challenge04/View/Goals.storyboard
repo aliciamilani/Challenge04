@@ -118,11 +118,11 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f1E-w5-TOS">
-                                <rect key="frame" x="20" y="200" width="374" height="90"/>
+                                <rect key="frame" x="20" y="200" width="374" height="130"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="TextField"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="iDG-li-Wco"/>
+                                    <constraint firstAttribute="height" constant="130" id="iDG-li-Wco"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellGoals" rowHeight="60" id="hZr-V6-8VV" customClass="CardCellGoals" customModule="GoMoo" customModuleProvider="target">
@@ -173,7 +173,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAU-UD-C81">
-                                <rect key="frame" x="20" y="314" width="374" height="70"/>
+                                <rect key="frame" x="20" y="354" width="374" height="70"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
                                 <constraints>

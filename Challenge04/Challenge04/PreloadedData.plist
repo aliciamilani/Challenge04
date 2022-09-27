@@ -4,129 +4,138 @@
 <array>
 	<array>
 		<string>1</string>
-		<string>4</string>
-		<string>Revisar matemática</string>
+		<string>2</string>
+		<string>Review math subjects</string>
 		<string>3</string>
 		<string>2</string>
 		<string>0</string>
-		<string>Estudar cap 1 e 2</string>
+		<string>Study chapter 1 and 2</string>
+	</array>
+	<array>
+		<string>1</string>
+		<string>2</string>
+		<string>Review geography subjects</string>
+		<string>3</string>
+		<string>2</string>
+		<string>0</string>
+		<string>Study chapter 3 and 4</string>
+	</array>
+	<array>
+		<string>1</string>
+		<string>3</string>
+		<string>Send worksheet to department X</string>
+		<string>3</string>
+		<string>3</string>
+		<string>0</string>
+		<string>Share link</string>
+	</array>
+	<array>
+		<string>1</string>
+		<string>3</string>
+		<string>Send report at 8am</string>
+		<string>3</string>
+		<string>3</string>
+		<string>0</string>
+		<string>Request email list</string>
 	</array>
 	<array>
 		<string>1</string>
 		<string>4</string>
-		<string>Revisar geografia</string>
-		<string>3</string>
+		<string>Rewatch french course lessons</string>
+		<string>1</string>
 		<string>2</string>
 		<string>0</string>
-		<string>Estudar cap 3 e 4</string>
+		<string>Access the course website</string>
 	</array>
 	<array>
-		<string>1</string>
 		<string>5</string>
-		<string>Simulado de Humanas</string>
-		<string>3</string>
-		<string>3</string>
-		<string>0</string>
-		<string>Fazer exercicios do livro</string>
-	</array>
-	<array>
-		<string>1</string>
-		<string>5</string>
-		<string>Simulado de Redação</string>
-		<string>3</string>
-		<string>3</string>
-		<string>0</string>
-		<string>Fazer exercicios de gramatica</string>
-	</array>
-	<array>
-		<string>2</string>
 		<string>6</string>
-		<string>Treinar pedaladas</string>
-		<string>1</string>
-		<string>2</string>
-		<string>0</string>
-		<string>No parque central</string>
-	</array>
-	<array>
-		<string>2</string>
-		<string>6</string>
-		<string>Corrida 15 minutos</string>
-		<string>1</string>
-		<string>1</string>
-		<string>0</string>
-		<string>Levar tenis azul</string>
-	</array>
-	<array>
-		<string>2</string>
-		<string>7</string>
-		<string>Treinar mira</string>
+		<string>Buying vegetables at the market</string>
 		<string>1</string>
 		<string>2</string>
 		<string>0</string>
 		<string>Marcar com os amigos</string>
 	</array>
 	<array>
+		<string>5</string>
+		<string>6</string>
+		<string>Drink water</string>
+		<string>1</string>
 		<string>2</string>
+		<string>0</string>
+		<string>At least 6 glasses</string>
+	</array>
+	<array>
+		<string>5</string>
 		<string>7</string>
-		<string>Jogar uma partida</string>
-		<string>1</string>
-		<string>2</string>
-		<string>0</string>
-		<string>19h</string>
-	</array>
-	<array>
-		<string>2</string>
-		<string>8</string>
-		<string>Tiros de 10s</string>
+		<string>Take a walk in the park</string>
 		<string>2</string>
 		<string>1</string>
 		<string>0</string>
-		<string>Levar bola</string>
+		<string></string>
 	</array>
 	<array>
+		<string>5</string>
+		<string>7</string>
+		<string>Go to the gym</string>
 		<string>2</string>
+		<string>2</string>
+		<string>0</string>
+		<string>7pm</string>
+	</array>
+	<array>
+		<string>5</string>
 		<string>8</string>
-		<string>Repasse</string>
-		<string>2</string>
-		<string>2</string>
+		<string>Play volleyball with the guys</string>
+		<string>3</string>
+		<string>3</string>
 		<string>0</string>
-		<string>Alugar quadra</string>
+		<string>Bring volleyball</string>
 	</array>
 	<array>
-		<string>2</string>
 		<string>9</string>
-		<string>Treinar aquarela</string>
-		<string>3</string>
-		<string>3</string>
-		<string>0</string>
-		<string>Comprar pincel</string>
-	</array>
-	<array>
-		<string>2</string>
-		<string>9</string>
-		<string>Pintura a oleo</string>
-		<string>3</string>
-		<string>3</string>
-		<string>0</string>
-		<string>Estudar tecnicas</string>
-	</array>
-	<array>
-		<string>2</string>
 		<string>10</string>
-		<string>Aprender sobre perspectiva</string>
+		<string>Read school textbooks</string>
 		<string>3</string>
 		<string>2</string>
 		<string>0</string>
-		<string>Assistir videoaula</string>
+		<string>Go to the library</string>
 	</array>
 	<array>
-		<string>3</string>
-		<string>11</string>
-		<string>Organizar agulhas</string>
+		<string>9</string>
+		<string>10</string>
+		<string>Read Pride and Prejudice</string>
 		<string>1</string>
 		<string>1</string>
 		<string>0</string>
-		<string>Comprar potes</string>
+		<string></string>
+	</array>
+	<array>
+		<string>9</string>
+		<string>11</string>
+		<string>Play some video games</string>
+		<string>1</string>
+		<string>1</string>
+		<string>0</string>
+		<string>Invite a friend</string>
+	</array>
+	<array>
+		<string>9</string>
+		<string>11</string>
+		<string>Paint with watercolor</string>
+		<string>1</string>
+		<string>1</string>
+		<string>0</string>
+		<string>Buy watercolor</string>
+	</array>
+	<array>
+		<string>9</string>
+		<string>12</string>
+		<string>Practice a choreography</string>
+		<string>1</string>
+		<string>1</string>
+		<string>0</string>
+		<string>Search one</string>
 	</array>
 </array>
 </plist>
