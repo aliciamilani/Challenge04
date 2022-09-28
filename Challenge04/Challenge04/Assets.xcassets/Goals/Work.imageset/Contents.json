@@ -36,7 +36,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "Work@3x 2.png",
+      "filename" : "Work@2x 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -47,7 +47,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Work@2x 1.png",
+      "filename" : "Work_dm@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -74,7 +74,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Work@3x 3.png",
+      "filename" : "Work_dm@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
