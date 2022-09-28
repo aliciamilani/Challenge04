@@ -335,12 +335,13 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             // error
         }
     }
-
+    
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
         if !(titleTextField.text == ""){
             if add {
                 createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
+                
             } else {
                 if taskModel.title != titleTextField.text! {
                     updateTitle(newTitle: titleTextField.text!)

@@ -28,6 +28,37 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    private var listAllItems = [TaskModel]()
+    
+    func getAllItems() {
+        do {
+            let allData = try context.fetch(TaskModel.fetchRequest())
+            
+            listAllItems = allData.filter { t in
+                return t.urgency == true
+            }
+            
+            listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
+            
+            for i in listAllItems {
+                
+                if !listOfTasks.contains(i.objectID.uriRepresentation().absoluteString){
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
+                }
+            }
+            
+            userDefaults.set(listOfTasks, forKey: "tasks")
+            
+        
+            self.tableView.reloadData()
+            
+            
+        } catch {
+            //error
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +68,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         getHumorDay()
-        
         
     }
     
@@ -96,6 +126,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
         navigationController?.setNavigationBarHidden(true, animated: true)
         
+        getAllItems()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
