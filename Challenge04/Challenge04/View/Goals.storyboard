@@ -203,7 +203,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete">
-                                    <color key="baseBackgroundColor" name="FinishButton"/>
+                                    <color key="baseBackgroundColor" red="0.78431372549019607" green="0.36078431372549019" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

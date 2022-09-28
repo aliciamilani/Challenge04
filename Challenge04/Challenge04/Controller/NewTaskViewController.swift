@@ -107,6 +107,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.allowsSelection = true
         
         
+        
         createTextView()
     
         if !add {
@@ -133,6 +134,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
         tableView.reloadData()
     
         if !add {
