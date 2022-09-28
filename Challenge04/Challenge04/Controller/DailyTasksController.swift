@@ -30,34 +30,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     private var listAllItems = [TaskModel]()
     
-    func getAllItems() {
-        do {
-            let allData = try context.fetch(TaskModel.fetchRequest())
-            
-            listAllItems = allData.filter { t in
-                return t.urgency == true
-            }
-            
-            listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
-            
-            for i in listAllItems {
-                
-                if !listOfTasks.contains(i.objectID.uriRepresentation().absoluteString){
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-            }
-            
-            userDefaults.set(listOfTasks, forKey: "tasks")
-            
-        
-            self.tableView.reloadData()
-            
-            
-        } catch {
-            //error
-        }
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +57,24 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
         listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
         
+        do {
+            let allData = try context.fetch(TaskModel.fetchRequest())
+            
+            listAllItems = allData.filter { t in
+                return t.urgency == true
+            }
+            
+            for i in listAllItems {
+                
+                if !listOfTasks.contains(i.objectID.uriRepresentation().absoluteString){
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
+                }
+            }
+            
+        } catch {
+            
+        }
+        
         taskModel = [TaskModel]()
         
         for i in 0 ..< listOfTasks.count {
@@ -94,6 +84,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             if a.title != nil{
                 taskModel.append(a)
             }
+        }
+        
+        userDefaults.set(listOfTasks, forKey: "tasks")
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
@@ -122,11 +118,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         messageLabel.text = getMessage(humor: humor)
         
         getSavedTasks()
-        tableView.reloadData()
         
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        getAllItems()
+    
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
