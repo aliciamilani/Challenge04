@@ -37,6 +37,8 @@ class GoalsController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.tabBarController?.tabBar.isHidden = false
+        
         let defaults = UserDefaults.standard
         
         if defaults.bool(forKey: "goalsButton") {
