@@ -19,12 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-jW-Pu8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
                                 <rect key="frame" x="0.0" y="92" width="414" height="640"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="tintColor" name="Background"/>
                                 <color key="separatorColor" red="0.31372549019607843" green="0.32156862745098036" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,8 +69,12 @@
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="eZM-jW-Pu8" firstAttribute="top" secondItem="0N4-Ea-T0U" secondAttribute="top" id="2v7-j4-lGc"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="top" secondItem="JMB-Qj-CQc" secondAttribute="top" id="3rO-aV-d6w"/>
+                            <constraint firstItem="JMB-Qj-CQc" firstAttribute="trailing" secondItem="eZM-jW-Pu8" secondAttribute="trailing" id="Bg6-xd-FUI"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="trailing" secondItem="JMB-Qj-CQc" secondAttribute="trailing" id="opx-mp-bcx"/>
+                            <constraint firstAttribute="bottom" secondItem="eZM-jW-Pu8" secondAttribute="bottom" id="p3E-fM-uuq"/>
+                            <constraint firstItem="eZM-jW-Pu8" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="yoO-r7-8na"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="zJ0-x8-m9T"/>
                             <constraint firstItem="JMB-Qj-CQc" firstAttribute="bottom" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="130" id="zYb-Ci-b1Q"/>
                         </constraints>
@@ -433,7 +440,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-EX-1bu">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-r8-xBA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
@@ -588,7 +595,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-BH-F3Z">
-                                                <rect key="frame" x="32" y="646" width="350" height="52"/>
+                                                <rect key="frame" x="32" y="698" width="350" height="52"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Finish adding task" label="Finish"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="Yfb-WS-Gq0"/>
@@ -700,8 +707,8 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZD5-kh-RgQ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZD5-kh-RgQ">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="MainTitle"/>
                     </navigationBar>
