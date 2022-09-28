@@ -20,7 +20,9 @@ class LocalTask {
 
     var descrip: String
     
-    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes, descrip: String){
+    var urgency: Bool
+    
+    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes, descrip: String, urgency: Bool){
         self.title = title
         
         self.difficulty = difficulty
@@ -33,6 +35,7 @@ class LocalTask {
         self.goal = goal
         
         self.descrip = descrip
+        self.urgency = urgency
     }
     
     init(){
@@ -46,103 +49,24 @@ class LocalTask {
         self.goal = .none
         
         self.descrip = ""
+        self.urgency = false
     }
 }
 
 @objc
 public enum CategoryTypes: Int16 {
     case Studies = 1,
-        Sports = 2,
-        Art = 3,
-        School = 4,
-        College = 5,
-        Soccer = 6,
-        Eletronics = 7,
-        Basketball = 8,
-        Painting = 9,
-        Drawing = 10,
-        Crochet = 11,
+        Study = 2,
+        Work = 3,
+        OthersStudy = 4,
+        Sports = 5,
+        Food = 6,
+        Exercise = 7,
+        OthersSports = 8,
+        Art = 9,
+        Leisure = 10,
+        Hobbies = 11,
+        OthersArt = 12,
         none = 0
 }
 
-//func getTasks() -> ([LocalTask]){
-//    
-//    let tasksArray = [
-//        LocalTask(
-//            title: "Study outstanding math subjects",
-//            difficulty: 2,
-//            duration: 2,
-//            category: .Studies,
-//            goal: .School,
-//            descrip
-//        ),
-//        
-//        LocalTask(
-//            title: "Practice soccer",
-//            difficulty: 2,
-//            duration: 1,
-//            category: .Sports,
-//            goal: .Soccer
-//        ),
-//        
-//        LocalTask(
-//            title: "Advance reading of next year's paradidactic",
-//            difficulty: 1,
-//            duration: 1,
-//            category: .Studies,
-//            goal: .College
-//        ),
-//        
-//        LocalTask(
-//            title: "Play new X game update",
-//            difficulty: 2,
-//            duration: 1,
-//            category: .Sports,
-//            goal: .Eletronics
-//        ),
-//    ]
-//    
-//    return tasksArray
-//
-//}
-//
-//func getAllTasks() -> ([LocalTask]){
-//    
-//    let tasksArray = [
-//        LocalTask(
-//            title: "aaa",
-//            difficulty: 2,
-//            duration: 2,
-//            category: .Studies,
-//            goal: .School
-//        ),
-//        
-//        LocalTask(
-//            title: "bbbb",
-//            difficulty: 2,
-//            duration: 1,
-//            category: .Sports,
-//            goal: .Soccer
-//        ),
-//        
-//        LocalTask(
-//            title: "cccc",
-//            difficulty: 1,
-//            duration: 1,
-//            category: .Studies,
-//            goal: .College
-//        ),
-//        
-//        LocalTask(
-//            title: "dddddd",
-//            difficulty: 2,
-//            duration: 1,
-//            category: .Sports,
-//            goal: .Eletronics
-//        ),
-//    ]
-//    
-//    return tasksArray
-//
-//}
-//

@@ -11,14 +11,15 @@ import UIKit
 class GoalsController: UIViewController {
     
     
-    @IBOutlet weak var study1Btn: UIButton!
-    @IBOutlet weak var study2Btn: UIButton!
-    @IBOutlet weak var sport1Btn: UIButton!
-    @IBOutlet weak var sport2Btn: UIButton!
-    @IBOutlet weak var sport3Btn: UIButton!
-    @IBOutlet weak var arts1Btn: UIButton!
-    @IBOutlet weak var arts2Btn: UIButton!
-    @IBOutlet weak var arts3Btn: UIButton!
+    @IBOutlet weak var workBtn: UIButton!
+    @IBOutlet weak var studyBtn: UIButton!
+    @IBOutlet weak var othersStudyBtn: UIButton!
+    @IBOutlet weak var othesSportsBtn: UIButton!
+    @IBOutlet weak var exerciseBtn: UIButton!
+    @IBOutlet weak var foodBtn: UIButton!
+    @IBOutlet weak var leisureBtn: UIButton!
+    @IBOutlet weak var othersArtBtn: UIButton!
+    @IBOutlet weak var hobbiesBtn: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
     
     
@@ -32,8 +33,6 @@ class GoalsController: UIViewController {
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,66 +49,72 @@ class GoalsController: UIViewController {
     }
     
     @IBAction func goalsChoice(_ sender: UIButton) {
-//        confirmButton.alpha = 1.0
-//        confirmButton.isEnabled = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "schoolSegue" {
+        if segue.identifier == "study" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Studies
-                destination.goal = .School
+                destination.goal = .Study
             }
         }
         
-        if segue.identifier == "collegeSegue" {
+        if segue.identifier == "work" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Studies
-                destination.goal = .College
+                destination.goal = .Work
             }
         }
         
-        if segue.identifier == "soccerSegue" {
+        if segue.identifier == "othersStudy" {
+            if let destination = segue.destination as? AllTasksController {
+                destination.category = .Studies
+                destination.goal = .OthersStudy
+            }
+        }
+        
+        if segue.identifier == "food" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Sports
-                destination.goal = .Soccer
+                destination.goal = .Food
             }
         }
         
-        if segue.identifier == "electronicsSegue" {
+        if segue.identifier == "exercise" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Sports
-                destination.goal = .Eletronics
+                destination.goal = .Exercise
             }
         }
         
-        if segue.identifier == "basketballSegue" {
+        if segue.identifier == "othersSports" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Sports
-                destination.goal = .Basketball
+                destination.goal = .OthersSports
             }
         }
         
-        if segue.identifier == "paintingSegue" {
+        if segue.identifier == "leisure" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Art
-                destination.goal = .Painting
+                destination.goal = .Leisure
             }
         }
         
-        if segue.identifier == "drawingSegue" {
+        if segue.identifier == "hobbies" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Art
-                destination.goal = .Drawing
+                destination.goal = .Hobbies
             }
         }
         
-        if segue.identifier == "crochetSegue" {
+        if segue.identifier == "othersArt" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Art
-                destination.goal = .Crochet
+                destination.goal = .OthersArt
             }
         }
+        
     }
 }
