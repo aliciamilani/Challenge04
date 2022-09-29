@@ -405,6 +405,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="Zth-Pm-xht" id="zLY-QX-kqx"/>
                         <outlet property="difficultyLabel" destination="RTL-01-95i" id="SMX-4M-iad"/>
+                        <outlet property="rescheduleBtn" destination="Zoj-ao-41H" id="MqE-j7-Biv"/>
                         <outlet property="taskTitleLabel" destination="KEk-uo-mAE" id="5cg-G9-Qpg"/>
                         <outlet property="timerLabel" destination="6dG-WD-wFr" id="pMx-rm-F8I"/>
                         <outlet property="urgencyLabel" destination="xi8-zJ-KuX" id="8eZ-qE-GPr"/>

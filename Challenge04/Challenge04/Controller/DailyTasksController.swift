@@ -143,24 +143,30 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let latter = UIContextualAction(style: .destructive,
-                                       title: "Reschedule") { [weak self] (action, view, completionHandler) in
-            guard let self = self else {return}
-            
-            
-            self.taskModel.remove(at: indexPath.row)
-            
-            self.listOfTasks.remove(at: indexPath.row)
-            self.userDefaults.set(self.listOfTasks, forKey: "tasks")
-            
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.tableView.reloadData()
-        }
-        latter.backgroundColor = UIColor(named: "Reschedule")
         
-        let configuration = UISwipeActionsConfiguration(actions: [latter])
+        if !taskModel[indexPath.row].urgency {
             
-        return configuration
+            let latter = UIContextualAction(style: .destructive,
+                                            title: "Reschedule") { [weak self] (action, view, completionHandler) in
+                guard let self = self else {return}
+                
+                
+                self.taskModel.remove(at: indexPath.row)
+                
+                self.listOfTasks.remove(at: indexPath.row)
+                self.userDefaults.set(self.listOfTasks, forKey: "tasks")
+                
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.tableView.reloadData()
+            }
+            latter.backgroundColor = UIColor(named: "Reschedule")
+            
+            let configuration = UISwipeActionsConfiguration(actions: [latter])
+            
+            return configuration
+        }
+        
+        return nil
     }
     
     func tableView(_ tableView: UITableView,
