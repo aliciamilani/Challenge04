@@ -114,6 +114,8 @@ class DetailsController: UIViewController{
         
         removeElementFromDefaults()
         
+        HapticsManager.shared.vibrate(for: .success)
+        
         navigationController?.popViewController(animated: true)
     }
     
