@@ -56,7 +56,7 @@ private var mediumList = [TaskModel]()
 private var hardList = [TaskModel]()
 
 let userDefaults = UserDefaults.standard
-var listOfTasks: [String] = userDefaults.object(forKey: "tasks") as? [String] ?? []
+var listOfTasks: [String] = []
 let dicHumor: [String:Int] = ["Happy": 3, "Confident": 3, "Indifferent": 3, "Irritated": 2, "Tired": 1, "Sad": 2]
 
 func treateItems() {
