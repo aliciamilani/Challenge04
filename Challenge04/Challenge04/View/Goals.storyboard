@@ -180,7 +180,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAU-UD-C81">
-                                <rect key="frame" x="20" y="354" width="374" height="70"/>
+                                <rect key="frame" x="20" y="399.5" width="374" height="70"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
                                 <accessibility key="accessibilityConfiguration" hint="Add or edit description"/>
@@ -214,21 +214,30 @@
                                     <action selector="deleteButton:" destination="hBt-v3-XOy" eventType="touchUpInside" id="3Ge-qN-yPR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select urgency if your task needs to be done today. It will be added in the daily tasks." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16v-xk-dMF">
+                                <rect key="frame" x="20" y="342" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vx-5M-pgH"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="fih-pR-mEo" secondAttribute="trailing" constant="20" id="1WW-gJ-hkJ"/>
+                            <constraint firstAttribute="trailing" secondItem="16v-xk-dMF" secondAttribute="trailing" constant="20" id="4PD-gB-5kp"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="rZq-ip-b3T" secondAttribute="trailing" id="ASh-h4-q4b"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="Hcv-34-soO" secondAttribute="trailing" constant="20" id="ApC-Zj-g6e"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="top" secondItem="Hcv-34-soO" secondAttribute="bottom" constant="24" id="GTH-Rc-3KQ"/>
                             <constraint firstItem="hAU-UD-C81" firstAttribute="leading" secondItem="f1E-w5-TOS" secondAttribute="leading" id="Jmr-iC-cRn"/>
                             <constraint firstItem="hAU-UD-C81" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" id="L3I-aT-X9Q"/>
+                            <constraint firstItem="16v-xk-dMF" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="12" id="NdS-nr-evf"/>
+                            <constraint firstItem="16v-xk-dMF" firstAttribute="leading" secondItem="1Oq-ia-6AG" secondAttribute="leading" constant="20" id="Pqj-MN-NMl"/>
                             <constraint firstItem="fih-pR-mEo" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="SMz-Xi-fYM"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="Ut4-Ih-1zR"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="top" secondItem="rZq-ip-b3T" secondAttribute="top" constant="44" id="Yuq-ig-jez"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="fih-pR-mEo" secondAttribute="bottom" constant="30" id="cFy-1j-YfH"/>
-                            <constraint firstItem="hAU-UD-C81" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="24" id="cn0-4h-YXt"/>
+                            <constraint firstItem="hAU-UD-C81" firstAttribute="top" secondItem="16v-xk-dMF" secondAttribute="bottom" constant="24" id="gwa-Aj-cR7"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="p2A-y3-4O5"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" constant="20" id="pOp-bU-X5i"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="rZq-ip-b3T" secondAttribute="bottom" id="qQU-yT-Xl3"/>
@@ -312,7 +321,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-EX-hRK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time needed to complete the task." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-EX-hRK">
                                 <rect key="frame" x="32" y="249" width="362" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -397,7 +406,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitment needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-wd-dHT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitment needed to complete the task." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-wd-dHT">
                                 <rect key="frame" x="32" y="249" width="362" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
