@@ -107,6 +107,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.allowsSelection = true
         
         
+        
         createTextView()
     
         if !add {
@@ -133,6 +134,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
         tableView.reloadData()
     
         if !add {
@@ -335,12 +337,13 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             // error
         }
     }
-
+    
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         
         if !(titleTextField.text == ""){
             if add {
                 createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
+                
             } else {
                 if taskModel.title != titleTextField.text! {
                     updateTitle(newTitle: titleTextField.text!)

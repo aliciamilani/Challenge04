@@ -28,6 +28,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    private var listAllItems = [TaskModel]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +40,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         getHumorDay()
-        
         
     }
     
@@ -55,6 +57,24 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         
         listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
         
+        do {
+            let allData = try context.fetch(TaskModel.fetchRequest())
+            
+            listAllItems = allData.filter { t in
+                return t.urgency == true
+            }
+            
+            for i in listAllItems {
+                
+                if !listOfTasks.contains(i.objectID.uriRepresentation().absoluteString){
+                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
+                }
+            }
+            
+        } catch {
+            
+        }
+        
         taskModel = [TaskModel]()
         
         for i in 0 ..< listOfTasks.count {
@@ -64,6 +84,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             if a.title != nil{
                 taskModel.append(a)
             }
+        }
+        
+        userDefaults.set(listOfTasks, forKey: "tasks")
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
@@ -92,10 +118,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         messageLabel.text = getMessage(humor: humor)
         
         getSavedTasks()
-        tableView.reloadData()
         
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
+    
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,24 +143,30 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let latter = UIContextualAction(style: .destructive,
-                                       title: "Reschedule") { [weak self] (action, view, completionHandler) in
-            guard let self = self else {return}
-            
-            
-            self.taskModel.remove(at: indexPath.row)
-            
-            self.listOfTasks.remove(at: indexPath.row)
-            self.userDefaults.set(self.listOfTasks, forKey: "tasks")
-            
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.tableView.reloadData()
-        }
-        latter.backgroundColor = UIColor(named: "Reschedule")
         
-        let configuration = UISwipeActionsConfiguration(actions: [latter])
+        if !taskModel[indexPath.row].urgency {
             
-        return configuration
+            let latter = UIContextualAction(style: .destructive,
+                                            title: "Reschedule") { [weak self] (action, view, completionHandler) in
+                guard let self = self else {return}
+                
+                
+                self.taskModel.remove(at: indexPath.row)
+                
+                self.listOfTasks.remove(at: indexPath.row)
+                self.userDefaults.set(self.listOfTasks, forKey: "tasks")
+                
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.tableView.reloadData()
+            }
+            latter.backgroundColor = UIColor(named: "Reschedule")
+            
+            let configuration = UISwipeActionsConfiguration(actions: [latter])
+            
+            return configuration
+        }
+        
+        return nil
     }
     
     func tableView(_ tableView: UITableView,

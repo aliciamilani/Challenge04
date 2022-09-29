@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, cowboy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-on-cNY">
-                                <rect key="frame" x="20" y="132" width="374" height="34"/>
+                                <rect key="frame" x="20" y="132" width="374" height="28"/>
                                 <accessibility key="accessibilityConfiguration" label="Hey, Cowboy!">
                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                 </accessibility>
@@ -38,20 +38,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-3g-J4E">
-                                <rect key="frame" x="20" y="186" width="272" height="17"/>
+                                <rect key="frame" x="20" y="180" width="272" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moo" translatesAutoresizingMaskIntoConstraints="NO" id="ilu-53-Epr">
-                                <rect key="frame" x="294" y="97" width="150" height="150"/>
+                                <rect key="frame" x="294" y="91" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="MDi-j4-fV6"/>
                                     <constraint firstAttribute="width" constant="150" id="wAf-ry-t7G"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9p-BH-k5p">
-                                <rect key="frame" x="0.0" y="223" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="217" width="414" height="679"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="tintColor" name="Background"/>
                                 <userDefinedRuntimeAttributes>
@@ -61,14 +61,14 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLr-9F-EOh">
-                                <rect key="frame" x="20" y="253" width="374" height="25.5"/>
+                                <rect key="frame" x="20" y="247" width="374" height="21"/>
                                 <accessibility key="accessibilityConfiguration" hint="Week day according to your adjust set up"/>
                                 <fontDescription key="fontDescription" name="Poppins-Black" family="Poppins" pointSize="18"/>
                                 <color key="textColor" name="Labels"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-Ps-ofN">
-                                <rect key="frame" x="0.0" y="298.5" width="414" height="563.5"/>
+                                <rect key="frame" x="0.0" y="288" width="414" height="574"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="tintColor" name="Background"/>
                                 <color key="separatorColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,17 +78,17 @@
                                 <color key="sectionIndexTrackingBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="e9N-aw-f0f" customClass="CardCell" customModule="GoMoo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="63"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="59.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9N-aw-f0f" id="m15-B0-lCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYz-OX-dKD">
-                                                    <rect key="frame" x="20" y="10" width="374" height="43"/>
+                                                    <rect key="frame" x="20" y="10" width="374" height="39.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="aaaa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-NY-hT8">
-                                                            <rect key="frame" x="15" y="10" width="344" height="23"/>
+                                                            <rect key="frame" x="15" y="10" width="344" height="19.5"/>
                                                             <accessibility key="accessibilityConfiguration" hint="Tap to see details of yhis task"/>
                                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                                             <color key="textColor" name="Labels"/>
@@ -231,43 +231,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-ao-41H">
-                                <rect key="frame" x="20" y="790" width="374" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="dWR-Oa-6t0"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Reschedule">
-                                    <color key="baseBackgroundColor" name="Reschedule"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="rescheduleBtn:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="25q-nc-nAE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-zx-hgo">
-                                <rect key="frame" x="20" y="722" width="374" height="52"/>
-                                <accessibility key="accessibilityConfiguration" hint="Go back to daily tasks" label="Done"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="87g-pj-7Sf"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Done">
-                                    <color key="baseBackgroundColor" name="Done"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="doneBtn:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="U85-LG-cha"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDD-3R-5W9">
                                 <rect key="frame" x="20" y="260" width="374" height="144"/>
                                 <subviews>
@@ -367,6 +330,50 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="njf-Uf-zfB">
+                                <rect key="frame" x="32" y="722" width="350" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-zx-hgo">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="52"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Go back to daily tasks" label="Done"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="87g-pj-7Sf"/>
+                                            <constraint firstAttribute="width" constant="350" id="KVc-4p-JCO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Done">
+                                            <color key="baseBackgroundColor" name="Done"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneBtn:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="U85-LG-cha"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-ao-41H">
+                                        <rect key="frame" x="0.0" y="68" width="350" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="dWR-Oa-6t0"/>
+                                            <constraint firstAttribute="width" constant="350" id="hyL-IG-VXY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reschedule">
+                                            <color key="baseBackgroundColor" name="Reschedule"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rescheduleBtn:" destination="J0Z-yh-GEm" eventType="touchUpInside" id="25q-nc-nAE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LE0-HD-T8j"/>
                         <color key="backgroundColor" name="Background"/>
@@ -376,24 +383,20 @@
                             <constraint firstItem="nDD-3R-5W9" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" constant="20" id="8fq-5L-DdT"/>
                             <constraint firstItem="UFp-fC-M2T" firstAttribute="top" secondItem="LE0-HD-T8j" secondAttribute="top" id="BPt-xu-YmK"/>
                             <constraint firstItem="LE0-HD-T8j" firstAttribute="trailing" secondItem="W0l-ZO-FeO" secondAttribute="trailing" constant="20" id="DZz-qD-B6Q"/>
-                            <constraint firstItem="LE0-HD-T8j" firstAttribute="trailing" secondItem="Zoj-ao-41H" secondAttribute="trailing" constant="20" id="FgA-UQ-eX0"/>
                             <constraint firstItem="SCZ-jf-e5V" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" constant="20" id="KAq-0D-yO3"/>
+                            <constraint firstItem="LE0-HD-T8j" firstAttribute="bottom" secondItem="njf-Uf-zfB" secondAttribute="bottom" constant="20" id="KVG-kK-zCC"/>
                             <constraint firstItem="SCZ-jf-e5V" firstAttribute="top" secondItem="UFp-fC-M2T" secondAttribute="top" constant="40" id="Q3P-TC-BwL"/>
                             <constraint firstItem="JsS-Pq-YU3" firstAttribute="top" secondItem="nDD-3R-5W9" secondAttribute="bottom" constant="24" id="QtZ-C3-ift"/>
                             <constraint firstItem="LE0-HD-T8j" firstAttribute="trailing" secondItem="nDD-3R-5W9" secondAttribute="trailing" constant="20" id="R9l-lR-I6f"/>
-                            <constraint firstItem="LE0-HD-T8j" firstAttribute="bottom" secondItem="Zoj-ao-41H" secondAttribute="bottom" constant="20" id="Uk7-Hw-613"/>
                             <constraint firstItem="yrv-4K-iNA" firstAttribute="top" secondItem="JsS-Pq-YU3" secondAttribute="bottom" constant="12" id="Z8Z-Xl-Dnf"/>
                             <constraint firstItem="yrv-4K-iNA" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" constant="20" id="a3p-VT-wzs"/>
-                            <constraint firstItem="Zoj-ao-41H" firstAttribute="top" secondItem="0Ze-zx-hgo" secondAttribute="bottom" constant="16" id="aP7-qj-aYn"/>
                             <constraint firstItem="W0l-ZO-FeO" firstAttribute="top" secondItem="SCZ-jf-e5V" secondAttribute="bottom" constant="12" id="eIW-I3-6aK"/>
                             <constraint firstItem="nDD-3R-5W9" firstAttribute="top" secondItem="fIp-1E-0jZ" secondAttribute="bottom" constant="12" id="eKw-wz-FjC"/>
-                            <constraint firstItem="LE0-HD-T8j" firstAttribute="trailing" secondItem="0Ze-zx-hgo" secondAttribute="trailing" constant="20" id="jtk-b2-dnj"/>
+                            <constraint firstItem="njf-Uf-zfB" firstAttribute="centerX" secondItem="LE0-HD-T8j" secondAttribute="centerX" id="hqo-9x-JOb"/>
                             <constraint firstItem="UFp-fC-M2T" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" id="qbZ-4u-DdE"/>
                             <constraint firstItem="LE0-HD-T8j" firstAttribute="trailing" secondItem="yrv-4K-iNA" secondAttribute="trailing" constant="20" id="rLB-aS-SlV"/>
                             <constraint firstItem="fIp-1E-0jZ" firstAttribute="top" secondItem="W0l-ZO-FeO" secondAttribute="bottom" constant="24" id="sdZ-Qn-i8V"/>
-                            <constraint firstItem="Zoj-ao-41H" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" constant="20" id="vlp-Gc-xRA"/>
                             <constraint firstItem="LE0-HD-T8j" firstAttribute="bottom" secondItem="UFp-fC-M2T" secondAttribute="bottom" id="xSo-6k-2gu"/>
-                            <constraint firstItem="0Ze-zx-hgo" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" constant="20" id="y0H-NC-wvO"/>
                             <constraint firstItem="W0l-ZO-FeO" firstAttribute="leading" secondItem="LE0-HD-T8j" secondAttribute="leading" constant="20" id="yK8-1E-AMe"/>
                             <constraint firstItem="LE0-HD-T8j" firstAttribute="trailing" secondItem="UFp-fC-M2T" secondAttribute="trailing" id="zlV-IB-zo4"/>
                         </constraints>
@@ -402,6 +405,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="Zth-Pm-xht" id="zLY-QX-kqx"/>
                         <outlet property="difficultyLabel" destination="RTL-01-95i" id="SMX-4M-iad"/>
+                        <outlet property="rescheduleBtn" destination="Zoj-ao-41H" id="MqE-j7-Biv"/>
                         <outlet property="taskTitleLabel" destination="KEk-uo-mAE" id="5cg-G9-Qpg"/>
                         <outlet property="timerLabel" destination="6dG-WD-wFr" id="pMx-rm-F8I"/>
                         <outlet property="urgencyLabel" destination="xi8-zJ-KuX" id="8eZ-qE-GPr"/>
@@ -409,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="us7-Zz-sdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2172.463768115942" y="59.598214285714285"/>
+            <point key="canvasLocation" x="2171.0144927536235" y="59.598214285714285"/>
         </scene>
         <!--Goals-->
         <scene sceneID="XIO-tW-8BT">

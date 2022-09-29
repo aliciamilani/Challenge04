@@ -19,12 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-jW-Pu8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYC-E9-cQu">
                                 <rect key="frame" x="0.0" y="92" width="414" height="640"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="tintColor" name="Background"/>
                                 <color key="separatorColor" red="0.31372549019607843" green="0.32156862745098036" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,8 +69,12 @@
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="eZM-jW-Pu8" firstAttribute="top" secondItem="0N4-Ea-T0U" secondAttribute="top" id="2v7-j4-lGc"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="top" secondItem="JMB-Qj-CQc" secondAttribute="top" id="3rO-aV-d6w"/>
+                            <constraint firstItem="JMB-Qj-CQc" firstAttribute="trailing" secondItem="eZM-jW-Pu8" secondAttribute="trailing" id="Bg6-xd-FUI"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="trailing" secondItem="JMB-Qj-CQc" secondAttribute="trailing" id="opx-mp-bcx"/>
+                            <constraint firstAttribute="bottom" secondItem="eZM-jW-Pu8" secondAttribute="bottom" id="p3E-fM-uuq"/>
+                            <constraint firstItem="eZM-jW-Pu8" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="yoO-r7-8na"/>
                             <constraint firstItem="XYC-E9-cQu" firstAttribute="leading" secondItem="JMB-Qj-CQc" secondAttribute="leading" id="zJ0-x8-m9T"/>
                             <constraint firstItem="JMB-Qj-CQc" firstAttribute="bottom" secondItem="XYC-E9-cQu" secondAttribute="bottom" constant="130" id="zYb-Ci-b1Q"/>
                         </constraints>
@@ -173,7 +180,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAU-UD-C81">
-                                <rect key="frame" x="20" y="354" width="374" height="70"/>
+                                <rect key="frame" x="20" y="399.5" width="374" height="70"/>
                                 <color key="backgroundColor" name="TextField"/>
                                 <color key="tintColor" name="MainTitle"/>
                                 <accessibility key="accessibilityConfiguration" hint="Add or edit description"/>
@@ -196,7 +203,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Delete">
-                                    <color key="baseBackgroundColor" name="FinishButton"/>
+                                    <color key="baseBackgroundColor" red="0.78431372549019607" green="0.36078431372549019" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -207,21 +214,30 @@
                                     <action selector="deleteButton:" destination="hBt-v3-XOy" eventType="touchUpInside" id="3Ge-qN-yPR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select urgency if your task needs to be done today. It will be added in the daily tasks." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16v-xk-dMF">
+                                <rect key="frame" x="20" y="342" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Vx-5M-pgH"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="fih-pR-mEo" secondAttribute="trailing" constant="20" id="1WW-gJ-hkJ"/>
+                            <constraint firstAttribute="trailing" secondItem="16v-xk-dMF" secondAttribute="trailing" constant="20" id="4PD-gB-5kp"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="rZq-ip-b3T" secondAttribute="trailing" id="ASh-h4-q4b"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="Hcv-34-soO" secondAttribute="trailing" constant="20" id="ApC-Zj-g6e"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="top" secondItem="Hcv-34-soO" secondAttribute="bottom" constant="24" id="GTH-Rc-3KQ"/>
                             <constraint firstItem="hAU-UD-C81" firstAttribute="leading" secondItem="f1E-w5-TOS" secondAttribute="leading" id="Jmr-iC-cRn"/>
                             <constraint firstItem="hAU-UD-C81" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" id="L3I-aT-X9Q"/>
+                            <constraint firstItem="16v-xk-dMF" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="12" id="NdS-nr-evf"/>
+                            <constraint firstItem="16v-xk-dMF" firstAttribute="leading" secondItem="1Oq-ia-6AG" secondAttribute="leading" constant="20" id="Pqj-MN-NMl"/>
                             <constraint firstItem="fih-pR-mEo" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="SMz-Xi-fYM"/>
                             <constraint firstItem="Hcv-34-soO" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="Ut4-Ih-1zR"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="top" secondItem="rZq-ip-b3T" secondAttribute="top" constant="44" id="Yuq-ig-jez"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="fih-pR-mEo" secondAttribute="bottom" constant="30" id="cFy-1j-YfH"/>
-                            <constraint firstItem="hAU-UD-C81" firstAttribute="top" secondItem="f1E-w5-TOS" secondAttribute="bottom" constant="24" id="cn0-4h-YXt"/>
+                            <constraint firstItem="hAU-UD-C81" firstAttribute="top" secondItem="16v-xk-dMF" secondAttribute="bottom" constant="24" id="gwa-Aj-cR7"/>
                             <constraint firstItem="f1E-w5-TOS" firstAttribute="leading" secondItem="9Vx-5M-pgH" secondAttribute="leading" constant="20" id="p2A-y3-4O5"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="trailing" secondItem="f1E-w5-TOS" secondAttribute="trailing" constant="20" id="pOp-bU-X5i"/>
                             <constraint firstItem="9Vx-5M-pgH" firstAttribute="bottom" secondItem="rZq-ip-b3T" secondAttribute="bottom" id="qQU-yT-Xl3"/>
@@ -305,7 +321,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-EX-hRK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time needed to complete the task." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-EX-hRK">
                                 <rect key="frame" x="32" y="249" width="362" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -390,7 +406,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitment needed to complete the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-wd-dHT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commitment needed to complete the task." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y95-wd-dHT">
                                 <rect key="frame" x="32" y="249" width="362" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -429,12 +445,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Portrait-background-goals" translatesAutoresizingMaskIntoConstraints="NO" id="9ut-t7-SQm">
-                                <rect key="frame" x="0.0" y="23" width="414" height="850"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-goals" translatesAutoresizingMaskIntoConstraints="NO" id="9ut-t7-SQm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-EX-1bu">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-EX-1bu">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-r8-xBA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
@@ -574,22 +589,6 @@
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="hobbies" id="5aS-qN-m4R"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-BH-F3Z">
-                                                <rect key="frame" x="32" y="633.5" width="350" height="52"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Finish adding task" label="Finish"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="Yfb-WS-Gq0"/>
-                                                    <constraint firstAttribute="width" constant="350" id="zlK-Fs-aNa"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Finish">
-                                                    <color key="baseBackgroundColor" name="FinishButton"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="confirmAction:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="0oB-pB-nwH"/>
-                                                    <segue destination="YDi-KG-8Rs" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Le9-ta-f33"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-cr-cCQ">
                                                 <rect key="frame" x="273.5" y="400.5" width="109" height="106"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Add tasks for this category" label="Others"/>
@@ -602,6 +601,22 @@
                                                 <connections>
                                                     <action selector="goalsChoice:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="SDN-fl-PiZ"/>
                                                     <segue destination="mE9-ZN-4Bb" kind="show" identifier="othersArt" id="FSb-2j-i23"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnW-BH-F3Z">
+                                                <rect key="frame" x="32" y="698" width="350" height="52"/>
+                                                <accessibility key="accessibilityConfiguration" hint="Finish adding task" label="Finish"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="Yfb-WS-Gq0"/>
+                                                    <constraint firstAttribute="width" constant="350" id="zlK-Fs-aNa"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Finish">
+                                                    <color key="baseBackgroundColor" name="FinishButton"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="confirmAction:" destination="Prt-FP-d1Y" eventType="touchUpInside" id="0oB-pB-nwH"/>
+                                                    <segue destination="YDi-KG-8Rs" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="Le9-ta-f33"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -625,7 +640,6 @@
                                             <constraint firstItem="BAS-gc-v3T" firstAttribute="top" secondItem="9hF-kA-nEp" secondAttribute="bottom" constant="12" id="ahN-LP-QVT"/>
                                             <constraint firstItem="W0x-VS-IJR" firstAttribute="centerY" secondItem="O8i-au-4dG" secondAttribute="centerY" id="b61-lT-9wx"/>
                                             <constraint firstItem="xPh-ua-d1Q" firstAttribute="top" secondItem="4l9-r8-xBA" secondAttribute="top" constant="24" id="btU-EC-PhL"/>
-                                            <constraint firstItem="OnW-BH-F3Z" firstAttribute="top" secondItem="2Ug-dd-Ah9" secondAttribute="bottom" constant="127" id="fHZ-wT-5NB"/>
                                             <constraint firstItem="2Ug-dd-Ah9" firstAttribute="centerX" secondItem="4l9-r8-xBA" secondAttribute="centerX" id="gss-rV-Qkz"/>
                                             <constraint firstItem="BAS-gc-v3T" firstAttribute="centerX" secondItem="4l9-r8-xBA" secondAttribute="centerX" id="lux-Eb-tje"/>
                                             <constraint firstItem="GXu-cr-cCQ" firstAttribute="leading" secondItem="2Ug-dd-Ah9" secondAttribute="trailing" constant="12" id="oI0-KZ-kUX"/>
@@ -648,11 +662,16 @@
                         <color key="backgroundColor" name="Background"/>
                         <color key="tintColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="9ut-t7-SQm" firstAttribute="trailing" secondItem="FGm-wc-20Y" secondAttribute="trailing" id="2dS-07-RAD"/>
                             <constraint firstItem="FD6-EX-1bu" firstAttribute="bottom" secondItem="FGm-wc-20Y" secondAttribute="bottom" id="41o-gs-tGD"/>
                             <constraint firstItem="FD6-EX-1bu" firstAttribute="leading" secondItem="FGm-wc-20Y" secondAttribute="leading" id="LoH-BV-BUB"/>
+                            <constraint firstItem="9ut-t7-SQm" firstAttribute="top" secondItem="SuP-Fl-0Of" secondAttribute="top" id="WED-OR-NNE"/>
                             <constraint firstItem="4l9-r8-xBA" firstAttribute="width" secondItem="SuP-Fl-0Of" secondAttribute="width" id="bhc-hr-uHP"/>
+                            <constraint firstAttribute="bottom" secondItem="9ut-t7-SQm" secondAttribute="bottom" id="gy6-tN-LWE"/>
                             <constraint firstItem="FD6-EX-1bu" firstAttribute="trailing" secondItem="FGm-wc-20Y" secondAttribute="trailing" id="t0B-if-Na3"/>
+                            <constraint firstItem="FGm-wc-20Y" firstAttribute="bottom" secondItem="OnW-BH-F3Z" secondAttribute="bottom" constant="20" id="tIk-xW-o8X"/>
                             <constraint firstItem="FD6-EX-1bu" firstAttribute="top" secondItem="FGm-wc-20Y" secondAttribute="top" id="uUm-wV-0fe"/>
+                            <constraint firstItem="9ut-t7-SQm" firstAttribute="leading" secondItem="FGm-wc-20Y" secondAttribute="leading" id="yKJ-pD-uUy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Goals" largeTitleDisplayMode="always" id="WLw-pk-aPZ"/>
@@ -697,8 +716,8 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZD5-kh-RgQ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZD5-kh-RgQ">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="MainTitle"/>
                     </navigationBar>

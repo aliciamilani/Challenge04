@@ -21,6 +21,8 @@ class DetailsController: UIViewController{
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var rescheduleBtn: UIButton!
+    
     var task = TaskModel()
     var position = 0
     let userDefaults = UserDefaults.standard
@@ -51,6 +53,13 @@ class DetailsController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (task.urgency){
+            rescheduleBtn.isHidden = true
+        } else {
+            rescheduleBtn.isHidden = false
+        }
+        
         taskTitleLabel.text = task.title!
         timerLabel.text = "The duration of this task is " + findDuration()
         difficultyLabel.text = "This task is considered " + findDifficulty()

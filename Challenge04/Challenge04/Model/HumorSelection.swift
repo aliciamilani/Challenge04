@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 import CoreData
 
+private var taskModel = [TaskModel]()
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 class HumorSelection {
     var userHumor: String = ""
-    
 }
 
 func getMessage(humor: String) -> (String){
@@ -39,107 +41,79 @@ func getMessage(humor: String) -> (String){
     }
 }
 
-private var taskModel = [TaskModel]()
-let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 
 func getAllItems() {
     do {
         taskModel = try context.fetch(TaskModel.fetchRequest())
-        
     } catch {
         //error
     }
-    
 }
 
+private var easyList = [TaskModel]()
+private var mediumList = [TaskModel]()
+private var hardList = [TaskModel]()
+
+let userDefaults = UserDefaults.standard
+var listOfTasks: [String] = userDefaults.object(forKey: "tasks") as? [String] ?? []
+let dicHumor: [String:Int] = ["Happy": 3, "Confident": 3, "Indifferent": 3, "Irritated": 2, "Tired": 1, "Sad": 2]
+
+func treateItems() {
+    for task in taskModel {
+        
+        if !task.urgency {
+            if (task.difficulty == 1 && task.duration == 1) || (task.difficulty == 1 && task.duration == 2) || (task.difficulty == 2 && task.duration == 1) {
+                easyList.append(task)
+            }
+            
+            if (task.difficulty == 2 && task.duration == 2) || (task.difficulty == 2 && task.duration == 3) || (task.difficulty == 1 && task.duration == 3) {
+                mediumList.append(task)
+            }
+            
+            if (task.difficulty == 3 && task.duration == 3) || (task.difficulty == 3 && task.duration == 2) || (task.difficulty == 3 && task.duration == 1) {
+                hardList.append(task)
+            }
+        }
+    }
+}
+
+
+
 func getTasksDay(humor: String){
-    var listTasks = [TaskModel]()
+    
+    var alltasks = [TaskModel]()
     
     getAllItems()
-    
-    let userDefaults = UserDefaults.standard
-    var listOfTasks: [String] = userDefaults.object(forKey: "tasks") as? [String] ?? []
-    
-    var j = 0
-    
-    let dicHumor: [String:Int] = ["Happy": 3, "Confident": 3, "Indifferent": 3, "Irritated": 2, "Tired": 1, "Sad": 2]
-    
-    let qtdeTask = dicHumor[humor]!
+    treateItems()
 
+    let qtdeTask = dicHumor[humor]!
+    
     if taskModel.count != 0 {
-        for i in taskModel {
-            if listTasks.count < qtdeTask {
-                
-                let soma = (i.difficulty + i.duration)
+        if humor == "Happy" || humor == "Confident"{
+            alltasks = hardList + mediumList + easyList
             
-                if i.difficulty == 3 && soma >= 5 && humor == "Happy"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-            
-                if i.difficulty == 3 && humor == "Confident" {
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-                
-                if i.duration == 3 && soma == 5 && humor == "Confident"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-                
-                if i.difficulty == 1 && soma == 4 && humor == "Indifferent"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-                
-                if soma == 4 && humor == "Irritated"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-                
-                if i.difficulty == 2 && soma == 3 && humor == "Tired"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-                
-                if soma == 3 && humor == "Sad"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-                
-                if soma == 2 && humor == "Tired"{
-                    listTasks.append(i)
-                    taskModel.remove(at: j)
-                    listOfTasks.append(i.objectID.uriRepresentation().absoluteString)
-                }
-            }
-            
-            j += 1
-        }
-                
-        let difference = qtdeTask - listTasks.count
-        var elements: [Int] = []
-            
-        if difference != 0 && taskModel.count != 0 {
-            var i = 0
-            while i < difference{
-                let num = Int.random(in: 0...taskModel.count - 1)
-                if !elements.contains(num){
-                    elements.append(num)
-                    listTasks.append(taskModel[num])
-                    listOfTasks.append(taskModel[num].objectID.uriRepresentation().absoluteString)
-                }
-                
-                i += 1
+            for i in 1...qtdeTask{
+                listOfTasks.append(alltasks[i].objectID.uriRepresentation().absoluteString)
             }
         }
+        
+        if humor == "Indifferent" {
+            alltasks = mediumList + hardList + easyList
+            
+            for i in 1...qtdeTask{
+                listOfTasks.append(alltasks[i].objectID.uriRepresentation().absoluteString)
+            }
+        }
+        
+        if humor == "Irritated" || humor == "Tired" || humor == "Sad"{
+            alltasks = easyList + mediumList + hardList
+            
+            for i in 1...qtdeTask{
+                listOfTasks.append(alltasks[i].objectID.uriRepresentation().absoluteString)
+            }
+        }
+        
     }
     
     userDefaults.set(listOfTasks, forKey: "tasks")
