@@ -185,7 +185,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
             
-            HapticsManager.shared.vibrate(for: .success)
+//            HapticsManager.shared.vibrate(for: .success)
         }
         done.backgroundColor = UIColor(named: "Done")
         
