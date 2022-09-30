@@ -66,7 +66,7 @@
                                     <color key="baseForegroundColor" name="MainTitle"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4gW-Zx-5T4" kind="show" id="Hb4-64-bPe"/>
+                                    <segue destination="4gW-Zx-5T4" kind="presentation" modalPresentationStyle="fullScreen" id="Hb4-64-bPe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your goals!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYV-pe-gck">
@@ -165,7 +165,7 @@
                                     <color key="baseForegroundColor" name="MainTitle"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4gW-Zx-5T4" kind="show" id="AgJ-1w-LE8"/>
+                                    <segue destination="4gW-Zx-5T4" kind="presentation" modalPresentationStyle="fullScreen" id="AgJ-1w-LE8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,7 +290,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kcw-1T-QsH"/>
+        <segue reference="AgJ-1w-LE8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Onb_1" width="213.66667175292969" height="216"/>
