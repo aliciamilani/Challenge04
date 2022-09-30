@@ -32,7 +32,7 @@
                                     <color key="baseBackgroundColor" name="FinishButton"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="abh-bb-TSG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="5hr-oa-GdN"/>
+                                    <segue destination="abh-bb-TSG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="5hr-oa-GdN"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onb_1" translatesAutoresizingMaskIntoConstraints="NO" id="X3v-dx-05R">
@@ -125,7 +125,7 @@
                                     <color key="baseBackgroundColor" name="FinishButton"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="cdU-tQ-J2u" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="yvO-4U-brZ"/>
+                                    <segue destination="cdU-tQ-J2u" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="yvO-4U-brZ"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onb_2" translatesAutoresizingMaskIntoConstraints="NO" id="Lua-DT-IhT">
@@ -290,7 +290,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AgJ-1w-LE8"/>
+        <segue reference="kcw-1T-QsH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Onb_1" width="213.66667175292969" height="216"/>
