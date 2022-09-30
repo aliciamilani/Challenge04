@@ -106,7 +106,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             preloadData()
             
+            userDefaults.set(true, forKey: "goalsButton")
+            
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingStory")
+            self.window?.rootViewController = vc
+            
             userDefaults.set(true, forKey: "addNewFunc")
+            
+            return
         }
         
         if checkHumorDay(){
@@ -115,8 +123,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.rootViewController = vc
             
         } else {
-            let defaults = UserDefaults.standard
-            defaults.set(true, forKey: "goalsButton")
+            
+            userDefaults.set(true, forKey: "goalsButton")
             
             if humorModel.count == 0 {
                 let storyboard = UIStoryboard(name: "Goals", bundle: .main)
