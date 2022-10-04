@@ -11,11 +11,8 @@ import CoreData
 class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var wecolmeMessage: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var messageLabel: UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
         
     var humor = ""
@@ -25,14 +22,12 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     private var taskModel = [TaskModel]()
     private var humorModel = [HumorModel]()
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     private var listAllItems = [TaskModel]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageLabel.text = getMessage(humor: humor)
         
         userDefaults.set(false, forKey: "goalsButton")
         
@@ -40,21 +35,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         
         getHumorDay()
-        
     }
     
-    func deleteItem(item: TaskModel){
-        context.delete(item)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
     
     func getSavedTasks(){
-        
         listOfTasks = userDefaults.object(forKey: "tasks") as? [String] ?? []
         
         do {
@@ -72,7 +56,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             }
             
         } catch {
-            
         }
         
         taskModel = [TaskModel]()
@@ -115,7 +98,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         dateLabel.text = getCurrentTime()
-        messageLabel.text = getMessage(humor: humor)
         
         getSavedTasks()
         
@@ -150,7 +132,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                             title: "Reschedule") { [weak self] (action, view, completionHandler) in
                 guard let self = self else {return}
                 
-                
                 self.taskModel.remove(at: indexPath.row)
                 
                 self.listOfTasks.remove(at: indexPath.row)
@@ -161,9 +142,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             }
             latter.backgroundColor = UIColor(named: "Reschedule")
             
-            let configuration = UISwipeActionsConfiguration(actions: [latter])
-            
-            return configuration
+            return UISwipeActionsConfiguration(actions: [latter])
         }
         
         return nil
@@ -176,7 +155,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                        title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
-            self.deleteItem(item: self.taskModel[indexPath.row])
+            CoreDataFunctions().deleteItem(item: self.taskModel[indexPath.row])
             self.taskModel.remove(at: indexPath.row)
             
             self.listOfTasks.remove(at: indexPath.row)
@@ -188,10 +167,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
 //            HapticsManager.shared.vibrate(for: .success)
         }
         done.backgroundColor = UIColor(named: "Done")
-        
-        let configuration = UISwipeActionsConfiguration(actions: [done])
-            
-        return configuration
+    
+        return UISwipeActionsConfiguration(actions: [done])
     }
     
     
@@ -249,25 +226,35 @@ extension UITableView {
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
         let titleLabel = UILabel()
         let messageLabel = UILabel()
+        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         titleLabel.textColor = UIColor.black
+        
         titleLabel.font = UIFont(name: "Poppins-Light", size: 19)
         titleLabel.textColor = UIColor(named: "Text")
+        
         messageLabel.textColor = UIColor.lightGray
         messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)
+        
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageLabel)
+        
         titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        
         messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
+        
         titleLabel.text = title
+        
         messageLabel.text = message
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
-        // The only tricky part is here:
+        
+        
         self.backgroundView = emptyView
         self.separatorStyle = .none
     }
