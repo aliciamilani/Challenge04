@@ -12,28 +12,23 @@ import CoreData
 class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
-    
     @IBOutlet weak var titleTextField: UITextField!
-    
     @IBOutlet weak var descriptionText: UITextView!
-    var placeholderLabel : UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var deleteBtn: UIButton!
     
-    var taskModel = TaskModel()
     
+    var taskModel = TaskModel()
     var createdTask: LocalTask?
     
     var category: CategoryTypes = .none
     var goal: CategoryTypes = .none
     
-    var add = true
-
+    var add: Bool  = true
     var urgency: Bool = false
     
     let mySwitch = UISwitch()
+    var placeholderLabel : UILabel!
     
     struct Options {
         let title: String
@@ -59,7 +54,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         default:
             return "I don't know"
         }
-    
     }
     
     func getTextDuration(_ num: Int?) -> String {
@@ -75,11 +69,9 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         default:
             return "I don't know"
         }
-    
     }
     
     func createTextView(){
-        
         descriptionText.delegate = self
         placeholderLabel = UILabel()
         placeholderLabel.text = "Description (optional)"
@@ -106,8 +98,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
-        
-        
         createTextView()
     
         if !add {
@@ -126,15 +116,16 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         createdTask?.difficulty = 1
         createdTask?.duration = 1
+        
         configureTextFields()
         
         placeholderLabel.isHidden = !descriptionText.text.isEmpty
-        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+        
         tableView.reloadData()
     
         if !add {
@@ -144,7 +135,6 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             data[0].description = getTextDifficulty(createdTask?.difficulty)
             data[1].description = getTextDuration(createdTask?.duration)
         }
-        
     }
     
     private func configureTextFields(){
@@ -161,36 +151,24 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         return data.count
     }
     
-    func deleteItem(item: TaskModel){
-        context.delete(item)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
     
     @IBAction func deleteButton(_ sender: Any) {
         let alert = UIAlertController(title: "Are you sure you'd like to delete this task?", message: "This task will not appear in your list anymore.", preferredStyle: .alert)
 
-            let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
-                self.deleteItem(item: self.taskModel)
-                self.navigationController?.popViewController(animated: true)
-            }
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            CoreDataFunctions().deleteItem(item: self.taskModel)
+            self.navigationController?.popViewController(animated: true)
+        }
 
-            alert.addAction(yesAction)
+        alert.addAction(yesAction)
+    
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
-            // cancel action
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
-            present(alert, animated: true, completion: nil)
-        
+        present(alert, animated: true, completion: nil)
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
                 
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
@@ -217,12 +195,10 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @objc func switchDidChange(_ sender: UISwitch){
-        
         if add {
             createdTask?.urgency = sender.isOn
-        } else {
-            urgency = sender.isOn
         }
+        
         urgency = sender.isOn
     }
     
@@ -235,8 +211,25 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func updateDuration(newDuration: Int){
+        taskModel.duration = Int16(newDuration)
+        
+        do {
+            try context.save()
+        } catch {
+        }
+    }
     
+    func updateDifficulty(newDifficulty: Int){
+        taskModel.difficulty = Int16(newDifficulty)
+        
+        do {
+            try context.save()
+        } catch {
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
                 if !add {
@@ -265,94 +258,20 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, urgency: Bool){
-        let newItem = TaskModel(context: context)
-        newItem.title = title
-        newItem.difficulty = Int16(difficulty)
-        newItem.duration = Int16(duration)
-        newItem.goal = goal.rawValue
-        newItem.category = category.rawValue
-        newItem.descrip = descrip
-        newItem.urgency = urgency
-    
-        do {
-            try context.save()
-        } catch {
-        }
-    }
-    
-    func updateDuration(newDuration: Int){
-        
-        taskModel.duration = Int16(newDuration)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateDifficulty(newDifficulty: Int){
-        
-        taskModel.difficulty = Int16(newDifficulty)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateTitle(newTitle: String){
-        
-        taskModel.title = newTitle
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateDescrip(newDescrip: String){
-        
-        taskModel.descrip = newDescrip
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateUrgency(newUrgency: Bool){
-        
-        taskModel.urgency = newUrgency
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
-        
         if !(titleTextField.text == ""){
             if add {
-                createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
+                CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
                 
             } else {
                 if taskModel.title != titleTextField.text! {
-                    updateTitle(newTitle: titleTextField.text!)
+                    CoreDataFunctions().updateTitle(taskModel: self.taskModel, newTitle: titleTextField.text!)
                 }
                 if taskModel.descrip != descriptionText.text {
-                    updateDescrip(newDescrip: descriptionText.text)
+                    CoreDataFunctions().updateDescrip(taskModel: self.taskModel, newDescrip: descriptionText.text)
                 }
                 if taskModel.urgency != urgency {
-                    updateUrgency(newUrgency: urgency)
+                    CoreDataFunctions().updateUrgency(taskModel: self.taskModel, newUrgency: urgency)
                 }
             }
         }
@@ -390,4 +309,16 @@ extension NewTaskViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
     }
+}
+
+class CardCellGoals: UITableViewCell {
+
+    @IBOutlet weak var titleOptions: UILabel!
+    @IBOutlet weak var descriptionOptions: UILabel!
+    
+    func configure(title: String, description: String){
+        titleOptions.text = title
+        descriptionOptions.text = description
+    }
+    
 }

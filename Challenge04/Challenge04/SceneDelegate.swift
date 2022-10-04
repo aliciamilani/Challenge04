@@ -11,13 +11,13 @@ import CoreData
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private var humorModel = [HumorModel]()
-    let userDefaults = UserDefaults.standard
     
+    private var humorModel = [HumorModel]()
+    
+    let userDefaults = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func preloadData() {
-        
         let preloadedDataKey = "didPreloadData"
             
         guard let urlPath = Bundle.main.url(forResource: "PreloadedData", withExtension: "plist") else {
@@ -26,12 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let backgroundContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.newBackgroundContext()
 
-        
         backgroundContext.perform {
             if let arrayContent = NSArray(contentsOf: urlPath) as? [Array<String>] {
 
                 do {
-                    
                     for item in arrayContent {
                         let taskModelObject = TaskModel(context: backgroundContext)
                         taskModelObject.category = Int16(item[0])!
@@ -60,8 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         fetchRequest.returnsObjectsAsFaults = false
 
-        do
-        {
+        do {
             let results = try managedContext.fetch(fetchRequest)
             for managedObject in results
             {
@@ -94,14 +91,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if userDefaults.bool(forKey: "addNewFunc") != true {
-            
             deleteAllData(entity: "TaskModel")
             
             preloadData()
@@ -123,7 +116,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.rootViewController = vc
             
         } else {
-            
             userDefaults.set(true, forKey: "goalsButton")
             
             if humorModel.count == 0 {
@@ -136,11 +128,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let storyboard = UIStoryboard(name: "HumorView", bundle: .main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "humorStory")
                 self.window?.rootViewController = UINavigationController(rootViewController: vc)
-                
             }
-            
         }
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

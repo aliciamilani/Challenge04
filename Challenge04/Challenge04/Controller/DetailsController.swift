@@ -12,15 +12,10 @@ import CoreData
 class DetailsController: UIViewController{
     
     @IBOutlet weak var taskTitleLabel: UILabel!
-    
     @IBOutlet weak var timerLabel: UILabel!
-    
     @IBOutlet weak var difficultyLabel: UILabel!
-    
     @IBOutlet weak var urgencyLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var rescheduleBtn: UIButton!
     
     var task = TaskModel()
@@ -81,19 +76,6 @@ class DetailsController: UIViewController{
         
     }
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    func deleteItem(item: TaskModel){
-        context.delete(item)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    
     @IBAction func okBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
@@ -110,7 +92,7 @@ class DetailsController: UIViewController{
     
     @IBAction func doneBtn(_ sender: UIButton) {
         
-        deleteItem(item: task)
+        CoreDataFunctions().deleteItem(item: task)
         
         removeElementFromDefaults()
         

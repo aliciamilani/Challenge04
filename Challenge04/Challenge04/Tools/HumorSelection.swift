@@ -10,7 +10,21 @@ import UIKit
 import CoreData
 
 private var taskModel = [TaskModel]()
+private var easyList = [TaskModel]()
+private var mediumList = [TaskModel]()
+private var hardList = [TaskModel]()
+
+let userDefaults = UserDefaults.standard
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+var listOfTasks: [String] = []
+let dicHumor: [String:Int] =
+    ["Happy": 3,
+     "Confident": 3,
+     "Indifferent": 3,
+     "Irritated": 2,
+     "Tired": 1,
+     "Sad": 2]
 
 class HumorSelection {
     var userHumor: String = ""
@@ -41,8 +55,6 @@ func getMessage(humor: String) -> (String){
     }
 }
 
-
-
 func getAllItems() {
     do {
         taskModel = try context.fetch(TaskModel.fetchRequest())
@@ -50,14 +62,6 @@ func getAllItems() {
         //error
     }
 }
-
-private var easyList = [TaskModel]()
-private var mediumList = [TaskModel]()
-private var hardList = [TaskModel]()
-
-let userDefaults = UserDefaults.standard
-var listOfTasks: [String] = []
-let dicHumor: [String:Int] = ["Happy": 3, "Confident": 3, "Indifferent": 3, "Irritated": 2, "Tired": 1, "Sad": 2]
 
 func treateItems() {
     for task in taskModel {
