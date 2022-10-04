@@ -133,7 +133,6 @@
 		8B54985728ABC5F100299D02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */,
 				8B1E611828ABEA29006FB525 /* Task.swift */,
 			);
 			path = Model;
@@ -207,6 +206,7 @@
 		8BE0AD0B28EBABC40029ED38 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */,
 				8D97393328E5D605004AEA3C /* HapticsManager.swift */,
 				8BE0AD0C28EBABDD0029ED38 /* CoreDataFunctions.swift */,
 			);

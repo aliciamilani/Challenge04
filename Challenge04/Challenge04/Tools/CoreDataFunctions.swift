@@ -24,6 +24,18 @@ public class CoreDataFunctions {
         }
     }
     
+    public func saveHumor(humor: String){
+        let newItem = HumorModel(context: context)
+        newItem.data = Date()
+        newItem.humor = humor
+        
+        do {
+            try context.save()
+        } catch {
+            // error
+        }
+    }
+    
     public func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, urgency: Bool){
         let newItem = TaskModel(context: context)
         newItem.title = title
