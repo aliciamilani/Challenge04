@@ -264,3 +264,16 @@ extension UITableView {
         self.separatorStyle = .singleLine
     }
 }
+
+
+class CardCell: UITableViewCell {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var cardView: UIView!
+    
+    func configure(title: String){
+        titleLabel.text = title
+        cardView.layer.cornerRadius = 12.0
+    }
+}

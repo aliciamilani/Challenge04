@@ -52,27 +52,6 @@ public class CoreDataFunctions {
         }
     }
     
-    func updateDuration(taskModel: TaskModel, newDuration: Int){
-        
-        taskModel.duration = Int16(newDuration)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateDifficulty(taskModel: TaskModel, newDifficulty: Int){
-        
-        taskModel.difficulty = Int16(newDifficulty)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
     
     func updateTitle(taskModel: TaskModel, newTitle: String){
         

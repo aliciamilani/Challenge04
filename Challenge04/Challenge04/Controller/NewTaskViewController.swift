@@ -211,6 +211,24 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func updateDuration(newDuration: Int){
+        taskModel.duration = Int16(newDuration)
+        
+        do {
+            try context.save()
+        } catch {
+        }
+    }
+    
+    func updateDifficulty(newDifficulty: Int){
+        taskModel.difficulty = Int16(newDifficulty)
+        
+        do {
+            try context.save()
+        } catch {
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
@@ -291,4 +309,16 @@ extension NewTaskViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
     }
+}
+
+class CardCellGoals: UITableViewCell {
+
+    @IBOutlet weak var titleOptions: UILabel!
+    @IBOutlet weak var descriptionOptions: UILabel!
+    
+    func configure(title: String, description: String){
+        titleOptions.text = title
+        descriptionOptions.text = description
+    }
+    
 }

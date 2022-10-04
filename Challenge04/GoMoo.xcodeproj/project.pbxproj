@@ -24,9 +24,7 @@
 		8BB52E2528ABC4E300916CD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB52E2428ABC4E300916CD5 /* SceneDelegate.swift */; };
 		8BB52E2C28ABC4E400916CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB52E2B28ABC4E400916CD5 /* Assets.xcassets */; };
 		8BB52E2F28ABC4E400916CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB52E2D28ABC4E400916CD5 /* LaunchScreen.storyboard */; };
-		8BB8C2E928B8913400C9F49B /* CardCellGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8C2E828B8913400C9F49B /* CardCellGoals.swift */; };
 		8BCABD7228E5E1DE00A6AD58 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BCABD7128E5E1DE00A6AD58 /* Onboarding.storyboard */; };
-		8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDB1F7728AD34BD009C945D /* CardCell.swift */; };
 		8BE0AD0D28EBABDD0029ED38 /* CoreDataFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0AD0C28EBABDD0029ED38 /* CoreDataFunctions.swift */; };
 		8BF551E828BCFBAD00F9B2D9 /* DurationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF551E728BCFBAD00F9B2D9 /* DurationController.swift */; };
 		8BF551F228BD0EB200F9B2D9 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF551F128BD0EB200F9B2D9 /* DifficultyController.swift */; };
@@ -76,9 +74,7 @@
 		8BB52E2B28ABC4E400916CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BB52E2E28ABC4E400916CD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BB52E3028ABC4E400916CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BB8C2E828B8913400C9F49B /* CardCellGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellGoals.swift; sourceTree = "<group>"; };
 		8BCABD7128E5E1DE00A6AD58 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		8BDB1F7728AD34BD009C945D /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		8BE0AD0C28EBABDD0029ED38 /* CoreDataFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFunctions.swift; sourceTree = "<group>"; };
 		8BF551E728BCFBAD00F9B2D9 /* DurationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationController.swift; sourceTree = "<group>"; };
 		8BF551F128BD0EB200F9B2D9 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
@@ -145,8 +141,6 @@
 				8DD4573B28B7BCC1004B68DC /* NewTaskViewController.swift */,
 				8DB5322C28AE9A1200327621 /* HumorController.swift */,
 				8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */,
-				8BDB1F7728AD34BD009C945D /* CardCell.swift */,
-				8BB8C2E828B8913400C9F49B /* CardCellGoals.swift */,
 				8BF551E728BCFBAD00F9B2D9 /* DurationController.swift */,
 				8BF551F128BD0EB200F9B2D9 /* DifficultyController.swift */,
 				8B53DA7728C0EECA0046625B /* AllTasksController.swift */,
@@ -341,8 +335,6 @@
 				8B1E611928ABEA29006FB525 /* Task.swift in Sources */,
 				8B35B2FD28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift in Sources */,
 				8B65871C28DB6A1700B92163 /* DetailsController.swift in Sources */,
-				8BB8C2E928B8913400C9F49B /* CardCellGoals.swift in Sources */,
-				8BDB1F7828AD34BD009C945D /* CardCell.swift in Sources */,
 				8DC408AA28B6636D00847C28 /* GoalsController.swift in Sources */,
 				8BB52E2328ABC4E300916CD5 /* AppDelegate.swift in Sources */,
 				8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */,
