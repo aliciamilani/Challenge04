@@ -36,7 +36,6 @@ class GoalsController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.tabBarController?.tabBar.isHidden = false
         
         let defaults = UserDefaults.standard
@@ -54,7 +53,6 @@ class GoalsController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "study" {
             if let destination = segue.destination as? AllTasksController {
                 destination.category = .Studies
@@ -117,6 +115,5 @@ class GoalsController: UIViewController {
                 destination.goal = .OthersArt
             }
         }
-        
     }
 }
