@@ -17,13 +17,13 @@ extension TaskModel {
     }
 
     @NSManaged public var category: Int16
-    @NSManaged public var cod: UUID?
     @NSManaged public var difficulty: Int16
     @NSManaged public var duration: Int16
     @NSManaged public var goal: Int16
     @NSManaged public var points: Float
     @NSManaged public var title: String?
-
+    @NSManaged public var descrip: String?
+    @NSManaged public var urgency: Bool
 }
 
 extension TaskModel : Identifiable {

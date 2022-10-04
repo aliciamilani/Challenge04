@@ -17,17 +17,19 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     var goal: CategoryTypes = .none
     
     private var taskModel = [TaskModel]()
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.tabBarController?.tabBar.isHidden = true
         getAllItems()
     }
     
@@ -49,26 +51,6 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
             //error
         }
         
-    }
-    
-    func deleteItem(item: TaskModel){
-        context.delete(item)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateItem(item: TaskModel, newTitle: String){
-        item.title = newTitle
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
     }
     
     @IBAction func addTasks(_ sender: UIBarButtonItem) {

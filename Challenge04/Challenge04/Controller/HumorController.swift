@@ -11,8 +11,6 @@ class HumorController: UIViewController {
     
     // MARK: - Variables
     
-    var humorSelected: String = ""
-    
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var humorImage: UIImageView!
     @IBOutlet weak var confidentBtn: UIButton!
@@ -23,6 +21,7 @@ class HumorController: UIViewController {
     @IBOutlet weak var irritatedBtn: UIButton!
     @IBOutlet weak var goBtn: UIButton!
     
+    var humorSelected: String = ""
     
     // MARK: - Main
     
@@ -42,7 +41,6 @@ class HumorController: UIViewController {
         
         goBtn.alpha = 0.5
         goBtn.isUserInteractionEnabled = false
-        
         
         humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
@@ -65,51 +63,20 @@ class HumorController: UIViewController {
     }
     
     func isSelectedButton () {
-        
         sadBtn.layer.borderColor = UIColor.clear.cgColor
         tiredBtn.layer.borderColor = UIColor.clear.cgColor
         happyBtn.layer.borderColor = UIColor.clear.cgColor
         irritatedBtn.layer.borderColor = UIColor.clear.cgColor
         confidentBtn.layer.borderColor = UIColor.clear.cgColor
         indifferentBtn.layer.borderColor = UIColor.clear.cgColor
-        
-    }
-    
-    func accessibility () {
-        mainTitle.isAccessibilityElement = true
-        humorImage.accessibilityLabel = "Humor image selectedt"
-        indifferentBtn.isAccessibilityElement = true
-        confidentBtn.isAccessibilityElement = true
-        irritatedBtn.isAccessibilityElement = true
-        happyBtn.isAccessibilityElement = true
-        tiredBtn.isAccessibilityElement = true
-        sadBtn.isAccessibilityElement = true
-        goBtn.isAccessibilityElement = true
-        humorImage.isAccessibilityElement = true
-    }
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    func createItem(humor: String){
-        do {
-            let newItem = HumorModel(context: context)
-            
-            newItem.data = Date()
-            newItem.humor = humor
-            
-            try context.save()
-        } catch {
-            // error
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        createItem(humor: humorSelected)
+        CoreDataFunctions().saveHumor(humor: humorSelected)
         
         getTasksDay(humor: humorSelected)
 
-        
         if let destinationViewController = segue.destination as? DailyTasksController {
             destinationViewController.humor = humorSelected
         }

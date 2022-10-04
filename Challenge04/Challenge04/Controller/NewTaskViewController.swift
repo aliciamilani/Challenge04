@@ -9,22 +9,26 @@ import Foundation
 import UIKit
 import CoreData
 
-class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
-    
-    @IBOutlet weak var textField: UITextField!
-    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var deleteBtn: UIButton!
+    
     
     var taskModel = TaskModel()
-    
     var createdTask: LocalTask?
     
     var category: CategoryTypes = .none
     var goal: CategoryTypes = .none
     
-    var add = true
+    var add: Bool  = true
+    var urgency: Bool = false
+    
+    let mySwitch = UISwitch()
+    var placeholderLabel : UILabel!
     
     struct Options {
         let title: String
@@ -32,24 +36,60 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     var data: [Options] = [
-        Options(title: "Difficulty", description: "I don't know >"),
-        Options(title: "Duration", description: "I don't know >")
+        Options(title: "Difficulty", description: "I don't know"),
+        Options(title: "Duration", description: "I don't know"),
+        Options(title: "Urgency", description: "")
     ]
     
-    func getText(_ num: Int?) -> String {
+    func getTextDifficulty(_ num: Int?) -> String {
         switch (num){
         case 0:
-            return "I don't know >"
+            return "I don't know"
         case 1:
-            return "Low >"
+            return "Easy"
         case 2:
-            return "Moderate >"
+            return "Medium"
         case 3:
-            return "High >"
+            return "Hard"
         default:
-            return "I don't know >"
+            return "I don't know"
         }
+    }
     
+    func getTextDuration(_ num: Int?) -> String {
+        switch (num){
+        case 0:
+            return "I don't know"
+        case 1:
+            return "1 hour"
+        case 2:
+            return "2 hours"
+        case 3:
+            return "3 hours or more"
+        default:
+            return "I don't know"
+        }
+    }
+    
+    func createTextView(){
+        descriptionText.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "Description (optional)"
+        placeholderLabel.font = .systemFont(ofSize: 15)
+        placeholderLabel.sizeToFit()
+        
+        descriptionText.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (descriptionText.font?.pointSize)! / 2)
+        placeholderLabel.textColor = .tertiaryLabel
+        placeholderLabel.isHidden = !descriptionText.text.isEmpty
+        
+        descriptionText.textColor = .label
+        descriptionText.font = .systemFont(ofSize: 15)
+        
+        titleTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 18, height: titleTextField.frame.height))
+        titleTextField.leftViewMode = .always
+        
+        descriptionText.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
     }
     
     override func viewDidLoad() {
@@ -58,36 +98,49 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.allowsSelection = true
         
+        createTextView()
+    
         if !add {
-            textField.text = taskModel.title
+            deleteBtn.isHidden = false
+            titleTextField.text = taskModel.title
+            descriptionText.text = taskModel.descrip
+            mySwitch.setOn(taskModel.urgency, animated: true)
+            
         } else {
+            deleteBtn.isHidden = true
             createdTask = LocalTask()
-            textField.text = createdTask?.title
+            titleTextField.text = createdTask?.title
+            descriptionText.text = createdTask?.descrip
+            mySwitch.setOn(createdTask!.urgency, animated: true)
         }
         
         createdTask?.difficulty = 1
         createdTask?.duration = 1
+        
         configureTextFields()
         
+        placeholderLabel.isHidden = !descriptionText.text.isEmpty
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+        
         tableView.reloadData()
     
         if !add {
-            data[0].description = getText(Int(taskModel.difficulty))
-            data[1].description = getText(Int(taskModel.duration))
+            data[0].description = getTextDifficulty(Int(taskModel.difficulty))
+            data[1].description = getTextDuration(Int(taskModel.duration))
         } else {
-            data[0].description = getText(createdTask?.difficulty)
-            data[1].description = getText(createdTask?.duration)
+            data[0].description = getTextDifficulty(createdTask?.difficulty)
+            data[1].description = getTextDuration(createdTask?.duration)
         }
-        
     }
     
     private func configureTextFields(){
-        textField.delegate = self
+        titleTextField.delegate = self
         
-        if (textField.text == "") {
+        if (titleTextField.text == "" && descriptionText.text == "") {
             addTaskButton.isEnabled = false
         } else {
             addTaskButton.isEnabled = true
@@ -98,13 +151,55 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         return data.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
+    @IBAction func deleteButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Are you sure you'd like to delete this task?", message: "This task will not appear in your list anymore.", preferredStyle: .alert)
+
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            CoreDataFunctions().deleteItem(item: self.taskModel)
+            self.navigationController?.popViewController(animated: true)
+        }
+
+        alert.addAction(yesAction)
+    
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
                 
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         
+    
+        if indexPath.row != 2 {
+            cell.accessoryView = .none
+            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            
+        } else {
+            cell.accessoryType = .none
+            
+            mySwitch.onTintColor = UIColor(named: "FinishButton")
+            
+            mySwitch.tag = indexPath.row
+            mySwitch.addTarget(self, action: #selector(self.switchDidChange(_:)), for: .valueChanged)
+            
+            cell.accessoryView = mySwitch
+        }
+        
+        cell.selectionStyle = .none
+        
         return cell
+    }
+    
+    @objc func switchDidChange(_ sender: UISwitch){
+        if add {
+            createdTask?.urgency = sender.isOn
+        }
+        
+        urgency = sender.isOn
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -116,8 +211,25 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func updateDuration(newDuration: Int){
+        taskModel.duration = Int16(newDuration)
+        
+        do {
+            try context.save()
+        } catch {
+        }
+    }
     
+    func updateDifficulty(newDifficulty: Int){
+        taskModel.difficulty = Int16(newDifficulty)
+        
+        do {
+            try context.save()
+        } catch {
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
                 if !add {
@@ -146,65 +258,20 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes){
-        let newItem = TaskModel(context: context)
-        newItem.title = title
-        newItem.difficulty = Int16(difficulty)
-        newItem.duration = Int16(duration)
-        newItem.goal = goal.rawValue
-        newItem.category = category.rawValue
-    
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateDuration(newDuration: Int){
-        
-        taskModel.duration = Int16(newDuration)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateDifficulty(newDifficulty: Int){
-        
-        taskModel.difficulty = Int16(newDifficulty)
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    func updateTitle(newTitle: String){
-        
-        taskModel.title = newTitle
-        
-        do {
-            try context.save()
-        } catch {
-            // error
-        }
-    }
-    
-    
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
-        
-        if !(textField.text == ""){
+        if !(titleTextField.text == ""){
             if add {
-                createItem(title: textField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category)
+                CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
+                
             } else {
-                if taskModel.title != textField.text! {
-                    updateTitle(newTitle: textField.text!)
+                if taskModel.title != titleTextField.text! {
+                    CoreDataFunctions().updateTitle(taskModel: self.taskModel, newTitle: titleTextField.text!)
+                }
+                if taskModel.descrip != descriptionText.text {
+                    CoreDataFunctions().updateDescrip(taskModel: self.taskModel, newDescrip: descriptionText.text)
+                }
+                if taskModel.urgency != urgency {
+                    CoreDataFunctions().updateUrgency(taskModel: self.taskModel, newUrgency: urgency)
                 }
             }
         }
@@ -214,14 +281,19 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension NewTaskViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+    
+    func textFieldShouldReturn(_ titleTextField: UITextField) -> Bool {
+        titleTextField.resignFirstResponder()
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textField(_ titleTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
-        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        let text = (titleTextField.text! as NSString).replacingCharacters(in: range, with: string)
 
         if !text.isEmpty{
             addTaskButton.isEnabled = true
@@ -232,3 +304,21 @@ extension NewTaskViewController: UITextFieldDelegate {
     }
 }
 
+
+extension NewTaskViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+    }
+}
+
+class CardCellGoals: UITableViewCell {
+
+    @IBOutlet weak var titleOptions: UILabel!
+    @IBOutlet weak var descriptionOptions: UILabel!
+    
+    func configure(title: String, description: String){
+        titleOptions.text = title
+        descriptionOptions.text = description
+    }
+    
+}

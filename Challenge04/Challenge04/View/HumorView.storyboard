@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qfc-Kt-95f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qfc-Kt-95f">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <accessibilityOverrides dynamicTypePreference="6"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,8 +24,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-down" translatesAutoresizingMaskIntoConstraints="NO" id="raT-D4-Zko">
+                                <rect key="frame" x="298" y="721" width="192" height="188"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-up" translatesAutoresizingMaskIntoConstraints="NO" id="D0S-6G-Q4Z">
+                                <rect key="frame" x="-156" y="201" width="214" height="269"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Howdy, cowboy! How are you feeling today?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-dk-zZc">
-                                <rect key="frame" x="32" y="74" width="350" height="56"/>
+                                <rect key="frame" x="32" y="78" width="350" height="56"/>
                                 <accessibility key="accessibilityConfiguration" label="Howdy, cowboy! How are you feeling today?">
                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                 </accessibility>
@@ -36,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecz-Qt-4kk">
-                                <rect key="frame" x="135" y="202" width="144" height="144"/>
+                                <rect key="frame" x="135" y="206" width="144" height="144"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4P3-8B-YIJ">
                                         <rect key="frame" x="0.0" y="8" width="144" height="128"/>
@@ -57,7 +64,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1fN-lC-nKG">
-                                <rect key="frame" x="89" y="411" width="236" height="156"/>
+                                <rect key="frame" x="89" y="440" width="236" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="d4z-xP-74A">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="156"/>
@@ -200,7 +207,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAb-6q-SHn">
-                                <rect key="frame" x="32" y="627" width="350" height="52"/>
+                                <rect key="frame" x="32" y="790" width="350" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" hint="Finish and go to day tasks" label="Let's go!"/>
                                 <constraints>
@@ -220,12 +227,6 @@
                                     <segue destination="uk7-BW-M5M" kind="presentation" identifier="dailyTasks" modalPresentationStyle="fullScreen" id="1zY-hh-kJv"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-up" translatesAutoresizingMaskIntoConstraints="NO" id="D0S-6G-Q4Z">
-                                <rect key="frame" x="-156" y="197" width="214" height="269"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spot-down" translatesAutoresizingMaskIntoConstraints="NO" id="raT-D4-Zko">
-                                <rect key="frame" x="298" y="692" width="192" height="188"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RWF-BC-1Wa"/>
                         <color key="backgroundColor" name="Background"/>
@@ -235,9 +236,9 @@
                             <constraint firstItem="ecz-Qt-4kk" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="1rC-4H-eTe"/>
                             <constraint firstItem="ZAb-6q-SHn" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="2xB-tz-JE7"/>
                             <constraint firstItem="1g6-dk-zZc" firstAttribute="top" secondItem="RWF-BC-1Wa" secondAttribute="top" constant="30" id="6Cw-yJ-mKf"/>
-                            <constraint firstItem="1fN-lC-nKG" firstAttribute="top" secondItem="ecz-Qt-4kk" secondAttribute="bottom" constant="65" id="7TX-rC-u9w"/>
+                            <constraint firstItem="1fN-lC-nKG" firstAttribute="top" secondItem="ecz-Qt-4kk" secondAttribute="bottom" constant="90" id="7TX-rC-u9w"/>
                             <constraint firstItem="ecz-Qt-4kk" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="72" id="FCb-vc-ofM"/>
-                            <constraint firstItem="ZAb-6q-SHn" firstAttribute="top" secondItem="1fN-lC-nKG" secondAttribute="bottom" constant="60" id="HiF-pL-GA8"/>
+                            <constraint firstItem="RWF-BC-1Wa" firstAttribute="bottom" secondItem="ZAb-6q-SHn" secondAttribute="bottom" constant="20" id="G4l-11-rQI"/>
                             <constraint firstItem="raT-D4-Zko" firstAttribute="leading" secondItem="1fN-lC-nKG" secondAttribute="trailing" constant="-27" id="JUZ-oK-TG9"/>
                             <constraint firstItem="D0S-6G-Q4Z" firstAttribute="top" secondItem="1g6-dk-zZc" secondAttribute="bottom" constant="67" id="Krd-nO-rAK"/>
                             <constraint firstItem="1fN-lC-nKG" firstAttribute="centerX" secondItem="RWF-BC-1Wa" secondAttribute="centerX" id="ZkD-xH-h6N"/>
@@ -293,7 +294,7 @@
             <color red="0.82352941176470584" green="0.51764705882352946" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

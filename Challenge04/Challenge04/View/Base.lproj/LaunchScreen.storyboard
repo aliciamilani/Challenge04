@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,16 +16,45 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait-background-launch" translatesAutoresizingMaskIntoConstraints="NO" id="G1I-ri-URn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lauch_Mood" translatesAutoresizingMaskIntoConstraints="NO" id="67I-vI-lsb">
+                                <rect key="frame" x="138.5" y="383.5" width="137" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="3dT-XN-2Sy"/>
+                                    <constraint firstAttribute="height" constant="129" id="PAA-ET-byX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lauch_Text" translatesAutoresizingMaskIntoConstraints="NO" id="QrJ-x1-FSS">
+                                <rect key="frame" x="61" y="760" width="292" height="47"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G1I-ri-URn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9Po-dF-Sgv"/>
+                            <constraint firstItem="67I-vI-lsb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Fet-A9-k8A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QrJ-x1-FSS" secondAttribute="trailing" constant="61" id="KnB-Yp-ybP"/>
+                            <constraint firstItem="67I-vI-lsb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Rr5-04-O5o"/>
+                            <constraint firstItem="QrJ-x1-FSS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="dZs-NW-er4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QrJ-x1-FSS" secondAttribute="bottom" constant="55" id="ffv-Ql-nWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="G1I-ri-URn" secondAttribute="trailing" id="hxO-Kc-0gh"/>
+                            <constraint firstAttribute="bottom" secondItem="G1I-ri-URn" secondAttribute="bottom" id="jHW-EM-xhP"/>
+                            <constraint firstItem="G1I-ri-URn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="taZ-oN-hDI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Lauch_Mood" width="137" height="129"/>
+        <image name="Lauch_Text" width="228" height="47"/>
+        <image name="Portrait-background-launch" width="390" height="844"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
