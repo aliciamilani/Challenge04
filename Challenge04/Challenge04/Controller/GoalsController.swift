@@ -55,64 +55,64 @@ class GoalsController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "study" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Studies
-                destination.goal = .Study
+                destination.category = .studies
+                destination.goal = .study
             }
         }
         
         if segue.identifier == "work" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Studies
-                destination.goal = .Work
+                destination.category = .studies
+                destination.goal = .work
             }
         }
         
         if segue.identifier == "othersStudy" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Studies
-                destination.goal = .OthersStudy
+                destination.category = .studies
+                destination.goal = .othersStudy
             }
         }
         
         if segue.identifier == "food" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Sports
-                destination.goal = .Food
+                destination.category = .sports
+                destination.goal = .food
             }
         }
         
         if segue.identifier == "exercise" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Sports
-                destination.goal = .Exercise
+                destination.category = .sports
+                destination.goal = .exercise
             }
         }
         
         if segue.identifier == "othersSports" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Sports
-                destination.goal = .OthersSports
+                destination.category = .sports
+                destination.goal = .othersSports
             }
         }
         
         if segue.identifier == "leisure" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Art
-                destination.goal = .Leisure
+                destination.category = .art
+                destination.goal = .leisure
             }
         }
         
         if segue.identifier == "hobbies" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Art
-                destination.goal = .Hobbies
+                destination.category = .art
+                destination.goal = .hobbies
             }
         }
         
         if segue.identifier == "othersArt" {
             if let destination = segue.destination as? AllTasksController {
-                destination.category = .Art
-                destination.goal = .OthersArt
+                destination.category = .art
+                destination.goal = .othersArt
             }
         }
     }
