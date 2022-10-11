@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import CoreData
 
-
 private var taskModel = [TaskModel]()
 private var easyList = [TaskModel]()
 private var mediumList = [TaskModel]()
@@ -36,7 +35,7 @@ public func getAllItems() {
     }
 }
 
-private func treateItems() {
+private func divideTasksByLevel() {
     for task in taskModel {
         
         if !task.isUrgent {
@@ -56,7 +55,7 @@ private func treateItems() {
 }
 
 
-public func getMessage(humor: HumorTypes) -> (String){
+public func getDailyMessage(humor: HumorTypes) -> (String){
     switch(humor){
         
     case .happy:
@@ -80,37 +79,37 @@ public func getMessage(humor: HumorTypes) -> (String){
     }
 }
 
-public func getTasksDay(humor: HumorTypes){
+public func getDailyTasks(humor: HumorTypes){
     
-    var alltasks = [TaskModel]()
+    var allTasks = [TaskModel]()
     
     getAllItems()
-    treateItems()
+    divideTasksByLevel()
     
-    let qtdeTask = taskPerHumor[humor]!
+    let numberOfTaskByHumor = taskPerHumor[humor]!
     
     if taskModel.count != 0 {
         if humor == .happy || humor == .confident{
-            alltasks = hardList + mediumList + easyList
+            allTasks = hardList + mediumList + easyList
             
-            for i in 1...qtdeTask{
-                listOfTasks.append(alltasks[i].objectID.uriRepresentation().absoluteString)
+            for i in 1...numberOfTaskByHumor{
+                listOfTasks.append(allTasks[i].objectID.uriRepresentation().absoluteString)
             }
         }
         
         if humor == .indifferent {
-            alltasks = mediumList + hardList + easyList
+            allTasks = mediumList + hardList + easyList
             
-            for i in 1...qtdeTask{
-                listOfTasks.append(alltasks[i].objectID.uriRepresentation().absoluteString)
+            for i in 1...numberOfTaskByHumor{
+                listOfTasks.append(allTasks[i].objectID.uriRepresentation().absoluteString)
             }
         }
         
         if humor == .irritated || humor == .tired || humor == .sad {
-            alltasks = easyList + mediumList + hardList
+            allTasks = easyList + mediumList + hardList
             
-            for i in 1...qtdeTask{
-                listOfTasks.append(alltasks[i].objectID.uriRepresentation().absoluteString)
+            for i in 1...numberOfTaskByHumor{
+                listOfTasks.append(allTasks[i].objectID.uriRepresentation().absoluteString)
             }
         }
         

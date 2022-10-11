@@ -75,9 +75,9 @@ class HumorController: UIViewController {
         
         guard let humorSelected = humorSelected else { return }
         
-        CoreDataFunctions().saveHumor(humor: humorSelected)
+        CoreDataFunctions().addHumor(humor: humorSelected)
         
-        getTasksDay(humor: humorSelected)
+        getDailyTasks(humor: humorSelected)
         
         if let destinationViewController = segue.destination as? DailyTasksController {
             

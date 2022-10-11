@@ -100,7 +100,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidAppear(animated)
         
         guard let humor = humor else { return }
-        messageLabel.text = getMessage(humor: humor)
+        messageLabel.text = getDailyMessage(humor: humor)
         
         dateLabel.text = Date().getFormattedDate()
         
@@ -160,7 +160,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                                       title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
-            CoreDataFunctions().deleteItem(item: self.taskModel[indexPath.row])
+            CoreDataFunctions().deleteTask(item: self.taskModel[indexPath.row])
             self.taskModel.remove(at: indexPath.row)
             
             self.listOfTasks.remove(at: indexPath.row)

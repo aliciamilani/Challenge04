@@ -14,7 +14,7 @@ public class CoreDataFunctions {
     
     init() {}
     
-    public func deleteItem(item: TaskModel){
+    public func deleteTask(item: TaskModel){
         context.delete(item)
         
         do {
@@ -24,11 +24,11 @@ public class CoreDataFunctions {
         }
     }
     
-    public func saveHumor(humor: HumorTypes){
+    public func addHumor(humor: HumorTypes){
         
-        let newItem = HumorModel(context: context)
-        newItem.data = Date()
-        newItem.humor = humor.rawValue
+        let newHumor = HumorModel(context: context)
+        newHumor.data = Date()
+        newHumor.humor = humor.rawValue
         
         do {
             try context.save()
@@ -37,15 +37,16 @@ public class CoreDataFunctions {
         }
     }
     
-    public func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, isUrgent: Bool){
-        let newItem = TaskModel(context: context)
-        newItem.title = title
-        newItem.difficulty = Int16(difficulty)
-        newItem.duration = Int16(duration)
-        newItem.goal = goal.rawValue
-        newItem.category = category.rawValue
-        newItem.descrip = descrip
-        newItem.isUrgent = isUrgent
+    public func addTask(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, isUrgent: Bool){
+        
+        let newTask = TaskModel(context: context)
+        newTask.title = title
+        newTask.difficulty = Int16(difficulty)
+        newTask.duration = Int16(duration)
+        newTask.goal = Int16(goal.rawValue)
+        newTask.category = Int16(category.rawValue)
+        newTask.descrip = descrip
+        newTask.isUrgent = isUrgent
         
         do {
             try context.save()
@@ -54,7 +55,7 @@ public class CoreDataFunctions {
     }
     
     
-    func updateTitle(taskModel: TaskModel, newTitle: String){
+    func updateTitleTask(taskModel: TaskModel, newTitle: String){
         
         taskModel.title = newTitle
         
@@ -65,7 +66,7 @@ public class CoreDataFunctions {
         }
     }
     
-    func updateDescrip(taskModel: TaskModel, newDescrip: String){
+    func updateDescripTask(taskModel: TaskModel, newDescrip: String){
         
         taskModel.descrip = newDescrip
         
@@ -76,7 +77,7 @@ public class CoreDataFunctions {
         }
     }
     
-    func updateUrgecy(taskModel: TaskModel, changeUrgency: Bool){
+    func updateUrgecyTask(taskModel: TaskModel, changeUrgency: Bool){
         
         taskModel.isUrgent = changeUrgency
         

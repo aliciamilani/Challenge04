@@ -22,7 +22,6 @@ extension Date {
         let thedate = "\(stringDate)"
         return thedate
         
-        
     }
 }
 

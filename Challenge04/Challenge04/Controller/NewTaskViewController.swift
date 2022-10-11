@@ -156,7 +156,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         let alert = UIAlertController(title: "Are you sure you'd like to delete this task?", message: "This task will not appear in your list anymore.", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
-            CoreDataFunctions().deleteItem(item: self.taskModel)
+            CoreDataFunctions().deleteTask(item: self.taskModel)
             self.navigationController?.popViewController(animated: true)
         }
         
@@ -265,17 +265,17 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             guard let category = category else { return }
             
             if isNewTask {
-                CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, isUrgent: createdTask!.isUrgent)
+                CoreDataFunctions().addTask(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, isUrgent: createdTask!.isUrgent)
                 
             } else {
                 if taskModel.title != titleTextField.text! {
-                    CoreDataFunctions().updateTitle(taskModel: self.taskModel, newTitle: titleTextField.text!)
+                    CoreDataFunctions().updateTitleTask(taskModel: self.taskModel, newTitle: titleTextField.text!)
                 }
                 if taskModel.descrip != descriptionText.text {
-                    CoreDataFunctions().updateDescrip(taskModel: self.taskModel, newDescrip: descriptionText.text)
+                    CoreDataFunctions().updateDescripTask(taskModel: self.taskModel, newDescrip: descriptionText.text)
                 }
                 if taskModel.isUrgent != isUrgent {
-                    CoreDataFunctions().updateUrgecy(taskModel: self.taskModel, changeUrgency: isUrgent)
+                    CoreDataFunctions().updateUrgecyTask(taskModel: self.taskModel, changeUrgency: isUrgent)
                 }
             }
         }

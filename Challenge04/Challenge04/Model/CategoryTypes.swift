@@ -8,7 +8,7 @@
 import Foundation
 
 @objc
-public enum CategoryTypes: Int16 {
+public enum CategoryTypes: Int {
     case studies = 1
     case study = 2
     case work = 3

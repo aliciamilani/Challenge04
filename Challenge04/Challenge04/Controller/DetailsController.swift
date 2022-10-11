@@ -92,7 +92,7 @@ class DetailsController: UIViewController{
     
     @IBAction func doneBtn(_ sender: UIButton) {
         
-        CoreDataFunctions().deleteItem(item: task)
+        CoreDataFunctions().deleteTask(item: task)
         
         removeElementFromDefaults()
         
