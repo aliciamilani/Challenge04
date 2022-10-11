@@ -102,7 +102,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
         guard let humor = humor else { return }
         messageLabel.text = getMessage(humor: humor)
         
-        dateLabel.text = getCurrentTime()
+        dateLabel.text = Date().getFormattedDate()
         
         getSavedTasks()
         
@@ -209,22 +209,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
 }
-
-func getCurrentTime() -> String {
-    
-    let currentLocale:Locale = NSLocale(localeIdentifier: Locale.preferredLanguages.first!) as Locale
-    let currentDate =  Date()
-    
-    let stringDate = currentDate.formatted(.dateTime
-        .day(.twoDigits)
-        .month(.wide)
-        .weekday(.short)
-        .locale(currentLocale))
-    
-    let thedate = "\(stringDate)"
-    return thedate
-}
-
 
 extension UITableView {
     func setEmptyView(title: String, message: String) {
