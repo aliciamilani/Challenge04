@@ -21,5 +21,4 @@ public enum CategoryTypes: Int16 {
     case leisure = 10
     case hobbies = 11
     case othersArt = 12
-    case none = 0
 }

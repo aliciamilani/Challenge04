@@ -21,8 +21,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     var taskModel = TaskModel()
     var createdTask: LocalTask?
     
-    var category: CategoryTypes = .none
-    var goal: CategoryTypes = .none
+    var category: CategoryTypes?
+    var goal: CategoryTypes?
     
     var isNewTask: Bool  = true
     var isUrgent: Bool = false
@@ -260,6 +260,10 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         if !(titleTextField.text == ""){
+            
+            guard let goal = goal else { return }
+            guard let category = category else { return }
+            
             if isNewTask {
                 CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, isUrgent: createdTask!.isUrgent)
                 

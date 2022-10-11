@@ -13,8 +13,8 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var category: CategoryTypes = .none
-    var goal: CategoryTypes = .none
+    var category: CategoryTypes?
+    var goal: CategoryTypes?
     
     private var taskModel = [TaskModel]()
     
@@ -38,6 +38,8 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
     func getAllItems() {
         do {
             let allData = try context.fetch(TaskModel.fetchRequest())
+            
+            guard let goal = goal else { return }
             
             taskModel = allData.filter { t in
                 return t.goal == goal.rawValue

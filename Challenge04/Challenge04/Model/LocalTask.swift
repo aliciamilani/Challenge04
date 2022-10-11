@@ -12,8 +12,8 @@ class LocalTask {
     var title : String
     var difficulty : Int
     var duration : Int
-    var category: CategoryTypes
-    var goal: CategoryTypes
+    var category: CategoryTypes?
+    var goal: CategoryTypes?
     var descrip: String
     var isUrgent: Bool
     
@@ -34,8 +34,6 @@ class LocalTask {
         self.title = ""
         self.difficulty = 0
         self.duration = 0
-        self.category = .none
-        self.goal = .none
         self.descrip = ""
         self.isUrgent = false
     }
