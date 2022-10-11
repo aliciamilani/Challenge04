@@ -14,8 +14,8 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-        
-    var humor = ""
+    
+    var humor: Humor?
     
     let userDefaults = UserDefaults.standard
     var listOfTasks: [String] = []
@@ -27,7 +27,6 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageLabel.text = getMessage(humor: humor)
         
         userDefaults.set(false, forKey: "goalsButton")
         
@@ -84,7 +83,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                 return Calendar.current.isDateInToday(h.data!)
             }
             
-            self.humor = humorModel[0].humor!
+            guard let humorModel = humorModel[0].humor else { return }
+            
+            self.humor = getHumorFromString(humor: humorModel)
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -97,15 +98,19 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        guard let humor = humor else { return }
+        messageLabel.text = getMessage(humor: humor)
+        
         dateLabel.text = getCurrentTime()
         
         getSavedTasks()
         
         navigationController?.setNavigationBarHidden(true, animated: true)
-    
+        
         tableView.reloadData()
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if taskModel.count == 0 {
@@ -149,10 +154,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView,
-                       trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let done = UIContextualAction(style: .destructive,
-                                       title: "Done") { [weak self] (action, view, completionHandler) in
+                                      title: "Done") { [weak self] (action, view, completionHandler) in
             guard let self = self else {return}
             
             CoreDataFunctions().deleteItem(item: self.taskModel[indexPath.row])
@@ -164,10 +169,10 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
             
-//            HapticsManager.shared.vibrate(for: .success)
+            //            HapticsManager.shared.vibrate(for: .success)
         }
         done.backgroundColor = UIColor(named: "Done")
-    
+        
         return UISwipeActionsConfiguration(actions: [done])
     }
     
@@ -175,9 +180,9 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor.init(named: "Card")
-
+        
     }
-
+    
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         if indexPath != nil {
             let cell = tableView.cellForRow(at: indexPath!)
@@ -211,10 +216,10 @@ func getCurrentTime() -> String {
     let currentDate =  Date()
     
     let stringDate = currentDate.formatted(.dateTime
-                     .day(.twoDigits)
-                     .month(.wide)
-                     .weekday(.short)
-                     .locale(currentLocale))
+        .day(.twoDigits)
+        .month(.wide)
+        .weekday(.short)
+        .locale(currentLocale))
     
     let thedate = "\(stringDate)"
     return thedate
@@ -267,7 +272,7 @@ extension UITableView {
 
 
 class CardCell: UITableViewCell {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var cardView: UIView!

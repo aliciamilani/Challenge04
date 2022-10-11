@@ -18,40 +18,62 @@ let userDefaults = UserDefaults.standard
 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 var listOfTasks: [String] = []
-let dicHumor: [String:Int] =
-    ["Happy": 3,
-     "Confident": 3,
-     "Indifferent": 3,
-     "Irritated": 2,
-     "Tired": 1,
-     "Sad": 2]
 
-class HumorSelection {
-    var userHumor: String = ""
+public enum Humor : String {
+    case happy = "Happy"
+    case confident = "Confident"
+    case indifferent = "Indifferent"
+    case irritated = "Irritated"
+    case tired = "Tired"
+    case sad = "Sad"
 }
 
-func getMessage(humor: String) -> (String){
+let taskPerHumor: [Humor:Int] =
+[.happy: 3,
+ .confident: 3,
+ .indifferent: 3,
+ .irritated: 2,
+ .tired: 1,
+ .sad: 2]
+
+class HumorSelection {
+    var userHumor: Humor?
+}
+
+func getHumorFromString(humor: String) -> Humor?{
+    switch humor {
+    case "Happy": return .happy
+    case "Sad": return .sad
+    case "Indifferent": return .indifferent
+    case "Irritated": return .irritated
+    case "Tired": return .tired
+    case "Confident": return .confident
+    default:
+        return nil
+    }
+}
+
+func getMessage(humor: Humor) -> (String){
     switch(humor){
-    case "Happy":
+        
+    case .happy:
         return "Glad you're happy today! Let's complete the day with some activities?"
         
-    case "Confident":
+    case .confident:
         return "I liked the attitude! Let's rock today!"
         
-    case "Indifferent":
+    case .indifferent:
         return "Animation, cowboy! You can do it!"
         
-    case "Irritated":
+    case .irritated:
         return "Take it easy! I separated some very special activities for you today!"
         
-    case "Sad":
+    case .sad:
         return "Don't worry! I have your back. There are some small activities for today: "
         
-    case "Tired":
+    case .tired:
         return "You'll feel a lot better when you finish today's activities! Let's go"
         
-    default:
-        return "Here are some activities for you :)"
     }
 }
 
@@ -84,17 +106,17 @@ func treateItems() {
 
 
 
-func getTasksDay(humor: String){
+func getTasksDay(humor: Humor){
     
     var alltasks = [TaskModel]()
     
     getAllItems()
     treateItems()
-
-    let qtdeTask = dicHumor[humor]!
+    
+    let qtdeTask = taskPerHumor[humor]!
     
     if taskModel.count != 0 {
-        if humor == "Happy" || humor == "Confident"{
+        if humor == .happy || humor == .confident{
             alltasks = hardList + mediumList + easyList
             
             for i in 1...qtdeTask{
@@ -102,7 +124,7 @@ func getTasksDay(humor: String){
             }
         }
         
-        if humor == "Indifferent" {
+        if humor == .indifferent {
             alltasks = mediumList + hardList + easyList
             
             for i in 1...qtdeTask{
@@ -110,7 +132,7 @@ func getTasksDay(humor: String){
             }
         }
         
-        if humor == "Irritated" || humor == "Tired" || humor == "Sad"{
+        if humor == .irritated || humor == .tired || humor == .sad {
             alltasks = easyList + mediumList + hardList
             
             for i in 1...qtdeTask{

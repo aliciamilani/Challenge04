@@ -21,7 +21,7 @@ class HumorController: UIViewController {
     @IBOutlet weak var irritatedBtn: UIButton!
     @IBOutlet weak var goBtn: UIButton!
     
-    var humorSelected: String = ""
+    var humorSelected: Humor?
     
     // MARK: - Main
     
@@ -44,14 +44,14 @@ class HumorController: UIViewController {
         
         humorImage.image = UIImage.init(named: "Humor/Shadow")
     }
-
+    
     @IBAction func humorButtons(_ sender: UIButton) {
         goBtn.alpha = 1.0
         goBtn.isUserInteractionEnabled = true
         
         guard var imageName = sender.titleLabel?.text else { return }
         
-        humorSelected = imageName
+        humorSelected = getHumorFromString(humor: imageName)
         
         imageName = "Humor/" + imageName
         humorImage.image = UIImage.init(named: imageName)
@@ -73,11 +73,14 @@ class HumorController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        guard let humorSelected = humorSelected else { return }
+        
         CoreDataFunctions().saveHumor(humor: humorSelected)
         
         getTasksDay(humor: humorSelected)
-
+        
         if let destinationViewController = segue.destination as? DailyTasksController {
+            
             destinationViewController.humor = humorSelected
         }
     }

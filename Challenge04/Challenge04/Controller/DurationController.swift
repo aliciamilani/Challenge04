@@ -82,11 +82,11 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         data[2].check = false
         tableView.reloadData()
     }
-
+    
 }
 
 class CardCellDuration: UITableViewCell {
-
+    
     @IBOutlet weak var titleOptions: UILabel!
     
     func configure(title: String){

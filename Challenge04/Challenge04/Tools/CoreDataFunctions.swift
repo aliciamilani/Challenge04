@@ -16,7 +16,7 @@ public class CoreDataFunctions {
     
     public func deleteItem(item: TaskModel){
         context.delete(item)
-
+        
         do {
             try context.save()
         } catch {
@@ -24,10 +24,11 @@ public class CoreDataFunctions {
         }
     }
     
-    public func saveHumor(humor: String){
+    public func saveHumor(humor: Humor){
+        
         let newItem = HumorModel(context: context)
         newItem.data = Date()
-        newItem.humor = humor
+        newItem.humor = humor.rawValue
         
         do {
             try context.save()
@@ -45,7 +46,7 @@ public class CoreDataFunctions {
         newItem.category = category.rawValue
         newItem.descrip = descrip
         newItem.urgency = urgency
-    
+        
         do {
             try context.save()
         } catch {

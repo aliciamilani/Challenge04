@@ -80,7 +80,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
         
         if segue.identifier == "addSegue" {
             if let destination = segue.destination as? NewTaskViewController {
-            
+                
                 destination.goal = goal
                 destination.category = category
                 destination.add = true
@@ -101,7 +101,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 class CardCellAllTasks: UITableViewCell {
-
+    
     @IBOutlet weak var title: UILabel!
     
     func configure(currentTitle: String){

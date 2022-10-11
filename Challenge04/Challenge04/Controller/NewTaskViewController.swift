@@ -99,7 +99,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.allowsSelection = true
         
         createTextView()
-    
+        
         if !add {
             deleteBtn.isHidden = false
             titleTextField.text = taskModel.title
@@ -127,7 +127,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tabBarController?.tabBar.isHidden = true
         
         tableView.reloadData()
-    
+        
         if !add {
             data[0].description = getTextDifficulty(Int(taskModel.difficulty))
             data[1].description = getTextDuration(Int(taskModel.duration))
@@ -154,26 +154,26 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func deleteButton(_ sender: Any) {
         let alert = UIAlertController(title: "Are you sure you'd like to delete this task?", message: "This task will not appear in your list anymore.", preferredStyle: .alert)
-
+        
         let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
             CoreDataFunctions().deleteItem(item: self.taskModel)
             self.navigationController?.popViewController(animated: true)
         }
-
+        
         alert.addAction(yesAction)
-    
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
+        
         present(alert, animated: true, completion: nil)
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellGoals", for: indexPath) as! CardCellGoals
-                
+        
         cell.configure(title: data[indexPath.row].title, description: data[indexPath.row].description)
         
-    
+        
         if indexPath.row != 2 {
             cell.accessoryView = .none
             cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
@@ -292,9 +292,9 @@ extension NewTaskViewController: UITextFieldDelegate {
     }
     
     func textField(_ titleTextField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
+        
         let text = (titleTextField.text! as NSString).replacingCharacters(in: range, with: string)
-
+        
         if !text.isEmpty{
             addTaskButton.isEnabled = true
         } else {
@@ -312,7 +312,7 @@ extension NewTaskViewController : UITextViewDelegate {
 }
 
 class CardCellGoals: UITableViewCell {
-
+    
     @IBOutlet weak var titleOptions: UILabel!
     @IBOutlet weak var descriptionOptions: UILabel!
     

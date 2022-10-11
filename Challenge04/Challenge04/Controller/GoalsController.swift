@@ -25,7 +25,7 @@ class GoalsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         confirmButton.alpha = 0
         confirmButton.isEnabled = false
         

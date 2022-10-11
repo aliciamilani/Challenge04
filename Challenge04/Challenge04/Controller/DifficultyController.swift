@@ -86,7 +86,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
 }
 
 class CardCellDifficulty: UITableViewCell {
-
+    
     @IBOutlet weak var titleOptions: UILabel!
     
     func configure(title: String){
