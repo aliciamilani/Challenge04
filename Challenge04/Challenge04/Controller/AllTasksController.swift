@@ -83,7 +83,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 destination.goal = goal
                 destination.category = category
-                destination.add = true
+                destination.isNewTask = true
             }
         }
         
@@ -94,7 +94,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
                 }
                 tableView.deselectRow(at: indexPath, animated: false)
                 destination.taskModel = taskModel[indexPath.row]
-                destination.add = false
+                destination.isNewTask = false
             }
         }
     }

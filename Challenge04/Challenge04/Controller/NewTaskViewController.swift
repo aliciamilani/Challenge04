@@ -24,7 +24,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     var category: CategoryTypes = .none
     var goal: CategoryTypes = .none
     
-    var add: Bool  = true
+    var isNewTask: Bool  = true
     var isUrgent: Bool = false
     
     let mySwitch = UISwitch()
@@ -100,7 +100,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         createTextView()
         
-        if !add {
+        if !isNewTask {
             deleteBtn.isHidden = false
             titleTextField.text = taskModel.title
             descriptionText.text = taskModel.descrip
@@ -128,7 +128,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tableView.reloadData()
         
-        if !add {
+        if !isNewTask {
             data[0].description = getTextDifficulty(Int(taskModel.difficulty))
             data[1].description = getTextDuration(Int(taskModel.duration))
         } else {
@@ -195,7 +195,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @objc func switchDidChange(_ sender: UISwitch){
-        if add {
+        if isNewTask {
             createdTask?.isUrgent = sender.isOn
         }
         
@@ -232,12 +232,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "durationSegue" {
             if let destination = segue.destination as? DurationController {
-                if !add {
-                    destination.taskDuration = Int(taskModel.duration)
-                    destination.add = false
+                if !isNewTask {
+                    destination.indexOfDuration = Int(taskModel.duration)
+                    destination.isNewTask = false
                 } else {
-                    destination.taskDuration = createdTask!.duration
-                    destination.add = true
+                    destination.indexOfDuration = createdTask!.duration
+                    destination.isNewTask = true
                 }
                 
             }
@@ -246,12 +246,12 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         if segue.identifier == "difficultySegue" {
             if let destination = segue.destination as? DifficultyController {
                 
-                if !add {
-                    destination.taskDifficulty = Int(taskModel.difficulty)
-                    destination.add = false
+                if !isNewTask {
+                    destination.indexOfDifficulty = Int(taskModel.difficulty)
+                    destination.isNewTask = false
                 } else {
-                    destination.taskDifficulty = createdTask!.difficulty
-                    destination.add = true
+                    destination.indexOfDifficulty = createdTask!.difficulty
+                    destination.isNewTask = true
                 }
             }
         }
@@ -260,7 +260,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         if !(titleTextField.text == ""){
-            if add {
+            if isNewTask {
                 CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, isUrgent: createdTask!.isUrgent)
                 
             } else {

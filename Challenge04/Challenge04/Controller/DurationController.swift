@@ -12,8 +12,8 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var taskDuration : Int = 0
-    var add = true
+    var indexOfDuration : Int = 0
+    var isNewTask = true
     
     struct Options {
         let id: Int
@@ -32,7 +32,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[taskDuration-1].check = true
+        data[indexOfDuration-1].check = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,7 +60,7 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
         
         data[indexPath.row].check.toggle()
         
-        taskDuration = data[indexPath.row].id
+        indexOfDuration = data[indexPath.row].id
         
         tableView.reloadRows(at:[indexPath], with:.none)
         
@@ -68,10 +68,10 @@ class DurationController: UIViewController, UITableViewDelegate, UITableViewData
             self.navigationController?.popViewController(animated: true)
             let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
             
-            if !self.add {
-                destination.updateDuration(newDuration: self.taskDuration)
+            if !self.isNewTask {
+                destination.updateDuration(newDuration: self.indexOfDuration)
             } else {
-                destination.createdTask?.duration = self.taskDuration
+                destination.createdTask?.duration = self.indexOfDuration
             }
         }
     }

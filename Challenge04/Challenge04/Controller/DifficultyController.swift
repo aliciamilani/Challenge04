@@ -12,7 +12,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var taskDifficulty = 0
+    var indexOfDifficulty = 0
     var isNewTask = true
     
     struct Options {
@@ -32,7 +32,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
-        data[taskDifficulty-1].check = true
+        data[indexOfDifficulty-1].check = true
         
     }
     
@@ -61,7 +61,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         
         data[indexPath.row].check.toggle()
         
-        taskDifficulty = data[indexPath.row].id
+        indexOfDifficulty = data[indexPath.row].id
         
         tableView.reloadRows(at:[indexPath],with:.none)
         
@@ -70,9 +70,9 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
             let destination = self.navigationController?.viewControllers.last as! NewTaskViewController
             
             if !self.isNewTask {
-                destination.updateDifficulty(newDifficulty: self.taskDifficulty)
+                destination.updateDifficulty(newDifficulty: self.indexOfDifficulty)
             } else {
-                destination.createdTask?.difficulty = self.taskDifficulty
+                destination.createdTask?.difficulty = self.indexOfDifficulty
             }
         }
     }
