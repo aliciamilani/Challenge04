@@ -9,26 +9,18 @@ import Foundation
 import UIKit
 import CoreData
 
+
 private var taskModel = [TaskModel]()
 private var easyList = [TaskModel]()
 private var mediumList = [TaskModel]()
 private var hardList = [TaskModel]()
 
-let userDefaults = UserDefaults.standard
-let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+private let userDefaults = UserDefaults.standard
+public let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-var listOfTasks: [String] = []
+private var listOfTasks: [String] = []
 
-public enum Humor : String {
-    case happy = "Happy"
-    case confident = "Confident"
-    case indifferent = "Indifferent"
-    case irritated = "Irritated"
-    case tired = "Tired"
-    case sad = "Sad"
-}
-
-let taskPerHumor: [Humor:Int] =
+private let taskPerHumor: [HumorTypes:Int] =
 [.happy: 3,
  .confident: 3,
  .indifferent: 3,
@@ -36,24 +28,35 @@ let taskPerHumor: [Humor:Int] =
  .tired: 1,
  .sad: 2]
 
-class HumorSelection {
-    var userHumor: Humor?
-}
-
-func getHumorFromString(humor: String) -> Humor?{
-    switch humor {
-    case "Happy": return .happy
-    case "Sad": return .sad
-    case "Indifferent": return .indifferent
-    case "Irritated": return .irritated
-    case "Tired": return .tired
-    case "Confident": return .confident
-    default:
-        return nil
+public func getAllItems() {
+    do {
+        taskModel = try context.fetch(TaskModel.fetchRequest())
+    } catch {
+        //error
     }
 }
 
-func getMessage(humor: Humor) -> (String){
+private func treateItems() {
+    for task in taskModel {
+        
+        if !task.isUrgent {
+            if (task.difficulty == 1 && task.duration == 1) || (task.difficulty == 1 && task.duration == 2) || (task.difficulty == 2 && task.duration == 1) {
+                easyList.append(task)
+            }
+            
+            if (task.difficulty == 2 && task.duration == 2) || (task.difficulty == 2 && task.duration == 3) || (task.difficulty == 1 && task.duration == 3) {
+                mediumList.append(task)
+            }
+            
+            if (task.difficulty == 3 && task.duration == 3) || (task.difficulty == 3 && task.duration == 2) || (task.difficulty == 3 && task.duration == 1) {
+                hardList.append(task)
+            }
+        }
+    }
+}
+
+
+public func getMessage(humor: HumorTypes) -> (String){
     switch(humor){
         
     case .happy:
@@ -77,36 +80,7 @@ func getMessage(humor: Humor) -> (String){
     }
 }
 
-func getAllItems() {
-    do {
-        taskModel = try context.fetch(TaskModel.fetchRequest())
-    } catch {
-        //error
-    }
-}
-
-func treateItems() {
-    for task in taskModel {
-        
-        if !task.isUrgent {
-            if (task.difficulty == 1 && task.duration == 1) || (task.difficulty == 1 && task.duration == 2) || (task.difficulty == 2 && task.duration == 1) {
-                easyList.append(task)
-            }
-            
-            if (task.difficulty == 2 && task.duration == 2) || (task.difficulty == 2 && task.duration == 3) || (task.difficulty == 1 && task.duration == 3) {
-                mediumList.append(task)
-            }
-            
-            if (task.difficulty == 3 && task.duration == 3) || (task.difficulty == 3 && task.duration == 2) || (task.difficulty == 3 && task.duration == 1) {
-                hardList.append(task)
-            }
-        }
-    }
-}
-
-
-
-func getTasksDay(humor: Humor){
+public func getTasksDay(humor: HumorTypes){
     
     var alltasks = [TaskModel]()
     
@@ -144,3 +118,4 @@ func getTasksDay(humor: Humor){
     
     userDefaults.set(listOfTasks, forKey: "tasks")
 }
+

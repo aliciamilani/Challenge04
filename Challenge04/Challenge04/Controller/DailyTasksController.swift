@@ -15,7 +15,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var humor: Humor?
+    var humor: HumorTypes?
     
     let userDefaults = UserDefaults.standard
     var listOfTasks: [String] = []

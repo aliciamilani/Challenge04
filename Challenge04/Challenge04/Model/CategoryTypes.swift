@@ -9,17 +9,17 @@ import Foundation
 
 @objc
 public enum CategoryTypes: Int16 {
-    case studies = 1,
-         study = 2,
-         work = 3,
-         othersStudy = 4,
-         sports = 5,
-         food = 6,
-         exercise = 7,
-         othersSports = 8,
-         art = 9,
-         leisure = 10,
-         hobbies = 11,
-         othersArt = 12,
-         none = 0
+    case studies = 1
+    case study = 2
+    case work = 3
+    case othersStudy = 4
+    case sports = 5
+    case food = 6
+    case exercise = 7
+    case othersSports = 8
+    case art = 9
+    case leisure = 10
+    case hobbies = 11
+    case othersArt = 12
+    case none = 0
 }

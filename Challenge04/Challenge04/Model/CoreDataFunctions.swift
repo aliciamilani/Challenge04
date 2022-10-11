@@ -24,7 +24,7 @@ public class CoreDataFunctions {
         }
     }
     
-    public func saveHumor(humor: Humor){
+    public func saveHumor(humor: HumorTypes){
         
         let newItem = HumorModel(context: context)
         newItem.data = Date()

@@ -21,7 +21,7 @@ class HumorController: UIViewController {
     @IBOutlet weak var irritatedBtn: UIButton!
     @IBOutlet weak var goBtn: UIButton!
     
-    var humorSelected: Humor?
+    var humorSelected: HumorTypes?
     
     // MARK: - Main
     

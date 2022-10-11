@@ -15,3 +15,16 @@ public enum HumorTypes : String {
     case tired = "Tired"
     case sad = "Sad"
 }
+
+public func getHumorFromString(humor: String) -> HumorTypes?{
+    switch humor {
+    case "Happy": return .happy
+    case "Sad": return .sad
+    case "Indifferent": return .indifferent
+    case "Irritated": return .irritated
+    case "Tired": return .tired
+    case "Confident": return .confident
+    default:
+        return nil
+    }
+}
