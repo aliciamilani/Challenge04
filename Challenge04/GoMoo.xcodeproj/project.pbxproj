@@ -11,7 +11,7 @@
 		8B0BF20A28E5E807004B7E4F /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0BF20928E5E807004B7E4F /* OnboardingController.swift */; };
 		8B1A5B3728C6CC28001B8AA2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A5B3528C6CC28001B8AA2 /* Model.xcdatamodeld */; };
 		8B1E611728ABE904006FB525 /* HumorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1E611628ABE904006FB525 /* HumorView.storyboard */; };
-		8B1E611928ABEA29006FB525 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611828ABEA29006FB525 /* Task.swift */; };
+		8B1E611928ABEA29006FB525 /* LocalTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611828ABEA29006FB525 /* LocalTask.swift */; };
 		8B1E611D28ABEAB2006FB525 /* DailyTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */; };
 		8B35B2FC28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B2FA28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift */; };
 		8B35B2FD28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B2FB28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift */; };
@@ -59,7 +59,7 @@
 		8B0BF20928E5E807004B7E4F /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		8B1A5B3628C6CC28001B8AA2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8B1E611628ABE904006FB525 /* HumorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HumorView.storyboard; sourceTree = "<group>"; };
-		8B1E611828ABEA29006FB525 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		8B1E611828ABEA29006FB525 /* LocalTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTask.swift; sourceTree = "<group>"; };
 		8B1E611C28ABEAB2006FB525 /* DailyTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTasksController.swift; sourceTree = "<group>"; };
 		8B35B2FA28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HumorModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8B35B2FB28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HumorModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		8B54985728ABC5F100299D02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8B1E611828ABEA29006FB525 /* Task.swift */,
+				8B1E611828ABEA29006FB525 /* LocalTask.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				8B1A5B3728C6CC28001B8AA2 /* Model.xcdatamodeld in Sources */,
 				8BF551E828BCFBAD00F9B2D9 /* DurationController.swift in Sources */,
 				8B35B2FC28CCEB2A00D76683 /* HumorModel+CoreDataClass.swift in Sources */,
-				8B1E611928ABEA29006FB525 /* Task.swift in Sources */,
+				8B1E611928ABEA29006FB525 /* LocalTask.swift in Sources */,
 				8B35B2FD28CCEB2A00D76683 /* HumorModel+CoreDataProperties.swift in Sources */,
 				8B65871C28DB6A1700B92163 /* DetailsController.swift in Sources */,
 				8DC408AA28B6636D00847C28 /* GoalsController.swift in Sources */,
