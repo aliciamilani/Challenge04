@@ -56,13 +56,13 @@ class HumorController: UIViewController {
         imageName = "Humor/" + imageName
         humorImage.image = UIImage.init(named: imageName)
         
-        isSelectedButton()
+        buttonClearBorderStyle()
         sender.layer.borderWidth = 1
         sender.layer.cornerRadius = 12
         sender.layer.borderColor = UIColor.label.cgColor
     }
     
-    func isSelectedButton () {
+    func buttonClearBorderStyle() {
         sadBtn.layer.borderColor = UIColor.clear.cgColor
         tiredBtn.layer.borderColor = UIColor.clear.cgColor
         happyBtn.layer.borderColor = UIColor.clear.cgColor
