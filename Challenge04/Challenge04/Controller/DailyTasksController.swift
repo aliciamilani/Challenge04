@@ -44,7 +44,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             let allData = try context.fetch(TaskModel.fetchRequest())
             
             listAllItems = allData.filter { t in
-                return t.urgency == true
+                return t.isUrgent == true
             }
             
             for i in listAllItems {
@@ -131,7 +131,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        if !taskModel[indexPath.row].urgency {
+        if !taskModel[indexPath.row].isUrgent {
             
             let latter = UIContextualAction(style: .destructive,
                                             title: "Reschedule") { [weak self] (action, view, completionHandler) in

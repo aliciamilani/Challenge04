@@ -8,47 +8,35 @@
 import Foundation
 
 class LocalTask {
-    var title : String
     
+    var title : String
     var difficulty : Int
     var duration : Int
-    
-    var points: Float
-    
     var category: CategoryTypes
     var goal: CategoryTypes
-    
     var descrip: String
+    var isUrgent: Bool
     
-    var urgency: Bool
-    
-    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes, descrip: String, urgency: Bool){
+    init(title: String, difficulty: Int, duration: Int, category: CategoryTypes, goal: CategoryTypes, descrip: String, isUrgent: Bool){
         self.title = title
         
         self.difficulty = difficulty
         self.duration = duration
         
-        // calculate priority
-        self.points = Float(difficulty + duration)
-        
         self.category = category
         self.goal = goal
         
         self.descrip = descrip
-        self.urgency = urgency
+        self.isUrgent = isUrgent
     }
     
     init(){
         self.title = ""
-        
         self.difficulty = 0
         self.duration = 0
-        
-        self.points = 0
         self.category = .none
         self.goal = .none
-        
         self.descrip = ""
-        self.urgency = false
+        self.isUrgent = false
     }
 }

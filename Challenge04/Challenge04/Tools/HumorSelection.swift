@@ -88,7 +88,7 @@ func getAllItems() {
 func treateItems() {
     for task in taskModel {
         
-        if !task.urgency {
+        if !task.isUrgent {
             if (task.difficulty == 1 && task.duration == 1) || (task.difficulty == 1 && task.duration == 2) || (task.difficulty == 2 && task.duration == 1) {
                 easyList.append(task)
             }

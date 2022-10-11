@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         taskModelObject.duration = Int16(item[4])!
                         taskModelObject.points = Float(item[5])!
                         taskModelObject.descrip = item[6]
-                        taskModelObject.urgency = Bool(item[7]) ?? false
+                        taskModelObject.isUrgent = Bool(item[7]) ?? false
                     }
                     
                     try backgroundContext.save()

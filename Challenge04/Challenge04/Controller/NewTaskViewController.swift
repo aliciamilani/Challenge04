@@ -25,7 +25,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     var goal: CategoryTypes = .none
     
     var add: Bool  = true
-    var urgency: Bool = false
+    var isUrgent: Bool = false
     
     let mySwitch = UISwitch()
     var placeholderLabel : UILabel!
@@ -104,14 +104,14 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
             deleteBtn.isHidden = false
             titleTextField.text = taskModel.title
             descriptionText.text = taskModel.descrip
-            mySwitch.setOn(taskModel.urgency, animated: true)
+            mySwitch.setOn(taskModel.isUrgent, animated: true)
             
         } else {
             deleteBtn.isHidden = true
             createdTask = LocalTask()
             titleTextField.text = createdTask?.title
             descriptionText.text = createdTask?.descrip
-            mySwitch.setOn(createdTask!.urgency, animated: true)
+            mySwitch.setOn(createdTask!.isUrgent, animated: true)
         }
         
         createdTask?.difficulty = 1
@@ -196,10 +196,10 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func switchDidChange(_ sender: UISwitch){
         if add {
-            createdTask?.urgency = sender.isOn
+            createdTask?.isUrgent = sender.isOn
         }
         
-        urgency = sender.isOn
+        isUrgent = sender.isOn
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -261,7 +261,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func AddButton(_ sender: UIBarButtonItem) {
         if !(titleTextField.text == ""){
             if add {
-                CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, urgency: createdTask!.urgency)
+                CoreDataFunctions().createItem(title: titleTextField.text!, difficulty: createdTask!.difficulty, duration: createdTask!.duration, goal: goal, category: category, descrip: descriptionText.text, isUrgent: createdTask!.isUrgent)
                 
             } else {
                 if taskModel.title != titleTextField.text! {
@@ -270,8 +270,8 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                 if taskModel.descrip != descriptionText.text {
                     CoreDataFunctions().updateDescrip(taskModel: self.taskModel, newDescrip: descriptionText.text)
                 }
-                if taskModel.urgency != urgency {
-                    CoreDataFunctions().updateUrgency(taskModel: self.taskModel, newUrgency: urgency)
+                if taskModel.isUrgent != isUrgent {
+                    CoreDataFunctions().updateUrgecy(taskModel: self.taskModel, changeUrgency: isUrgent)
                 }
             }
         }

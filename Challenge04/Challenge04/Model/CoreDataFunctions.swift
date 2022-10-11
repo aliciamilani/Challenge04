@@ -37,7 +37,7 @@ public class CoreDataFunctions {
         }
     }
     
-    public func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, urgency: Bool){
+    public func createItem(title: String, difficulty: Int, duration: Int, goal: CategoryTypes, category: CategoryTypes, descrip: String, isUrgent: Bool){
         let newItem = TaskModel(context: context)
         newItem.title = title
         newItem.difficulty = Int16(difficulty)
@@ -45,7 +45,7 @@ public class CoreDataFunctions {
         newItem.goal = goal.rawValue
         newItem.category = category.rawValue
         newItem.descrip = descrip
-        newItem.urgency = urgency
+        newItem.isUrgent = isUrgent
         
         do {
             try context.save()
@@ -76,9 +76,9 @@ public class CoreDataFunctions {
         }
     }
     
-    func updateUrgency(taskModel: TaskModel, newUrgency: Bool){
+    func updateUrgecy(taskModel: TaskModel, changeUrgency: Bool){
         
-        taskModel.urgency = newUrgency
+        taskModel.isUrgent = changeUrgency
         
         do {
             try context.save()
