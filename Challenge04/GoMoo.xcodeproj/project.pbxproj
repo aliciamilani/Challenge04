@@ -131,6 +131,7 @@
 		8B54985728ABC5F100299D02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BE0AD0C28EBABDD0029ED38 /* CoreDataFunctions.swift */,
 				8B1E611828ABEA29006FB525 /* LocalTask.swift */,
 			);
 			path = Model;
@@ -213,7 +214,6 @@
 			children = (
 				8D745E2028ABCC4300F6ED75 /* HumorSelection.swift */,
 				8D97393328E5D605004AEA3C /* HapticsManager.swift */,
-				8BE0AD0C28EBABDD0029ED38 /* CoreDataFunctions.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
