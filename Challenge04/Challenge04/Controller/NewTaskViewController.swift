@@ -181,7 +181,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             cell.accessoryType = .none
             
-            mySwitch.onTintColor = UIColor(named: "FinishButton")
+            mySwitch.onTintColor = UIColor.finishButton
             
             mySwitch.tag = indexPath.row
             mySwitch.addTarget(self, action: #selector(self.switchDidChange(_:)), for: .valueChanged)

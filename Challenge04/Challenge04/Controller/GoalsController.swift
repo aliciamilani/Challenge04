@@ -29,7 +29,7 @@ class GoalsController: UIViewController {
         confirmButton.alpha = 0
         confirmButton.isEnabled = false
         
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "MainTitle")
+        self.navigationController?.navigationBar.tintColor = UIColor.mainTitle
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {

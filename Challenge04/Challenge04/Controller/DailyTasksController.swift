@@ -145,7 +145,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 self.tableView.reloadData()
             }
-            latter.backgroundColor = UIColor(named: "Reschedule")
+            latter.backgroundColor = UIColor.reschedule
             
             return UISwipeActionsConfiguration(actions: [latter])
         }
@@ -171,7 +171,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             
             //            HapticsManager.shared.vibrate(for: .success)
         }
-        done.backgroundColor = UIColor(named: "Done")
+        done.backgroundColor = UIColor.done
         
         return UISwipeActionsConfiguration(actions: [done])
     }
@@ -179,14 +179,14 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        cell?.contentView.backgroundColor = UIColor.init(named: "Card")
+        cell?.contentView.backgroundColor = UIColor.card
         
     }
     
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         if indexPath != nil {
             let cell = tableView.cellForRow(at: indexPath!)
-            cell?.contentView.backgroundColor = UIColor.init(named: "Background")
+            cell?.contentView.backgroundColor = UIColor.background
         }
         
     }
@@ -222,7 +222,7 @@ extension UITableView {
         titleLabel.textColor = UIColor.black
         
         titleLabel.font = UIFont(name: "Poppins-Light", size: 19)
-        titleLabel.textColor = UIColor(named: "Text")
+        titleLabel.textColor = UIColor.text
         
         messageLabel.textColor = UIColor.lightGray
         messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 17)

@@ -48,7 +48,7 @@ class DifficultyController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.accessoryType = data[indexPath.row].check ? .checkmark : .none
         
-        cell.tintColor = UIColor.init(named: "MainTitle")
+        cell.tintColor = UIColor.mainTitle
         cell.backgroundColor = UIColor.clear
         
         cell.selectionStyle = .none
