@@ -31,7 +31,7 @@ public func getAllItems() {
     do {
         taskModel = try context.fetch(TaskModel.fetchRequest())
     } catch {
-        //error
+        fatalError("Unable to load data.")
     }
 }
 

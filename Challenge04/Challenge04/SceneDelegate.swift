@@ -46,7 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     self.userDefaults.set(true, forKey: preloadedDataKey)
                     
                 } catch {
-                    
+                    fatalError("Unable to initialize data.")
                 }
             }
         }
@@ -84,10 +84,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return false
             
         } catch {
-            //error
+            fatalError("Could not load the daily mood.")
         }
-        
-        return false
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

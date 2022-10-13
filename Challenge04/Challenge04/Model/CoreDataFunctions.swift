@@ -20,7 +20,7 @@ public class CoreDataFunctions {
         do {
             try context.save()
         } catch {
-            // error
+            fatalError("Unable to delete the task.")
         }
     }
     
@@ -33,7 +33,7 @@ public class CoreDataFunctions {
         do {
             try context.save()
         } catch {
-            // error
+            fatalError("Unable to add mood of the day.")
         }
     }
     
@@ -51,6 +51,7 @@ public class CoreDataFunctions {
         do {
             try context.save()
         } catch {
+            fatalError("Unable to add the task.")
         }
     }
     
@@ -62,7 +63,7 @@ public class CoreDataFunctions {
         do {
             try context.save()
         } catch {
-            // error
+            fatalError("Unable to update the task title.")
         }
     }
     
@@ -73,7 +74,7 @@ public class CoreDataFunctions {
         do {
             try context.save()
         } catch {
-            // error
+            fatalError("Unable to update the task description.")
         }
     }
     
@@ -84,7 +85,7 @@ public class CoreDataFunctions {
         do {
             try context.save()
         } catch {
-            // error
+            fatalError("Unable to update the task urgency.")
         }
     }
     

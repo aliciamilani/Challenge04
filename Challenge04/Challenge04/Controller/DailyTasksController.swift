@@ -55,6 +55,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             }
             
         } catch {
+            fatalError("Unable to get daily tasks.")
         }
         
         taskModel = [TaskModel]()
@@ -92,7 +93,7 @@ class DailyTasksController : UIViewController, UITableViewDelegate, UITableViewD
             }
             
         } catch {
-            //error
+            fatalError("Unable to get daily mood.")
         }
     }
     

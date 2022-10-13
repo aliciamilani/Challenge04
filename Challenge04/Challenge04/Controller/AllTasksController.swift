@@ -50,7 +50,7 @@ class AllTasksController: UIViewController, UITableViewDelegate, UITableViewData
             }
             
         } catch {
-            //error
+            fatalError("Unable to load all tasks of a goal.")
         }
         
     }

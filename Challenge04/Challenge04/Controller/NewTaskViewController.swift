@@ -217,6 +217,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         do {
             try context.save()
         } catch {
+            fatalError("Unable to update the task duration.")
         }
     }
     
@@ -226,6 +227,7 @@ class NewTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         do {
             try context.save()
         } catch {
+            fatalError("Unable to update the task difficulty.")
         }
     }
     
