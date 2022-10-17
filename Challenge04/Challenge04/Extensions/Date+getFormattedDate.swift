@@ -10,17 +10,24 @@ import Foundation
 extension Date {
     func getFormattedDate() -> String {
         
-        let currentLocale:Locale = NSLocale(localeIdentifier: Locale.preferredLanguages.first!) as Locale
-        let currentDate =  Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .full
+        let date = Date()
+
+        let currentLocale = NSLocale(localeIdentifier: Locale.preferredLanguages.first!) as Locale
+        dateFormatter.locale = currentLocale
         
-        let stringDate = currentDate.formatted(.dateTime
-            .day(.twoDigits)
-            .month(.wide)
-            .weekday(.short)
-            .locale(currentLocale))
+//        let currentDate =  Date()
+//
+//        let stringDate = currentDate.formatted(.dateTime
+//            .day(.twoDigits)
+//            .month(.wide)
+//            .weekday(.short)
+//            .locale(currentLocale))
+//
+//        let thedate = "\(stringDate)"
         
-        let thedate = "\(stringDate)"
-        return thedate
+        return dateFormatter.string(from: date)
         
     }
 }
